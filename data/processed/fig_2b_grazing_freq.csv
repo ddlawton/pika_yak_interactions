@@ -1,0 +1,121 @@
+transect,plant_group,grazing_freq,month,animal
+1,S. chamaejasme,0,June,yak
+1,S. chamaejasme,0,July,yak
+1,S. chamaejasme,0,August,yak
+2,S. chamaejasme,0,June,yak
+2,S. chamaejasme,0,July,yak
+2,S. chamaejasme,0,August,yak
+3,S. chamaejasme,0,June,yak
+3,S. chamaejasme,0,July,yak
+3,S. chamaejasme,0,August,yak
+4,S. chamaejasme,0,June,yak
+4,S. chamaejasme,0,July,yak
+4,S. chamaejasme,0,August,yak
+5,S. chamaejasme,0,June,yak
+5,S. chamaejasme,0,July,yak
+5,S. chamaejasme,0,August,yak
+6,S. chamaejasme,0,June,yak
+6,S. chamaejasme,0,July,yak
+6,S. chamaejasme,0,August,yak
+7,S. chamaejasme,0,June,yak
+7,S. chamaejasme,0,July,yak
+7,S. chamaejasme,0,August,yak
+8,S. chamaejasme,0,June,yak
+8,S. chamaejasme,0,July,yak
+8,S. chamaejasme,0,August,yak
+9,S. chamaejasme,0,June,yak
+9,S. chamaejasme,0,July,yak
+9,S. chamaejasme,0,August,yak
+10,S. chamaejasme,0,June,yak
+10,S. chamaejasme,0,July,yak
+10,S. chamaejasme,0,August,yak
+1,Sedges,50,June,yak
+1,Sedges,70,July,yak
+1,Sedges,30,August,yak
+2,Sedges,70,June,yak
+2,Sedges,40,July,yak
+2,Sedges,60,August,yak
+3,Sedges,40,June,yak
+3,Sedges,50,July,yak
+3,Sedges,40,August,yak
+4,Sedges,20,June,yak
+4,Sedges,20,July,yak
+4,Sedges,40,August,yak
+5,Sedges,40,June,yak
+5,Sedges,80,July,yak
+5,Sedges,20,August,yak
+6,Sedges,60,June,yak
+6,Sedges,50,July,yak
+6,Sedges,70,August,yak
+7,Sedges,30,June,yak
+7,Sedges,30,July,yak
+7,Sedges,50,August,yak
+8,Sedges,50,June,yak
+8,Sedges,70,July,yak
+8,Sedges,70,August,yak
+9,Sedges,70,June,yak
+9,Sedges,40,July,yak
+9,Sedges,30,August,yak
+10,Sedges,40,June,yak
+10,Sedges,10,July,yak
+10,Sedges,20,August,yak
+1,Grasses,80,June,yak
+1,Grasses,60,July,yak
+1,Grasses,100,August,yak
+2,Grasses,100,June,yak
+2,Grasses,70,July,yak
+2,Grasses,80,August,yak
+3,Grasses,70,June,yak
+3,Grasses,50,July,yak
+3,Grasses,60,August,yak
+4,Grasses,60,June,yak
+4,Grasses,100,July,yak
+4,Grasses,70,August,yak
+5,Grasses,90,June,yak
+5,Grasses,90,July,yak
+5,Grasses,40,August,yak
+6,Grasses,50,June,yak
+6,Grasses,70,July,yak
+6,Grasses,50,August,yak
+7,Grasses,80,June,yak
+7,Grasses,80,July,yak
+7,Grasses,60,August,yak
+8,Grasses,70,June,yak
+8,Grasses,70,July,yak
+8,Grasses,90,August,yak
+9,Grasses,100,June,yak
+9,Grasses,80,July,yak
+9,Grasses,100,August,yak
+10,Grasses,70,June,yak
+10,Grasses,90,July,yak
+10,Grasses,50,August,yak
+1,Forbs,10,June,yak
+1,Forbs,20,July,yak
+1,Forbs,30,August,yak
+2,Forbs,30,June,yak
+2,Forbs,10,July,yak
+2,Forbs,0,August,yak
+3,Forbs,10,June,yak
+3,Forbs,40,July,yak
+3,Forbs,20,August,yak
+4,Forbs,20,June,yak
+4,Forbs,0,July,yak
+4,Forbs,30,August,yak
+5,Forbs,50,June,yak
+5,Forbs,10,July,yak
+5,Forbs,50,August,yak
+6,Forbs,0,June,yak
+6,Forbs,0,July,yak
+6,Forbs,10,August,yak
+7,Forbs,10,June,yak
+7,Forbs,10,July,yak
+7,Forbs,0,August,yak
+8,Forbs,30,June,yak
+8,Forbs,30,July,yak
+8,Forbs,20,August,yak
+9,Forbs,0,June,yak
+9,Forbs,20,July,yak
+9,Forbs,0,August,yak
+10,Forbs,10,June,yak
+10,Forbs,0,July,yak
+10,Forbs,20,August,yak

@@ -1,0 +1,385 @@
+block,pika_treatment,posion_plant_treatment,year,plant,cover,month
+1,no pika,No S. chamaejasme,2022,s_chamaejasme,2,June
+1,no pika,No S. chamaejasme,2022,sedges,56,June
+1,no pika,No S. chamaejasme,2022,grasses,21,June
+1,no pika,No S. chamaejasme,2022,forbs,37,June
+1,no pika,No S. chamaejasme,2022,s_chamaejasme,4,July
+1,no pika,No S. chamaejasme,2022,sedges,58,July
+1,no pika,No S. chamaejasme,2022,grasses,28,July
+1,no pika,No S. chamaejasme,2022,forbs,36,July
+1,no pika,No S. chamaejasme,2022,s_chamaejasme,0,August
+1,no pika,No S. chamaejasme,2022,sedges,63,August
+1,no pika,No S. chamaejasme,2022,grasses,21,August
+1,no pika,No S. chamaejasme,2022,forbs,32,August
+2,no pika,No S. chamaejasme,2022,s_chamaejasme,0,June
+2,no pika,No S. chamaejasme,2022,sedges,43,June
+2,no pika,No S. chamaejasme,2022,grasses,14,June
+2,no pika,No S. chamaejasme,2022,forbs,21,June
+2,no pika,No S. chamaejasme,2022,s_chamaejasme,5,July
+2,no pika,No S. chamaejasme,2022,sedges,62,July
+2,no pika,No S. chamaejasme,2022,grasses,23,July
+2,no pika,No S. chamaejasme,2022,forbs,18,July
+2,no pika,No S. chamaejasme,2022,s_chamaejasme,2,August
+2,no pika,No S. chamaejasme,2022,sedges,67,August
+2,no pika,No S. chamaejasme,2022,grasses,19,August
+2,no pika,No S. chamaejasme,2022,forbs,22,August
+3,no pika,No S. chamaejasme,2022,s_chamaejasme,3,June
+3,no pika,No S. chamaejasme,2022,sedges,47,June
+3,no pika,No S. chamaejasme,2022,grasses,29,June
+3,no pika,No S. chamaejasme,2022,forbs,19,June
+3,no pika,No S. chamaejasme,2022,s_chamaejasme,2,July
+3,no pika,No S. chamaejasme,2022,sedges,43,July
+3,no pika,No S. chamaejasme,2022,grasses,34,July
+3,no pika,No S. chamaejasme,2022,forbs,26,July
+3,no pika,No S. chamaejasme,2022,s_chamaejasme,3,August
+3,no pika,No S. chamaejasme,2022,sedges,56,August
+3,no pika,No S. chamaejasme,2022,grasses,27,August
+3,no pika,No S. chamaejasme,2022,forbs,27,August
+4,no pika,No S. chamaejasme,2022,s_chamaejasme,5,June
+4,no pika,No S. chamaejasme,2022,sedges,40,June
+4,no pika,No S. chamaejasme,2022,grasses,23,June
+4,no pika,No S. chamaejasme,2022,forbs,13,June
+4,no pika,No S. chamaejasme,2022,s_chamaejasme,7,July
+4,no pika,No S. chamaejasme,2022,sedges,56,July
+4,no pika,No S. chamaejasme,2022,grasses,27,July
+4,no pika,No S. chamaejasme,2022,forbs,29,July
+4,no pika,No S. chamaejasme,2022,s_chamaejasme,1,August
+4,no pika,No S. chamaejasme,2022,sedges,58,August
+4,no pika,No S. chamaejasme,2022,grasses,31,August
+4,no pika,No S. chamaejasme,2022,forbs,19,August
+1,pika,No S. chamaejasme,2022,s_chamaejasme,0,June
+1,pika,No S. chamaejasme,2022,sedges,58,June
+1,pika,No S. chamaejasme,2022,grasses,10,June
+1,pika,No S. chamaejasme,2022,forbs,34,June
+1,pika,No S. chamaejasme,2022,s_chamaejasme,5,July
+1,pika,No S. chamaejasme,2022,sedges,49,July
+1,pika,No S. chamaejasme,2022,grasses,16,July
+1,pika,No S. chamaejasme,2022,forbs,23,July
+1,pika,No S. chamaejasme,2022,s_chamaejasme,0,August
+1,pika,No S. chamaejasme,2022,sedges,49,August
+1,pika,No S. chamaejasme,2022,grasses,18,August
+1,pika,No S. chamaejasme,2022,forbs,28,August
+2,pika,No S. chamaejasme,2022,s_chamaejasme,1,June
+2,pika,No S. chamaejasme,2022,sedges,61,June
+2,pika,No S. chamaejasme,2022,grasses,35,June
+2,pika,No S. chamaejasme,2022,forbs,27,June
+2,pika,No S. chamaejasme,2022,s_chamaejasme,3,July
+2,pika,No S. chamaejasme,2022,sedges,55,July
+2,pika,No S. chamaejasme,2022,grasses,33,July
+2,pika,No S. chamaejasme,2022,forbs,17,July
+2,pika,No S. chamaejasme,2022,s_chamaejasme,4,August
+2,pika,No S. chamaejasme,2022,sedges,61,August
+2,pika,No S. chamaejasme,2022,grasses,12,August
+2,pika,No S. chamaejasme,2022,forbs,30,August
+3,pika,No S. chamaejasme,2022,s_chamaejasme,6,June
+3,pika,No S. chamaejasme,2022,sedges,44,June
+3,pika,No S. chamaejasme,2022,grasses,27,June
+3,pika,No S. chamaejasme,2022,forbs,36,June
+3,pika,No S. chamaejasme,2022,s_chamaejasme,6,July
+3,pika,No S. chamaejasme,2022,sedges,51,July
+3,pika,No S. chamaejasme,2022,grasses,36,July
+3,pika,No S. chamaejasme,2022,forbs,30,July
+3,pika,No S. chamaejasme,2022,s_chamaejasme,2,August
+3,pika,No S. chamaejasme,2022,sedges,54,August
+3,pika,No S. chamaejasme,2022,grasses,23,August
+3,pika,No S. chamaejasme,2022,forbs,37,August
+4,pika,No S. chamaejasme,2022,s_chamaejasme,2,June
+4,pika,No S. chamaejasme,2022,sedges,56,June
+4,pika,No S. chamaejasme,2022,grasses,29,June
+4,pika,No S. chamaejasme,2022,forbs,18,June
+4,pika,No S. chamaejasme,2022,s_chamaejasme,1,July
+4,pika,No S. chamaejasme,2022,sedges,44,July
+4,pika,No S. chamaejasme,2022,grasses,27,July
+4,pika,No S. chamaejasme,2022,forbs,15,July
+4,pika,No S. chamaejasme,2022,s_chamaejasme,3,August
+4,pika,No S. chamaejasme,2022,sedges,63,August
+4,pika,No S. chamaejasme,2022,grasses,30,August
+4,pika,No S. chamaejasme,2022,forbs,21,August
+1,no pika,S. chamaejasme,2022,s_chamaejasme,25,June
+1,no pika,S. chamaejasme,2022,sedges,46,June
+1,no pika,S. chamaejasme,2022,grasses,13,June
+1,no pika,S. chamaejasme,2022,forbs,27,June
+1,no pika,S. chamaejasme,2022,s_chamaejasme,24,July
+1,no pika,S. chamaejasme,2022,sedges,49,July
+1,no pika,S. chamaejasme,2022,grasses,16,July
+1,no pika,S. chamaejasme,2022,forbs,17,July
+1,no pika,S. chamaejasme,2022,s_chamaejasme,14,August
+1,no pika,S. chamaejasme,2022,sedges,52,August
+1,no pika,S. chamaejasme,2022,grasses,10,August
+1,no pika,S. chamaejasme,2022,forbs,22,August
+2,no pika,S. chamaejasme,2022,s_chamaejasme,30,June
+2,no pika,S. chamaejasme,2022,sedges,42,June
+2,no pika,S. chamaejasme,2022,grasses,6,June
+2,no pika,S. chamaejasme,2022,forbs,13,June
+2,no pika,S. chamaejasme,2022,s_chamaejasme,17,July
+2,no pika,S. chamaejasme,2022,sedges,38,July
+2,no pika,S. chamaejasme,2022,grasses,8,July
+2,no pika,S. chamaejasme,2022,forbs,23,July
+2,no pika,S. chamaejasme,2022,s_chamaejasme,17,August
+2,no pika,S. chamaejasme,2022,sedges,50,August
+2,no pika,S. chamaejasme,2022,grasses,9,August
+2,no pika,S. chamaejasme,2022,forbs,17,August
+3,no pika,S. chamaejasme,2022,s_chamaejasme,36,June
+3,no pika,S. chamaejasme,2022,sedges,51,June
+3,no pika,S. chamaejasme,2022,grasses,19,June
+3,no pika,S. chamaejasme,2022,forbs,20,June
+3,no pika,S. chamaejasme,2022,s_chamaejasme,40,July
+3,no pika,S. chamaejasme,2022,sedges,42,July
+3,no pika,S. chamaejasme,2022,grasses,9,July
+3,no pika,S. chamaejasme,2022,forbs,11,July
+3,no pika,S. chamaejasme,2022,s_chamaejasme,13,August
+3,no pika,S. chamaejasme,2022,sedges,38,August
+3,no pika,S. chamaejasme,2022,grasses,13,August
+3,no pika,S. chamaejasme,2022,forbs,24,August
+4,no pika,S. chamaejasme,2022,s_chamaejasme,31,June
+4,no pika,S. chamaejasme,2022,sedges,38,June
+4,no pika,S. chamaejasme,2022,grasses,11,June
+4,no pika,S. chamaejasme,2022,forbs,18,June
+4,no pika,S. chamaejasme,2022,s_chamaejasme,29,July
+4,no pika,S. chamaejasme,2022,sedges,33,July
+4,no pika,S. chamaejasme,2022,grasses,14,July
+4,no pika,S. chamaejasme,2022,forbs,20,July
+4,no pika,S. chamaejasme,2022,s_chamaejasme,9,August
+4,no pika,S. chamaejasme,2022,sedges,46,August
+4,no pika,S. chamaejasme,2022,grasses,7,August
+4,no pika,S. chamaejasme,2022,forbs,19,August
+1,pika,S. chamaejasme,2022,s_chamaejasme,7,June
+1,pika,S. chamaejasme,2022,sedges,47,June
+1,pika,S. chamaejasme,2022,grasses,10,June
+1,pika,S. chamaejasme,2022,forbs,21,June
+1,pika,S. chamaejasme,2022,s_chamaejasme,4,July
+1,pika,S. chamaejasme,2022,sedges,61,July
+1,pika,S. chamaejasme,2022,grasses,25,July
+1,pika,S. chamaejasme,2022,forbs,18,July
+1,pika,S. chamaejasme,2022,s_chamaejasme,2,August
+1,pika,S. chamaejasme,2022,sedges,59,August
+1,pika,S. chamaejasme,2022,grasses,28,August
+1,pika,S. chamaejasme,2022,forbs,20,August
+2,pika,S. chamaejasme,2022,s_chamaejasme,8,June
+2,pika,S. chamaejasme,2022,sedges,49,June
+2,pika,S. chamaejasme,2022,grasses,17,June
+2,pika,S. chamaejasme,2022,forbs,12,June
+2,pika,S. chamaejasme,2022,s_chamaejasme,5,July
+2,pika,S. chamaejasme,2022,sedges,50,July
+2,pika,S. chamaejasme,2022,grasses,30,July
+2,pika,S. chamaejasme,2022,forbs,15,July
+2,pika,S. chamaejasme,2022,s_chamaejasme,5,August
+2,pika,S. chamaejasme,2022,sedges,47,August
+2,pika,S. chamaejasme,2022,grasses,25,August
+2,pika,S. chamaejasme,2022,forbs,18,August
+3,pika,S. chamaejasme,2022,s_chamaejasme,12,June
+3,pika,S. chamaejasme,2022,sedges,52,June
+3,pika,S. chamaejasme,2022,grasses,22,June
+3,pika,S. chamaejasme,2022,forbs,15,June
+3,pika,S. chamaejasme,2022,s_chamaejasme,11,July
+3,pika,S. chamaejasme,2022,sedges,53,July
+3,pika,S. chamaejasme,2022,grasses,26,July
+3,pika,S. chamaejasme,2022,forbs,22,July
+3,pika,S. chamaejasme,2022,s_chamaejasme,4,August
+3,pika,S. chamaejasme,2022,sedges,60,August
+3,pika,S. chamaejasme,2022,grasses,16,August
+3,pika,S. chamaejasme,2022,forbs,15,August
+4,pika,S. chamaejasme,2022,s_chamaejasme,3,June
+4,pika,S. chamaejasme,2022,sedges,60,June
+4,pika,S. chamaejasme,2022,grasses,31,June
+4,pika,S. chamaejasme,2022,forbs,18,June
+4,pika,S. chamaejasme,2022,s_chamaejasme,2,July
+4,pika,S. chamaejasme,2022,sedges,42,July
+4,pika,S. chamaejasme,2022,grasses,25,July
+4,pika,S. chamaejasme,2022,forbs,24,July
+4,pika,S. chamaejasme,2022,s_chamaejasme,7,August
+4,pika,S. chamaejasme,2022,sedges,52,August
+4,pika,S. chamaejasme,2022,grasses,33,August
+4,pika,S. chamaejasme,2022,forbs,27,August
+1,no pika,No S. chamaejasme,2022,s_chamaejasme,3,June
+1,no pika,No S. chamaejasme,2022,sedges,53,June
+1,no pika,No S. chamaejasme,2022,grasses,25,June
+1,no pika,No S. chamaejasme,2022,forbs,23,June
+1,no pika,No S. chamaejasme,2022,s_chamaejasme,6,July
+1,no pika,No S. chamaejasme,2022,sedges,48,July
+1,no pika,No S. chamaejasme,2022,grasses,22,July
+1,no pika,No S. chamaejasme,2022,forbs,29,July
+1,no pika,No S. chamaejasme,2022,s_chamaejasme,2,August
+1,no pika,No S. chamaejasme,2022,sedges,58,August
+1,no pika,No S. chamaejasme,2022,grasses,28,August
+1,no pika,No S. chamaejasme,2022,forbs,12,August
+2,no pika,No S. chamaejasme,2023,s_chamaejasme,5,June
+2,no pika,No S. chamaejasme,2023,sedges,50,June
+2,no pika,No S. chamaejasme,2023,grasses,17,June
+2,no pika,No S. chamaejasme,2023,forbs,34,June
+2,no pika,No S. chamaejasme,2023,s_chamaejasme,2,July
+2,no pika,No S. chamaejasme,2023,sedges,62,July
+2,no pika,No S. chamaejasme,2023,grasses,18,July
+2,no pika,No S. chamaejasme,2023,forbs,22,July
+2,no pika,No S. chamaejasme,2023,s_chamaejasme,5,August
+2,no pika,No S. chamaejasme,2023,sedges,51,August
+2,no pika,No S. chamaejasme,2023,grasses,33,August
+2,no pika,No S. chamaejasme,2023,forbs,25,August
+3,no pika,No S. chamaejasme,2023,s_chamaejasme,1,June
+3,no pika,No S. chamaejasme,2023,sedges,42,June
+3,no pika,No S. chamaejasme,2023,grasses,27,June
+3,no pika,No S. chamaejasme,2023,forbs,25,June
+3,no pika,No S. chamaejasme,2023,s_chamaejasme,4,July
+3,no pika,No S. chamaejasme,2023,sedges,37,July
+3,no pika,No S. chamaejasme,2023,grasses,20,July
+3,no pika,No S. chamaejasme,2023,forbs,35,July
+3,no pika,No S. chamaejasme,2023,s_chamaejasme,3,August
+3,no pika,No S. chamaejasme,2023,sedges,46,August
+3,no pika,No S. chamaejasme,2023,grasses,32,August
+3,no pika,No S. chamaejasme,2023,forbs,28,August
+4,no pika,No S. chamaejasme,2023,s_chamaejasme,7,June
+4,no pika,No S. chamaejasme,2023,sedges,47,June
+4,no pika,No S. chamaejasme,2023,grasses,31,June
+4,no pika,No S. chamaejasme,2023,forbs,18,June
+4,no pika,No S. chamaejasme,2023,s_chamaejasme,3,July
+4,no pika,No S. chamaejasme,2023,sedges,45,July
+4,no pika,No S. chamaejasme,2023,grasses,31,July
+4,no pika,No S. chamaejasme,2023,forbs,24,July
+4,no pika,No S. chamaejasme,2023,s_chamaejasme,6,August
+4,no pika,No S. chamaejasme,2023,sedges,39,August
+4,no pika,No S. chamaejasme,2023,grasses,19,August
+4,no pika,No S. chamaejasme,2023,forbs,16,August
+1,pika,No S. chamaejasme,2023,s_chamaejasme,3,June
+1,pika,No S. chamaejasme,2023,sedges,59,June
+1,pika,No S. chamaejasme,2023,grasses,32,June
+1,pika,No S. chamaejasme,2023,forbs,20,June
+1,pika,No S. chamaejasme,2023,s_chamaejasme,5,July
+1,pika,No S. chamaejasme,2023,sedges,49,July
+1,pika,No S. chamaejasme,2023,grasses,15,July
+1,pika,No S. chamaejasme,2023,forbs,12,July
+1,pika,No S. chamaejasme,2023,s_chamaejasme,4,August
+1,pika,No S. chamaejasme,2023,sedges,50,August
+1,pika,No S. chamaejasme,2023,grasses,21,August
+1,pika,No S. chamaejasme,2023,forbs,20,August
+2,pika,No S. chamaejasme,2023,s_chamaejasme,6,June
+2,pika,No S. chamaejasme,2023,sedges,51,June
+2,pika,No S. chamaejasme,2023,grasses,16,June
+2,pika,No S. chamaejasme,2023,forbs,28,June
+2,pika,No S. chamaejasme,2023,s_chamaejasme,4,July
+2,pika,No S. chamaejasme,2023,sedges,57,July
+2,pika,No S. chamaejasme,2023,grasses,33,July
+2,pika,No S. chamaejasme,2023,forbs,27,July
+2,pika,No S. chamaejasme,2023,s_chamaejasme,2,August
+2,pika,No S. chamaejasme,2023,sedges,46,August
+2,pika,No S. chamaejasme,2023,grasses,25,August
+2,pika,No S. chamaejasme,2023,forbs,34,August
+3,pika,No S. chamaejasme,2023,s_chamaejasme,2,June
+3,pika,No S. chamaejasme,2023,sedges,48,June
+3,pika,No S. chamaejasme,2023,grasses,8,June
+3,pika,No S. chamaejasme,2023,forbs,34,June
+3,pika,No S. chamaejasme,2023,s_chamaejasme,2,July
+3,pika,No S. chamaejasme,2023,sedges,56,July
+3,pika,No S. chamaejasme,2023,grasses,19,July
+3,pika,No S. chamaejasme,2023,forbs,30,July
+3,pika,No S. chamaejasme,2023,s_chamaejasme,3,August
+3,pika,No S. chamaejasme,2023,sedges,57,August
+3,pika,No S. chamaejasme,2023,grasses,20,August
+3,pika,No S. chamaejasme,2023,forbs,31,August
+4,pika,No S. chamaejasme,2023,s_chamaejasme,2,June
+4,pika,No S. chamaejasme,2023,sedges,58,June
+4,pika,No S. chamaejasme,2023,grasses,26,June
+4,pika,No S. chamaejasme,2023,forbs,31,June
+4,pika,No S. chamaejasme,2023,s_chamaejasme,3,July
+4,pika,No S. chamaejasme,2023,sedges,62,July
+4,pika,No S. chamaejasme,2023,grasses,31,July
+4,pika,No S. chamaejasme,2023,forbs,21,July
+4,pika,No S. chamaejasme,2023,s_chamaejasme,2,August
+4,pika,No S. chamaejasme,2023,sedges,59,August
+4,pika,No S. chamaejasme,2023,grasses,33,August
+4,pika,No S. chamaejasme,2023,forbs,18,August
+1,no pika,S. chamaejasme,2023,s_chamaejasme,27,June
+1,no pika,S. chamaejasme,2023,sedges,40,June
+1,no pika,S. chamaejasme,2023,grasses,10,June
+1,no pika,S. chamaejasme,2023,forbs,22,June
+1,no pika,S. chamaejasme,2023,s_chamaejasme,29,July
+1,no pika,S. chamaejasme,2023,sedges,32,July
+1,no pika,S. chamaejasme,2023,grasses,12,July
+1,no pika,S. chamaejasme,2023,forbs,31,July
+1,no pika,S. chamaejasme,2023,s_chamaejasme,27,August
+1,no pika,S. chamaejasme,2023,sedges,57,August
+1,no pika,S. chamaejasme,2023,grasses,9,August
+1,no pika,S. chamaejasme,2023,forbs,29,August
+2,no pika,S. chamaejasme,2023,s_chamaejasme,10,June
+2,no pika,S. chamaejasme,2023,sedges,53,June
+2,no pika,S. chamaejasme,2023,grasses,13,June
+2,no pika,S. chamaejasme,2023,forbs,23,June
+2,no pika,S. chamaejasme,2023,s_chamaejasme,26,July
+2,no pika,S. chamaejasme,2023,sedges,57,July
+2,no pika,S. chamaejasme,2023,grasses,8,July
+2,no pika,S. chamaejasme,2023,forbs,19,July
+2,no pika,S. chamaejasme,2023,s_chamaejasme,12,August
+2,no pika,S. chamaejasme,2023,sedges,50,August
+2,no pika,S. chamaejasme,2023,grasses,10,August
+2,no pika,S. chamaejasme,2023,forbs,28,August
+3,no pika,S. chamaejasme,2023,s_chamaejasme,32,June
+3,no pika,S. chamaejasme,2023,sedges,49,June
+3,no pika,S. chamaejasme,2023,grasses,9,June
+3,no pika,S. chamaejasme,2023,forbs,19,June
+3,no pika,S. chamaejasme,2023,s_chamaejasme,37,July
+3,no pika,S. chamaejasme,2023,sedges,39,July
+3,no pika,S. chamaejasme,2023,grasses,16,July
+3,no pika,S. chamaejasme,2023,forbs,18,July
+3,no pika,S. chamaejasme,2023,s_chamaejasme,25,August
+3,no pika,S. chamaejasme,2023,sedges,42,August
+3,no pika,S. chamaejasme,2023,grasses,11,August
+3,no pika,S. chamaejasme,2023,forbs,20,August
+4,no pika,S. chamaejasme,2023,s_chamaejasme,21,June
+4,no pika,S. chamaejasme,2023,sedges,41,June
+4,no pika,S. chamaejasme,2023,grasses,21,June
+4,no pika,S. chamaejasme,2023,forbs,17,June
+4,no pika,S. chamaejasme,2023,s_chamaejasme,32,July
+4,no pika,S. chamaejasme,2023,sedges,32,July
+4,no pika,S. chamaejasme,2023,grasses,13,July
+4,no pika,S. chamaejasme,2023,forbs,24,July
+4,no pika,S. chamaejasme,2023,s_chamaejasme,18,August
+4,no pika,S. chamaejasme,2023,sedges,48,August
+4,no pika,S. chamaejasme,2023,grasses,18,August
+4,no pika,S. chamaejasme,2023,forbs,17,August
+1,pika,S. chamaejasme,2023,s_chamaejasme,12,June
+1,pika,S. chamaejasme,2023,sedges,62,June
+1,pika,S. chamaejasme,2023,grasses,13,June
+1,pika,S. chamaejasme,2023,forbs,35,June
+1,pika,S. chamaejasme,2023,s_chamaejasme,15,July
+1,pika,S. chamaejasme,2023,sedges,50,July
+1,pika,S. chamaejasme,2023,grasses,13,July
+1,pika,S. chamaejasme,2023,forbs,32,July
+1,pika,S. chamaejasme,2023,s_chamaejasme,13,August
+1,pika,S. chamaejasme,2023,sedges,58,August
+1,pika,S. chamaejasme,2023,grasses,23,August
+1,pika,S. chamaejasme,2023,forbs,29,August
+2,pika,S. chamaejasme,2023,s_chamaejasme,9,June
+2,pika,S. chamaejasme,2023,sedges,57,June
+2,pika,S. chamaejasme,2023,grasses,19,June
+2,pika,S. chamaejasme,2023,forbs,24,June
+2,pika,S. chamaejasme,2023,s_chamaejasme,10,July
+2,pika,S. chamaejasme,2023,sedges,51,July
+2,pika,S. chamaejasme,2023,grasses,29,July
+2,pika,S. chamaejasme,2023,forbs,26,July
+2,pika,S. chamaejasme,2023,s_chamaejasme,11,August
+2,pika,S. chamaejasme,2023,sedges,61,August
+2,pika,S. chamaejasme,2023,grasses,34,August
+2,pika,S. chamaejasme,2023,forbs,36,August
+3,pika,S. chamaejasme,2023,s_chamaejasme,12,June
+3,pika,S. chamaejasme,2023,sedges,40,June
+3,pika,S. chamaejasme,2023,grasses,27,June
+3,pika,S. chamaejasme,2023,forbs,36,June
+3,pika,S. chamaejasme,2023,s_chamaejasme,12,July
+3,pika,S. chamaejasme,2023,sedges,56,July
+3,pika,S. chamaejasme,2023,grasses,16,July
+3,pika,S. chamaejasme,2023,forbs,26,July
+3,pika,S. chamaejasme,2023,s_chamaejasme,7,August
+3,pika,S. chamaejasme,2023,sedges,58,August
+3,pika,S. chamaejasme,2023,grasses,26,August
+3,pika,S. chamaejasme,2023,forbs,33,August
+4,pika,S. chamaejasme,2023,s_chamaejasme,10,June
+4,pika,S. chamaejasme,2023,sedges,41,June
+4,pika,S. chamaejasme,2023,grasses,34,June
+4,pika,S. chamaejasme,2023,forbs,18,June
+4,pika,S. chamaejasme,2023,s_chamaejasme,9,July
+4,pika,S. chamaejasme,2023,sedges,48,July
+4,pika,S. chamaejasme,2023,grasses,32,July
+4,pika,S. chamaejasme,2023,forbs,15,July
+4,pika,S. chamaejasme,2023,s_chamaejasme,4,August
+4,pika,S. chamaejasme,2023,sedges,37,August
+4,pika,S. chamaejasme,2023,grasses,21,August
+4,pika,S. chamaejasme,2023,forbs,27,August

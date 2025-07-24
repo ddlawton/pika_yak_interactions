@@ -1,0 +1,3 @@
+renv/*
+.DS_Store
+.Rprofile

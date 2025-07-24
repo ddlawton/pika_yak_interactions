@@ -1,0 +1,121 @@
+plot,plant_group,feeding_clipping_freq,month,animal
+1,S. chamaejasme,60,June,pika
+1,S. chamaejasme,50,July,pika
+1,S. chamaejasme,30,August,pika
+2,S. chamaejasme,90,June,pika
+2,S. chamaejasme,70,July,pika
+2,S. chamaejasme,20,August,pika
+3,S. chamaejasme,80,June,pika
+3,S. chamaejasme,30,July,pika
+3,S. chamaejasme,40,August,pika
+4,S. chamaejasme,60,June,pika
+4,S. chamaejasme,80,July,pika
+4,S. chamaejasme,30,August,pika
+5,S. chamaejasme,70,June,pika
+5,S. chamaejasme,60,July,pika
+5,S. chamaejasme,30,August,pika
+6,S. chamaejasme,100,June,pika
+6,S. chamaejasme,80,July,pika
+6,S. chamaejasme,20,August,pika
+7,S. chamaejasme,70,June,pika
+7,S. chamaejasme,70,July,pika
+7,S. chamaejasme,50,August,pika
+8,S. chamaejasme,80,June,pika
+8,S. chamaejasme,70,July,pika
+8,S. chamaejasme,30,August,pika
+9,S. chamaejasme,80,June,pika
+9,S. chamaejasme,90,July,pika
+9,S. chamaejasme,40,August,pika
+10,S. chamaejasme,90,June,pika
+10,S. chamaejasme,70,July,pika
+10,S. chamaejasme,60,August,pika
+1,Sedges,20,June,pika
+1,Sedges,10,July,pika
+1,Sedges,50,August,pika
+2,Sedges,10,June,pika
+2,Sedges,10,July,pika
+2,Sedges,0,August,pika
+3,Sedges,0,June,pika
+3,Sedges,30,July,pika
+3,Sedges,10,August,pika
+4,Sedges,10,June,pika
+4,Sedges,20,July,pika
+4,Sedges,40,August,pika
+5,Sedges,30,June,pika
+5,Sedges,0,July,pika
+5,Sedges,30,August,pika
+6,Sedges,50,June,pika
+6,Sedges,30,July,pika
+6,Sedges,0,August,pika
+7,Sedges,10,June,pika
+7,Sedges,10,July,pika
+7,Sedges,20,August,pika
+8,Sedges,10,June,pika
+8,Sedges,0,July,pika
+8,Sedges,10,August,pika
+9,Sedges,20,June,pika
+9,Sedges,40,July,pika
+9,Sedges,10,August,pika
+10,Sedges,30,June,pika
+10,Sedges,0,July,pika
+10,Sedges,20,August,pika
+1,Grasses,0,June,pika
+1,Grasses,0,July,pika
+1,Grasses,30,August,pika
+2,Grasses,0,June,pika
+2,Grasses,10,July,pika
+2,Grasses,0,August,pika
+3,Grasses,10,June,pika
+3,Grasses,20,July,pika
+3,Grasses,40,August,pika
+4,Grasses,20,June,pika
+4,Grasses,30,July,pika
+4,Grasses,0,August,pika
+5,Grasses,0,June,pika
+5,Grasses,0,July,pika
+5,Grasses,40,August,pika
+6,Grasses,10,June,pika
+6,Grasses,30,July,pika
+6,Grasses,20,August,pika
+7,Grasses,30,June,pika
+7,Grasses,20,July,pika
+7,Grasses,0,August,pika
+8,Grasses,10,June,pika
+8,Grasses,10,July,pika
+8,Grasses,0,August,pika
+9,Grasses,0,June,pika
+9,Grasses,10,July,pika
+9,Grasses,20,August,pika
+10,Grasses,20,June,pika
+10,Grasses,20,July,pika
+10,Grasses,40,August,pika
+1,Forbs,30,June,pika
+1,Forbs,50,July,pika
+1,Forbs,30,August,pika
+2,Forbs,40,June,pika
+2,Forbs,30,July,pika
+2,Forbs,70,August,pika
+3,Forbs,20,June,pika
+3,Forbs,40,July,pika
+3,Forbs,60,August,pika
+4,Forbs,40,June,pika
+4,Forbs,20,July,pika
+4,Forbs,50,August,pika
+5,Forbs,20,June,pika
+5,Forbs,40,July,pika
+5,Forbs,20,August,pika
+6,Forbs,50,June,pika
+6,Forbs,60,July,pika
+6,Forbs,20,August,pika
+7,Forbs,20,June,pika
+7,Forbs,30,July,pika
+7,Forbs,70,August,pika
+8,Forbs,40,June,pika
+8,Forbs,10,July,pika
+8,Forbs,20,August,pika
+9,Forbs,30,June,pika
+9,Forbs,30,July,pika
+9,Forbs,30,August,pika
+10,Forbs,60,June,pika
+10,Forbs,40,July,pika
+10,Forbs,20,August,pika
