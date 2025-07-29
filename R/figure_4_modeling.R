@@ -11,6 +11,21 @@
 #     selection, estimated marginal means analysis, and plot export.
 # =============================================================
 
+# modeling steps
+# so for plots A-F, the same basic modeling structure should be used
+# with differing response variables. Lets start with the most complex 
+# we have the following variables:
+# pika_treatment (two levels), posion_plant_treatment (two levels), block (4 levels),
+# yak (2 yaks per treatment plot) and # month (three months)
+# I think I will test these following structures, from most to least complex:
+
+# response ~ pika_treatment * posion_plant_treatment + (1|block) + (1|block:yak:month) 
+# response ~ pika_treatment * posion_plant_treatment + (1 | block) + (1 | month)
+# response ~ pika_treatment * posion_plant_treatment + (1 | block)
+# response ~ pika_treatment * posion_plant_treatment + (1 | month)
+# response ~ pika_treatment * posion_plant_treatment 
+
+# I have built functions to help reduce redunancy in this script
 
 # --- Load Required Packages ---
 library(tidyverse)       # for data wrangling and visualization
@@ -26,6 +41,9 @@ library(here)            # for reproducible file paths
 here::i_am("README.md")  # ensures 'here()' resolves paths correctly
 
 
+# --- Source Utility Functions for Figure 4 ---
+source(here("functions/figure_4_utils.R"))
+
 # --- Load Cleaned Data ---
 fig4ac_dat <- read_csv(here("data/processed/fig_4ac_s3a_forage_efficiency.csv"), show_col_types = FALSE)
 
@@ -38,12 +56,13 @@ fig4ef_dat <- read_csv(here("data/processed/fig_4ef_s3b_bites_steps_ratio.csv"),
 # =============================================================
 
 fig4a_dat <- fig4ac_dat |>
-    filter(str_detect(plant,'total'))
+    filter(str_detect(plant,'total')) 
 
 
 fig4a_dat |>
   ggplot(aes(x=pika_treatment,y=forage_efficiency,color = posion_plant_treatment)) +
-    geom_jitter(position = position_jitterdodge(jitter.width = 0.2))
+    geom_jitter(position = position_jitterdodge(jitter.width = 0.2))  +
+    MetBrewer::scale_color_met_d(name = "Lakota")
 
 fig4a_dat |>
   ggplot(aes(x = month, y = forage_efficiency, color = posion_plant_treatment)) +
@@ -54,5 +73,271 @@ fig4a_dat |>
   theme_pubr(base_size = 10) +
   theme(legend.position = "bottom", legend.title = element_blank())
 
+fig4a_dat |>
+  ggplot(aes(x = yak, y = forage_efficiency, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
+  MetBrewer::scale_color_met_d(name = "Lakota") +
+  labs(y = "Total bites/h", color = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank()) +
+  facet_grid(posion_plant_treatment~block)
 
-unique(fig4ac_dat$plant)
+
+fig4a_dat |>
+  ggplot(aes(x = block, y = forage_efficiency, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
+  MetBrewer::scale_color_met_d(name = "Lakota") +
+  labs(y = "Total bites/h", color = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank())
+
+# raw data viz summary
+# total bites per yak differed in posion plant treatment between in the no pika treatments
+# with the exception of s chamaejasme plots in the no poike treatments, pika and no pika treatments 
+# didnt vary all that much
+# really no differnce months or yak 
+# there might be some differences between the blocks.
+
+# Figure 4A modeling
+
+fig4a_models <- fit_candidate_models('forage_efficiency',
+  data = fig4a_dat,
+  family = gaussian())
+
+fig4a_model_selection_table <- fig4a_models$table
+
+# fixed effect only model, month ranef, and block ranef models
+# have the must suuport.
+# I think that keeping the block as a random effect makes the most since
+# given that this follows the experimental design closely
+
+
+fig4a_best_model <- fig4a_models$models$mod_b
+summary(fig4a_best_model)
+
+#diagnostics
+performance::check_model(fig4a_best_model)
+
+# Extract EMMs
+
+fig4a_emms <- extract_emms(fig4a_best_model, 
+  ~ pika_treatment * posion_plant_treatment, 
+  adjust = "sidak")
+
+# now plotting fixed effect
+
+fig4a_plot <- plot_emms(data = fig4a_dat, 
+  emms_letters = fig4a_emms$cld, 
+  yvar = 'forage_efficiency', 
+  ylab = 'total bites\\h', 
+  y_letter_override = 800) 
+
+# now plotting random effect
+
+fig4a_ranef_plot <- plot_random_effects(model = fig4a_best_model, 
+  data = fig4a_dat, 
+  grouping_var = 'block', 
+  response = 'forage_efficiency') 
+
+# figure 4A modeling summary
+# there was no difference between no pika and pika
+# there was an interactive effect with no pike x s. chamaejasme treatment
+# having lower bites overall. All other combinations were very similiar
+# block as suggested by the BLUPs, really had a small impact
+
+# FIgure 4B
+
+fig4b_dat <- fig4ac_dat |>
+    filter(str_detect(plant,'sedges'))
+
+
+# Raw visualization
+
+fig4b_dat |>
+  ggplot(aes(x=pika_treatment,y=forage_efficiency,color = posion_plant_treatment)) +
+    geom_jitter(position = position_jitterdodge(jitter.width = 0.2))  +
+    MetBrewer::scale_color_met_d(name = "Lakota")
+
+fig4b_dat |>
+  ggplot(aes(x = month, y = forage_efficiency, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
+  MetBrewer::scale_color_met_d(name = "Lakota") +
+  labs(y = "Sedge bites/h", color = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank())
+
+fig4b_dat |>
+  ggplot(aes(x = yak, y = forage_efficiency, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
+  MetBrewer::scale_color_met_d(name = "Demuth") +
+  labs(y = "Sedge bites/h", color = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank()) +
+  facet_grid(posion_plant_treatment~block)
+
+
+fig4b_dat |>
+  ggplot(aes(x = block, y = forage_efficiency, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
+  MetBrewer::scale_color_met_d(name = "Lakota") +
+  labs(y = "Sedge bites/h", color = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank())
+
+# Figure 4B raw visualization summary
+# this looks very similiar to 4A.
+# pika v no pika -- very similiar probably not significant
+# pika x posion treat -- probably signficant following same pattern as Figure 4A
+# little variation in block or yak. maybe some with month.
+
+# Figure 4B modeling
+
+fig4b_models <- fit_candidate_models('forage_efficiency',
+  data = fig4b_dat,
+  family = gaussian())
+
+fig4b_model_selection_table <- fig4b_models$table
+
+# fixed effect only model, month ranef, and block ranef models
+# have the must suuport.
+# I think that keeping the block as a random effect makes the most since
+# given that this follows the experimental design closely
+
+
+fig4b_best_model <- fig4b_models$models$mod_b
+summary(fig4b_best_model)
+
+#diagnostics
+performance::check_model(fig4b_best_model)
+
+# Extract EMMs
+
+fig4b_emms <- extract_emms(fig4b_best_model, 
+  ~ pika_treatment * posion_plant_treatment, 
+  adjust = "sidak")
+
+# now plotting fixed effect
+
+fig4b_plot <- plot_emms(data = fig4b_dat, 
+  emms_letters = fig4b_emms$cld, 
+  yvar = 'forage_efficiency', 
+  ylab = 'total bites\\h', 
+  y_letter_override = 460) 
+
+# now plotting random effect
+
+fig4b_ranef_plot <- plot_random_effects(model = fig4b_best_model, 
+  data = fig4b_dat, 
+  grouping_var = 'block', 
+  response = 'forage_efficiency') 
+
+
+# figure 4B modeling summary
+# As suggested by raw visualization, the story is very similiar to Figure 4A
+# there was no difference between no pika and pika
+# there was an interactive effect with no pike x s. chamaejasme treatment
+# having lower bites overall. All other combinations were very similiar
+# block as suggested by the BLUPs, really had a small impact
+# but i chose the glmm model just to keep things consistent and due to the experimental design
+
+# Figure 4C
+
+fig4c_dat <- fig4ac_dat |>
+    filter(str_detect(plant,'grasses'))
+
+fig4c_dat |>
+  ggplot(aes(x=pika_treatment,y=forage_efficiency,color = posion_plant_treatment)) +
+    geom_jitter(position = position_jitterdodge(jitter.width = 0.2))  +
+    MetBrewer::scale_color_met_d(name = "Lakota")
+
+fig4c_dat |>
+  ggplot(aes(x = month, y = forage_efficiency, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
+  MetBrewer::scale_color_met_d(name = "Lakota") +
+  labs(y = "grass bites/h", color = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank())
+
+fig4c_dat |>
+  ggplot(aes(x = yak, y = forage_efficiency, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
+  MetBrewer::scale_color_met_d(name = "Demuth") +
+  labs(y = "grass bites/h", color = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank()) +
+  facet_grid(posion_plant_treatment~block)
+
+fig4c_dat |>
+  ggplot(aes(x = block, y = forage_efficiency, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
+  MetBrewer::scale_color_met_d(name = "Lakota") +
+  labs(y = "grass bites/h", color = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank())
+
+# raw data viz summary
+# very similiar 
+# total bites per yak differed in posion plant treatment between in the no pika treatments
+# with the exception of s chamaejasme plots in the no poike treatments, pika and no pika treatments 
+# didnt vary all that much
+# really no differnce months or yak 
+# there might be some differences between the blocks.
+
+test_dat <- fig4ac_dat |>
+    filter(!str_detect(plant,'total')) |>
+    mutate(plant = gsub('_[0-9]+$','',plant))
+
+mod <- glmmTMB(forage_efficiency ~
+  pika_treatment * 
+  posion_plant_treatment * 
+  plant +
+  (1| block:yak),
+  data = test_dat,
+  family = gaussian())
+
+test = extract_emms(mod,spec = ~pika_treatment * posion_plant_treatment * plant)
+
+test
+summary(mod)
+
+test_emms <- test$emm
+
+test_emms |>
+    ggplot(aes(x=pika_treatment,y=emmean,))
+
+
+dodge_width=0.75
+y_letter_override = 0
+test_dat |>
+  left_join(test$cld, by = c("pika_treatment", "posion_plant_treatment","plant")) |>
+  ggplot(aes(x = pika_treatment, y = forage_efficiency, color = posion_plant_treatment)) +
+  geom_jitter(
+    size = 1, alpha = 0.4,
+    position = position_jitterdodge(jitter.width = 0.2, dodge.width = dodge_width)
+  ) +
+  geom_point(
+    data = test$cld,
+    aes(x = pika_treatment, y = emmean, fill = posion_plant_treatment),
+    position = position_dodge(width = dodge_width),
+    alpha = 1, size = 4, pch = 21, color = "black"
+  ) +
+  geom_text(
+    data = test$cld,
+    aes(x = pika_treatment, y = mean(emmean) * 1.5, label = letters, group = posion_plant_treatment),
+    position = position_dodge(width = dodge_width),
+    size = 5, show.legend = FALSE, color = "black"
+  ) +
+  MetBrewer::scale_fill_met_d(name = "Lakota") +
+  MetBrewer::scale_color_met_d(name = "Lakota") +
+  #labs(y = ylab, x = "", color = "Poison plant treatment", fill = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank()) +
+  facet_wrap(~plant,nrow=2,scales='free')
