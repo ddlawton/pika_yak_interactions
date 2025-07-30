@@ -40,7 +40,7 @@ fig3d_dat <- read_csv(here("data/processed/fig_3d_s2_forage_quality.csv"), show_
 
 # Raw data plot
 fig3a_weight_gain_by_month <- fig3a_dat |>
-  select(block, year, month, yak, pika_treatment, weight_gain) |>
+  dplyr::select(block, year, month, yak, pika_treatment, weight_gain) |>
   ggplot(aes(x = month, y = weight_gain, color = factor(block))) +
   geom_jitter(width = 0.2) +
   facet_grid(~pika_treatment)
@@ -80,8 +80,8 @@ fig3a_model_summary <- tidy(fig3a_models$mod4)
 write_csv(fig3a_model_table, here("output/figure_3/tables/figure_3a_model_selection_criteria.csv"))
 write_csv(fig3a_model_summary, here("output/figure_3/tables/figure_3a_model_summary.csv"))
 
-ggsave(fig3a_re_plot, here("output/figure_3/plots/figure_3a_plant_month_conditional_mean.png"), width = 5, height = 5)
-ggsave(fig3a_weight_gain_by_month, here("output/figure_3/plots/figure_3a_raw_weight_by_month.png"), width = 10, height = 5)
+ggsave(fig3a_re_plot,file=here("output/figure_3/plots/figure_3a_plant_month_conditional_mean.png"), width = 5, height = 5)
+ggsave(fig3a_weight_gain_by_month, file = here("output/figure_3/plots/figure_3a_raw_weight_by_month.png"), width = 10, height = 5)
 
 # =============================================================
 # FIGURE 3B — S. chamaejasme Cover
@@ -118,11 +118,11 @@ fig3b_re_plot <- plot_random_effects(fig3b_models$mod4, fig3b_dat, "month", "cov
 # Export
 fig3b_model_summary <- tidy(fig3b_models$mod4)
 
-write_csv(fig3b_model_table, here("output/figure_3/tables/figure_3b_model_selection_criteria.csv"))
-write_csv(fig3b_model_summary, here("output/figure_3/tables/figure_3b_model_summary.csv"))
+write_csv(fig3b_model_table, file = here("output/figure_3/tables/figure_3b_model_selection_criteria.csv"))
+write_csv(fig3b_model_summary, file = here("output/figure_3/tables/figure_3b_model_summary.csv"))
 
-ggsave(fig3b_re_plot, here("output/figure_3/plots/figure_3b_month_conditional_mean.png"), width = 5, height = 5)
-ggsave(grasscover_treatments_facet_month_plot, here("output/figure_3/plots/figure_3b_grasscover_treatments_facet_month.png"), width = 10, height = 5)
+ggsave(fig3b_re_plot, file = here("output/figure_3/plots/figure_3b_month_conditional_mean.png"), width = 5, height = 5)
+ggsave(grasscover_treatments_facet_month_plot, file = here("output/figure_3/plots/figure_3b_grasscover_treatments_facet_month.png"), width = 10, height = 5)
 
 # =============================================================
 # FIGURE 3C — Grass Cover
@@ -149,7 +149,7 @@ cover_by_month_facet_block_pika <- cover_by_month_facet_pika +
 
 # Fit and evaluate models
 fig3c_models <- fit_models("cover ~ pika_treatment * posion_plant_treatment", fig3c_dat)
-fig3c_model_table <- model_selection_table(fig3c_models, model_names = fig3c_model_names)
+fig3c_model_table <- model_selection_table(fig3c_models, model_names = fig3a_model_names)
 summary(fig3c_models$mod4)
 
 fig3c_emms <- extract_emms(fig3c_models$mod4, "pika_treatment * posion_plant_treatment")
@@ -158,12 +158,12 @@ fig3c_re_plot <- plot_random_effects(fig3c_models$mod4, fig3c_dat, "month", "cov
 
 fig3c_model_summary <- tidy(fig3c_models$mod4)
 
-write_csv(fig3c_model_table, here("output/figure_3/tables/figure_3c_model_selection_criteria.csv"))
-write_csv(fig3c_model_summary, here("output/figure_3/tables/figure_3c_model_summary.csv"))
+write_csv(fig3c_model_table, file = here("output/figure_3/tables/figure_3c_model_selection_criteria.csv"))
+write_csv(fig3c_model_summary, file = here("output/figure_3/tables/figure_3c_model_summary.csv"))
 
-ggsave(fig3c_re_plot, here("output/figure_3/plots/figure_3c_month_conditional_mean.png"), width = 5, height = 5)
-ggsave(cover_by_month_facet_pika, here("output/figure_3/plots/figure_3c_cover_by_month_facet_pika.png"), width = 5, height = 5)
-ggsave(cover_by_month_facet_block_pika, here("output/figure_3/plots/figure_3c_cover_by_month_facet_block_pika.png"), width = 6, height = 6)
+ggsave(fig3c_re_plot, file = here("output/figure_3/plots/figure_3c_month_conditional_mean.png"), width = 5, height = 5)
+ggsave(cover_by_month_facet_pika, file = here("output/figure_3/plots/figure_3c_cover_by_month_facet_pika.png"), width = 5, height = 5)
+ggsave(cover_by_month_facet_block_pika, file = here("output/figure_3/plots/figure_3c_cover_by_month_facet_block_pika.png"), width = 6, height = 6)
 
 # =============================================================
 # FIGURE 3D — Forage Quality (Crude Protein %)
@@ -189,7 +189,7 @@ cp_by_month_facet_block_pika <- cp_by_month_facet_pika + facet_grid(block ~ pika
 
 # Model fitting
 fig3d_models <- fit_models("forage_quality ~ pika_treatment * posion_plant_treatment", fig3d_dat)
-fig3d_model_table <- model_selection_table(fig3d_models, model_names = fig3d_model_names)
+fig3d_model_table <- model_selection_table(fig3d_models, model_names = fig3a_model_names)
 summary(fig3d_models$mod4)
 
 fig3d_emms <- extract_emms(fig3d_models$mod4, "pika_treatment * posion_plant_treatment")
@@ -198,18 +198,18 @@ fig3d_re_plot <- plot_random_effects(fig3d_models$mod4, fig3d_dat, "month", "for
 
 fig3d_model_summary <- tidy(fig3d_models$mod4)
 
-write_csv(fig3d_model_table, here("output/figure_3/tables/figure_3d_model_selection_criteria.csv"))
-write_csv(fig3d_model_summary, here("output/figure_3/tables/figure_3d_model_summary.csv"))
+write_csv(fig3d_model_table, file = here("output/figure_3/tables/figure_3d_model_selection_criteria.csv"))
+write_csv(fig3d_model_summary, file = here("output/figure_3/tables/figure_3d_model_summary.csv"))
 
-ggsave(fig3d_re_plot, here("output/figure_3/plots/figure_3d_month_conditional_mean.png"), width = 5, height = 5)
-ggsave(cp_by_month_facet_pika, here("output/figure_3/plots/figure_3d_cp_by_month_facet_pika.png"), width = 5, height = 5)
-ggsave(cp_by_month_facet_block_pika, here("output/figure_3/plots/figure_3d_cp_by_month_facet_block_pika.png"), width = 5, height = 5)
+ggsave(fig3d_re_plot, file = here("output/figure_3/plots/figure_3d_month_conditional_mean.png"), width = 5, height = 5)
+ggsave(cp_by_month_facet_pika, file = here("output/figure_3/plots/figure_3d_cp_by_month_facet_pika.png"), width = 5, height = 5)
+ggsave(cp_by_month_facet_block_pika, file = here("output/figure_3/plots/figure_3d_cp_by_month_facet_block_pika.png"), width = 5, height = 5)
 
 # =============================================================
 # FINAL COMPOSITE FIGURE: FIGURE 3 (A–D)
 # =============================================================
 
 fig3_plot <- (fig3a_plot + fig3b_plot) / (fig3c_plot + fig3d_plot) +
-  plot_annotation(tag_levels = "A")
+  plot_annotation(tag_levels = "A") + plot_layout(guides = "collect") & theme(legend.position = 'bottom')
 
-ggsave(fig3_plot, file = here("output/figure_3/figure_3.png"), width = 10, height = 10)
+ggsave(fig3_plot, file = here("output/figure_3/figure_3.png"), width = 6, height = 6)
