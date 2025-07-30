@@ -147,7 +147,7 @@ fig4a_ranef_plot <- plot_random_effects(model = fig4a_best_model,
 # having lower bites overall. All other combinations were very similiar
 # block as suggested by the BLUPs, really had a small impact
 
-# FIgure 4B
+# Figure 4B
 
 fig4b_dat <- fig4ac_dat |>
     filter(str_detect(plant,'sedges'))
@@ -226,7 +226,7 @@ fig4b_emms <- extract_emms(fig4b_best_model,
 fig4b_plot <- plot_emms(data = fig4b_dat, 
   emms_letters = fig4b_emms$cld, 
   yvar = 'forage_efficiency', 
-  ylab = 'total bites\\h', 
+  ylab = 'sedge bites\\h', 
   y_letter_override = 460) 
 
 # now plotting random effect
@@ -291,53 +291,339 @@ fig4c_dat |>
 # really no differnce months or yak 
 # there might be some differences between the blocks.
 
-test_dat <- fig4ac_dat |>
-    filter(!str_detect(plant,'total')) |>
-    mutate(plant = gsub('_[0-9]+$','',plant))
+# Figure 4C modeling
 
-mod <- glmmTMB(forage_efficiency ~
-  pika_treatment * 
-  posion_plant_treatment * 
-  plant +
-  (1| block:yak),
-  data = test_dat,
+fig4c_models <- fit_candidate_models('forage_efficiency',
+  data = fig4c_dat,
   family = gaussian())
 
-test = extract_emms(mod,spec = ~pika_treatment * posion_plant_treatment * plant)
+fig4c_model_selection_table <- fig4c_models$table
 
-test
-summary(mod)
-
-test_emms <- test$emm
-
-test_emms |>
-    ggplot(aes(x=pika_treatment,y=emmean,))
+# fixed effect only model, month ranef, and block ranef models
+# have the most support.
+# I think that keeping the block as a random effect makes the most since
+# given that this follows the experimental design closely
 
 
-dodge_width=0.75
-y_letter_override = 0
-test_dat |>
-  left_join(test$cld, by = c("pika_treatment", "posion_plant_treatment","plant")) |>
-  ggplot(aes(x = pika_treatment, y = forage_efficiency, color = posion_plant_treatment)) +
-  geom_jitter(
-    size = 1, alpha = 0.4,
-    position = position_jitterdodge(jitter.width = 0.2, dodge.width = dodge_width)
-  ) +
-  geom_point(
-    data = test$cld,
-    aes(x = pika_treatment, y = emmean, fill = posion_plant_treatment),
-    position = position_dodge(width = dodge_width),
-    alpha = 1, size = 4, pch = 21, color = "black"
-  ) +
-  geom_text(
-    data = test$cld,
-    aes(x = pika_treatment, y = mean(emmean) * 1.5, label = letters, group = posion_plant_treatment),
-    position = position_dodge(width = dodge_width),
-    size = 5, show.legend = FALSE, color = "black"
-  ) +
-  MetBrewer::scale_fill_met_d(name = "Lakota") +
+fig4c_best_model <- fig4c_models$models$mod_b
+summary(fig4c_best_model)
+
+#diagnostics
+performance::check_model(fig4c_best_model)
+
+# Extract EMMs
+
+fig4c_emms <- extract_emms(fig4c_best_model, 
+  ~ pika_treatment * posion_plant_treatment, 
+  adjust = "sidak")
+
+# now plotting fixed effect
+
+fig4c_plot <- plot_emms(data = fig4c_dat, 
+  emms_letters = fig4c_emms$cld, 
+  yvar = 'forage_efficiency', 
+  ylab = 'grass bites\\h', 
+  y_letter_override = 320) 
+
+# now plotting random effect
+
+fig4c_ranef_plot <- plot_random_effects(model = fig4c_best_model, 
+  data = fig4c_dat, 
+  grouping_var = 'block', 
+  response = 'forage_efficiency') 
+
+# Figure 4C modeling summary
+# There was no main effect of pika treatment on forage efficiency.
+# S. chamaejasme treatment alone significantly reduced bites.
+# However, this effect was moderated by an interaction: in pika-present plots,
+# the negative impact of S. chamaejasme was largely mitigated.
+# In other words, S. chamaejasme only lowered bites when pika were absent.
+# All other combinations resulted in similar bite rates.
+# Block-level variation was minimal, with low random intercept variance.
+
+# Figure 4D
+fig4d_dat <- fig4d_dat |>
+  mutate(yak = gsub("_[^_]*$", "", yak))
+
+
+fig4d_dat |>
+  ggplot(aes(x=pika_treatment,y=total_steps,color = posion_plant_treatment)) +
+    geom_jitter(position = position_jitterdodge(jitter.width = 0.2))  +
+    MetBrewer::scale_color_met_d(name = "Lakota")
+
+fig4d_dat |>
+  ggplot(aes(x = month, y = total_steps, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
   MetBrewer::scale_color_met_d(name = "Lakota") +
-  #labs(y = ylab, x = "", color = "Poison plant treatment", fill = "Poison plant treatment") +
+  labs(y = "total steps/h", color = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank())
+
+fig4d_dat |>
+  ggplot(aes(x = yak, y = total_steps, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
+  MetBrewer::scale_color_met_d(name = "Demuth") +
+  labs(y = "total steps/h", color = "Poison plant treatment") +
   theme_pubr(base_size = 10) +
   theme(legend.position = "bottom", legend.title = element_blank()) +
-  facet_wrap(~plant,nrow=2,scales='free')
+  facet_grid(posion_plant_treatment~block)
+
+fig4d_dat |>
+  ggplot(aes(x = block, y = total_steps, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
+  MetBrewer::scale_color_met_d(name = "Lakota") +
+  labs(y = "total steps/h", color = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank())
+
+
+# raw data viz summary
+# It appears that yaks took more steps in the no pika x S. chamaejasme plots as compare to other treatments
+# doesnt look like a strong effect of block, yak, or month on total steps.
+
+
+# Figure 4D modeling
+
+fig4d_models <- fit_candidate_models('total_steps',
+  data = fig4d_dat,
+  family = gaussian())
+
+fig4d_model_selection_table <- fig4d_models$table
+
+# fixed effect only model, month ranef, and block ranef models
+# have the must suuport.
+# the full model didnt converged which isnt a problem
+# I think that keeping the block as a random effect makes the most since
+# given that this follows the experimental design closely
+
+
+fig4d_best_model <- fig4d_models$models$mod_b
+summary(fig4d_best_model)
+
+#diagnostics
+performance::check_model(fig4d_best_model)
+
+# Extract EMMs
+
+fig4d_emms <- extract_emms(fig4d_best_model, 
+  ~ pika_treatment * posion_plant_treatment, 
+  adjust = "sidak")
+
+# now plotting fixed effect
+
+fig4d_plot <- plot_emms(data = fig4d_dat, 
+  emms_letters = fig4d_emms$cld, 
+  yvar = 'total_steps', 
+  ylab = 'total steps\\h', 
+  y_letter_override = 1000) 
+
+# now plotting random effect
+
+fig4d_ranef_plot <- plot_random_effects(model = fig4d_best_model, 
+  data = fig4d_dat, 
+  grouping_var = 'block', 
+  response = 'total_steps') 
+
+# Figure 4D modeling summary
+# There was no main effect of pika treatment on total steps taken.
+# S. chamaejasme treatment alone significantly increased total steps.
+# However, there was a strong interaction: in pika-present plots,
+# this increase in steps was entirely reversed.
+# That is, S. chamaejasme increased movement only when pika were absent.
+# All other treatment combinations showed relatively similar movement levels.
+# Block-level variance was minimal, suggesting low site-level influence.
+
+
+# =============================================================
+# Figure 4E — Foraging efficiency (bites/step ratio) — Sedges
+# =============================================================
+
+fige_dat <- fig4ef_dat |>
+  filter(plant == 'sedges') |>
+  rename(yak = yak_num)
+
+# Raw visualizations
+fige_dat |>
+  ggplot(aes(x = pika_treatment, y = bites_steps_ratio, color = posion_plant_treatment)) +
+  geom_jitter(position = position_jitterdodge(jitter.width = 0.2)) +
+  MetBrewer::scale_color_met_d(name = "Lakota")
+
+fige_dat |>
+  ggplot(aes(x = month, y = bites_steps_ratio, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
+  MetBrewer::scale_color_met_d(name = "Lakota") +
+  labs(y = "Bites/step (sedges)", color = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank())
+
+fige_dat |>
+  ggplot(aes(x = yak, y = bites_steps_ratio, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
+  MetBrewer::scale_color_met_d(name = "Demuth") +
+  labs(y = "Bites/step (sedges)", color = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank()) +
+  facet_grid(posion_plant_treatment~block)
+
+fige_dat |>
+  ggplot(aes(x = block, y = bites_steps_ratio, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
+  MetBrewer::scale_color_met_d(name = "Lakota") +
+  labs(y = "Bites/step (sedges)", color = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank())
+
+# Raw visualization summary
+# very similiar to all other panels. THe interactive effect of the pike and posion plant treatments
+
+# Modeling
+fig4e_models <- fit_candidate_models(
+  response = 'bites_steps_ratio',
+  data = fige_dat,
+  family = gaussian()
+)
+
+fig4e_model_selection_table <- fig4e_models$table
+
+fig4e_best_model <- fig4e_models$models$mod_b
+summary(fig4e_best_model)
+
+performance::check_model(fig4e_best_model)
+
+fig4e_emms <- extract_emms(
+  model = fig4e_best_model,
+  spec = ~ pika_treatment * posion_plant_treatment,
+  adjust = "sidak"
+)
+
+fig4e_plot <- plot_emms(
+  data = fige_dat,
+  emms_letters = fig4e_emms$cld,
+  yvar = 'bites_steps_ratio',
+  ylab = 'sedge bites per step',
+  y_letter_override = 1
+)
+
+fig4e_ranef_plot <- plot_random_effects(
+  model = fig4e_best_model,
+  data = fige_dat,
+  grouping_var = 'block',
+  response = 'bites_steps_ratio'
+)
+
+# Figure 4E modeling summary
+# There was no main effect of pika treatment on sedge bite-to-step ratio.
+# S. chamaejasme treatment significantly reduced the ratio of sedge bites to steps.
+# However, this effect was reversed in pika-present plots:
+# the negative effect of S. chamaejasme was almost entirely offset.
+# As a result, bite efficiency was only reduced when pika were absent.
+# Other combinations showed very similar efficiency levels.
+# Block-level variation was minimal, with very low random effect variance.
+
+
+
+# =============================================================
+# Figure 4F — Foraging efficiency (bites/step ratio) — Grasses
+# =============================================================
+
+figf_dat <- fig4ef_dat |>
+  filter(plant == 'grasses')  |>
+  rename(yak = yak_num)
+  
+
+# Raw visualizations
+figf_dat |>
+  ggplot(aes(x = pika_treatment, y = bites_steps_ratio, color = posion_plant_treatment)) +
+  geom_jitter(position = position_jitterdodge(jitter.width = 0.2)) +
+  MetBrewer::scale_color_met_d(name = "Lakota")
+
+figf_dat |>
+  ggplot(aes(x = month, y = bites_steps_ratio, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
+  MetBrewer::scale_color_met_d(name = "Lakota") +
+  labs(y = "Bites/step (grasses)", color = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank())
+
+figf_dat |>
+  ggplot(aes(x = yak, y = bites_steps_ratio, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
+  MetBrewer::scale_color_met_d(name = "Demuth") +
+  labs(y = "Bites/step (grasses)", color = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank()) +
+  facet_grid(posion_plant_treatment~block)
+
+figf_dat |>
+  ggplot(aes(x = block, y = bites_steps_ratio, color = posion_plant_treatment)) +
+  geom_jitter(size = 1, position = position_jitterdodge(jitter.width = 0.2)) +
+  facet_wrap(~pika_treatment) +
+  MetBrewer::scale_color_met_d(name = "Lakota") +
+  labs(y = "Bites/step (grasses)", color = "Poison plant treatment") +
+  theme_pubr(base_size = 10) +
+  theme(legend.position = "bottom", legend.title = element_blank())
+
+# It is the same story
+
+# Modeling
+fig4f_models <- fit_candidate_models(
+  response = 'bites_steps_ratio',
+  data = figf_dat,
+  family = gaussian()
+)
+
+fig4f_model_selection_table <- fig4f_models$table
+
+fig4f_best_model <- fig4f_models$models$mod_b
+summary(fig4f_best_model)
+
+performance::check_model(fig4f_best_model)
+
+fig4f_emms <- extract_emms(
+  model = fig4f_best_model,
+  spec = ~ pika_treatment * posion_plant_treatment,
+  adjust = "sidak"
+)
+
+fig4f_plot <- plot_emms(
+  data = figf_dat,
+  emms_letters = fig4f_emms$cld,
+  yvar = 'bites_steps_ratio',
+  ylab = 'grass bites per step',
+  y_letter_override = 0.7
+)
+
+fig4f_ranef_plot <- plot_random_effects(
+  model = fig4f_best_model,
+  data = figf_dat,
+  grouping_var = 'block',
+  response = 'bites_steps_ratio'
+)
+
+# Figure 4F modeling summary
+# There was no main effect of pika treatment on bite-to-step ratio.
+# S. chamaejasme treatment significantly reduced foraging efficiency.
+# This effect was again moderated by an interaction: in the presence of pika,
+# the negative impact of S. chamaejasme was partially reversed.
+# That is, forage efficiency dropped only when pika were absent and S. chamaejasme was present.
+# All other combinations produced similar bite efficiency levels.
+# Block-level variation was negligible, with near-zero random intercept variance.
+
+
+# =============================================================
+# FINAL COMPOSITE FIGURE: FIGURE 4 (A–F)
+# =============================================================
+
+fig4_plot <- (fig4a_plot | fig4b_plot | fig4c_plot) / (fig4d_plot | fig4e_plot | fig4f_plot) +
+    plot_annotation(tag_levels = 'A') + plot_layout(guides = "collect") & theme(legend.position = 'bottom')
+  
+ggsave(fig4_plot, file = here("output/figure_4/figure_4.png"), width = 10, height = 5)
+  
