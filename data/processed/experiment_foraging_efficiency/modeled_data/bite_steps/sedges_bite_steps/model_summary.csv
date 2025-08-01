@@ -1,0 +1,5 @@
+effect,component,term,estimate,std.error,statistic,p.value
+fixed,cond,(Intercept),-6.517104380027314,NA,NA,NA
+fixed,cond,pika_treatmentpika,0.04262892087323401,NA,NA,NA
+fixed,cond,posion_plant_treatmentS. chamaejasme,-0.04232538049508766,NA,NA,NA
+fixed,cond,pika_treatmentpika:posion_plant_treatmentS. chamaejasme,0.1980017236047828,NA,NA,NA

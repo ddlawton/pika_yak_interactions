@@ -1,15 +1,71 @@
+# =============================================================
+# Experimental Treatments: Plant Cover
+# -------------------------------------------------------------
+# Author: Douglas Lawton
+# Date: July 24, 2025
+# Purpose: Clean, document, and fully reproduce the analyses and
+#          visualizations of plant cover across pika and 
+#          poisonous plant treatment combinations.
+# =============================================================
 
+# --- Load Required Packages ---
+library(tidyverse)       # Data wrangling and plotting
+library(glmmTMB)         # Generalized linear mixed models
+library(emmeans)         # Estimated marginal means
+library(multcomp)        # Multiple comparisons
+library(broom.mixed)     # Tidy model outputs from mixed models
+library(DHARMa)          # GLMM diagnostics
+library(ggpubr)          # Publication-ready ggplots
+library(here)            # Relative file paths
+library(glue)            # String interpolation
 
+# --- Set Root Directory for Project ---
+here::i_am("README.md")  # Anchor project for reproducible paths
 
-fig3b_3c_dat_split <- fig3b_3c_dat |>
-    ungroup() |>
-    (plant)
+# --- Custom Color Palette ---
+pink <- '#ff8080'
+green <- '#2fc09b'
 
-names(fig3b_3c_dat_split) <- fig3b_3c_dat |>
+# =============================================================
+# Load and Prepare Data
+# =============================================================
+
+# --- Load all processed CSVs ---
+csv_dir <- here("data/processed/experiment_plant_cover")
+csv_files <- list.files(csv_dir, pattern = "\\.csv$", full.names = TRUE)
+
+walk(csv_files, function(file) {
+  obj_name <- tools::file_path_sans_ext(basename(file))
+  assign(obj_name, read_csv(file, show_col_types = FALSE), envir = .GlobalEnv)
+})
+
+# --- Prepare plant cover dataset ---
+plant_cover_by_treatment <- plant_cover_by_treatment |>
+  group_by(plant) |>
+  mutate(
+    n_obs = n(),
+    cover_beta = ((cover * (n_obs - 1) + 0.5) / n_obs) / 100
+  ) |>
+  select(-n_obs) |>
+  mutate(
+    year = factor(year),
+    block = factor(block)
+  )
+
+# --- Split data by plant type ---
+plant_cover_by_treatment_split <- plant_cover_by_treatment |>
+  ungroup() |>
+  group_split(plant)
+
+names(plant_cover_by_treatment_split) <- plant_cover_by_treatment |>
   distinct(plant) |>
   pull(plant)
 
-# Function to fit both models to a single plant-level dataset
+# =============================================================
+# Fit GLMMs: Gaussian and Beta Families
+# =============================================================
+
+# --- Fit both Gaussian and Beta models ---
 fit_models <- function(df) {
   list(
     beta = glmmTMB(
@@ -27,55 +83,59 @@ fit_models <- function(df) {
   )
 }
 
-# Apply to each plant type
-plant_models <- map(fig3b_3c_dat_split, fit_models)
+plant_models <- map(plant_cover_by_treatment_split, fit_models)
 
-# Function to generate and save diagnostics for a single model
+# =============================================================
+# Model Diagnostics
+# =============================================================
+
+# --- Save residual diagnostics for a single model ---
 save_diagnostics <- function(plant_name, model, model_type) {
   png(
-    filename = here("output/figure_3/diagnostic_plots", glue::glue("{plant_name}_{model_type}_diagnostics.png")),
+    filename = here("output/experiment_plant_cover/diagnostic_plots", 
+                    glue("{plant_name}_{model_type}_diagnostics.png")),
     width = 1200, height = 600, res = 150
   )
   
-  par(mfrow = c(1, 2), oma = c(0, 0, 2, 0))  # 1 row, 2 plots, title space
+  par(mfrow = c(1, 2), oma = c(0, 0, 2, 0))  # 1 row, 2 plots
 
-  # Simulate and plot residuals
   resid <- simulateResiduals(model, n = 1000)
   plotQQunif(resid)
   plotResiduals(resid)
 
-  # Add overall title
-  mtext(glue::glue("DHARMa Diagnostics – {plant_name} ({model_type})"), outer = TRUE, cex = 1.2)
+  mtext(glue("DHARMa Diagnostics – {plant_name} ({model_type})"), outer = TRUE, cex = 1.2)
 
   dev.off()
 }
 
-# Loop over each plant and model type
+# --- Generate diagnostics for each plant and model type ---
 iwalk(plant_models, function(models, plant_name) {
   save_diagnostics(plant_name, models$gauss, "gauss")
   save_diagnostics(plant_name, models$beta, "beta")
 })
 
+# =============================================================
+# Choose Best Model (Beta)
+# =============================================================
 
-# I will stick with the beta family since it similar fit to the gaussian, but fit better
 plant_models_beta <- map(plant_models, "beta")
 
+# =============================================================
+# Generate and Save Plots
+# =============================================================
 
-# Create named plot list per plant
-figbc_plots <- map(names(plant_models_beta), function(name) {
-  
-  data <- fig3b_3c_dat_split[[name]]
+# --- Create list of ggplots by plant ---
+plant_cover_plots <- map(names(plant_models_beta), function(name) {
+  data <- plant_cover_by_treatment_split[[name]]
   model <- plant_models_beta[[name]]
   
-  # Estimated marginal means and comparisons
   emms <- emmeans(model, ~ pika_treatment * posion_plant_treatment, type = "response")
   emms_df <- as_tibble(emms)
   contrasts <- as_tibble(pairs(emms, adjust = "tukey"))
-  letters <- cld(emms, adjust = "tukey", Letters = "BAC") |>
+  letters <- cld(emms, adjust = "tukey", Letters = letters) |>
     as_tibble() |>
     mutate(.group = str_trim(.group))
   
-  # Merge .group letters into original data
   plot_data <- data |>
     left_join(letters, by = c("pika_treatment", "posion_plant_treatment"))
   
@@ -105,12 +165,52 @@ figbc_plots <- map(names(plant_models_beta), function(name) {
       color = "Poison plant treatment",
       fill = "Poison plant treatment"
     ) +
-    theme_pubr(base_size = 10) +
+    theme_pubr(base_size = 15) +
     theme(legend.position = "bottom", legend.title = element_blank())
 }) |> set_names(names(plant_models_beta))
 
+# --- Save plots to disk ---
+iwalk(plant_cover_plots, ~ ggsave(
+  here("output/experiment_plant_cover/plots", glue("plant_cover_{.y}.png")),
+  plot = .x, width = 6, height = 5
+))
 
-iwalk(figbc_plots, ~ ggsave(here::here("output/figure_3", 
-  glue::glue("fig3bc_{.y}.png")), plot = .x, width = 6, height = 5))
+# =============================================================
+# Export Model Outputs
+# =============================================================
 
+# --- Named list of beta-family models for export ---
+model_list <- list(
+  s_chamaejasme_cover = plant_models_beta$s_chamaejasme,
+  sedges_cover = plant_models_beta$sedges,
+  grasses_cover = plant_models_beta$grasses,
+  forbs_cover = plant_models_beta$forbs
+)
 
+# --- Function to export summary, EMMs, contrasts, and groups ---
+save_model_outputs <- function(model, name) {
+  base_dir <- here("data/processed/experiment_plant_cover/modeled_data", name)
+  dir.create(base_dir, recursive = TRUE, showWarnings = FALSE)
+  
+  # Model summary
+  model_summary <- tidy(model)
+  write_csv(model_summary, file.path(base_dir, "model_summary.csv"))
+  
+  # Estimated Marginal Means
+  emms <- emmeans(model, ~ pika_treatment * posion_plant_treatment, type = "response")
+  emms_df <- as_tibble(emms)
+  write_csv(emms_df, file.path(base_dir, "emms.csv"))
+  
+  # Post hoc pairwise contrasts
+  contrasts <- as_tibble(pairs(emms))
+  write_csv(contrasts, file.path(base_dir, "posthoc_contrasts.csv"))
+  
+  # Compact letter display (groupings)
+  letters <- cld(emms, Letters = letters, type = "response") |>
+    as_tibble() |>
+    mutate(.group = str_trim(.group))
+  write_csv(letters, file.path(base_dir, "posthoc_letters.csv"))
+}
+
+# --- Export results for each model ---
+imap(model_list, save_model_outputs)
