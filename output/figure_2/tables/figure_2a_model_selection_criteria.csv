@@ -1,5 +1,0 @@
-model,AIC,deltaAIC,BIC,deltaBIC
-Fixed effects only,1019.2434945312614,0,NA,NA
-Random intercept for month,1021.2434946309622,2.0000000997008556,NA,NA
-Random intercepts: month + month × plant group,1031.5500486640042,12.306554132742804,NA,NA
-Random intercept: month × plant group only,1033.4082048856294,14.164710354368026,NA,NA
