@@ -99,7 +99,6 @@ yak_weight_gain <- yak_weight_gain |>
   dplyr::select(-treatment_code)
 
 
-
 # =============================================================
 # Fit GLMMs
 # =============================================================
@@ -118,46 +117,119 @@ yak_bite_steps_ratio_split <- split_by_plant(yak_bite_steps_ratio)
 
 # --- Model fitting functions ---
 plant_bites_fit_models <- function(df) {
-  glmmTMB(
-    forage_efficiency ~ pika_treatment * posion_plant_treatment +
-      (1 | block) + (1 | year) + (1 | month) + (1 | yak),
-    family = gaussian(),
-    data = df
+  warnings_list <- list()
+  
+  # Try Gaussian model first
+  model <- tryCatch({
+    withCallingHandlers(
+      glmmTMB(
+        forage_efficiency ~ pika_treatment * posion_plant_treatment +
+          (1 | block) + (1 | year) + (1 | month),
+        family = gaussian(),
+        data = df
+      ),
+      warning = function(w) {
+        warnings_list[[length(warnings_list) + 1]] <<- conditionMessage(w)
+        invokeRestart("muffleWarning")
+      }
+    )
+  }, error = function(e) {
+    warnings_list[[length(warnings_list) + 1]] <<- paste("Gaussian model failed:", conditionMessage(e))
+    NULL
+  })
+
+  # If Gaussian failed to converge or produced a known convergence warning, try Tweedie
+  if (
+    is.null(model) ||
+    any(grepl("Model convergence problem", warnings_list)) ||
+    any(grepl("non-positive-definite Hessian", warnings_list))
+  ) {
+    warnings_list[[length(warnings_list) + 1]] <- "Trying Tweedie model due to Gaussian convergence issues"
+    
+    model <- tryCatch({
+      withCallingHandlers(
+        glmmTMB(
+          forage_efficiency ~ pika_treatment * posion_plant_treatment +
+            (1 | block) + (1 | year) + (1 | month),
+          family = tweedie(link = "log"),
+          data = df
+        ),
+        warning = function(w) {
+          warnings_list[[length(warnings_list) + 1]] <<- conditionMessage(w)
+          invokeRestart("muffleWarning")
+        }
+      )
+    }, error = function(e) {
+      warnings_list[[length(warnings_list) + 1]] <<- paste("Tweedie model failed:", conditionMessage(e))
+      NULL
+    })
+  }
+
+  # Return the model and any captured warnings
+  list(
+    model = model,
+    warnings = warnings_list
   )
 }
 
+
 bite_steps_ratio_models <- function(df) {
-  list(
-    beta = glmmTMB(
+  warnings_list <- list(beta = list(), gauss = list())
+
+  # Fit beta model and capture warnings
+  beta_model <- withCallingHandlers(
+    expr = glmmTMB(
       bites_steps_ratio_beta ~ pika_treatment * posion_plant_treatment +
-        (1 | block) + (1 | year) + (1 | month) + (1 | yak),
+        (1 | block) + (1 | year) + (1 | month),
       family = beta_family(),
       data = df
     ),
-    gauss = glmmTMB(
+    warning = function(w) {
+      warnings_list$beta[[length(warnings_list$beta) + 1]] <<- conditionMessage(w)
+      invokeRestart("muffleWarning")
+    }
+  )
+
+  # Fit gauss model and capture warnings
+  gauss_model <- withCallingHandlers(
+    expr = glmmTMB(
       bites_steps_ratio ~ pika_treatment * posion_plant_treatment +
-        (1 | block) + (1 | year) + (1 | month) + (1 | yak),
+        (1 | block) + (1 | year) + (1 | month),
       family = gaussian(),
       data = df
-    )
+    ),
+    warning = function(w) {
+      warnings_list$gauss[[length(warnings_list$gauss) + 1]] <<- conditionMessage(w)
+      invokeRestart("muffleWarning")
+    }
+  )
+
+  list(
+    beta = beta_model,
+    gauss = gauss_model,
+    warnings = warnings_list
   )
 }
 
 
+
+
 # --- Fit all models ---
-plant_bites_models    <- map(yak_plant_bites_split, plant_bites_fit_models)
-bite_steps_models     <- map(yak_bite_steps_ratio_split, bite_steps_ratio_models)
+plant_bites_models <- map(yak_plant_bites_split, plant_bites_fit_models)
+
+bite_steps_models <- map(yak_bite_steps_ratio_split, bite_steps_ratio_models)
+
 
 total_steps_model <-   glmmTMB(
   total_steps ~ pika_treatment * posion_plant_treatment +
-    (1 | block) + (1 | year) + (1 | month) + (1 | yak),
+    (1 | block) + (1 | year) + (1 | month),
   family = gaussian(),
   data = yak_total_steps
 )
 
 weight_gain_model <-   glmmTMB(
   weight_gain ~ pika_treatment * posion_plant_treatment +
-    (1 | block) + (1 | year) + (1 | month) + (1 | yak),
+    (1 | block) + (1 | year) + (1 | month),
   family = gaussian(),
   data = yak_weight_gain
 )
@@ -187,13 +259,50 @@ save_diagnostics <- function(plant_name, model, model_type,directory) {
 
 # --- Generate diagnostics for each plant and model type ---
 iwalk(bite_steps_models, function(models, plant_name) {
-  save_diagnostics(plant_name, models$gauss, "gauss",directory = "output/experiment_foraging_efficiency/diagnostic_plots/bite_steps_ratio")
-  save_diagnostics(plant_name, models$beta, "beta",directory = "output/experiment_foraging_efficiency/diagnostic_plots/bite_steps_ratio")
+  if (!is.null(models$gauss)) {
+    try(
+      save_diagnostics(
+        plant_name,
+        models$gauss,
+        "gauss",
+        directory = "output/experiment_foraging_efficiency/diagnostic_plots/bite_steps_ratio"
+      ),
+      silent = TRUE
+    )
+  } else {
+    message(glue("[{plant_name}] Skipped gauss model (fit failed)"))
+  }
+
+  if (!is.null(models$beta)) {
+    try(
+      save_diagnostics(
+        plant_name,
+        models$beta,
+        "beta",
+        directory = "output/experiment_foraging_efficiency/diagnostic_plots/bite_steps_ratio"
+      ),
+      silent = TRUE
+    )
+  } else {
+    message(glue("[{plant_name}] Skipped beta model (fit failed)"))
+  }
 })
 
-# Loop over a flat (non-nested) named list of models
+
 iwalk(plant_bites_models, function(model, plant_name) {
-  save_diagnostics(plant_name, model, model_type = "gauss",directory = "output/experiment_foraging_efficiency/diagnostic_plots/plant_bites")
+  if (!is.null(model)) {
+    try(
+      save_diagnostics(
+        plant_name,
+        model,
+        model_type = "gaussian",
+        directory = "output/experiment_foraging_efficiency/diagnostic_plots/plant_bites"
+      ),
+      silent = TRUE
+    )
+  } else {
+    message(glue("[{plant_name}] Skipped gauss model (fit failed)"))
+  }
 })
 
 
@@ -258,7 +367,7 @@ save_model_outputs <- function(model, model_name, base_dir_path) {
   dir.create(model_dir, recursive = TRUE, showWarnings = FALSE)
   
   # --- Model Summary (fixed + random effects) ---
-  model_summary <- broom.mixed::tidy(model, effects = "fixed")
+  model_summary <- broom.mixed::tidy(model)
   write_csv(model_summary, file.path(model_dir, "model_summary.csv"))
 
   # --- Estimated Marginal Means ---
@@ -280,16 +389,15 @@ save_model_outputs <- function(model, model_name, base_dir_path) {
 
 # --- Export results for each model ---
 
+
 # Example directory: adjust to your output path
-output_dir <- here("data/processed/experiment_foraging_efficiency/modeled_data/bite_steps")
+bite_steps_output_dir <- here("data/processed/experiment_foraging_efficiency/modeled_data/bite_steps")
+plant_bites_output_dir <- here("data/processed/experiment_foraging_efficiency/modeled_data/plant_bites")
 
 # Loop through named list of glmmTMB models
-iwalk(bite_steps_model_list, ~ save_model_outputs(.x, .y, output_dir))
+iwalk(bite_steps_model_list, ~ save_model_outputs(.x, .y, bite_steps_output_dir))
+iwalk(plant_bites_model_list, ~ save_model_outputs(.x$model, .y, plant_bites_output_dir))
 
-
-
-imap(bite_steps_model_list, save_model_outputs,base_dir_path = here("data/processed/experiment_foraging_efficiency/modeled_data/bite_steps"))
-imap(plant_bites_model_list, save_model_outputs,base_dir_path = here("data/processed/experiment_foraging_efficiency/modeled_data/plant_bites"))
 
 # weight gain
 
@@ -329,7 +437,8 @@ contrasts <- as_tibble(pairs(emms))
 write_csv(contrasts, file.path("data/processed/experiment_foraging_efficiency/modeled_data/total_steps", "posthoc_contrasts.csv"))
 
 # Compact letter display (groupings)
-letters <- cld(emms, Letters = letters, type = "response") |>
+letters <- multcomp::cld(emms, Letters = 'AB', type = "response") |>
   as_tibble() |>
   mutate(.group = str_trim(.group))
 write_csv(letters, file.path(here("data/processed/experiment_foraging_efficiency/modeled_data/total_steps"), "posthoc_letters.csv"))
+
