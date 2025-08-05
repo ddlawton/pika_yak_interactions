@@ -56,7 +56,8 @@ summary(quality_dat$forage_quality) # ensuring that the percentage does not cont
 # --- Split data by plant type ---
 quality_dat_split <- quality_dat |>
   ungroup() |>
-  group_split(quality_metric)
+  group_split(quality_metric) |>
+  set_names(quality_dat |> group_by(quality_metric) |> group_keys() |> pull(quality_metric))
 
 names(quality_dat_split) <- quality_dat |>
   distinct(quality_metric) |>

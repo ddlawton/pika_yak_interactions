@@ -46,7 +46,7 @@ plant_cover_by_treatment <- plant_cover_by_treatment |>
     n_obs = n(),
     cover_beta = ((cover * (n_obs - 1) + 0.5) / n_obs) / 100
   ) |>
-  select(-n_obs) |>
+  dplyr::select(-n_obs) |>
   mutate(
     year = factor(year),
     block = factor(block)
@@ -54,12 +54,11 @@ plant_cover_by_treatment <- plant_cover_by_treatment |>
 
 # --- Split data by plant type ---
 plant_cover_by_treatment_split <- plant_cover_by_treatment |>
-  ungroup() |>
-  group_split(plant)
+  group_by(plant) |>
+  group_split() |>
+  set_names(plant_cover_by_treatment |> group_by(plant) |> group_keys() |> pull(plant))
 
-names(plant_cover_by_treatment_split) <- plant_cover_by_treatment |>
-  distinct(plant) |>
-  pull(plant)
+
 
 # =============================================================
 # Fit GLMMs: Gaussian and Beta Families

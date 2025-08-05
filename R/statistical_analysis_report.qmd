@@ -1,0 +1,410 @@
+---
+title: "Pika-Yak Interctions Results Summary"
+author: "Douglas Lawton"
+date: today
+project:
+  type: default
+  output-dir: ../
+format: 
+  pdf:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    keep-tex: true
+    fig-cap-location: bottom
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    highlight-style: pygments
+    code-block-bg: true
+    code-line-numbers: false
+    citation-package: natbib
+    colorlinks: true
+    linkcolor: blue
+    urlcolor: blue
+    fig-width: 6.5
+    fig-height: 4.5
+editor: visual
+---
+
+```{r}
+#| echo: false
+#| results: "hide"
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(ggpubr)
+library(patchwork)
+library(here)
+
+# --- Set Root Directory for Project ---
+here::i_am("README.md")  # Anchor project for reproducible paths
+
+# --- Custom Color Palette ---
+pink <- '#ff8080'
+green <- '#2fc09b'
+
+```
+
+
+
+# Introduction
+
+This document summarizes the final statistical models, diagnostics, and effect estimates used in the manuscript titled:  
+**_"Pika facilitates yaks by suppressing poisonous plants in the Tibetan Plateau"_**.
+
+All analyses were conducted in R using `glmmTMB`, `emmeans`, and other tidyverse tools. Figures and contrasts are shown below for all major response variables.
+
+All code and data are housed within the project’s GitHub repository, available at: [https://github.com/ddlawton/pika_yak_interactions](https://github.com/ddlawton/pika_yak_interactions)
+
+---
+
+Instead of grouping the models by figure number, I organized them by data type, as follows:
+
+### Diet Selection
+- Pika feeding
+- Yak grazing
+- Dung density
+- Pika burrow density
+
+### Experiment: Plant Cover
+- Forbs
+- Grasses
+- *S. chamaejasme*
+- Sedges
+
+### Experiment: Foraging Efficiency
+- Yak bite/step ratios
+- Yak bites by type
+- Yak total steps
+- Yak weight gain
+
+### Experiment: Foraging Quality
+- ADF
+- CP
+- EE
+- NDF
+
+Each variable gets its own model, and the modeling approach is described below.
+
+---
+
+# Overview of Statistical Models
+
+The goal of the statistical approach was to respect the hierarchical structure of the data without overfitting. Because the design was fully factorial, model construction was relatively straightforward. The primary variation across models was whether they included a random effect for yak.
+
+
+**Without individual yak**
+```{r}
+response ~ pika_treatment * poison_plant_treatment +
+    (1 | block) + 
+    (1 | year) + 
+    (1 | month)
+```
+
+**With individual yak**
+```{r}
+response ~ pika_treatment * poison_plant_treatment +
+    (1 | block) + 
+    (1 | year) + 
+    (1 | month) + 
+    (1 | yak)
+```
+
+## Statistical Families Used
+
+| Family   | When Used                                              |
+|----------|--------------------------------------------------------|
+| Gaussian | Default, used when residuals appeared homoscedastic   |
+| Beta     | Used for percent/proportion data (if converged well)  |
+| Tweedie  | Used when overdispersion or skew was a concern         |
+
+In general, percent data was modeled using the Beta family when possible. If model fit or convergence was poor, I used the gaussian family instead. As a fallback, the tweedie distribution was helpful in handling data with zero inflation, overdispersion, or non-normal characteristics.
+
+Random effect terms like `block`, `year`, and `month` often had minimal influence on fixed effect estimates. However, I chose to retain them in the models to reflect the experimental design and sampling structure. Even when the variance explained was negligible, their inclusion helped preserve the integrity of the hierarchical layout and avoid pseudoreplication.
+
+---
+
+# Data Modeling Summary
+
+## Diet Selection
+
+```{r}
+#| echo: false
+#| results: "hide"
+#| message: false
+#| warning: false
+
+
+pika_data <- read_csv(here('data/processed/diet_selection/pika_feeding.csv'))
+pika_feeding_model_summary <- read_csv(here('data/processed/diet_selection/modeled_data/pika_feeding/model_summary.csv'))
+pika_feeding_contrasts <- read_csv(here('data/processed/diet_selection/modeled_data/pika_feeding/posthoc_contrasts.csv'))
+
+yak_data <- read_csv(here('data/processed/diet_selection/yak_grazing.csv'))
+yak_feeding_model_summary <- read_csv(here('data/processed/diet_selection/modeled_data/yak_grazing/model_summary.csv'))
+yak_feeding_contrasts <- read_csv(here('data/processed/diet_selection/modeled_data/yak_grazing/posthoc_contrasts.csv'))
+
+dung_burrow_by_plot <- read_csv(here('data/processed/diet_selection/dung_burrow_by_plot.csv'))
+```
+
+
+The following figure (@fig-diet_selection_figure) shows pika feedind frequency (A) and yak grazig frequebcy (B) by every pika and posion plant treatment with sigificance shown with letters. It also shows the relationship between pika burrow density (C) and yak dung density (D) by *S. chamaejasme* cover.
+
+
+
+```{r}
+#| label: fig-diet_selection_figure
+#| fig-cap: "diet selection figure"
+#| echo: false
+#| reulsts: asis'
+#| message: false
+#| warning: false
+pika_data
+
+
+
+
+```
+
+![diet selection figure](../output/figure_2/figure_2.png)
+
+
+### Pika feeding results
+
+There was a signficant effect of plant group on pike feeding (@tbl-pika-feeding-model-summary) with *S. chamaejasme* consumption being the highest,followed by forbs, and then sedges and grasses (@tbl-pika-feeding-model-contrasts)
+
+
+```{r}
+#| label: tbl-pika-feeding-model-summary
+#| tbl-cap: "Model summary for pika feeding."
+#| echo: false
+#| reulsts: asis'
+#| message: false
+#| warning: false
+
+library(knitr)
+library(kableExtra)
+
+pika_feeding_model_summary |>
+  kable(format = "latex", booktabs = TRUE, digits = 2) |>
+  kable_styling(latex_options = c("striped"))
+```
+
+```{r}
+#| label: tbl-pika-feeding-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for yak grazing by plant group."
+#| echo: false
+#| reulsts: 'asis'
+#| message: false
+#| warning: false
+library(knitr)
+library(kableExtra)
+
+pika_feeding_contrasts |>
+  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped"))
+
+
+```
+
+
+### Yak Grazing results
+
+There was a signficant effect of plant group on yak grazin (@tbl-yak-feeding-model-summary) with grass consumption being the highest,followed by sedges, and then forbs (@tbl-yak-feeding-model-contrasts).
+
+
+```{r}
+#| label: tbl-yak-feeding-model-summary
+#| tbl-cap: "Model summary for yak grazing by plant group"
+#| echo: false
+#| reulsts: asis'
+#| message: false
+#| warning: false
+
+library(knitr)
+library(kableExtra)
+
+yak_feeding_model_summary |>
+  kable(format = "latex", booktabs = TRUE, digits = 2) |>
+  kable_styling(latex_options = c("striped"))
+```
+
+
+
+```{r}
+#| label: tbl-yak-feeding-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for yak grazing by plant group"
+#| echo: false
+#| reulsts: 'asis'
+#| message: false
+#| warning: false
+library(knitr)
+library(kableExtra)
+
+yak_feeding_contrasts |>
+  kable(format = "latex", booktabs = TRUE, digits = 3, 
+        caption = "Estimated marginal means contrasts for pika feeding by plant group.") |>
+  kable_styling(latex_options = c("striped"))
+
+
+```
+
+### burrow and dung density
+
+I did not run specific statistical models for these plots (C and D). However I did notice an interesting non-linear relationship betwen pika burrow density and *S. chamajasme* cover. I think these plots are straight forward and more indepth tables were not needed.
+
+## Experiment: Plant cover
+
+```{r}
+#| echo: false
+#| results: "hide"
+#| message: false
+#| warning: false
+
+forbs_model_summary  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/forbs_cover/model_summary.csv'))
+forbs_model_contrasts  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/forbs_cover/posthoc_contrasts.csv'))
+
+grasses_model_summary  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/model_summary.csv'))
+grasses_model_contrasts  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/posthoc_contrasts.csv'))
+
+poison_model_summary  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/model_summary.csv'))
+poison__model_contrasts  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/posthoc_contrasts.csv'))
+
+sedges_model_summary  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/sedges_cover/model_summary.csv'))
+sedges_model_contrasts  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/sedges_cover/posthoc_contrasts.csv'))
+
+```
+
+
+### Forbs Cover
+
+There was a significant negative effect of *S. chamaejasme* treatment on forb cover, and a marginally significant positive interaction between pika presence and *S. chamaejasme* treatment (Table @tbl-forbs-model-summary). Post-hoc contrasts showed increased forb cover in the *S. chamaejasme* treatment, but this was modulated by pika presence (Table @tbl-forbs-model-contrasts).
+
+![forbs cover](../output/experiment_plant_cover/plots/plant_cover_forbs.png)
+
+```{r}
+#| label: tbl-forbs-model-summary
+#| tbl-cap: "Model summary for forb cover."
+#| echo: false
+#| message: false
+#| warning: false
+
+library(kableExtra)
+forbs_model_summary |>
+  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped"))
+```
+
+```{r}
+#| label: tbl-forbs-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for forb cover by treatment group."
+#| echo: false
+#| message: false
+#| warning: false
+
+forbs_model_contrasts |>
+  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped"))
+```
+
+---
+
+### Grasses Cover
+
+Grasses responded strongly to the *S. chamaejasme* treatment, showing a large increase in cover under *S. chamaejasme* alone and a significant negative interaction with pika presence (Table @tbl-grasses-model-summary). Pairwise contrasts confirm that the strongest grass suppression occurred when both pikas and *S. chamaejasme* were present (Table @tbl-grasses-model-contrasts).
+
+![grasses cover](../output/experiment_plant_cover/plots/plant_cover_grasses.png)
+
+```{r}
+#| label: tabl-grasses-model-summary
+#| tbl-cap: "Model summary for grass cover."
+#| echo: false
+#| message: false
+#| warning: false
+
+grasses_model_summary |>
+  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped"))
+```
+
+```{r}
+#| label: tabl-grasses-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for grass cover by treatment group."
+#| echo: false
+#| message: false
+#| warning: false
+
+grasses_model_contrasts |>
+  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped"))
+```
+
+---
+
+### *S. chamaejasme* Cover
+
+There was a significant **negative effect** of *S. chamaejasme* treatment, but pika presence had no clear effect (Table \@tbl-poison-model-summary). No post-hoc contrasts were statistically significant (Table \@tbl-poison-model-contrasts).
+
+
+![*S. chamaejasme*  cover](../output/experiment_plant_cover/plots/plant_cover_s_chamaejasme.png)
+
+```{r}
+#| label: poison-model-summary
+#| tbl-cap: "Model summary for *S. chamaejasme* cover."
+#| echo: false
+#| message: false
+#| warning: false
+
+poison_model_summary |>
+  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped"))
+```
+
+```{r}
+#| label: poison-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for *S. chamaejasme* cover by treatment group."
+#| echo: false
+#| message: false
+#| warning: false
+
+poison__model_contrasts |>
+  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped"))
+```
+
+---
+
+### Sedges Cover
+
+Sedge cover declined significantly under *S. chamaejasme* treatment but **increased when pikas were also present**, indicating a strong positive interaction effect (Table @tbl-sedges-model-summary). Post-hoc contrasts confirm the synergistic effect of pika presence and *S. chamaejasme* on sedge abundance (Table @tbl-sedges-model-contrasts).
+
+![sedges cover](../output/experiment_plant_cover/plots/plant_cover_sedges.png)
+
+```{r}
+#| label: sedges-model-summary
+#| tbl-cap: "Model summary for sedge cover."
+#| echo: false
+#| message: false
+#| warning: false
+
+sedges_model_summary |>
+  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped"))
+```
+
+```{r}
+#| label: sedges-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for sedge cover by treatment group."
+#| echo: false
+#| message: false
+#| warning: false
+
+sedges_model_contrasts |>
+  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped"))
+```
+
+
+## Experiment: Foraging Efficiency
+

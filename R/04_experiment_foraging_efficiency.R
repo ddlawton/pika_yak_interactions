@@ -109,7 +109,7 @@ split_by_plant <- function(df, group_var = "plant") {
   df |>
     ungroup() |>
     group_split(.data[[group_var]]) |>
-    set_names(df |> distinct(.data[[group_var]]) |> pull())
+    set_names(df |> group_by(.data[[group_var]]) |> group_keys() |> pull(.data[[group_var]]))
 }
 
 yak_plant_bites_split     <- split_by_plant(yak_plant_bites)
