@@ -72,7 +72,7 @@ yak_bite_steps_ratio <- yak_bite_steps_ratio |>
   group_by(plant) |>
   mutate(
     n_obs = n(),
-    bites_steps_ratio_beta = ((bites_steps_ratio * (n_obs - 1) + 0.5) / n_obs) / 100
+    bites_steps_ratio_beta = ((bites_steps_ratio * (n_obs - 1) + 0.5) / n_obs) 
   ) |>
   dplyr::select(-n_obs) |>
   mutate(
@@ -115,7 +115,10 @@ split_by_plant <- function(df, group_var = "plant") {
 yak_plant_bites_split     <- split_by_plant(yak_plant_bites)
 yak_bite_steps_ratio_split <- split_by_plant(yak_bite_steps_ratio)
 
+
+
 # --- Model fitting functions ---
+
 plant_bites_fit_models <- function(df) {
   warnings_list <- list()
   
