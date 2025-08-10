@@ -1,0 +1,310 @@
+---
+title: "Pika-Yak Interaction: Foraging Quality"
+author: "Douglas Lawton"
+date: today
+project:
+  type: default
+  output-dir: ../
+format: 
+  pdf:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    keep-tex: true
+    fig-cap-location: bottom
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    highlight-style: pygments
+    code-block-bg: true
+    code-line-numbers: false
+    citation-package: natbib
+    colorlinks: true
+    linkcolor: blue
+    urlcolor: blue
+    fig-width: 8
+    fig-height: 8
+    includes:
+      in-header: |
+        \usepackage{float}
+        \floatplacement{table}{b}
+editor: source
+---
+
+```{r}
+#| echo: false
+#| results: "hide"
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(ggpubr)
+library(patchwork)
+library(here)
+library(mgcv)
+library(knitr)
+library(kableExtra)
+
+# --- Set Root Directory for Project ---
+here::i_am("README.md")  # Anchor project for reproducible paths
+
+# --- Custom Color Palette ---
+pink <- '#ff8080'
+green <- '#2fc09b'
+
+```
+
+
+
+```{r}
+#| label: reading in quality data
+#| echo: false
+#| results: "hide"
+#| message: false
+#| warning: false
+
+# Load the bite_steps dataset once
+forage_quality <- read_csv(here("data/processed/experiment_foraging_quality/plant_foraging_quality.csv"))
+
+# Define a function to load model data for a plant group
+load_forage_quality_data <- function(quality_metric) {
+  base_path <- here(glue::glue("data/processed/experiment_foraging_quality/modeled_data/{quality_metric}"))
+  list(
+    emms = read_csv(file.path(base_path, "emms.csv")),
+    letters = read_csv(file.path(base_path, "posthoc_letters.csv")),
+    model_summary = read_csv(file.path(base_path, "model_summary.csv")),
+    model_contrasts = read_csv(file.path(base_path, "posthoc_contrasts.csv"))
+  )
+}
+
+
+# Define your plant groups
+quality_metrics <- c("adf", "cp", "ee","ndf")
+
+# Load all model data into a named list
+forag_quality_models <- map(quality_metrics, load_forage_quality_data) |> set_names(quality_metrics)
+
+```
+
+```{r}
+#| label: fig-forage-quality-figure
+#| fig-cap: "Forage Quality metrics by treatment"
+#| echo: false
+#| reulsts: asis'
+#| message: false
+#| warning: false
+
+# Define your color palette
+plant_colors <- c(green, pink)
+
+
+# Reusable function
+plot_forage_quality <- function(quality_metric, y_label, label_y = NULL, letters = TRUE) {
+  data <- forage_quality |> filter(plant == quality_metric)
+  emms <- forag_quality_models[[quality_metric]]$emms
+  letters_df <- forag_quality_models[[quality_metric]]$letters
+
+  label_y <- label_y %||% max(data$forage_quality, na.rm = TRUE)
+
+  p <- data |>
+    left_join(emms, by = c('pika_treatment', 'posion_plant_treatment')) |>
+    ggplot(aes(x = pika_treatment, y = forage_quality, color = posion_plant_treatment)) +
+    geom_jitter(
+      size = 1, alpha = 0.4,
+      position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.7)
+    ) +
+    geom_point(
+      data = letters_df,
+      aes(x = pika_treatment, y = response * 100, fill = posion_plant_treatment),
+      position = position_dodge(width = 0.7),
+      size = 4, pch = 21, color = "black", inherit.aes = FALSE
+    ) +
+    scale_fill_manual(values = plant_colors) +
+    scale_color_manual(values = plant_colors) +
+    labs(
+      y = y_label,
+      x = "",
+      color = "Poison plant treatment",
+      fill = "Poison plant treatment"
+    ) +
+    theme_pubr(base_size = 15) +
+    theme(legend.position = "bottom", legend.title = element_blank())
+
+    if (letters) {
+        p <- p  +
+        geom_text(
+            data = letters_df,
+            aes(x = pika_treatment, y = label_y, label = .group, group = posion_plant_treatment),
+            position = position_dodge(width = 0.7),
+            size = 5, color = "black", show.legend = FALSE
+        )
+  }
+
+  p
+}
+
+# Call the function for each plant type
+
+
+adf_plot <- plot_forage_quality("adf", "adf (%)",label_y=36)
+cp_plot  <- plot_forage_quality("cp", "cp (%)",label_y = 12)
+ee_plot   <- plot_forage_quality("ee", "ee (%)",label_y=5)
+ndf_plot   <- plot_forage_quality("ndf", "ndf (%)",label_y=68,letters=FALSE)
+
+
+
+(adf_plot + cp_plot) / (ee_plot + ndf_plot) + 
+  plot_annotation(tag_levels = 'A') + 
+  plot_layout(guides = "collect") & theme(legend.position = 'bottom')
+
+
+
+```
+
+# ADF model summary
+
+ADF content was slightly but significantly reduced by the poison plant (*S. chamaejasme*) treatment, while pika presence alone had no measurable effect (@tbl-adf-model-summary). A significant positive interaction indicated that pika partially offset the reduction in ADF caused by the poison plant. Contrasts showed that poison plant treatment generally lowered ADF, but this effect was weaker in pika-present plots (@tbl-adf-model-contrasts). Random variation across blocks and months was small, with no detectable year-to-year variation (@tbl-adf-model-summary).
+
+# CP model summary
+
+Crude protein (CP) content was significantly reduced by the poison plant (*S. chamaejasme*) treatment, while pika presence alone had a marginally non-significant positive effect (@tbl-cp-model-summary). A strong positive interaction showed that pika presence substantially mitigated the reduction in CP caused by the poison plant. Contrasts confirmed lower CP in treated plots without pika, but this reduction was much smaller in pika-present plots (@tbl-cp-model-contrasts). Random variation across blocks and months was minimal, with no variation across years.
+
+# EE model summary
+
+Ether extract (EE) content was slightly reduced by pika presence, while the poison plant (*S. chamaejasme*) treatment alone had no significant effect (@tbl-ee-model-summary). A significant positive interaction indicated that pika mitigated the small negative effect of the poison plant on EE. Contrasts revealed only minor and inconsistent differences among treatment combinations, with most effects small in magnitude (@tbl-ee-model-contrasts). Random variation across months was minimal, with no variation across blocks or years.
+
+# NDF model summary
+
+Neutral detergent fiber (NDF) content was slightly reduced by the poison plant (S. chamaejasme) treatment, while pika presence alone had no significant effect (@tbl-ndf-model-summary). The interaction between pika and the poison plant was not significant, indicating that pika did not modify the treatment’s effect on NDF. Random variation was minimal across blocks and absent across years and months.
+
+
+
+
+# Tables
+
+
+```{r}
+#| label: tbl-adf-model-summary
+#| tbl-cap: "Model summary for ADF."
+#| echo: false
+#| message: false
+#| warning: false
+
+forag_quality_models$adf$model_summary |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  kable(format = "latex", booktabs = TRUE, digits = 3)|>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+```{r}
+#| label: tbl-adf-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for ADF by treatment group."
+#| echo: false
+#| message: false
+#| warning: false
+
+forag_quality_models$adf$model_contrasts |>
+  kable(format = "latex", booktabs = TRUE, digits = 3)|>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+
+```{r}
+#| label: tbl-cp-model-summary
+#| tbl-cap: "Model summary for CP."
+#| echo: false
+#| message: false
+#| warning: false
+
+
+forag_quality_models$cp$model_summary |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  kable(format = "latex", booktabs = TRUE, digits = 3)|>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+```{r}
+#| label: tbl-cp-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for CP by treatment group."
+#| echo: false
+#| message: false
+#| warning: false
+
+forag_quality_models$cp$model_contrasts |>
+  kable(format = "latex", booktabs = TRUE, digits = 3)|>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+
+```{r}
+#| label: tbl-ee-model-summary
+#| tbl-cap: "Model summary for EE."
+#| echo: false
+#| message: false
+#| warning: false
+
+
+forag_quality_models$ee$model_summary |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  kable(format = "latex", booktabs = TRUE, digits = 3)|>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+```{r}
+#| label: tbl-ee-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for EE by treatment group."
+#| echo: false
+#| message: false
+#| warning: false
+
+forag_quality_models$ee$model_contrasts |>
+  kable(format = "latex", booktabs = TRUE, digits = 3)|>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+
+```{r}
+#| label: tbl-ndf-model-summary
+#| tbl-cap: "Model summary for NDF."
+#| echo: false
+#| message: false
+#| warning: false
+
+
+forag_quality_models$ndf$model_summary |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  kable(format = "latex", booktabs = TRUE, digits = 3)|>
+  kable_styling(latex_options = c("striped","scale_down"))
+```

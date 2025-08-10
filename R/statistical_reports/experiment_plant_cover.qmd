@@ -206,25 +206,19 @@ sedge_plot   <- make_cover_plot("sedges", sedges_letters, "sedge cover (%)", tex
 
 # Forbs Cover
 
-
-Forb cover showed a small but significant reduction with the poison plant (S. chamaejasme) treatment, while pika presence alone had no measurable effect (@tbl-forbs-model-summary). The interaction between pika and poison plant treatments was not significant, indicating that pika did not alter the poison plant’s effect on forb cover. Random variation across blocks and years was small, and no month-to-month variation was detected. 
-
+Forb cover showed a small but significant reduction with the poison plant (S. chamaejasme) treatment, while pika presence alone had no measurable effect (@tbl-forbs-model-summary). The interaction between pika and poison plant treatments was not significant, indicating that pika did not alter the poison plant’s effect on forb cover. Random variation across blocks and years was small, and no month-to-month variation was detected.
 
 # Grasses Cover
 
 Grass cover was significantly reduced by the poison plant (S. chamaejasme) treatment, with odds of occurrence dropping to less than half in treated plots. Pika presence alone had no detectable effect in untreated plots, but in treated plots, pika presence substantially increased grass cover, offsetting some of the negative effect of the poison plant. This positive interaction suggests pika may facilitate grass recovery when S. chamaejasme is present. Random variation across blocks and months was small, and no variation was detected across years. See the model summary and constrast tables (@tbl-grasses-model-summary, @tbl-grasses-model-contrasts)
 
-
 # *S. chamaejasme* Cover
 
 Stellera chamaejasme cover was strongly increased in the poison plant treatment (@tbl-poison-model-summary). Pika presence alone had no significant effect in untreated plots, but significantly reduced the large cover gains from the poison plant treatment (@tbl-poison-model-contrasts). This interaction indicates that pika substantially suppress S. chamaejasme when it is present in high abundance. Random variation across blocks, years, and months was small relative to the fixed effects.
 
-
 # Sedges Cover
 
 Sedge cover was significantly reduced by the poison plant (S. chamaejasme) treatment, while pika presence alone had no significant effect. The positive pika × poison plant interaction was marginally non-significant (p = 0.076), suggesting a possible tendency for pika to lessen the negative effect of the poison plant (@tbl-sedges-model-summary). Random variation was small across blocks and months, and no year-to-year variation was detected.
-
-
 
 ```{r}
 #| label: tbl-forbs-model-summary
@@ -262,7 +256,6 @@ forbs_model_contrasts |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
-
 ```{r}
 #| label: tbl-grasses-model-summary
 #| tbl-cap: "Model summary for grass cover."
@@ -297,7 +290,6 @@ grasses_model_contrasts |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
-
 ```{r}
 #| label: tbl-poison-model-summary
 #| tbl-cap: "Model summary for *S. chamaejasme* cover."
@@ -331,7 +323,6 @@ poison__model_contrasts |>
   kable(format = "latex", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
-
 
 ```{r}
 #| label: tbl-sedges-model-summary
