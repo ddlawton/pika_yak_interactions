@@ -2,34 +2,14 @@
 title: "Pika-Yak Interaction: Plant Cover"
 author: "Douglas Lawton"
 date: today
-project:
-  type: default
-  output-dir: ../
-format: 
-  pdf:
+format:
+  html:
     toc: true
     toc-depth: 2
     number-sections: true
-    keep-tex: true
     fig-cap-location: bottom
-    documentclass: article
-    geometry: margin=1in
-    fontsize: 11pt
-    highlight-style: pygments
-    code-block-bg: true
-    code-line-numbers: false
-    citation-package: natbib
-    colorlinks: true
-    linkcolor: blue
-    urlcolor: blue
-    fig-width: 8
-    fig-height: 8
-    fig-pos: b
-    includes:
-      in-header: |
-        \usepackage{float}
-        \floatplacement{table}{b}
-editor: visual
+    theme: cosmo
+editor: source
 ---
 
 ```{r}
@@ -54,59 +34,6 @@ pink <- '#ff8080'
 green <- '#2fc09b'
 
 ```
-
-# Introduction
-
-This document summarizes the statistical models for plant cover in the manuscript titled: ***"Pika facilitates yaks by suppressing poisonous plants in the Tibetan Plateau"***.
-
-All analyses were conducted in R using `glmmTMB`, `emmeans`, and other tidyverse tools. Figures and contrasts are shown below for all major response variables.
-
-All code and data are housed within the project’s GitHub repository, available at: <https://github.com/ddlawton/pika_yak_interactions>
-
-------------------------------------------------------------------------
-
-# Overview of Statistical Models
-
-The goal of the statistical approach was to respect the hierarchical structure of the data without overfitting. Because the design was fully factorial, model construction was relatively straightforward. The primary variation across models was whether they included a random effect for yak.
-
-**Without individual yak**
-
-```{r}
-#| label: model formula 1
-#| eval: false
-response ~ pika_treatment * poison_plant_treatment +
-    (1 | block) + 
-    (1 | year) + 
-    (1 | month)
-```
-
-**With individual yak**
-
-```{r}
-#| label: model formula 2
-#| eval: false
-response ~ pika_treatment * poison_plant_treatment +
-    (1 | block) + 
-    (1 | year) + 
-    (1 | month) + 
-    (1 | yak)
-```
-
-Statistical Families Used:
-
-| Family   | When Used                                            |
-|----------|------------------------------------------------------|
-| Gaussian | Default, used when residuals appeared homoscedastic  |
-| Beta     | Used for percent/proportion data (if converged well) |
-| Tweedie  | Used when overdispersion or skew was a concern       |
-
-In general, percent data was modeled using the Beta family when possible. If model fit or convergence was poor, I used the gaussian family instead. As a fallback, the tweedie distribution was helpful in handling data with zero inflation, overdispersion, or non-normal characteristics.
-
-Random effect terms like `block`, `year`, and `month` often had minimal influence on fixed effect estimates. However, I chose to retain them in the models to reflect the experimental design and sampling structure. Even when the variance explained was negligible, their inclusion helped preserve the integrity of the hierarchical layout and avoid pseudoreplication.
-
-------------------------------------------------------------------------
-
-# Data Modeling Summary:
 
 ```{r}
 #| echo: false
@@ -206,19 +133,20 @@ sedge_plot   <- make_cover_plot("sedges", sedges_letters, "sedge cover (%)", tex
 
 # Forbs Cover
 
-Forb cover showed a small but significant reduction with the poison plant (S. chamaejasme) treatment, while pika presence alone had no measurable effect (@tbl-forbs-model-summary). The interaction between pika and poison plant treatments was not significant, indicating that pika did not alter the poison plant’s effect on forb cover. Random variation across blocks and years was small, and no month-to-month variation was detected.
+Forb cover showed a small but significant reduction with the poison plant (*S. chamaejasme*) treatment, while pika presence alone had no measurable effect (@tbl-forbs-model-summary). The interaction between pika and poison plant treatments was not significant, indicating that pika did not alter the poison plant’s effect on forb cover. Random variation across blocks and years was small, and no month-to-month variation was detected.
 
 # Grasses Cover
 
-Grass cover was significantly reduced by the poison plant (S. chamaejasme) treatment, with odds of occurrence dropping to less than half in treated plots. Pika presence alone had no detectable effect in untreated plots, but in treated plots, pika presence substantially increased grass cover, offsetting some of the negative effect of the poison plant. This positive interaction suggests pika may facilitate grass recovery when S. chamaejasme is present. Random variation across blocks and months was small, and no variation was detected across years. See the model summary and constrast tables (@tbl-grasses-model-summary, @tbl-grasses-model-contrasts)
+Grass cover was significantly reduced by the poison plant (*S. chamaejasme*) treatment, with odds of occurrence dropping to less than half in treated plots. Pika presence alone had no detectable effect in untreated plots, but in treated plots, pika presence substantially increased grass cover, offsetting some of the negative effect of the poison plant. This positive interaction suggests that pika may facilitate grass recovery when *S. chamaejasme* is present. Random variation across blocks and months was small, and no variation was detected across years. See the model summary and contrast tables (@tbl-grasses-model-summary, @tbl-grasses-model-contrasts).
 
 # *S. chamaejasme* Cover
 
-Stellera chamaejasme cover was strongly increased in the poison plant treatment (@tbl-poison-model-summary). Pika presence alone had no significant effect in untreated plots, but significantly reduced the large cover gains from the poison plant treatment (@tbl-poison-model-contrasts). This interaction indicates that pika substantially suppress S. chamaejasme when it is present in high abundance. Random variation across blocks, years, and months was small relative to the fixed effects.
+*Stellera chamaejasme* cover was strongly increased in the poison plant treatment (@tbl-poison-model-summary). Pika presence alone had no significant effect in untreated plots but significantly reduced the large cover gains from the poison plant treatment (@tbl-poison-model-contrasts). This interaction indicates that pika substantially suppress *S. chamaejasme* when it is present in high abundance. Random variation across blocks, years, and months was small relative to the fixed effects.
 
 # Sedges Cover
 
-Sedge cover was significantly reduced by the poison plant (S. chamaejasme) treatment, while pika presence alone had no significant effect. The positive pika × poison plant interaction was marginally non-significant (p = 0.076), suggesting a possible tendency for pika to lessen the negative effect of the poison plant (@tbl-sedges-model-summary). Random variation was small across blocks and months, and no year-to-year variation was detected.
+Sedge cover was significantly reduced by the poison plant (*S. chamaejasme*) treatment, while pika presence alone had no significant effect. The positive pika × poison plant interaction was marginally non-significant (p = 0.076), suggesting a possible tendency for pika to lessen the negative effect of the poison plant (@tbl-sedges-model-summary). Random variation was small across blocks and months, and no year-to-year variation was detected.
+
 
 ```{r}
 #| label: tbl-forbs-model-summary
@@ -239,7 +167,7 @@ forbs_model_summary |>
     )
   ) |>
   select(!c(component,group)) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -252,7 +180,7 @@ forbs_model_summary |>
 #| results: "hide"
 
 forbs_model_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3)|>
+  kable(format = "html", booktabs = TRUE, digits = 3)|>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -274,7 +202,7 @@ grasses_model_summary |>
     )
   ) |>
   select(!c(component,group)) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -286,7 +214,7 @@ grasses_model_summary |>
 #| warning: false
 
 grasses_model_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -308,7 +236,7 @@ poison_model_summary |>
     )
   ) |>
   select(!c(component,group)) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -320,7 +248,7 @@ poison_model_summary |>
 #| warning: false
 
 poison__model_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -342,7 +270,7 @@ sedges_model_summary |>
     )
   ) |>
   select(!c(component,group)) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -355,6 +283,6 @@ sedges_model_summary |>
 #| results: "hide"
 
 sedges_model_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```

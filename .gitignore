@@ -1,3 +1,6 @@
 renv/*
 .DS_Store
 .Rprofile
+
+/.quarto/
+/_site/

@@ -2,33 +2,14 @@
 title: "Pika-Yak Interaction: Foraging Efficiency"
 author: "Douglas Lawton"
 date: today
-project:
-  type: default
-  output-dir: ../
-format: 
-  pdf:
+format:
+  html:
     toc: true
     toc-depth: 2
     number-sections: true
-    keep-tex: true
     fig-cap-location: bottom
-    documentclass: article
-    geometry: margin=1in
-    fontsize: 11pt
-    highlight-style: pygments
-    code-block-bg: true
-    code-line-numbers: false
-    citation-package: natbib
-    colorlinks: true
-    linkcolor: blue
-    urlcolor: blue
-    fig-width: 8
-    fig-height: 8
-    includes:
-      in-header: |
-        \usepackage{float}
-        \floatplacement{table}{b}
-editor: visual
+    theme: cosmo
+editor: source
 ---
 
 ```{r}
@@ -53,57 +34,6 @@ pink <- '#ff8080'
 green <- '#2fc09b'
 
 ```
-
-# Introduction
-
-This document summarizes the statistical models for plant cover in the manuscript titled: ***"Pika facilitates yaks by suppressing poisonous plants in the Tibetan Plateau"***.
-
-All analyses were conducted in R using `glmmTMB`, `emmeans`, and other tidyverse tools. Figures and contrasts are shown below for all major response variables.
-
-All code and data are housed within the project’s GitHub repository, available at: <https://github.com/ddlawton/pika_yak_interactions>
-
-------------------------------------------------------------------------
-
-# Overview of Statistical Models
-
-The goal of the statistical approach was to respect the hierarchical structure of the data without overfitting. Because the design was fully factorial, model construction was relatively straightforward. The primary variation across models was whether they included a random effect for yak.
-
-**Without individual yak**
-
-```{r}
-#| label: model formula 1
-#| eval: false
-response ~ pika_treatment * poison_plant_treatment +
-    (1 | block) + 
-    (1 | year) + 
-    (1 | month)
-```
-
-**With individual yak**
-
-```{r}
-#| label: model formula 2
-#| eval: false
-response ~ pika_treatment * poison_plant_treatment +
-    (1 | block) + 
-    (1 | year) + 
-    (1 | month) + 
-    (1 | yak)
-```
-
-Statistical Families Used:
-
-| Family   | When Used                                            |
-|----------|------------------------------------------------------|
-| Gaussian | Default, used when residuals appeared homoscedastic  |
-| Beta     | Used for percent/proportion data (if converged well) |
-| Tweedie  | Used when overdispersion or skew was a concern       |
-
-In general, percent data was modeled using the Beta family when possible. If model fit or convergence was poor, I used the gaussian family instead. As a fallback, the tweedie distribution was helpful in handling data with zero inflation, overdispersion, or non-normal characteristics.
-
-Random effect terms like `block`, `year`, and `month` often had minimal influence on fixed effect estimates. However, I chose to retain them in the models to reflect the experimental design and sampling structure. Even when the variance explained was negligible, their inclusion helped preserve the integrity of the hierarchical layout and avoid pseudoreplication.
-
-------------------------------------------------------------------------
 
 # Bite Steps
 
@@ -144,6 +74,8 @@ The following figure (@fig-bite_step_figures) shows the relationship between yak
 #| reulsts: asis'
 #| message: false
 #| warning: false
+#| fig-width: 8
+#| fig-height: 8
 
 # Define your color palette
 plant_colors <- c(green, pink)
@@ -208,17 +140,17 @@ forbs_plot   <- plot_bite_steps("forbs", "forbs bite/steps", label_y = 0.4,lette
 
 ```
 
-## grass bite steps
+## Grass Bite Steps
 
-The model revealed that the presence of S. chamaejasme significantly reduced yak grass feeding efficiency (bite/step ratio) (@tbl-grasses-bite-step-model-summary), but this negative effect was mitigated when pikas were present, as shown by a significant positive interaction (@tbl-grasses-bite-step-model-summary). Pika presence alone did not influence feeding efficiency, but in combination with S. chamaejasme, it substantially improved it (@tbl-grasses-bite-step-model-contrasts). This suggests that pikas may facilitate yak foraging by offsetting the detrimental effects of poisonous plants.
+The model revealed that the presence of *S. chamaejasme* significantly reduced yak grass feeding efficiency (bite/step ratio) (@tbl-grasses-bite-step-model-summary), but this negative effect was mitigated when pikas were present, as shown by a significant positive interaction (@tbl-grasses-bite-step-model-summary). Pika presence alone did not influence feeding efficiency; however, in combination with *S. chamaejasme*, it substantially improved it (@tbl-grasses-bite-step-model-contrasts). These results suggest that pikas may facilitate yak foraging by offsetting the detrimental effects of poisonous plants.
 
-## sedge bite steps
+## Sedge Bite Steps
 
-The presence of S. chamaejasme significantly reduced yak feeding efficiency on sedges, as shown by a strong negative main effect in the model summary (see @tbl-sedges-bite-step-model-summary). Although pika presence alone had no effect, the significant positive interaction indicates that pikas mitigated the negative impact of the poisonous plant. Specifically, sedge bite/step ratios were much lower when S. chamaejasme was present without pikas, but this reduction was substantially less when pikas were present (see pairwise contrasts in @tbl-sedges-bite-step-model-contrasts). These findings suggest that pikas facilitate yak foraging on sedges by reducing the negative effects of *S. chamaejasme*.
+The presence of *S. chamaejasme* significantly reduced yak feeding efficiency on sedges, as shown by a strong negative main effect in the model summary (@tbl-sedges-bite-step-model-summary). Although pika presence alone had no effect, the significant positive interaction indicates that pikas mitigated the negative impact of the poisonous plant. Specifically, sedge bite/step ratios were much lower when *S. chamaejasme* was present without pikas, but this reduction was substantially less when pikas were present (see pairwise contrasts in @tbl-sedges-bite-step-model-contrasts). These findings suggest that pikas facilitate yak foraging on sedges by reducing the negative effects of *S. chamaejasme*.
 
-## forbs bite steps
+## Forbs Bite Steps
 
-For forbs, neither pika presence nor S. chamaejasme alone significantly affected yak feeding efficiency, as both main effects were non-significant (see @tbl-forbs-bite-step-model-summary). However, there was a marginally non-significant interaction (p = 0.067), suggesting a possible moderating effect of pikas on the impact of the poisonous plant. In the pairwise contrasts, the bite/step ratio was significantly lower when S. chamaejasme was present and pikas were absent compared to when both were present (see @tbl-forbs-bite-step-model-contrasts). This indicates a weaker but still detectable facilitative effect of pikas on yak forb consumption in the presence of S. chamaejasme.
+For forbs, neither pika presence nor *S. chamaejasme* alone significantly affected yak feeding efficiency, as both main effects were non-significant (see @tbl-forbs-bite-step-model-summary). However, there was a marginally non-significant interaction (p = 0.067), suggesting a possible moderating effect of pikas on the impact of the poisonous plant. In the pairwise contrasts, the bite/step ratio was significantly lower when *S. chamaejasme* was present and pikas were absent compared to when both were present (see @tbl-forbs-bite-step-model-contrasts). This indicates a weaker but still detectable facilitative effect of pikas on yak forb consumption in the presence of *S. chamaejasme*.
 
 # Plant bites
 
@@ -252,7 +184,8 @@ plant_bites_models <- map(plant_groups, load_plant_bites_data) |> set_names(plan
 
 ```
 
-The following figure (@fig-bite_step_figures) shows the relationship between yak bite/step ratios per plant across he pika and poison plant treatments. We see decreased bite/step ratios for grasses and sedges within the no pika and poison plant treatment plots. Whereas all other treatment levels had a consistent bite/step ratio. Forbs is an exception where there is no difference except with increase forb bite/step ratio in the pika x poison plant treatment level.
+The following figure (@fig-bite_step_figures) shows the relationship between yak bite/step ratios per plant across the pika and poison plant treatments. We observe decreased bite/step ratios for grasses and sedges in the no-pika and poison plant treatment plots, while all other treatment levels exhibited consistent bite/step ratios. For forbs, there was no difference except for an increased bite/step ratio in the pika × poison plant treatment level.
+
 
 ```{r}
 #| label: fig-plant_bites_figures
@@ -261,6 +194,8 @@ The following figure (@fig-bite_step_figures) shows the relationship between yak
 #| reulsts: asis
 #| message: false
 #| warning: false
+#| fig-width: 8
+#| fig-height: 8
 
 # Define your color palette
 plant_colors <- c(green, pink)
@@ -326,22 +261,22 @@ total_plot   <- plot_plant_bites("total", "total bites", label_y = 800)
 
 ```
 
-## grass plant bites
+## Grass Plant Bites
 
-Yak grazing on grasses was significantly reduced by the presence of the poisonous plant S. chamaejasme, with a large negative estimate (-45.3) indicating fewer bites in treated plots. The pika treatment alone had no significant effect on grass bites. However, the interaction between pika presence and S. chamaejasme treatment was positive and significant (+43.9), suggesting that pika presence mitigates the negative effect of the poisonous plant on grass bites. Contrasts confirm that plots with S. chamaejasme had substantially lower grazing, except when pika were present, which restored grazing levels.
+Yak grazing on grasses was significantly reduced by the presence of the poisonous plant *S. chamaejasme*, with a large negative estimate (-45.3) indicating fewer bites in treated plots. The pika treatment alone had no significant effect on grass bites. However, the interaction between pika presence and *S. chamaejasme* treatment was positive and significant (+43.9), suggesting that pika presence mitigates the negative effect of the poisonous plant on grass bites. Contrasts confirm that plots with *S. chamaejasme* had substantially lower grazing, except when pikas were present, which restored grazing levels.
 
-## Forb plant bites
+## Forb Plant Bites
 
-Yak bites on forbs were generally low and showed no significant differences across pika or poisonous plant treatments. The S. chamaejasme treatment showed a marginally positive effect on forb bites, but this was not statistically significant (p \~ 0.058). The interaction between pika and S. chamaejasme was also non-significant. Overall, yak grazing on forbs appears unaffected by either treatment or their interaction.
+Yak bites on forbs were generally low and showed no significant differences across pika or poisonous plant treatments. The *S. chamaejasme* treatment showed a marginally positive effect on forb bites, but this was not statistically significant (p ~ 0.058). The interaction between pika and *S. chamaejasme* was also non-significant. Overall, yak grazing on forbs appears unaffected by either treatment or their interaction.
 
-## Sedge plant bites
+## Sedge Plant Bites
 
-Grazing on sedges was significantly reduced by S. chamaejasme treatment (estimate = -0.42), indicating fewer yak bites in plots with the poisonous plant. Pika presence alone had no significant effect, but the pika × S. chamaejasme interaction was strongly positive (+0.36), showing that pika presence offsets the reduction caused by the poisonous plant. Contrasts reveal that sedge grazing decreases with *S. chamaejasme* unless pika are present, which helps maintain grazing levels.
+Grazing on sedges was significantly reduced by *S. chamaejasme* treatment (estimate = -0.42), indicating fewer yak bites in plots with the poisonous plant. Pika presence alone had no significant effect, but the pika × *S. chamaejasme* interaction was strongly positive (+0.36), showing that pika presence offsets the reduction caused by the poisonous plant. Contrasts reveal that sedge grazing decreases with *S. chamaejasme* unless pikas are present, which helps maintain grazing levels.
 
+## Total Plant Bites
 
-## Total plant bites
+Yak grazing overall was significantly reduced by *S. chamaejasme* treatment, with 131 fewer bites on average compared to control plots without the poisonous plant. Pika presence alone did not significantly influence total bites. However, the strong positive interaction term (+119.5) indicates that pika presence substantially offsets the negative effect of *S. chamaejasme*, restoring grazing rates close to control levels. Contrasts confirm that while *S. chamaejasme* sharply reduces total bites, this effect is largely absent when pikas are present.
 
-Yak grazing overall was significantly reduced by S. chamaejasme treatment, with 131 fewer bites on average compared to control plots without the poisonous plant. Pika presence alone did not significantly influence total bites. However, the strong positive interaction term (+119.5) indicates that pika presence substantially offsets the negative effect of S. chamaejasme, restoring grazing rates close to control levels. Contrasts confirm that while *S. chamaejasme* sharply reduces total bites, this effect is largely absent when pika are present.
 
 # total steps and weight gain
 
@@ -455,17 +390,15 @@ weight_gain_plot <- weight_gain |>
 
 ```
 
-## total step model summary
+## Total Step Model Summary
 
-Yak movement (total steps) was significantly higher in S. chamaejasme plots, with an average increase of 113 steps compared to control plots without the poisonous plant (@tbl-total-step-model-summary). Pika presence alone did not significantly affect step counts. However, the strong negative interaction term (−136.1, @tbl-total-step-model-summary) indicates that when pika were present, the *S. chamaejasme*-induced increase in movement was eliminated. Contrasts show that while S. chamaejasme alone led to more steps, this effect was absent or reversed in the presence of pika, suggesting pika dampen the plant’s impact on yak movement patterns (@tbl-total-step-model-contrasts).
+Yak movement (total steps) was significantly higher in *S. chamaejasme* plots, with an average increase of 113 steps compared to control plots without the poisonous plant (@tbl-total-step-model-summary). Pika presence alone did not significantly affect step counts. However, the strong negative interaction term (−136.1, @tbl-total-step-model-summary) indicates that when pikas were present, the *S. chamaejasme*-induced increase in movement was eliminated. Contrasts show that while *S. chamaejasme* alone led to more steps, this effect was absent or reversed in the presence of pikas, suggesting that pikas dampen the plant’s impact on yak movement patterns (@tbl-total-step-model-contrasts).
 
-## Weight gain summary
+## Weight Gain Summary
 
-The poisonous plant S. chamaejasme substantially reduced yak weight gain, with a mean loss of 0.108 kg/day compared to control plots without the plant while pika presence alone had no significant effect on weight gain (@tbl-weight-gain-model-summary). However, the strong positive interaction term (+0.132 kg/day) indicates that pika presence largely neutralizes the negative effect of S. chamaejasme, resulting in weight gain similar to control conditions. Contrasts show that while S. chamaejasme sharply reduces weight gain in the absence of pika, this reduction disappears when pika are present, suggesting a facilitative role of pika in mitigating plant-induced losses (@tbl-weight-gain-model-contrasts).
-
+The poisonous plant *S. chamaejasme* substantially reduced yak weight gain, with a mean loss of 0.108 kg/day compared to control plots without the plant, while pika presence alone had no significant effect on weight gain (@tbl-weight-gain-model-summary). However, the strong positive interaction term (+0.132 kg/day) indicates that pika presence largely neutralizes the negative effect of *S. chamaejasme*, resulting in weight gain similar to control conditions. Contrasts show that while *S. chamaejasme* sharply reduces weight gain in the absence of pikas, this reduction disappears when pikas are present, suggesting a facilitative role of pikas in mitigating plant-induced losses (@tbl-weight-gain-model-contrasts).
 
 # tables
-
 
 ```{r}
 #| label: tbl-grasses-bite-step-model-summary
@@ -485,7 +418,7 @@ bite_step_models$grasses$model_summary |>
     )
   ) |>
   select(!c(component,group)) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -497,10 +430,9 @@ bite_step_models$grasses$model_summary |>
 #| warning: false
 
 bite_step_models$grasses$model_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
-
 
 ```{r}
 #| label: tbl-sedges-bite-step-model-summary
@@ -520,7 +452,7 @@ bite_step_models$sedges$model_summary |>
     )
   ) |>
   select(!c(component,group)) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -532,10 +464,9 @@ bite_step_models$sedges$model_summary |>
 #| warning: false
 
 bite_step_models$sedges$model_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
-
 
 ```{r}
 #| label: tbl-forbs-bite-step-model-summary
@@ -555,7 +486,7 @@ bite_step_models$forbs$model_summary  |>
     )
   ) |>
   select(!c(component,group)) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -567,10 +498,9 @@ bite_step_models$forbs$model_summary  |>
 #| warning: false
 
 bite_step_models$forbs$model_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
-
 
 ```{r}
 #| label: tbl-grasses-plant-bites-model-summary
@@ -591,7 +521,7 @@ plant_bites_models$grasses$model_summary  |>
     )
   ) |>
   select(!c(component,group)) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -603,10 +533,9 @@ plant_bites_models$grasses$model_summary  |>
 #| warning: false
 
 plant_bites_models$grasses$model_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
-
 
 ```{r}
 #| label: tbl-forbs-plant-bites-model-summary
@@ -627,10 +556,9 @@ plant_bites_models$forbs$model_summary  |>
     )
   ) |>
   select(!c(component,group)) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
-
 
 ```{r}
 #| label: tbl-sedges-plant-bites-model-summary
@@ -651,7 +579,7 @@ plant_bites_models$sedges$model_summary  |>
     )
   ) |>
   select(!c(component,group)) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -663,10 +591,9 @@ plant_bites_models$sedges$model_summary  |>
 #| warning: false
 
 plant_bites_models$sedges$model_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
-
 
 ```{r}
 #| label: tbl-total-plant-bites-model-summary
@@ -687,7 +614,7 @@ plant_bites_models$total$model_summary  |>
     )
   ) |>
   select(!c(component,group)) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -699,10 +626,9 @@ plant_bites_models$total$model_summary  |>
 #| warning: false
 
 plant_bites_models$total$model_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
-
 
 ```{r}
 #| label: tbl-total-step-model-summary
@@ -723,7 +649,7 @@ total_steps_models$model_summary  |>
     )
   ) |>
   select(!c(component,group)) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -736,10 +662,9 @@ total_steps_models$model_summary  |>
 
 
 total_steps_models$model_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
-
 
 ```{r}
 #| label: tbl-weight-gain-model-summary
@@ -760,7 +685,7 @@ weight_gain_models$model_summary  |>
     )
   ) |>
   select(!c(component,group)) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -772,6 +697,6 @@ weight_gain_models$model_summary  |>
 #| warning: false
 
 weight_gain_models$model_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```

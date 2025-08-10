@@ -1,0 +1,103 @@
+---
+title: "Pika–Yak Interactions: Statistical Modeling Overview"
+author: "Douglas Lawton"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    fig-cap-location: bottom
+    theme: cosmo
+editor: source
+---
+
+# Introduction
+
+This webpage provides an overview of the final statistical models, diagnostics, and effect estimates used in the manuscript:  
+***"Pika facilitates yaks by suppressing poisonous plants in the Tibetan Plateau"***.  
+
+All analyses were conducted in **R** using `glmmTMB`, `emmeans`, and the tidyverse ecosystem. For each major response variable, the corresponding figures, model summaries, and estimated contrasts are presented.  
+
+The full analysis workflow, including all code and data, is available in the project’s GitHub repository:  
+<https://github.com/ddlawton/pika_yak_interactions>
+
+---
+
+Rather than organizing results by manuscript figure number, models are grouped here by **data type** for easier navigation:
+
+**Diet Selection**  
+- Pika feeding  
+- Yak grazing  
+- Dung density  
+- Pika burrow density  
+
+**Experiment: Plant Cover**  
+- Forbs  
+- Grasses  
+- *S. chamaejasme*  
+- Sedges  
+
+**Experiment: Foraging Efficiency**  
+- Yak bite/step ratios  
+- Yak bites by type  
+- Yak total steps  
+- Yak weight gain  
+
+**Experiment: Foraging Quality**  
+- ADF  
+- CP  
+- EE  
+- NDF  
+
+Each variable was modeled separately, following the approach described below.
+
+---
+
+# Overview of Statistical Models
+
+The modeling strategy aimed to account for the **hierarchical structure** of the data while avoiding overfitting.  
+Because the design was fully factorial, the fixed-effect structure was consistent across analyses; differences between models were driven primarily by whether or not they included a **random effect for individual yak**.
+
+**Without individual yak:**
+
+```{r}
+#| label: model-formula-1
+#| eval: false
+response ~ pika_treatment * poison_plant_treatment +
+    (1 | block) + 
+    (1 | year) + 
+    (1 | month)
+```
+
+**With individual yak:**
+
+```{r}
+#| label: model-formula-2
+#| eval: false
+response ~ pika_treatment * poison_plant_treatment +
+    (1 | block) + 
+    (1 | year) + 
+    (1 | month) + 
+    (1 | yak)
+```
+
+---
+
+## Statistical Families Used
+
+| Family   | Application                                           |
+|----------|-------------------------------------------------------|
+| Gaussian | Default; used when residuals were approximately homoscedastic |
+| Beta     | Percent/proportion data (when convergence was stable) |
+| Tweedie  | Data with overdispersion, skew, or zero inflation      |
+
+**Model family selection**  
+- Percent/proportion data were modeled with the Beta family whenever possible.  
+- If Beta models failed to converge or fit poorly, the Gaussian family was used instead.  
+- The Tweedie distribution was employed as a flexible alternative for skewed or zero-inflated data.  
+
+**Random effects**  
+Random terms for `block`, `year`, and `month` were retained in all models to reflect the experimental design and sampling structure. Even when these effects explained minimal variance, their inclusion helped prevent pseudoreplication and maintain the integrity of the hierarchical model structure.
+
+---

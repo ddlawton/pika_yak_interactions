@@ -1,0 +1,22 @@
+project:
+  type: website
+
+website:
+  title: "Pika-Yak interactions"
+  navbar:
+    left:
+      - text: "Statistics Introduction"
+        href: R/statistical_reports/index.qmd
+      - text: "Diet Selection"
+        href: R/statistical_reports/diet_selection_report.qmd
+      - text: "Forage Quality"
+        href: R/statistical_reports/experiment_forage_quality.qmd
+      - text: "Foraging Efficiency"
+        href: R/statistical_reports/experiment_foraging_efficiency.qmd
+      - text: "Plant Cover"
+        href: R/statistical_reports/experiment_plant_cover.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true

@@ -2,33 +2,14 @@
 title: "Pika-Yak Interactions: Diet Selection"
 author: "Douglas Lawton"
 date: today
-project:
-  type: default
-  output-dir: ../
-format: 
-  pdf:
+format:
+  html:
     toc: true
     toc-depth: 2
     number-sections: true
-    keep-tex: true
     fig-cap-location: bottom
-    documentclass: article
-    geometry: margin=1in
-    fontsize: 11pt
-    highlight-style: pygments
-    code-block-bg: true
-    code-line-numbers: false
-    citation-package: natbib
-    colorlinks: true
-    linkcolor: blue
-    urlcolor: blue
-    fig-width: 8
-    fig-height: 8
-    includes:
-      in-header: |
-        \usepackage{float}
-        \floatplacement{table}{b}
-editor: visual
+    theme: cosmo
+editor: source
 ---
 
 ```{r}
@@ -54,44 +35,6 @@ green <- '#2fc09b'
 
 ```
 
-# Introduction
-
-This document summarizes the diet selection analysis within the manuscript titled: ***"Pika facilitates yaks by suppressing poisonous plants in the Tibetan Plateau"***.
-
-All analyses were conducted in R using `glmmTMB`, `emmeans`, and other tidyverse tools. Figures and contrasts are shown below for all major response variables.
-
-All code and data are housed within the project’s GitHub repository, available at: <https://github.com/ddlawton/pika_yak_interactions>
-
-------------------------------------------------------------------------
-
-# Overview of Statistical Models
-
-The goal of the statistical approach was to respect the hierarchical structure of the data without overfitting. Because the design was fully factorial, model construction was relatively straightforward. The primary variation across models was whether they included a random effect for yak.
-
-```{r}
-#| label: model formula 1
-#| eval: false
-response ~ pika_treatment * poison_plant_treatment +
-    (1 | block) + 
-    (1 | year) + 
-    (1 | month)
-```
-
-Statistical Families Used:
-
-| Family   | When Used                                            |
-|----------|------------------------------------------------------|
-| Gaussian | Default, used when residuals appeared homoscedastic  |
-| Beta     | Used for percent/proportion data (if converged well) |
-| Tweedie  | Used when overdispersion or skew was a concern       |
-
-In general, percent data was modeled using the Beta family when possible. If model fit or convergence was poor, I used the gaussian family instead. As a fallback, the tweedie distribution was helpful in handling data with zero inflation, overdispersion, or non-normal characteristics.
-
-Random effect terms like `block`, `year`, and `month` often had minimal influence on fixed effect estimates. However, I chose to retain them in the models to reflect the experimental design and sampling structure. Even when the variance explained was negligible, their inclusion helped preserve the integrity of the hierarchical layout and avoid pseudoreplication.
-
-------------------------------------------------------------------------
-
-# Data Modeling Summary
 
 ```{r}
 #| echo: false
@@ -128,7 +71,9 @@ gam_ests$adj_est <- gam_ests$.estimate + coef(burrow_model)[1]
 
 ```
 
-The following figure (@fig-diet_selection_figure) shows pika feedind frequency (A) and yak grazig frequebcy (B) by every pika and posion plant treatment with sigificance shown with letters. It also shows the relationship between pika burrow density (C) and yak dung density (D) by *S. chamaejasme* cover. Overall, the same results as what was seen in the original figure. Pikas preferred Forbs and *S. chamaejasme* overal grasses and sedges while Yaks prefered Grasses, then sedges, then forbs and avoided *S. chamaejasme* completely. This is further reinformed with plots C and D.
+The following figure (@fig-diet_selection_figure) shows pika feeding frequency (A) and yak grazing frequency (B) by each pika and poison plant treatment, with significance indicated by letters. It also shows the relationship between pika burrow density (C) and yak dung density (D) with S. chamaejasme cover. Overall, these results align with those seen in the original figure.
+
+Pikas preferred forbs and S. chamaejasme over grasses and sedges, while yaks preferred grasses, then sedges, then forbs, and completely avoided S. chamaejasme. This pattern is further reinforced by plots C and D.
 
 ```{r}
 #| label: fig-diet_selection_figure
@@ -186,17 +131,18 @@ dung_plot <- dung_burrow_by_plot |>
 
 ```
 
-## Pika feeding results
+# Pika feeding results
 
-There was a signficant effect of plant group on pike feeding (@tbl-pika-feeding-model-summary) with *S. chamaejasme* consumption being the highest, followed by forbs, and then sedges and grasses (@tbl-pika-feeding-model-contrasts).
+There was a significant effect of plant group on pika feeding (@tbl-pika-feeding-model-summary), with S. chamaejasme consumption being the highest, followed by forbs, then sedges and grasses (@tbl-pika-feeding-model-contrasts).
 
-## Yak Grazing results
+# Yak grazing results
 
-There was a signficant effect of plant group on yak grazing (@tbl-yak-feeding-model-summary) with grass consumption being the highest,followed by sedges, and then forbs (@tbl-yak-feeding-model-contrasts).
+There was a significant effect of plant group on yak grazing (@tbl-yak-feeding-model-summary), with grass consumption being the highest, followed by sedges, and then forbs (@tbl-yak-feeding-model-contrasts).
 
-## burrow and dung density
+# Burrow and dung density
 
-I did not run specific statistical models for these plots (C and D). However I did notice an interesting non-linear relationship betwen pika burrow density and *S. chamajasme* cover. I think these plots are straight forward and more indepth tables were not needed.
+I did not run specific statistical models for plots C and D. However, I observed an interesting non-linear relationship between pika burrow density and S. chamaejasme cover. These plots are straightforward and more in-depth tables were not deemed necessary.
+
 
 ```{r}
 #| label: tbl-pika-feeding-model-summary
@@ -210,7 +156,7 @@ library(knitr)
 library(kableExtra)
 
 pika_feeding_model_summary |>
-  kable(format = "latex", booktabs = TRUE, digits = 2) |>
+  kable(format = "html", booktabs = TRUE, digits = 2) |>
   kable_styling(latex_options = c("striped"))
 ```
 
@@ -225,7 +171,7 @@ library(knitr)
 library(kableExtra)
 
 pika_feeding_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped"))
 
 
@@ -243,7 +189,7 @@ library(knitr)
 library(kableExtra)
 
 yak_feeding_model_summary |>
-  kable(format = "latex", booktabs = TRUE, digits = 2) |>
+  kable(format = "html", booktabs = TRUE, digits = 2) |>
   kable_styling(latex_options = c("striped"))
 ```
 
@@ -258,7 +204,7 @@ library(knitr)
 library(kableExtra)
 
 yak_feeding_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped"))
 
 

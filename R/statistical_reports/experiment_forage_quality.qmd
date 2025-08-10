@@ -2,32 +2,13 @@
 title: "Pika-Yak Interaction: Foraging Quality"
 author: "Douglas Lawton"
 date: today
-project:
-  type: default
-  output-dir: ../
-format: 
-  pdf:
+format:
+  html:
     toc: true
     toc-depth: 2
     number-sections: true
-    keep-tex: true
     fig-cap-location: bottom
-    documentclass: article
-    geometry: margin=1in
-    fontsize: 11pt
-    highlight-style: pygments
-    code-block-bg: true
-    code-line-numbers: false
-    citation-package: natbib
-    colorlinks: true
-    linkcolor: blue
-    urlcolor: blue
-    fig-width: 8
-    fig-height: 8
-    includes:
-      in-header: |
-        \usepackage{float}
-        \floatplacement{table}{b}
+    theme: cosmo
 editor: source
 ---
 
@@ -93,6 +74,8 @@ forag_quality_models <- map(quality_metrics, load_forage_quality_data) |> set_na
 #| reulsts: asis'
 #| message: false
 #| warning: false
+#| fig-width: 8
+#| fig-height: 8
 
 # Define your color palette
 plant_colors <- c(green, pink)
@@ -161,23 +144,22 @@ ndf_plot   <- plot_forage_quality("ndf", "ndf (%)",label_y=68,letters=FALSE)
 
 ```
 
+
 # ADF model summary
 
-ADF content was slightly but significantly reduced by the poison plant (*S. chamaejasme*) treatment, while pika presence alone had no measurable effect (@tbl-adf-model-summary). A significant positive interaction indicated that pika partially offset the reduction in ADF caused by the poison plant. Contrasts showed that poison plant treatment generally lowered ADF, but this effect was weaker in pika-present plots (@tbl-adf-model-contrasts). Random variation across blocks and months was small, with no detectable year-to-year variation (@tbl-adf-model-summary).
+ADF content was slightly but significantly reduced by the poison plant (S. chamaejasme) treatment, while pika presence alone had no measurable effect (@tbl-adf-model-summary). A significant positive interaction indicated that pika partially offset the reduction in ADF caused by the poison plant. Contrasts showed that poison plant treatment generally lowered ADF, but this effect was weaker in pika-present plots (@tbl-adf-model-contrasts). Random variation across blocks and months was small, with no detectable year-to-year variation (@tbl-adf-model-summary).
 
 # CP model summary
 
-Crude protein (CP) content was significantly reduced by the poison plant (*S. chamaejasme*) treatment, while pika presence alone had a marginally non-significant positive effect (@tbl-cp-model-summary). A strong positive interaction showed that pika presence substantially mitigated the reduction in CP caused by the poison plant. Contrasts confirmed lower CP in treated plots without pika, but this reduction was much smaller in pika-present plots (@tbl-cp-model-contrasts). Random variation across blocks and months was minimal, with no variation across years.
+Crude protein (CP) content was significantly reduced by the poison plant (S. chamaejasme) treatment, while pika presence alone had a marginally non-significant positive effect (@tbl-cp-model-summary). A strong positive interaction showed that pika presence substantially mitigated the reduction in CP caused by the poison plant. Contrasts confirmed lower CP in treated plots without pika, but this reduction was much smaller in pika-present plots (@tbl-cp-model-contrasts). Random variation across blocks and months was minimal, with no variation across years.
 
 # EE model summary
 
-Ether extract (EE) content was slightly reduced by pika presence, while the poison plant (*S. chamaejasme*) treatment alone had no significant effect (@tbl-ee-model-summary). A significant positive interaction indicated that pika mitigated the small negative effect of the poison plant on EE. Contrasts revealed only minor and inconsistent differences among treatment combinations, with most effects small in magnitude (@tbl-ee-model-contrasts). Random variation across months was minimal, with no variation across blocks or years.
+Ether extract (EE) content was slightly reduced by pika presence, while the poison plant (S. chamaejasme) treatment alone had no significant effect (@tbl-ee-model-summary). A significant positive interaction indicated that pika mitigated the small negative effect of the poison plant on EE. Contrasts revealed only minor and inconsistent differences among treatment combinations, with most effects small in magnitude (@tbl-ee-model-contrasts). Random variation across months was minimal, with no variation across blocks or years.
 
 # NDF model summary
 
 Neutral detergent fiber (NDF) content was slightly reduced by the poison plant (S. chamaejasme) treatment, while pika presence alone had no significant effect (@tbl-ndf-model-summary). The interaction between pika and the poison plant was not significant, indicating that pika did not modify the treatment’s effect on NDF. Random variation was minimal across blocks and absent across years and months.
-
-
 
 
 # Tables
@@ -200,7 +182,7 @@ forag_quality_models$adf$model_summary |>
         TRUE ~ term
     )
   ) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3)|>
+  kable(format = "html", booktabs = TRUE, digits = 3)|>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -212,7 +194,7 @@ forag_quality_models$adf$model_summary |>
 #| warning: false
 
 forag_quality_models$adf$model_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3)|>
+  kable(format = "html", booktabs = TRUE, digits = 3)|>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -235,7 +217,7 @@ forag_quality_models$cp$model_summary |>
         TRUE ~ term
     )
   ) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3)|>
+  kable(format = "html", booktabs = TRUE, digits = 3)|>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -247,7 +229,7 @@ forag_quality_models$cp$model_summary |>
 #| warning: false
 
 forag_quality_models$cp$model_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3)|>
+  kable(format = "html", booktabs = TRUE, digits = 3)|>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -270,7 +252,7 @@ forag_quality_models$ee$model_summary |>
         TRUE ~ term
     )
   ) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3)|>
+  kable(format = "html", booktabs = TRUE, digits = 3)|>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -282,7 +264,7 @@ forag_quality_models$ee$model_summary |>
 #| warning: false
 
 forag_quality_models$ee$model_contrasts |>
-  kable(format = "latex", booktabs = TRUE, digits = 3)|>
+  kable(format = "html", booktabs = TRUE, digits = 3)|>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
@@ -305,6 +287,6 @@ forag_quality_models$ndf$model_summary |>
         TRUE ~ term
     )
   ) |>
-  kable(format = "latex", booktabs = TRUE, digits = 3)|>
+  kable(format = "html", booktabs = TRUE, digits = 3)|>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
