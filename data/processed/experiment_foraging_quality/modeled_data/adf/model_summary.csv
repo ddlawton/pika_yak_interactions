@@ -1,8 +1,8 @@
 effect,component,group,term,estimate,std.error,statistic,p.value
-fixed,cond,NA,(Intercept),-2.3862522150237915,0.022295334227808213,-107.02921923670918,0
-fixed,cond,NA,pika_treatmentpika,0.03184365044347033,0.016971392350640296,1.8763133740331526,0.06061226165718481
-fixed,cond,NA,posion_plant_treatmentS. chamaejasme,-0.15406328570596525,0.01766567109355673,-8.721054801148052,2.756219900698349e-18
-fixed,cond,NA,pika_treatmentpika:posion_plant_treatmentS. chamaejasme,0.133419003958659,0.02446834225060135,5.452719378869241,4.960531737735766e-8
-ran_pars,cond,block,sd__(Intercept),0.011698147594695934,NA,NA,NA
-ran_pars,cond,year,sd__(Intercept),1.763909194698106e-7,NA,NA,NA
-ran_pars,cond,month,sd__(Intercept),0.030830934439497016,NA,NA,NA
+fixed,cond,NA,(Intercept),-0.8177735563104913,0.025272454855112522,-32.35829526647898,1.0604946710064983e-229
+fixed,cond,NA,pika_treatmentpika,0.008932944980478018,0.01948651192490298,0.45841682774750847,0.6466530042131856
+fixed,cond,NA,posion_plant_treatmentS. chamaejasme,-0.061588715417066175,0.019627902262171235,-3.1378144538535744,0.0017021258795650303
+fixed,cond,NA,pika_treatmentpika:posion_plant_treatmentS. chamaejasme,0.07850518219947418,0.027627040286230364,2.8416066790405368,0.004488683161908091
+ran_pars,cond,block,sd__(Intercept),0.028556252622096,NA,NA,NA
+ran_pars,cond,year,sd__(Intercept),2.876828145907633e-6,NA,NA,NA
+ran_pars,cond,month,sd__(Intercept),0.027092815054579448,NA,NA,NA

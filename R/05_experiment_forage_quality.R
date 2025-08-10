@@ -59,9 +59,8 @@ quality_dat_split <- quality_dat |>
   group_split(quality_metric) |>
   set_names(quality_dat |> group_by(quality_metric) |> group_keys() |> pull(quality_metric))
 
-names(quality_dat_split) <- quality_dat |>
-  distinct(quality_metric) |>
-  pull(quality_metric)
+
+quality_dat_split
 
 # --- Fit both Gaussian and Beta models ---
 fit_models <- function(df) {

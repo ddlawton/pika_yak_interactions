@@ -1,0 +1,369 @@
+---
+title: "Pika-Yak Interaction: Plant Cover"
+author: "Douglas Lawton"
+date: today
+project:
+  type: default
+  output-dir: ../
+format: 
+  pdf:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    keep-tex: true
+    fig-cap-location: bottom
+    documentclass: article
+    geometry: margin=1in
+    fontsize: 11pt
+    highlight-style: pygments
+    code-block-bg: true
+    code-line-numbers: false
+    citation-package: natbib
+    colorlinks: true
+    linkcolor: blue
+    urlcolor: blue
+    fig-width: 8
+    fig-height: 8
+    fig-pos: b
+    includes:
+      in-header: |
+        \usepackage{float}
+        \floatplacement{table}{b}
+editor: visual
+---
+
+```{r}
+#| echo: false
+#| results: "hide"
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(ggpubr)
+library(patchwork)
+library(here)
+library(mgcv)
+library(knitr)
+library(kableExtra)
+
+# --- Set Root Directory for Project ---
+here::i_am("README.md")  # Anchor project for reproducible paths
+
+# --- Custom Color Palette ---
+pink <- '#ff8080'
+green <- '#2fc09b'
+
+```
+
+# Introduction
+
+This document summarizes the statistical models for plant cover in the manuscript titled: ***"Pika facilitates yaks by suppressing poisonous plants in the Tibetan Plateau"***.
+
+All analyses were conducted in R using `glmmTMB`, `emmeans`, and other tidyverse tools. Figures and contrasts are shown below for all major response variables.
+
+All code and data are housed within the project’s GitHub repository, available at: <https://github.com/ddlawton/pika_yak_interactions>
+
+------------------------------------------------------------------------
+
+# Overview of Statistical Models
+
+The goal of the statistical approach was to respect the hierarchical structure of the data without overfitting. Because the design was fully factorial, model construction was relatively straightforward. The primary variation across models was whether they included a random effect for yak.
+
+**Without individual yak**
+
+```{r}
+#| label: model formula 1
+#| eval: false
+response ~ pika_treatment * poison_plant_treatment +
+    (1 | block) + 
+    (1 | year) + 
+    (1 | month)
+```
+
+**With individual yak**
+
+```{r}
+#| label: model formula 2
+#| eval: false
+response ~ pika_treatment * poison_plant_treatment +
+    (1 | block) + 
+    (1 | year) + 
+    (1 | month) + 
+    (1 | yak)
+```
+
+Statistical Families Used:
+
+| Family   | When Used                                            |
+|----------|------------------------------------------------------|
+| Gaussian | Default, used when residuals appeared homoscedastic  |
+| Beta     | Used for percent/proportion data (if converged well) |
+| Tweedie  | Used when overdispersion or skew was a concern       |
+
+In general, percent data was modeled using the Beta family when possible. If model fit or convergence was poor, I used the gaussian family instead. As a fallback, the tweedie distribution was helpful in handling data with zero inflation, overdispersion, or non-normal characteristics.
+
+Random effect terms like `block`, `year`, and `month` often had minimal influence on fixed effect estimates. However, I chose to retain them in the models to reflect the experimental design and sampling structure. Even when the variance explained was negligible, their inclusion helped preserve the integrity of the hierarchical layout and avoid pseudoreplication.
+
+------------------------------------------------------------------------
+
+# Data Modeling Summary:
+
+```{r}
+#| echo: false
+#| label: read in data
+#| results: "hide"
+#| message: false
+#| warning: false
+cover_data <- read_csv(here('data/processed/experiment_plant_cover/plant_cover_by_treatment.csv'))
+
+forbs_emms <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/forbs_cover/emms.csv'))
+forbs_letters <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/forbs_cover/posthoc_letters.csv'))
+forbs_model_summary  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/forbs_cover/model_summary.csv'))
+forbs_model_contrasts  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/forbs_cover/posthoc_contrasts.csv'))
+
+grasses_emms <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/emms.csv'))
+grasses_letters <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/posthoc_letters.csv'))
+grasses_model_summary  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/model_summary.csv'))
+grasses_model_contrasts  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/posthoc_contrasts.csv'))
+
+poison_emms <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/emms.csv'))
+poison_letters <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/posthoc_letters.csv'))
+poison_model_summary  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/model_summary.csv'))
+poison__model_contrasts  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/posthoc_contrasts.csv'))
+
+sedges_emms <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/sedges_cover/emms.csv'))
+sedges_letters <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/sedges_cover/posthoc_letters.csv'))
+sedges_model_summary  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/sedges_cover/model_summary.csv'))
+sedges_model_contrasts  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/sedges_cover/posthoc_contrasts.csv'))
+
+```
+
+```{r}
+#| label: fig-plant-cover
+#| fig-cap: "Plant cover between experimental plots"
+#| fig-width: 8
+#| fig-height: 8
+#| echo: false
+#| reulsts: asis
+#| message: false
+#| warning: false
+
+make_cover_plot <- function(plant_name, letters_df, y_label, text_y = 41, letters = TRUE) {
+  p <- cover_data |>
+    filter(plant == plant_name) |>
+    left_join(letters_df, by = c("pika_treatment", "posion_plant_treatment")) |>
+    ggplot(aes(x = pika_treatment, y = cover, color = posion_plant_treatment)) +
+    geom_jitter(
+      size = 1, alpha = 0.4,
+      position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.7)
+    ) +
+    geom_point(
+        data = letters_df,
+        aes(x = pika_treatment, y = response * 100, fill = posion_plant_treatment),
+        position = position_dodge(width = 0.7),
+        size = 8, pch = 21, color = "black"
+    ) +
+    scale_fill_manual(values = c(green, pink)) +
+    scale_color_manual(values = c(green, pink)) +
+    labs(
+      y = y_label,
+      x = "",
+      color = "Poison plant treatment",
+      fill = "Poison plant treatment"
+    ) +
+    theme_pubr(base_size = 15) +
+    theme(legend.position = "bottom", legend.title = element_blank())
+
+  if (letters) {
+    p <- p  +
+      geom_text(
+        data = letters_df,
+        aes(x = pika_treatment, y = text_y, label = .group, group = posion_plant_treatment),
+        position = position_dodge(width = 0.7),
+        size = 5, color = "black", show.legend = FALSE
+      )
+  }
+
+  p
+}
+
+
+# Now call the function with appropriate arguments
+forb_plot    <- make_cover_plot("forbs", forbs_letters, "forb cover (%)", text_y = 41,letters=FALSE)
+grass_plot   <- make_cover_plot("grasses", grasses_letters, "grass cover (%)", text_y = 41)
+poison_plant <- make_cover_plot("s_chamaejasme", poison_letters, "S. chamaejasme cover (%)", text_y = 43)
+sedge_plot   <- make_cover_plot("sedges", sedges_letters, "sedge cover (%)", text_y = 70,letters=FALSE)
+
+
+
+(forb_plot + grass_plot) / (poison_plant + sedge_plot) +
+    plot_annotation(tag_levels = 'A') + 
+    plot_layout(guides = "collect") & theme(legend.position = 'bottom')
+
+
+
+```
+
+# Forbs Cover
+
+
+Forb cover showed a small but significant reduction with the poison plant (S. chamaejasme) treatment, while pika presence alone had no measurable effect (@tbl-forbs-model-summary). The interaction between pika and poison plant treatments was not significant, indicating that pika did not alter the poison plant’s effect on forb cover. Random variation across blocks and years was small, and no month-to-month variation was detected. 
+
+
+# Grasses Cover
+
+Grass cover was significantly reduced by the poison plant (S. chamaejasme) treatment, with odds of occurrence dropping to less than half in treated plots. Pika presence alone had no detectable effect in untreated plots, but in treated plots, pika presence substantially increased grass cover, offsetting some of the negative effect of the poison plant. This positive interaction suggests pika may facilitate grass recovery when S. chamaejasme is present. Random variation across blocks and months was small, and no variation was detected across years. See the model summary and constrast tables (@tbl-grasses-model-summary, @tbl-grasses-model-contrasts)
+
+
+# *S. chamaejasme* Cover
+
+Stellera chamaejasme cover was strongly increased in the poison plant treatment (@tbl-poison-model-summary). Pika presence alone had no significant effect in untreated plots, but significantly reduced the large cover gains from the poison plant treatment (@tbl-poison-model-contrasts). This interaction indicates that pika substantially suppress S. chamaejasme when it is present in high abundance. Random variation across blocks, years, and months was small relative to the fixed effects.
+
+
+# Sedges Cover
+
+Sedge cover was significantly reduced by the poison plant (S. chamaejasme) treatment, while pika presence alone had no significant effect. The positive pika × poison plant interaction was marginally non-significant (p = 0.076), suggesting a possible tendency for pika to lessen the negative effect of the poison plant (@tbl-sedges-model-summary). Random variation was small across blocks and months, and no year-to-year variation was detected.
+
+
+
+```{r}
+#| label: tbl-forbs-model-summary
+#| tbl-cap: "Model summary for forb cover."
+#| echo: false
+#| message: false
+#| warning: false
+
+library(kableExtra)
+forbs_model_summary |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  select(!c(component,group)) |>
+  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+```{r}
+#| label: tbl-forbs-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for forb cover by treatment group."
+#| echo: false
+#| message: false
+#| warning: false
+#| results: "hide"
+
+forbs_model_contrasts |>
+  kable(format = "latex", booktabs = TRUE, digits = 3)|>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+
+```{r}
+#| label: tbl-grasses-model-summary
+#| tbl-cap: "Model summary for grass cover."
+#| echo: false
+#| message: false
+#| warning: false
+
+grasses_model_summary |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  select(!c(component,group)) |>
+  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+```{r}
+#| label: tbl-grasses-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for grass cover by treatment group."
+#| echo: false
+#| message: false
+#| warning: false
+
+grasses_model_contrasts |>
+  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+
+```{r}
+#| label: tbl-poison-model-summary
+#| tbl-cap: "Model summary for *S. chamaejasme* cover."
+#| echo: false
+#| message: false
+#| warning: false
+
+poison_model_summary |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  select(!c(component,group)) |>
+  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+```{r}
+#| label: tbl-poison-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for *S. chamaejasme* cover by treatment group."
+#| echo: false
+#| message: false
+#| warning: false
+
+poison__model_contrasts |>
+  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+
+```{r}
+#| label: tbl-sedges-model-summary
+#| tbl-cap: "Model summary for sedge cover."
+#| echo: false
+#| message: false
+#| warning: false
+
+sedges_model_summary |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  select(!c(component,group)) |>
+  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+```{r}
+#| label: tbl-sedges-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for sedge cover by treatment group."
+#| echo: false
+#| message: false
+#| warning: false
+#| results: "hide"
+
+sedges_model_contrasts |>
+  kable(format = "latex", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
