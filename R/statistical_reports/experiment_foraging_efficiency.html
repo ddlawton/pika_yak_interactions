@@ -1,0 +1,2094 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.33">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Douglas Lawton">
+<meta name="dcterms.date" content="2025-08-10">
+
+<title>Pika-Yak Interaction: Foraging Efficiency – Pika-Yak interactions</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-4df3b0c4fafa0f66eafcead0ee6cff11.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Pika-Yak interactions</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../R/statistical_reports/index.html"> 
+<span class="menu-text">Statistics Introduction</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../R/statistical_reports/diet_selection_report.html"> 
+<span class="menu-text">Diet Selection</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../R/statistical_reports/experiment_forage_quality.html"> 
+<span class="menu-text">Forage Quality</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../../R/statistical_reports/experiment_foraging_efficiency.html" aria-current="page"> 
+<span class="menu-text">Foraging Efficiency</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../R/statistical_reports/experiment_plant_cover.html"> 
+<span class="menu-text">Plant Cover</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#bite-steps" id="toc-bite-steps" class="nav-link active" data-scroll-target="#bite-steps"><span class="header-section-number">1</span> Bite Steps</a>
+  <ul class="collapse">
+  <li><a href="#grass-bite-steps" id="toc-grass-bite-steps" class="nav-link" data-scroll-target="#grass-bite-steps"><span class="header-section-number">1.1</span> Grass Bite Steps</a></li>
+  <li><a href="#sedge-bite-steps" id="toc-sedge-bite-steps" class="nav-link" data-scroll-target="#sedge-bite-steps"><span class="header-section-number">1.2</span> Sedge Bite Steps</a></li>
+  <li><a href="#forbs-bite-steps" id="toc-forbs-bite-steps" class="nav-link" data-scroll-target="#forbs-bite-steps"><span class="header-section-number">1.3</span> Forbs Bite Steps</a></li>
+  </ul></li>
+  <li><a href="#plant-bites" id="toc-plant-bites" class="nav-link" data-scroll-target="#plant-bites"><span class="header-section-number">2</span> Plant bites</a>
+  <ul class="collapse">
+  <li><a href="#grass-plant-bites" id="toc-grass-plant-bites" class="nav-link" data-scroll-target="#grass-plant-bites"><span class="header-section-number">2.1</span> Grass Plant Bites</a></li>
+  <li><a href="#forb-plant-bites" id="toc-forb-plant-bites" class="nav-link" data-scroll-target="#forb-plant-bites"><span class="header-section-number">2.2</span> Forb Plant Bites</a></li>
+  <li><a href="#sedge-plant-bites" id="toc-sedge-plant-bites" class="nav-link" data-scroll-target="#sedge-plant-bites"><span class="header-section-number">2.3</span> Sedge Plant Bites</a></li>
+  <li><a href="#total-plant-bites" id="toc-total-plant-bites" class="nav-link" data-scroll-target="#total-plant-bites"><span class="header-section-number">2.4</span> Total Plant Bites</a></li>
+  </ul></li>
+  <li><a href="#total-steps-and-weight-gain" id="toc-total-steps-and-weight-gain" class="nav-link" data-scroll-target="#total-steps-and-weight-gain"><span class="header-section-number">3</span> total steps and weight gain</a>
+  <ul class="collapse">
+  <li><a href="#total-step-model-summary" id="toc-total-step-model-summary" class="nav-link" data-scroll-target="#total-step-model-summary"><span class="header-section-number">3.1</span> Total Step Model Summary</a></li>
+  <li><a href="#weight-gain-summary" id="toc-weight-gain-summary" class="nav-link" data-scroll-target="#weight-gain-summary"><span class="header-section-number">3.2</span> Weight Gain Summary</a></li>
+  </ul></li>
+  <li><a href="#tables" id="toc-tables" class="nav-link" data-scroll-target="#tables"><span class="header-section-number">4</span> tables</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Pika-Yak Interaction: Foraging Efficiency</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Douglas Lawton </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 10, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="bite-steps" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Bite Steps</h1>
+<p>The following figure (<a href="#fig-bite_step_figures" class="quarto-xref">Figure&nbsp;1</a>) shows the relationship between yak bite/step ratios per plant across he pika and poison plant treatments. We see decreased bite/step ratios for grasses and sedges within the no pika and poison plant treatment plots. Whereas all other treatment levels had a consistent bite/step ratio. Forbs is an exception where there is no difference except with increase forb bite/step ratio in the pika x poison plant treatment level.</p>
+<div class="cell" data-reulsts="asis'">
+<div class="cell-output-display">
+<div id="fig-bite_step_figures" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bite_step_figures-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="experiment_foraging_efficiency_files/figure-html/fig-bite_step_figures-1.png" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bite_step_figures-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: diet selection
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="grass-bite-steps" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="grass-bite-steps"><span class="header-section-number">1.1</span> Grass Bite Steps</h2>
+<p>The model revealed that the presence of <em>S. chamaejasme</em> significantly reduced yak grass feeding efficiency (bite/step ratio) (<a href="#tbl-grasses-bite-step-model-summary" class="quarto-xref">Table&nbsp;1</a>), but this negative effect was mitigated when pikas were present, as shown by a significant positive interaction (<a href="#tbl-grasses-bite-step-model-summary" class="quarto-xref">Table&nbsp;1</a>). Pika presence alone did not influence feeding efficiency; however, in combination with <em>S. chamaejasme</em>, it substantially improved it (<a href="#tbl-grasses-bite-step-model-contrasts" class="quarto-xref">Table&nbsp;2</a>). These results suggest that pikas may facilitate yak foraging by offsetting the detrimental effects of poisonous plants.</p>
+</section>
+<section id="sedge-bite-steps" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="sedge-bite-steps"><span class="header-section-number">1.2</span> Sedge Bite Steps</h2>
+<p>The presence of <em>S. chamaejasme</em> significantly reduced yak feeding efficiency on sedges, as shown by a strong negative main effect in the model summary (<a href="#tbl-sedges-bite-step-model-summary" class="quarto-xref">Table&nbsp;3</a>). Although pika presence alone had no effect, the significant positive interaction indicates that pikas mitigated the negative impact of the poisonous plant. Specifically, sedge bite/step ratios were much lower when <em>S. chamaejasme</em> was present without pikas, but this reduction was substantially less when pikas were present (see pairwise contrasts in <a href="#tbl-sedges-bite-step-model-contrasts" class="quarto-xref">Table&nbsp;4</a>). These findings suggest that pikas facilitate yak foraging on sedges by reducing the negative effects of <em>S. chamaejasme</em>.</p>
+</section>
+<section id="forbs-bite-steps" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="forbs-bite-steps"><span class="header-section-number">1.3</span> Forbs Bite Steps</h2>
+<p>For forbs, neither pika presence nor <em>S. chamaejasme</em> alone significantly affected yak feeding efficiency, as both main effects were non-significant (see <a href="#tbl-forbs-bite-step-model-summary" class="quarto-xref">Table&nbsp;5</a>). However, there was a marginally non-significant interaction (p = 0.067), suggesting a possible moderating effect of pikas on the impact of the poisonous plant. In the pairwise contrasts, the bite/step ratio was significantly lower when <em>S. chamaejasme</em> was present and pikas were absent compared to when both were present (see <a href="#tbl-forbs-bite-step-model-contrasts" class="quarto-xref">Table&nbsp;6</a>). This indicates a weaker but still detectable facilitative effect of pikas on yak forb consumption in the presence of <em>S. chamaejasme</em>.</p>
+</section>
+</section>
+<section id="plant-bites" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Plant bites</h1>
+<p>The following figure (<a href="#fig-bite_step_figures" class="quarto-xref">Figure&nbsp;1</a>) shows the relationship between yak bite/step ratios per plant across the pika and poison plant treatments. We observe decreased bite/step ratios for grasses and sedges in the no-pika and poison plant treatment plots, while all other treatment levels exhibited consistent bite/step ratios. For forbs, there was no difference except for an increased bite/step ratio in the pika × poison plant treatment level.</p>
+<div class="cell" data-reulsts="asis">
+<div class="cell-output-display">
+<div id="fig-plant_bites_figures" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-plant_bites_figures-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="experiment_foraging_efficiency_files/figure-html/fig-plant_bites_figures-1.png" class="img-fluid figure-img" width="768">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-plant_bites_figures-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: yak plant bites by plant group
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="grass-plant-bites" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="grass-plant-bites"><span class="header-section-number">2.1</span> Grass Plant Bites</h2>
+<p>Yak grazing on grasses was significantly reduced by the presence of the poisonous plant <em>S. chamaejasme</em>, with a large negative estimate (-45.3) indicating fewer bites in treated plots. The pika treatment alone had no significant effect on grass bites. However, the interaction between pika presence and <em>S. chamaejasme</em> treatment was positive and significant (+43.9), suggesting that pika presence mitigates the negative effect of the poisonous plant on grass bites. Contrasts confirm that plots with <em>S. chamaejasme</em> had substantially lower grazing, except when pikas were present, which restored grazing levels.</p>
+</section>
+<section id="forb-plant-bites" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="forb-plant-bites"><span class="header-section-number">2.2</span> Forb Plant Bites</h2>
+<p>Yak bites on forbs were generally low and showed no significant differences across pika or poisonous plant treatments. The <em>S. chamaejasme</em> treatment showed a marginally positive effect on forb bites, but this was not statistically significant (p ~ 0.058). The interaction between pika and <em>S. chamaejasme</em> was also non-significant. Overall, yak grazing on forbs appears unaffected by either treatment or their interaction.</p>
+</section>
+<section id="sedge-plant-bites" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sedge-plant-bites"><span class="header-section-number">2.3</span> Sedge Plant Bites</h2>
+<p>Grazing on sedges was significantly reduced by <em>S. chamaejasme</em> treatment (estimate = -0.42), indicating fewer yak bites in plots with the poisonous plant. Pika presence alone had no significant effect, but the pika × <em>S. chamaejasme</em> interaction was strongly positive (+0.36), showing that pika presence offsets the reduction caused by the poisonous plant. Contrasts reveal that sedge grazing decreases with <em>S. chamaejasme</em> unless pikas are present, which helps maintain grazing levels.</p>
+</section>
+<section id="total-plant-bites" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="total-plant-bites"><span class="header-section-number">2.4</span> Total Plant Bites</h2>
+<p>Yak grazing overall was significantly reduced by <em>S. chamaejasme</em> treatment, with 131 fewer bites on average compared to control plots without the poisonous plant. Pika presence alone did not significantly influence total bites. However, the strong positive interaction term (+119.5) indicates that pika presence substantially offsets the negative effect of <em>S. chamaejasme</em>, restoring grazing rates close to control levels. Contrasts confirm that while <em>S. chamaejasme</em> sharply reduces total bites, this effect is largely absent when pikas are present.</p>
+</section>
+</section>
+<section id="total-steps-and-weight-gain" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> total steps and weight gain</h1>
+<div class="cell" data-reulsts="asis">
+<div class="cell-output-display">
+<div id="fig-total-step-weight-gain" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-total-step-weight-gain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="experiment_foraging_efficiency_files/figure-html/fig-total-step-weight-gain-1.png" class="img-fluid figure-img" width="960">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-total-step-weight-gain-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Yak total steps and weight gain by treatment
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="total-step-model-summary" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="total-step-model-summary"><span class="header-section-number">3.1</span> Total Step Model Summary</h2>
+<p>Yak movement (total steps) was significantly higher in <em>S. chamaejasme</em> plots, with an average increase of 113 steps compared to control plots without the poisonous plant (<a href="#tbl-total-step-model-summary" class="quarto-xref">Table&nbsp;14</a>). Pika presence alone did not significantly affect step counts. However, the strong negative interaction term (−136.1, <a href="#tbl-total-step-model-summary" class="quarto-xref">Table&nbsp;14</a>) indicates that when pikas were present, the <em>S. chamaejasme</em>-induced increase in movement was eliminated. Contrasts show that while <em>S. chamaejasme</em> alone led to more steps, this effect was absent or reversed in the presence of pikas, suggesting that pikas dampen the plant’s impact on yak movement patterns (<a href="#tbl-total-step-model-contrasts" class="quarto-xref">Table&nbsp;15</a>).</p>
+</section>
+<section id="weight-gain-summary" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="weight-gain-summary"><span class="header-section-number">3.2</span> Weight Gain Summary</h2>
+<p>The poisonous plant <em>S. chamaejasme</em> substantially reduced yak weight gain, with a mean loss of 0.108 kg/day compared to control plots without the plant, while pika presence alone had no significant effect on weight gain (<a href="#tbl-weight-gain-model-summary" class="quarto-xref">Table&nbsp;16</a>). However, the strong positive interaction term (+0.132 kg/day) indicates that pika presence largely neutralizes the negative effect of <em>S. chamaejasme</em>, resulting in weight gain similar to control conditions. Contrasts show that while <em>S. chamaejasme</em> sharply reduces weight gain in the absence of pikas, this reduction disappears when pikas are present, suggesting a facilitative role of pikas in mitigating plant-induced losses (<a href="#tbl-weight-gain-model-contrasts" class="quarto-xref">Table&nbsp;17</a>).</p>
+</section>
+</section>
+<section id="tables" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> tables</h1>
+<div class="cell">
+<div id="tbl-grasses-bite-step-model-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-grasses-bite-step-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Model summary for grass bite/steps.
+</figcaption>
+<div aria-describedby="tbl-grasses-bite-step-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">effect</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">std.error</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">statistic</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">-1.012</td>
+<td style="text-align: right;">0.077</td>
+<td style="text-align: right;">-13.157</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika</td>
+<td style="text-align: right;">0.016</td>
+<td style="text-align: right;">0.088</td>
+<td style="text-align: right;">0.187</td>
+<td style="text-align: right;">0.852</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">poison plant</td>
+<td style="text-align: right;">-0.601</td>
+<td style="text-align: right;">0.096</td>
+<td style="text-align: right;">-6.275</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika : poison treamtent</td>
+<td style="text-align: right;">0.666</td>
+<td style="text-align: right;">0.129</td>
+<td style="text-align: right;">5.146</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">block</td>
+<td style="text-align: right;">0.031</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">year</td>
+<td style="text-align: right;">0.060</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">month</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-grasses-bite-step-model-contrasts" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-grasses-bite-step-model-contrasts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Estimated marginal means contrasts for grass bite/steps by treatment group.
+</figcaption>
+<div aria-describedby="tbl-grasses-bite-step-model-contrasts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">contrast</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">odds.ratio</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SE</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">df</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">null</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">z.ratio</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">no pika No S. chamaejasme / pika No S. chamaejasme</td>
+<td style="text-align: right;">0.984</td>
+<td style="text-align: right;">0.086</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-0.187</td>
+<td style="text-align: right;">0.998</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no pika No S. chamaejasme / no pika S. chamaejasme</td>
+<td style="text-align: right;">1.824</td>
+<td style="text-align: right;">0.175</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">6.275</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">no pika No S. chamaejasme / pika S. chamaejasme</td>
+<td style="text-align: right;">0.922</td>
+<td style="text-align: right;">0.080</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-0.936</td>
+<td style="text-align: right;">0.786</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pika No S. chamaejasme / no pika S. chamaejasme</td>
+<td style="text-align: right;">1.854</td>
+<td style="text-align: right;">0.177</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">6.460</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">pika No S. chamaejasme / pika S. chamaejasme</td>
+<td style="text-align: right;">0.937</td>
+<td style="text-align: right;">0.082</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-0.748</td>
+<td style="text-align: right;">0.877</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no pika S. chamaejasme / pika S. chamaejasme</td>
+<td style="text-align: right;">0.505</td>
+<td style="text-align: right;">0.048</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-7.178</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-sedges-bite-step-model-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sedges-bite-step-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Model summary for sedge bite/steps.
+</figcaption>
+<div aria-describedby="tbl-sedges-bite-step-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">effect</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">std.error</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">statistic</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">0.040</td>
+<td style="text-align: right;">0.140</td>
+<td style="text-align: right;">0.284</td>
+<td style="text-align: right;">0.776</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika</td>
+<td style="text-align: right;">0.080</td>
+<td style="text-align: right;">0.120</td>
+<td style="text-align: right;">0.668</td>
+<td style="text-align: right;">0.504</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">poison plant</td>
+<td style="text-align: right;">-0.949</td>
+<td style="text-align: right;">0.125</td>
+<td style="text-align: right;">-7.612</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika : poison treamtent</td>
+<td style="text-align: right;">1.006</td>
+<td style="text-align: right;">0.172</td>
+<td style="text-align: right;">5.833</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">block</td>
+<td style="text-align: right;">0.174</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">year</td>
+<td style="text-align: right;">0.083</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">month</td>
+<td style="text-align: right;">0.065</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-sedges-bite-step-model-contrasts" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sedges-bite-step-model-contrasts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Estimated marginal means contrasts for sedge bite/steps by treatment group.
+</figcaption>
+<div aria-describedby="tbl-sedges-bite-step-model-contrasts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">contrast</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">odds.ratio</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SE</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">df</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">null</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">z.ratio</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">no pika No S. chamaejasme / pika No S. chamaejasme</td>
+<td style="text-align: right;">0.923</td>
+<td style="text-align: right;">0.110</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-0.668</td>
+<td style="text-align: right;">0.909</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no pika No S. chamaejasme / no pika S. chamaejasme</td>
+<td style="text-align: right;">2.583</td>
+<td style="text-align: right;">0.322</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">7.612</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">no pika No S. chamaejasme / pika S. chamaejasme</td>
+<td style="text-align: right;">0.872</td>
+<td style="text-align: right;">0.104</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-1.154</td>
+<td style="text-align: right;">0.656</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pika No S. chamaejasme / no pika S. chamaejasme</td>
+<td style="text-align: right;">2.798</td>
+<td style="text-align: right;">0.350</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">8.218</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">pika No S. chamaejasme / pika S. chamaejasme</td>
+<td style="text-align: right;">0.944</td>
+<td style="text-align: right;">0.113</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-0.479</td>
+<td style="text-align: right;">0.964</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no pika S. chamaejasme / pika S. chamaejasme</td>
+<td style="text-align: right;">0.338</td>
+<td style="text-align: right;">0.042</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-8.740</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-forbs-bite-step-model-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-forbs-bite-step-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: Model summary for forbs bite/steps.
+</figcaption>
+<div aria-describedby="tbl-forbs-bite-step-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">effect</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">std.error</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">statistic</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">-1.756</td>
+<td style="text-align: right;">0.094</td>
+<td style="text-align: right;">-18.745</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika</td>
+<td style="text-align: right;">0.059</td>
+<td style="text-align: right;">0.092</td>
+<td style="text-align: right;">0.642</td>
+<td style="text-align: right;">0.521</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">poison plant</td>
+<td style="text-align: right;">-0.045</td>
+<td style="text-align: right;">0.093</td>
+<td style="text-align: right;">-0.486</td>
+<td style="text-align: right;">0.627</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika : poison treamtent</td>
+<td style="text-align: right;">0.235</td>
+<td style="text-align: right;">0.128</td>
+<td style="text-align: right;">1.835</td>
+<td style="text-align: right;">0.067</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">block</td>
+<td style="text-align: right;">0.108</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">year</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">month</td>
+<td style="text-align: right;">0.068</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-forbs-bite-step-model-contrasts" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-forbs-bite-step-model-contrasts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6: Estimated marginal means contrasts for forbs bite/steps by treatment group.
+</figcaption>
+<div aria-describedby="tbl-forbs-bite-step-model-contrasts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">contrast</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">odds.ratio</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SE</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">df</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">null</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">z.ratio</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">no pika No S. chamaejasme / pika No S. chamaejasme</td>
+<td style="text-align: right;">0.943</td>
+<td style="text-align: right;">0.086</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-0.642</td>
+<td style="text-align: right;">0.918</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no pika No S. chamaejasme / no pika S. chamaejasme</td>
+<td style="text-align: right;">1.046</td>
+<td style="text-align: right;">0.097</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.486</td>
+<td style="text-align: right;">0.962</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">no pika No S. chamaejasme / pika S. chamaejasme</td>
+<td style="text-align: right;">0.780</td>
+<td style="text-align: right;">0.069</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-2.800</td>
+<td style="text-align: right;">0.026</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pika No S. chamaejasme / no pika S. chamaejasme</td>
+<td style="text-align: right;">1.110</td>
+<td style="text-align: right;">0.102</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.127</td>
+<td style="text-align: right;">0.673</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">pika No S. chamaejasme / pika S. chamaejasme</td>
+<td style="text-align: right;">0.827</td>
+<td style="text-align: right;">0.073</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-2.151</td>
+<td style="text-align: right;">0.137</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no pika S. chamaejasme / pika S. chamaejasme</td>
+<td style="text-align: right;">0.745</td>
+<td style="text-align: right;">0.067</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-3.280</td>
+<td style="text-align: right;">0.006</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-grasses-plant-bites-model-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-grasses-plant-bites-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;7: Model summary for overall grass bites.
+</figcaption>
+<div aria-describedby="tbl-grasses-plant-bites-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">effect</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">std.error</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">statistic</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">151.716</td>
+<td style="text-align: right;">7.492</td>
+<td style="text-align: right;">20.250</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika</td>
+<td style="text-align: right;">-0.795</td>
+<td style="text-align: right;">8.606</td>
+<td style="text-align: right;">-0.092</td>
+<td style="text-align: right;">0.926</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">poison plant</td>
+<td style="text-align: right;">-45.338</td>
+<td style="text-align: right;">8.606</td>
+<td style="text-align: right;">-5.268</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika : poison treamtent</td>
+<td style="text-align: right;">43.945</td>
+<td style="text-align: right;">12.171</td>
+<td style="text-align: right;">3.611</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">block</td>
+<td style="text-align: right;">4.781</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">year</td>
+<td style="text-align: right;">5.174</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">month</td>
+<td style="text-align: right;">0.003</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">Residual</td>
+<td style="text-align: right;">42.160</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-grasses-plant-bite-model-contrasts" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-grasses-plant-bite-model-contrasts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;8: Estimated marginal means contrasts for overall grass bites.
+</figcaption>
+<div aria-describedby="tbl-grasses-plant-bite-model-contrasts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">contrast</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SE</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">df</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">t.ratio</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">no pika No S. chamaejasme - pika No S. chamaejasme</td>
+<td style="text-align: right;">0.795</td>
+<td style="text-align: right;">8.606</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">0.092</td>
+<td style="text-align: right;">1.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no pika No S. chamaejasme - no pika S. chamaejasme</td>
+<td style="text-align: right;">45.338</td>
+<td style="text-align: right;">8.606</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">5.268</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">no pika No S. chamaejasme - pika S. chamaejasme</td>
+<td style="text-align: right;">2.188</td>
+<td style="text-align: right;">8.606</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">0.254</td>
+<td style="text-align: right;">0.994</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pika No S. chamaejasme - no pika S. chamaejasme</td>
+<td style="text-align: right;">44.542</td>
+<td style="text-align: right;">8.606</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">5.176</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">pika No S. chamaejasme - pika S. chamaejasme</td>
+<td style="text-align: right;">1.392</td>
+<td style="text-align: right;">8.606</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">0.162</td>
+<td style="text-align: right;">0.998</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no pika S. chamaejasme - pika S. chamaejasme</td>
+<td style="text-align: right;">-43.150</td>
+<td style="text-align: right;">8.606</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">-5.014</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-forbs-plant-bites-model-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-forbs-plant-bites-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;9: Model summary for overall forb bites.
+</figcaption>
+<div aria-describedby="tbl-forbs-plant-bites-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">effect</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">std.error</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">statistic</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">4.394</td>
+<td style="text-align: right;">0.067</td>
+<td style="text-align: right;">65.117</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika</td>
+<td style="text-align: right;">0.074</td>
+<td style="text-align: right;">0.070</td>
+<td style="text-align: right;">1.060</td>
+<td style="text-align: right;">0.289</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">poison plant</td>
+<td style="text-align: right;">0.131</td>
+<td style="text-align: right;">0.069</td>
+<td style="text-align: right;">1.897</td>
+<td style="text-align: right;">0.058</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika : poison treamtent</td>
+<td style="text-align: right;">-0.043</td>
+<td style="text-align: right;">0.096</td>
+<td style="text-align: right;">-0.443</td>
+<td style="text-align: right;">0.658</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">block</td>
+<td style="text-align: right;">0.064</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">year</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">month</td>
+<td style="text-align: right;">0.055</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-sedges-plant-bites-model-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sedges-plant-bites-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;10: Model summary for overall sedge bites.
+</figcaption>
+<div aria-describedby="tbl-sedges-plant-bites-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">effect</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">std.error</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">statistic</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">5.648</td>
+<td style="text-align: right;">0.041</td>
+<td style="text-align: right;">138.781</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika</td>
+<td style="text-align: right;">0.039</td>
+<td style="text-align: right;">0.043</td>
+<td style="text-align: right;">0.918</td>
+<td style="text-align: right;">0.359</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">poison plant</td>
+<td style="text-align: right;">-0.418</td>
+<td style="text-align: right;">0.048</td>
+<td style="text-align: right;">-8.706</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika : poison treamtent</td>
+<td style="text-align: right;">0.355</td>
+<td style="text-align: right;">0.064</td>
+<td style="text-align: right;">5.506</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">block</td>
+<td style="text-align: right;">0.038</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">year</td>
+<td style="text-align: right;">0.016</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">month</td>
+<td style="text-align: right;">0.026</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-sedges-plant-bite-model-contrasts" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sedges-plant-bite-model-contrasts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;11: Estimated marginal means contrasts for overall sedge bites by treatment group.
+</figcaption>
+<div aria-describedby="tbl-sedges-plant-bite-model-contrasts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">contrast</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">ratio</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SE</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">df</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">null</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">z.ratio</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">no pika No S. chamaejasme / pika No S. chamaejasme</td>
+<td style="text-align: right;">0.962</td>
+<td style="text-align: right;">0.041</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-0.918</td>
+<td style="text-align: right;">0.795</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no pika No S. chamaejasme / no pika S. chamaejasme</td>
+<td style="text-align: right;">1.519</td>
+<td style="text-align: right;">0.073</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">8.706</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">no pika No S. chamaejasme / pika S. chamaejasme</td>
+<td style="text-align: right;">1.025</td>
+<td style="text-align: right;">0.044</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.559</td>
+<td style="text-align: right;">0.944</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pika No S. chamaejasme / no pika S. chamaejasme</td>
+<td style="text-align: right;">1.580</td>
+<td style="text-align: right;">0.075</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">9.584</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">pika No S. chamaejasme / pika S. chamaejasme</td>
+<td style="text-align: right;">1.066</td>
+<td style="text-align: right;">0.046</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1.476</td>
+<td style="text-align: right;">0.452</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no pika S. chamaejasme / pika S. chamaejasme</td>
+<td style="text-align: right;">0.674</td>
+<td style="text-align: right;">0.033</td>
+<td style="text-align: right;">Inf</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-8.168</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-total-plant-bites-model-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-total-plant-bites-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;12: Model summary for total bites.
+</figcaption>
+<div aria-describedby="tbl-total-plant-bites-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">effect</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">std.error</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">statistic</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">516.960</td>
+<td style="text-align: right;">13.697</td>
+<td style="text-align: right;">37.743</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika</td>
+<td style="text-align: right;">16.732</td>
+<td style="text-align: right;">16.580</td>
+<td style="text-align: right;">1.009</td>
+<td style="text-align: right;">0.313</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">poison plant</td>
+<td style="text-align: right;">-130.845</td>
+<td style="text-align: right;">16.580</td>
+<td style="text-align: right;">-7.892</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika : poison treamtent</td>
+<td style="text-align: right;">119.478</td>
+<td style="text-align: right;">23.447</td>
+<td style="text-align: right;">5.096</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">block</td>
+<td style="text-align: right;">8.619</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">year</td>
+<td style="text-align: right;">7.948</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">month</td>
+<td style="text-align: right;">0.008</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">Residual</td>
+<td style="text-align: right;">81.224</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-total-plant-bite-model-contrasts" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-total-plant-bite-model-contrasts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;13: Estimated marginal means contrasts for total bites by treatment group.
+</figcaption>
+<div aria-describedby="tbl-total-plant-bite-model-contrasts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">contrast</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SE</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">df</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">t.ratio</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">no pika No S. chamaejasme - pika No S. chamaejasme</td>
+<td style="text-align: right;">-16.732</td>
+<td style="text-align: right;">16.58</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">-1.009</td>
+<td style="text-align: right;">0.744</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no pika No S. chamaejasme - no pika S. chamaejasme</td>
+<td style="text-align: right;">130.845</td>
+<td style="text-align: right;">16.58</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">7.892</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">no pika No S. chamaejasme - pika S. chamaejasme</td>
+<td style="text-align: right;">-5.365</td>
+<td style="text-align: right;">16.58</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">-0.324</td>
+<td style="text-align: right;">0.988</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pika No S. chamaejasme - no pika S. chamaejasme</td>
+<td style="text-align: right;">147.577</td>
+<td style="text-align: right;">16.58</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">8.901</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">pika No S. chamaejasme - pika S. chamaejasme</td>
+<td style="text-align: right;">11.367</td>
+<td style="text-align: right;">16.58</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">0.686</td>
+<td style="text-align: right;">0.902</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no pika S. chamaejasme - pika S. chamaejasme</td>
+<td style="text-align: right;">-136.210</td>
+<td style="text-align: right;">16.58</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">-8.215</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-total-step-model-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-total-step-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;14: Model summary for total steps.
+</figcaption>
+<div aria-describedby="tbl-total-step-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">effect</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">std.error</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">statistic</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">583.542</td>
+<td style="text-align: right;">15.190</td>
+<td style="text-align: right;">38.415</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika</td>
+<td style="text-align: right;">-8.229</td>
+<td style="text-align: right;">20.981</td>
+<td style="text-align: right;">-0.392</td>
+<td style="text-align: right;">0.695</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">poison plant</td>
+<td style="text-align: right;">113.062</td>
+<td style="text-align: right;">20.981</td>
+<td style="text-align: right;">5.389</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika : poison treamtent</td>
+<td style="text-align: right;">-136.146</td>
+<td style="text-align: right;">29.671</td>
+<td style="text-align: right;">-4.588</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">block</td>
+<td style="text-align: right;">6.527</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">year</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">month</td>
+<td style="text-align: right;">0.000</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">Residual</td>
+<td style="text-align: right;">102.785</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-total-step-model-contrasts" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-total-step-model-contrasts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;15: Estimated marginal means contrasts for total steps by treatment group.
+</figcaption>
+<div aria-describedby="tbl-total-step-model-contrasts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">contrast</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SE</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">df</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">t.ratio</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">no pika No S. chamaejasme - pika No S. chamaejasme</td>
+<td style="text-align: right;">8.229</td>
+<td style="text-align: right;">20.981</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">0.392</td>
+<td style="text-align: right;">0.979</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no pika No S. chamaejasme - no pika S. chamaejasme</td>
+<td style="text-align: right;">-113.062</td>
+<td style="text-align: right;">20.981</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">-5.389</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">no pika No S. chamaejasme - pika S. chamaejasme</td>
+<td style="text-align: right;">31.312</td>
+<td style="text-align: right;">20.981</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">1.492</td>
+<td style="text-align: right;">0.444</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pika No S. chamaejasme - no pika S. chamaejasme</td>
+<td style="text-align: right;">-121.292</td>
+<td style="text-align: right;">20.981</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">-5.781</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">pika No S. chamaejasme - pika S. chamaejasme</td>
+<td style="text-align: right;">23.083</td>
+<td style="text-align: right;">20.981</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">1.100</td>
+<td style="text-align: right;">0.690</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no pika S. chamaejasme - pika S. chamaejasme</td>
+<td style="text-align: right;">144.375</td>
+<td style="text-align: right;">20.981</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">6.881</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-weight-gain-model-summary" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-weight-gain-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;16: Model summary for weight gain.
+</figcaption>
+<div aria-describedby="tbl-weight-gain-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">effect</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">term</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">std.error</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">statistic</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">(Intercept)</td>
+<td style="text-align: right;">0.322</td>
+<td style="text-align: right;">0.030</td>
+<td style="text-align: right;">10.796</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika</td>
+<td style="text-align: right;">0.010</td>
+<td style="text-align: right;">0.014</td>
+<td style="text-align: right;">0.740</td>
+<td style="text-align: right;">0.459</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">poison plant</td>
+<td style="text-align: right;">-0.108</td>
+<td style="text-align: right;">0.014</td>
+<td style="text-align: right;">-7.697</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">fixed</td>
+<td style="text-align: left;">pika : poison treamtent</td>
+<td style="text-align: right;">0.132</td>
+<td style="text-align: right;">0.020</td>
+<td style="text-align: right;">6.629</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">block</td>
+<td style="text-align: right;">0.008</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">year</td>
+<td style="text-align: right;">0.014</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">month</td>
+<td style="text-align: right;">0.045</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ran_pars</td>
+<td style="text-align: left;">Residual</td>
+<td style="text-align: right;">0.069</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div id="tbl-weight-gain-model-contrasts" class="cell quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-weight-gain-model-contrasts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;17: Estimated marginal means contrasts for weight gain by treatment group.
+</figcaption>
+<div aria-describedby="tbl-weight-gain-model-contrasts-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="table do-not-create-environment cell caption-top table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">contrast</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">estimate</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SE</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">df</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">t.ratio</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">p.value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">no pika No S. chamaejasme - pika No S. chamaejasme</td>
+<td style="text-align: right;">-0.010</td>
+<td style="text-align: right;">0.014</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">-0.740</td>
+<td style="text-align: right;">0.881</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no pika No S. chamaejasme - no pika S. chamaejasme</td>
+<td style="text-align: right;">0.108</td>
+<td style="text-align: right;">0.014</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">7.697</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">no pika No S. chamaejasme - pika S. chamaejasme</td>
+<td style="text-align: right;">-0.034</td>
+<td style="text-align: right;">0.014</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">-2.418</td>
+<td style="text-align: right;">0.077</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pika No S. chamaejasme - no pika S. chamaejasme</td>
+<td style="text-align: right;">0.119</td>
+<td style="text-align: right;">0.014</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">8.438</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">pika No S. chamaejasme - pika S. chamaejasme</td>
+<td style="text-align: right;">-0.024</td>
+<td style="text-align: right;">0.014</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">-1.678</td>
+<td style="text-align: right;">0.338</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">no pika S. chamaejasme - pika S. chamaejasme</td>
+<td style="text-align: right;">-0.142</td>
+<td style="text-align: right;">0.014</td>
+<td style="text-align: right;">184</td>
+<td style="text-align: right;">-10.115</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
