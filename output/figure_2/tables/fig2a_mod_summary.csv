@@ -1,8 +1,0 @@
-effect,component,group,term,estimate,std.error,statistic,p.value
-fixed,cond,NA,(Intercept),36.33332790372289,3.2350827651973177,11.231035043243107,2.870954949482679e-29
-fixed,cond,NA,plant_groupGrasses,-21.666651374079144,4.389404478618021,-4.936125499398217,7.968983836273717e-7
-fixed,cond,NA,plant_groupS. chamaejasme,23.66666145891345,4.389404478614953,5.391770472330976,6.97668475533075e-8
-fixed,cond,NA,plant_groupSedges,-18.666652730719257,4.389404478616875,-4.252661795388066,2.1124448850058985e-5
-ran_pars,cond,plot,sd__(Intercept),0.0012267533393246412,NA,NA,NA
-ran_pars,cond,month,sd__(Intercept),1.5801814852257932,NA,NA,NA
-ran_pars,cond,Residual,sd__Observation,17.000090445438392,NA,NA,NA
