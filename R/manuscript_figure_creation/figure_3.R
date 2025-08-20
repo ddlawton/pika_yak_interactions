@@ -56,11 +56,11 @@ panel_a_weight_gain <-  weight_gain |>
       data = weight_gain_models$letters,
       aes(x = pika_treatment, y = emmean, fill = posion_plant_treatment),
       position = position_dodge(width = 0.7),
-      size = 8, pch = 21, color = "black", inherit.aes = FALSE
+      size = 4, pch = 21, color = "black", inherit.aes = FALSE
     ) +
     geom_text(
       data = weight_gain_models$letters,
-      aes(x = pika_treatment, y = 1, label = .group, group = posion_plant_treatment),
+      aes(x = pika_treatment, y = 0.60, label = .group, group = posion_plant_treatment),
       position = position_dodge(width = 0.7),
       size = 5, color = "black", show.legend = FALSE, inherit.aes = FALSE
     ) +
@@ -72,7 +72,7 @@ panel_a_weight_gain <-  weight_gain |>
       color = "Poison plant treatment",
       fill = "Poison plant treatment"
     ) +
-    theme_pubr(base_size = 15) +
+    theme_pubr(base_size = 10) +
     theme(legend.position = "bottom", legend.title = element_blank())
 
 
@@ -100,8 +100,8 @@ forage_quality_models <- map(quality_metrics, load_forage_quality_data) |> set_n
 # Reusable function
 plot_forage_quality <- function(quality_metric, y_label, label_y = NULL, letters = TRUE) {
   data <- forage_quality |> filter(plant == quality_metric)
-  emms <- forag_quality_models[[quality_metric]]$emms
-  letters_df <- forag_quality_models[[quality_metric]]$letters
+  emms <- forage_quality_models[[quality_metric]]$emms
+  letters_df <- forage_quality_models[[quality_metric]]$letters
 
   label_y <- label_y %||% max(data$forage_quality, na.rm = TRUE)
 
@@ -126,7 +126,7 @@ plot_forage_quality <- function(quality_metric, y_label, label_y = NULL, letters
       color = "Poison plant treatment",
       fill = "Poison plant treatment"
     ) +
-    theme_pubr(base_size = 15) +
+    theme_pubr(base_size = 10) +
     theme(legend.position = "bottom", legend.title = element_blank())
 
     if (letters) {
@@ -143,13 +143,13 @@ plot_forage_quality <- function(quality_metric, y_label, label_y = NULL, letters
 }
 
 # Call the function for each plant type
+panel_b_cp  <- plot_forage_quality("cp", "cp (%)",label_y = 10)
 panel_c_adf <- plot_forage_quality("adf", "adf (%)",label_y=36)
-panel_b_cp  <- plot_forage_quality("cp", "cp (%)",label_y = 12)
-panel_d_ee   <- plot_forage_quality("ee", "ee (%)",label_y=5)
+panel_d_ee   <- plot_forage_quality("ee", "ee (%)",label_y=4)
 
 
 # --- Plant Cover ---
-
+cover_data <- read_csv(here('data/processed/experiment_plant_cover/plant_cover_by_treatment.csv'))
 
 grasses_emms <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/emms.csv'))
 grasses_letters <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/posthoc_letters.csv'))
@@ -160,3 +160,71 @@ poison_emms <- read_csv(here('data/processed/experiment_plant_cover/modeled_data
 poison_letters <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/posthoc_letters.csv'))
 poison_model_summary  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/model_summary.csv'))
 poison__model_contrasts  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/posthoc_contrasts.csv'))
+
+
+
+make_cover_plot <- function(plant_name, letters_df, y_label, text_y = 41, letters = TRUE) {
+  p <- cover_data |>
+    filter(plant == plant_name) |>
+    left_join(letters_df, by = c("pika_treatment", "posion_plant_treatment")) |>
+    ggplot(aes(x = pika_treatment, y = cover, color = posion_plant_treatment)) +
+    geom_jitter(
+      size = 1, alpha = 0.4,
+      position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.7)
+    ) +
+    geom_point(
+        data = letters_df,
+        aes(x = pika_treatment, y = response * 100, fill = posion_plant_treatment),
+        position = position_dodge(width = 0.7),
+        size = 4, pch = 21, color = "black"
+    ) +
+    scale_fill_manual(values = c(green, pink)) +
+    scale_color_manual(values = c(green, pink)) +
+    labs(
+      y = y_label,
+      x = "",
+      color = "Poison plant treatment",
+      fill = "Poison plant treatment"
+    ) +
+    theme_pubr(base_size = 10) +
+    theme(legend.position = "bottom", legend.title = element_blank())
+
+  if (letters) {
+    p <- p  +
+      geom_text(
+        data = letters_df,
+        aes(x = pika_treatment, y = text_y, label = .group, group = posion_plant_treatment),
+        position = position_dodge(width = 0.7),
+        size = 5, color = "black", show.legend = FALSE
+      )
+  }
+
+  p
+}
+
+
+panel_e_grass_plot   <- make_cover_plot("grasses", grasses_letters, "grass cover (%)", text_y = 41)
+panel_f_poison_plant <- make_cover_plot("s_chamaejasme", poison_letters, "S. chamaejasme cover (%)", text_y = 43)
+
+
+
+#  combine the plots into one panel
+
+
+
+layout <- "
+AB
+CD
+EF
+"
+
+
+figure_3 <- panel_a_weight_gain +
+  panel_b_cp +
+  panel_c_adf +
+  panel_d_ee +
+  panel_e_grass_plot +
+  panel_f_poison_plant +
+  plot_layout(design = layout, guides = "collect") & theme(legend.position = 'bottom')
+
+ggsave(figure_3,file = here('output/figure_3/figure_3.png'),width=10,height=8,dpi=300)
