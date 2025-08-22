@@ -10,6 +10,33 @@ format:
     fig-cap-location: bottom
     theme: cosmo
 editor: source
+crossref:
+  custom:
+    - kind: float
+      key: fig
+      latex-env: fig
+      reference-prefix: Figure
+      space-before-numbering: true
+      latex-list-of-description: Figure
+    - kind: float
+      key: suppfig
+      latex-env: suppfig
+      reference-prefix: Supplementary Figure 
+      space-before-numbering: true
+      latex-list-of-description: Supplementary Figure
+    - kind: float
+      key: tbl
+      latex-env: tbl
+      reference-prefix: Table
+      space-before-numbering: true
+      latex-list-of-description: Table
+    - kind: float
+      key: supptbl
+      latex-env: supptbl
+      reference-prefix: Supplementary Table
+      space-before-numbering: true
+      latex-list-of-description: Supplementary Table
+
 ---
 
 # Methods
@@ -20,14 +47,9 @@ All data were analyzed within with either linear models, generalized linear mixe
 
 # Results and Discussion
 
-We firstly carried out a set of field observational experiments to investigate the diet selections of pika and yak, and the associations among pika abundance, S. chamaejasme abundance, and yak activities under unmanipulated field conditions. Consistent with previous studies, we found that pika and yak have a distinguished diet preferences: yaks preferred grasses and sedge, whereas pika preferred the poisonous S. chamaejasme forbs (@fig-2 A, B). Moreover, we found that the S. chamaejasme abundance was negatively associated with active pika burrow abundance (R^2 = 0.731, P = 0.002, @fig-2 C), whereas the S. chamaejasme abundance was negatively associated with yak foraging activities, which indicated by dung density (R^2 = 0.412, P < 0.001, @fig-2 D).
+We firstly carried out a set of field observational experiments to investigate the diet selections of pika and yak, and the associations among pika abundance, S. chamaejasme abundance, and yak activities under unmanipulated field conditions. Consistent with previous studies^5,11,24-25^, we found that pika and yak have a distinguished diet preferences: yaks preferred grasses and sedge, whereas pika preferred the poisonous *S. chamaejasme* (@fig-2 A,B, @supptbl-pika-feeding-model-summary,@supptbl-pika-feeding-model-contrast,@tbl-yak-feeding-model-summary @supptbl-yak-feeding-model-contrast). Moreover, we found that the *S. chamaejasme* abundance was negatively associated with active pika burrow abundance (@fig-2 C), whereas the S. chamaejasme abundance was negatively associated with yak foraging activities, which indicated by dung density (@fig-2 D).
 
-Given these results, we then conducted an in-situ manipulative field experiment to explicitly examine the interactive effects of pika and *S. chamaejasme* forbs on weight gain, foraging quantity and quality, and grazing behaviors of yak by using fencing enclosure plots. We found an opposite effect of poisonous plants and pika presence on yak growth performance. Yaks had a slower weight gain in the no pika, *S. chamaejasme* plots (@fig-3 A) likely due to Pika feeding preferences (@fig-2 A).
-
-
-
-
-We found an opposing effect of poisonous plants and pika on yak growth performance; *S. chamaejasme* plot significantly reduced, whereas pika increased weight gain of yak by 15% (*S. chamaejasme*, F1,3 =16.36, P = 0.027) and 27% (pika, F1,3 =87.36, P = 0.03), respectively. 
+Given these results, we then conducted an in-situ manipulative field experiment to explicitly examine the interactive effects of pika and *S. chamaejasme* on weight gain, foraging quantity and quality, and grazing behaviors of yak by using fencing enclosure plots. For weight gain, overall yaks had a lower weight gain in poison plant plots than non-poison plant plots and there was an interactive effect between pika and  *S. chamaejasme* treatments (@supptbl-yak-weight-gain-model-summary). When pika were present, yaks had a high weight gain (@supptbl-pika-feeding-model-contrast). This is due to Pika feeding on *S. chamaejasme* (@fig-2 B, @supptbl-poison-cover-summary, @supptbl-poison-cover-contrasts), allow for more grass cover (@fig-2 C, @supptbl-grass-cover-model-summary, @supptbl-grass-cover-contrasts) as compared to the *S. chamaejasme* and no pika treatment plots.
 
 
 
@@ -36,19 +58,24 @@ We found an opposing effect of poisonous plants and pika on yak growth performan
 
 
 
-More importantly, there is an interactive effects between them (F1,3 =11.93, P = 0.041). In the presence of S. chamaejasme forbs, yak significantly increased weight gain by 71% when they shared foraging areas with pika (P \< 0.001, Fig.3a). However, such facilitative effects disappeared in the treatments without S. chamaejasme forbs (Fig.3a). These results, in combination with the fact that pika prefer S. chamaejasme forbs (Fig. 2a) and that S. chamaejasme abundance reduced dramatically by 67% in the presence of pika (P \< 0.001, Fig. 3b), indicating that pika facilitate yak through suppressing these poisonous plants.
+We found an opposing effect of poisonous plants and pika on yak growth performance; *S. chamaejasme* cover significantly reduced while pika presence increased weight gain of yak by 15% (S. chamaejasme, F1,3 =16.36, P = 0.027) and 27% (pika, F1,3 =87.36, P = 0.03), respectively. More importantly, there is an interactive effects between them (F1,3 =11.93, P = 0.041). In the presence of S. chamaejasme forbs, yak significantly increased weight gain by 71% when they shared foraging areas with pika (P < 0.001, Fig.3a). However, such facilitative effects disappeared in the treatments without S. chamaejasme forbs (Fig.3a). These results, in combination with the fact that pika prefer S. chamaejasme forbs (Fig. 2a) and that S. chamaejasme abundance reduced dramatically by 67% in the presence of pika (P < 0.001, Fig. 3b), indicating that pika facilitate yak through suppressing these poisonous plants.
+
 
 Food quantity and quality are key drivers of individual performance and population dynamics of large herbivores30-32. In the presence of S. chamaejasme forbs, pika increased cover of yak’s most favored grasses by 118% (P = 0.001, Fig. 3c) and increased crude protein content of total forage by 16% (P = 0.002, Fig. 3d), suggesting that pika facilitate yak by increasing the quantity and quality of forage plants. The increases in grass abundance and forage quality were likely driven by the decline in poisonous plant abundance induced by pika (Fig. 3b), which released inter-specific competition for shared resources (e.g., light, soil moisture and nutrients) and allowed their growth and expansion27-28. In the absence of S. chamaejasme forbs, however, the positive effects of pika on food resources and weight gain of yak disappeared (Fig. 3a,c,d). Pika and poisonous plants failed to significantly affected neither sedge cover, forb cover (Fig. S1), nor other chemical properties (e.g., acid detergent fibre, neutral detergent fibre, and ether extract) of forage in the plots (Fig. S2).
 
-Pika-yak facilitation was also associated with enhanced foraging efficiency in yak after shared grazing with pika. Optimal foraging theory predicts that animals tend to use mimumne energy cost to exploit high-quality food items or units to optimise the intake of digestible nutrients and hence animal production33. In ruminants, bite rate, step rate and bites per step predict foraging efficiency34, which are key to determine animal performance35. In the presence of S. chamaejasme forbs, yak's total bites rate and sedge bite rate was 34% (P = 0.001, Fig. 4a) and 58% (P = 0.001, Fig. 4b) higher in the treatment when they co-existed with pika. Moreover, while yak total steps rate was affected by neither pika nor S. chamaejasme (Fig. 4d), sedge bites per step and grass bites per step by yak significantly increased 89% (P \< 0.001, Fig. 4e) and 80% (P = 0.001, Fig. 4f) in the plots with pika, respectively. The improved yak foraging efficiency can be attributed to the declines in poisonous S. chamaejasme forbs (Fig. 3b), which enhanced their access to the palatable sedges and grasses in the presence of pika. In our system, the increases in food availability (Fig. 3c,d) and foraging efficiency (Fig. 4) may jointly shape the facilitative effects of pika on yak performance (Fig. 3a).
 
-In the Tibetan Plateau, the consumption of poisonous plants by small mammals such as pika and zokors (Eospalax baileyi) have long been noted24,36, and their detoxification mechanisms have been explored37-38. It is suggested that herbivores have evolved several adaptation strategies to cope with plant secondary metabolites (PSMs) in poisonous plants. For example, converting digested PSMs into non-toxic metabolites, adjusting catabolism processes at the physiological and genetic levels, or modifying gut microbiota to reduce PSM absorption, thus mitigating toxic injury39-41. Indeed, recent evidence suggests that the plateau zokors in the Tibetan Plateau can detoxify the toxic secondary metabolites from S. chamaejasme forbs through 1) P450 pair xenobiotic clearance, bile secretion, and xenobiotic clearance pathway37, and 2) reduce chenodeoxycholic acid and prostaglandin in the liver38. The similar physiological detoxification strategies may also apply to plateau pika in the same ecosystems.
+Pika-yak facilitation was also associated with enhanced foraging efficiency in yak after shared grazing with pika. Optimal foraging theory predicts that animals tend to use mimumne energy cost to exploit high-quality food items or units to optimise the intake of digestible nutrients and hence animal production33. In ruminants, bite rate, step rate and bites per step predict foraging efficiency34, which are key to determine animal performance35. In the presence of S. chamaejasme forbs, yak's total bites rate and sedge bite rate was 34% (P = 0.001, Fig. 4a) and 58% (P = 0.001, Fig. 4b) higher in the treatment when they co-existed with pika. Moreover, while yak total steps rate was affected by neither pika nor S. chamaejasme (Fig. 4d), sedge bites per step and grass bites per step by yak significantly increased 89% (P < 0.001, Fig. 4e) and 80% (P = 0.001, Fig. 4f) in the plots with pika, respectively. The improved yak foraging efficiency can be attributed to the declines in poisonous S. chamaejasme forbs (Fig. 3b), which enhanced their access to the palatable sedges and grasses in the presence of pika. In our system, the increases in food availability (Fig. 3c,d) and foraging efficiency (Fig. 4) may jointly shape the facilitative effects of pika on yak performance (Fig. 3a).
 
-Collectively, our results illustrate how small mammals can indirectly facilitate co-occurring large herbivores. By quantifying in situ effects of pika on poisonous plants abundance and experimentally manipulating this factor, we show that small mammals can play an important role in driving large herbivore population dynamics. We also demonstrated that diet differentiation is the key driver of such interspecific facilitation between small mammals and large herbivores. Our findings challenge the dominant paradigm that small mammals should purely compete with large herbivores for food4-6,. While intuitively appealing, this historic perspective is overly simplistic when considering the adaptive foraging ability and diet partitioning in herbivore community.
+
+In the Tibetan Plateau, the consumption of poisonous plants by small mammals such as pika and zokors (Eospalax baileyi) have long been noted24,36, and their detoxification mechanisms have been explored37-38. It is suggested that herbivores have evolved several adaptation strategies to cope with plant secondary metabolites (PSMs) in poisonous plants. For example, converting digested PSMs into non-toxic metabolites, adjusting catabolism processes at the physiological and genetic levels, or modifying gut microbiota to reduce PSM absorption, thus mitigating toxic injury39-41. Indeed, recent evidence suggests that the plateau zokors in the Tibetan Plateau can detoxify the toxic secondary metabolites from S. chamaejasme forbs through 1) P450 pair xenobiotic clearance, bile secretion, and xenobiotic clearance pathway37, and 2) reduce chenodeoxycholic acid and prostaglandin in the liver38. The similar physiological detoxification strategies may also apply to plateau pika in the same ecosystems. 
+
+Collectively, our results illustrate how small mammals can indirectly facilitate co-occurring large herbivores. By quantifying in situ effects of pika on poisonous plants abundance and experimentally manipulating this factor, we show that small mammals can play an important role in driving large herbivore population dynamics. We also demonstrated that diet differentiation is the key driver of such interspecific facilitation between small mammals and large herbivores. Our findings challenge the dominant paradigm that small mammals should purely compete with large herbivores for food4-6,. While intuitively appealing, this historic perspective is overly simplistic when considering the adaptive foraging ability and diet partitioning in herbivore community. 
 
 One paradigm of interspecific facilitation is that it tends to be greater in more stressful environments (i.e., stress gradient hypothesis, SGH)42. This paradigm has been widely documented in plant and microbial community43,44, with also increasing evidence in herbivore community16,17,45. Hence, while our study only looked at pika-yak interactions in summer with enough food resources, whether or not such facilitative effect will be lessened or even shifts to competition under more stressful conditions (e.g., when food resources become limited during winter or as herbivore density increases) deserves further investigations.
 
 Our results suggest that, at least during the growing seasons, maintaining a low to moderate density of rather than extensively eradicate pika, would benefit livestock production in the Tibetan Plateau. As the increase in demands of milk and meat by human globally, livestock continues to encroach into natural or semi-natural habitats46, building a diverse ecological interactions with local small animals, both vertebrates and invertebrates47. A comprehensive investigation the causes and consequences of livestock-small animal interactions can help to better understanding animal species coexistence, and is crucial for livestock production predictions and small animal conservation in grasslands.
+
+
 
 ```{r}
 #| label: gloabl settings
@@ -327,7 +354,7 @@ poison_models <- load_model_data(
 # -------------------------------------------------------------------
 
 # Panel A: Yak weight gain
-panel_a_weight_gain <- make_treatment_plot(
+panel_a <- make_treatment_plot(
   data    = weight_gain,
   emms    = weight_gain_models$emms,
   letters = weight_gain_models$letters,
@@ -337,7 +364,7 @@ panel_a_weight_gain <- make_treatment_plot(
 )
 
 # Panels B–D: Forage quality (CP, ADF, EE)
-panel_b_cp <- make_treatment_plot(
+panel_d <- make_treatment_plot(
   data    = forage_quality |> filter(plant == "cp"),
   emms    = forage_quality_models$cp$emms,
   letters = forage_quality_models$cp$letters,
@@ -346,7 +373,7 @@ panel_b_cp <- make_treatment_plot(
   label_y = 10
 )
 
-panel_c_adf <- make_treatment_plot(
+panel_e <- make_treatment_plot(
   data    = forage_quality |> filter(plant == "adf"),
   emms    = forage_quality_models$adf$emms,
   letters = forage_quality_models$adf$letters,
@@ -355,7 +382,7 @@ panel_c_adf <- make_treatment_plot(
   label_y = 36
 )
 
-panel_d_ee <- make_treatment_plot(
+panel_f <- make_treatment_plot(
   data    = forage_quality |> filter(plant == "ee"),
   emms    = forage_quality_models$ee$emms,
   letters = forage_quality_models$ee$letters,
@@ -365,7 +392,7 @@ panel_d_ee <- make_treatment_plot(
 )
 
 # Panels E–F: Plant cover (grasses & poison plant)
-panel_e_grass <- make_treatment_plot(
+panel_c <- make_treatment_plot(
   data    = cover_data |> filter(plant == "grasses"),
   emms    = grasses_models$emms,
   letters = grasses_models$letters,
@@ -374,7 +401,7 @@ panel_e_grass <- make_treatment_plot(
   label_y = 41
 )
 
-panel_f_poison <- make_treatment_plot(
+panel_b <- make_treatment_plot(
   data    = cover_data |> filter(plant == "s_chamaejasme"),
   emms    = poison_models$emms,
   letters = poison_models$letters,
@@ -387,12 +414,13 @@ panel_f_poison <- make_treatment_plot(
 # 5. Combine into Figure
 # -------------------------------------------------------------------
 
-figure_3 <- panel_a_weight_gain +
-  panel_b_cp +
-  panel_c_adf +
-  panel_d_ee +
-  panel_e_grass +
-  panel_f_poison +
+figure_3 <- panel_a +
+  panel_b +
+  panel_c +
+  panel_d +
+  panel_e +
+  panel_f +
+  plot_annotation(tag_levels = "A")  +
   plot_layout(design = layout, guides = "collect") & theme(legend.position = "bottom")
 
 # Save output
@@ -625,3 +653,405 @@ figure_4 <- panel_a + panel_b + panel_c +
 figure_4
 
 ```
+
+
+# Supplementary Figures and Tables
+
+
+
+::: {#supptbl-pika-feeding-model-summary}
+```{r}
+#| echo: false
+#| reulsts: 'asis'
+#| message: false
+#| warning: false
+
+library(knitr)
+library(kableExtra)
+pika_feeding_model_summary <- read_csv(here('data/processed/diet_selection/modeled_data/pika_feeding/model_summary.csv'),show_col_types = FALSE)
+
+pika_feeding_model_summary |>
+  kable(format = "html", booktabs = TRUE, digits = 2) |>
+  kable_styling(latex_options = c("striped"))
+```
+
+Model summary for pika feeding.
+::: 
+
+
+
+::: {#supptbl-pika-feeding-model-contrast}
+```{r}
+#| echo: false
+#| reulsts: 'asis'
+#| message: false
+#| warning: false
+library(knitr)
+library(kableExtra)
+
+pika_feeding_contrasts <- read_csv(here('data/processed/diet_selection/modeled_data/pika_feeding/posthoc_contrasts.csv'))
+
+pika_feeding_contrasts |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped"))
+
+
+```
+
+Model contrasts for pika feeding.
+::: 
+
+
+
+::: {#supptbl-yak-feeding-model-summary}
+```{r}
+#| label: tbl-yak-feeding-model-summary
+#| tbl-cap: "Model summary for yak grazing by plant group"
+#| echo: false
+#| reulsts: asis'
+#| message: false
+#| warning: false
+
+library(knitr)
+library(kableExtra)
+
+yak_feeding_model_summary <- read_csv(here('data/processed/diet_selection/modeled_data/yak_grazing/model_summary.csv'))
+
+yak_feeding_model_summary |>
+  kable(format = "html", booktabs = TRUE, digits = 2) |>
+  kable_styling(latex_options = c("striped"))
+```
+
+Model summary for yak grazing.
+::: 
+
+::: {#supptbl-yak-feeding-model-contrast}
+```{r}
+#| label: tbl-yak-feeding-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for yak grazing by plant group"
+#| echo: false
+#| reulsts: 'asis'
+#| message: false
+#| warning: false
+library(knitr)
+library(kableExtra)
+
+yak_feeding_contrasts <- read_csv(here('data/processed/diet_selection/modeled_data/yak_grazing/posthoc_contrasts.csv'),show_col_types = FALSE)
+
+yak_feeding_contrasts |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped"))
+
+
+```
+
+Model contrasts for yak grazing.
+::: 
+
+
+::: {#supptbl-yak-weight-gain-model-summary}
+```{r}
+#| label: tbl-weight-gain-model-summary
+#| tbl-cap: "Model summary for weight gain."
+#| echo: false
+#| message: false
+#| warning: false
+
+
+# Define a function to load model data for a plant group
+load_data <- function(base_path) {
+  list(
+    emms = read_csv(file.path(base_path, "emms.csv")),
+    letters = read_csv(file.path(base_path, "posthoc_letters.csv")),
+    model_summary = read_csv(file.path(base_path, "model_summary.csv")),
+    model_contrasts = read_csv(file.path(base_path, "posthoc_contrasts.csv"))
+  )
+}
+
+weight_gain_models <- load_data(here('data/processed/experiment_foraging_efficiency/modeled_data/weight_gain'))
+
+
+weight_gain_models$model_summary  |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  select(!c(component,group)) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+
+Model summary for yak weight gain.
+::: 
+
+
+
+```{r, reading in cover data}
+#| echo: false
+#| results: "hide"
+#| message: false
+#| warning: falseß
+
+grasses_emms <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/emms.csv'))
+grasses_letters <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/posthoc_letters.csv'))
+grasses_model_summary  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/model_summary.csv'))
+grasses_model_contrasts  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/posthoc_contrasts.csv'))
+
+poison_emms <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/emms.csv'))
+poison_letters <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/posthoc_letters.csv'))
+poison_model_summary  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/model_summary.csv'))
+poison__model_contrasts  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/posthoc_contrasts.csv'))
+
+```
+
+
+::: {#supptbl-grass-cover-model-summary}
+```{r}
+#| label: tbl-grasses-model-summary
+#| tbl-cap: "Model summary for grass cover."
+#| echo: false
+#| message: false
+#| warning: false
+
+grasses_model_summary |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  select(!c(component,group)) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+Model summary for Grass cover.
+::: 
+
+::: {#supptbl-grass-cover-contrasts}
+```{r}
+#| label: tbl-grasses-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for grass cover by treatment group."
+#| echo: false
+#| message: false
+#| warning: false
+
+grasses_model_contrasts |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+Model contrasts for Grass cover.
+::: 
+
+
+
+::: {#supptbl-poison-cover-summary}
+```{r}
+#| label: tbl-poison-model-summary
+#| tbl-cap: "Model summary for *S. chamaejasme* cover."
+#| echo: false
+#| message: false
+#| warning: false
+
+poison_model_summary |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  select(!c(component,group)) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+Model summary for *S. chamaejasme* cover.
+::: 
+
+
+::: {#supptbl-poison-cover-contrasts}
+```{r}
+#| label: tbl-poison-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for *S. chamaejasme* cover by treatment group."
+#| echo: false
+#| message: false
+#| warning: false
+
+poison__model_contrasts |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+Model contrasts for *S. chamaejasme* cover.
+::: 
+
+
+::: {#supptbl-yak-weight-gain-model-contrast}
+```{r}
+#| label: tbl-weight-gain-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for weight gain by treatment group."
+#| echo: false
+#| message: false
+#| warning: false
+
+weight_gain_models$model_contrasts |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+Model contrasts for yak weight gain.
+::: 
+
+
+
+
+::: {#supptbl-adf-model-summary}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+
+# Define a function to load model data for a plant group
+load_forage_quality_data <- function(quality_metric) {
+  base_path <- here(glue::glue("data/processed/experiment_foraging_quality/modeled_data/{quality_metric}"))
+  list(
+    emms = read_csv(file.path(base_path, "emms.csv")),
+    letters = read_csv(file.path(base_path, "posthoc_letters.csv")),
+    model_summary = read_csv(file.path(base_path, "model_summary.csv")),
+    model_contrasts = read_csv(file.path(base_path, "posthoc_contrasts.csv"))
+  )
+}
+
+
+# Define your plant groups
+quality_metrics <- c("adf", "cp", "ee","ndf")
+
+# Load all model data into a named list
+forag_quality_models <- map(quality_metrics, load_forage_quality_data) |> set_names(quality_metrics)
+
+forag_quality_models$adf$model_summary |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  kable(format = "html", booktabs = TRUE, digits = 3)|>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+Model summary for ADF.
+::: 
+
+
+::: {#supptbl-adf-model-contrast}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+forag_quality_models$adf$model_contrasts |>
+  kable(format = "html", booktabs = TRUE, digits = 3)|>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+Model contrasts for ADF.
+::: 
+
+
+::: {#supptbl-cp-model-summary}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+
+forag_quality_models$cp$model_summary |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  kable(format = "html", booktabs = TRUE, digits = 3)|>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+Model summary for CP.
+::: 
+
+
+::: {#supptbl-cp-model-contrasts}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+forag_quality_models$cp$model_contrasts |>
+  kable(format = "html", booktabs = TRUE, digits = 3)|>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+Model contrasts for CP.
+::: 
+
+
+::: {#supptbl-ee-model-summary}
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+
+forag_quality_models$ee$model_summary |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  kable(format = "html", booktabs = TRUE, digits = 3)|>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+Model summary for EE.
+::: 
+
+::: {#supptbl-ee-model-contrasts}
+```{r}
+#| label: tbl-ee-model-contrasts
+#| tbl-cap: "Estimated marginal means contrasts for EE by treatment group."
+#| echo: false
+#| message: false
+#| warning: false
+
+forag_quality_models$ee$model_contrasts |>
+  kable(format = "html", booktabs = TRUE, digits = 3)|>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+
+Model contrasts for EE.
+::: 
