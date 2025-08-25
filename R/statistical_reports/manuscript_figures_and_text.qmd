@@ -51,20 +51,10 @@ We firstly carried out a set of field observational experiments to investigate t
 
 Given these results, we then conducted an in-situ manipulative field experiment to explicitly examine the interactive effects of pika and *S. chamaejasme* on weight gain, foraging quantity and quality, and grazing behaviors of yak by using fencing enclosure plots. For weight gain, overall yaks had a lower weight gain in poison plant plots than non-poison plant plots and there was an interactive effect between pika and  *S. chamaejasme* treatments (@supptbl-yak-weight-gain-model-summary). When pika were present, yaks had a high weight gain (@supptbl-pika-feeding-model-contrast). This is due to Pika feeding on *S. chamaejasme* (@fig-2 B, @supptbl-poison-cover-summary, @supptbl-poison-cover-contrasts), allow for more grass cover (@fig-2 C, @supptbl-grass-cover-model-summary, @supptbl-grass-cover-contrasts) as compared to the *S. chamaejasme* and no pika treatment plots.
 
+Food quantity and quality are key drivers of individual performance and population dynamics of large herbivores^30-32^. In the presence of *S. chamaejasme* forbs, pika doubled the cover of yak’s most favored grasses (@fig-2 C, @supptbl-grass-cover-model-summary, @supptbl-grass-cover-contrasts) and increased crude protein content of total forage by approximately 14% (@fig-2 D, @supptbl-cp-model-summary, @supptbl-cp-model-contrasts), suggesting that pika facilitate yak by increasing the quantity and quality of forage plants. Acid detergent fibre and ether extract were also sigificantly different between the plots (@fig-2 E & F). The increases in grass abundance and forage quality were likely driven by the decline in poisonous plant abundance induced by pika (@fig-2 B), which released inter-specific competition for shared resources (e.g., light, soil moisture and nutrients) and allowed their growth and expansion^27-28^. In the absence of *S. chamaejasme* forbs, however, the positive effects of pika on food resources and weight gain of yak disappeared (@fig-2 A,C,D). Pika and poisonous plants impacted sedge cover similiarly like grass cover (@suppfig-forb-sedge-cover A) and there was a more complicated interaction with forb cover (@suppfig-forb-sedge-cover B). There was no impact of pika and poisonous plant on neutrl detergent fibre (@fig-2 C).
 
 
-
-
-
-
-
-We found an opposing effect of poisonous plants and pika on yak growth performance; *S. chamaejasme* cover significantly reduced while pika presence increased weight gain of yak by 15% (S. chamaejasme, F1,3 =16.36, P = 0.027) and 27% (pika, F1,3 =87.36, P = 0.03), respectively. More importantly, there is an interactive effects between them (F1,3 =11.93, P = 0.041). In the presence of S. chamaejasme forbs, yak significantly increased weight gain by 71% when they shared foraging areas with pika (P < 0.001, Fig.3a). However, such facilitative effects disappeared in the treatments without S. chamaejasme forbs (Fig.3a). These results, in combination with the fact that pika prefer S. chamaejasme forbs (Fig. 2a) and that S. chamaejasme abundance reduced dramatically by 67% in the presence of pika (P < 0.001, Fig. 3b), indicating that pika facilitate yak through suppressing these poisonous plants.
-
-
-Food quantity and quality are key drivers of individual performance and population dynamics of large herbivores30-32. In the presence of S. chamaejasme forbs, pika increased cover of yak’s most favored grasses by 118% (P = 0.001, Fig. 3c) and increased crude protein content of total forage by 16% (P = 0.002, Fig. 3d), suggesting that pika facilitate yak by increasing the quantity and quality of forage plants. The increases in grass abundance and forage quality were likely driven by the decline in poisonous plant abundance induced by pika (Fig. 3b), which released inter-specific competition for shared resources (e.g., light, soil moisture and nutrients) and allowed their growth and expansion27-28. In the absence of S. chamaejasme forbs, however, the positive effects of pika on food resources and weight gain of yak disappeared (Fig. 3a,c,d). Pika and poisonous plants failed to significantly affected neither sedge cover, forb cover (Fig. S1), nor other chemical properties (e.g., acid detergent fibre, neutral detergent fibre, and ether extract) of forage in the plots (Fig. S2).
-
-
-Pika-yak facilitation was also associated with enhanced foraging efficiency in yak after shared grazing with pika. Optimal foraging theory predicts that animals tend to use mimumne energy cost to exploit high-quality food items or units to optimise the intake of digestible nutrients and hence animal production33. In ruminants, bite rate, step rate and bites per step predict foraging efficiency34, which are key to determine animal performance35. In the presence of S. chamaejasme forbs, yak's total bites rate and sedge bite rate was 34% (P = 0.001, Fig. 4a) and 58% (P = 0.001, Fig. 4b) higher in the treatment when they co-existed with pika. Moreover, while yak total steps rate was affected by neither pika nor S. chamaejasme (Fig. 4d), sedge bites per step and grass bites per step by yak significantly increased 89% (P < 0.001, Fig. 4e) and 80% (P = 0.001, Fig. 4f) in the plots with pika, respectively. The improved yak foraging efficiency can be attributed to the declines in poisonous S. chamaejasme forbs (Fig. 3b), which enhanced their access to the palatable sedges and grasses in the presence of pika. In our system, the increases in food availability (Fig. 3c,d) and foraging efficiency (Fig. 4) may jointly shape the facilitative effects of pika on yak performance (Fig. 3a).
+Pika-yak facilitation was also associated with enhanced foraging efficiency in yak after shared grazing with pika. Optimal foraging theory predicts that animals tend to use minimum energy cost to exploit high-quality food items or units to optimise the intake of digestible nutrients and hence animal production^33^. In ruminants, bite rate, step rate and bites per step predict foraging efficiency^34^, which are key to determine animal performance^35^. In the presence of *S. chamaejasme* forbs, yak's total bites rate and sedge bite rate was 34% (P = 0.001, Fig. 4a) and 58% (P = 0.001, Fig. 4b) higher in the treatment when they co-existed with pika. Moreover, while yak total steps rate was affected by neither pika nor S. chamaejasme (Fig. 4d), sedge bites per step and grass bites per step by yak significantly increased 89% (P < 0.001, Fig. 4e) and 80% (P = 0.001, Fig. 4f) in the plots with pika, respectively. The improved yak foraging efficiency can be attributed to the declines in poisonous S. chamaejasme forbs (Fig. 3b), which enhanced their access to the palatable sedges and grasses in the presence of pika. In our system, the increases in food availability (Fig. 3c,d) and foraging efficiency (Fig. 4) may jointly shape the facilitative effects of pika on yak performance (Fig. 3a).
 
 
 In the Tibetan Plateau, the consumption of poisonous plants by small mammals such as pika and zokors (Eospalax baileyi) have long been noted24,36, and their detoxification mechanisms have been explored37-38. It is suggested that herbivores have evolved several adaptation strategies to cope with plant secondary metabolites (PSMs) in poisonous plants. For example, converting digested PSMs into non-toxic metabolites, adjusting catabolism processes at the physiological and genetic levels, or modifying gut microbiota to reduce PSM absorption, thus mitigating toxic injury39-41. Indeed, recent evidence suggests that the plateau zokors in the Tibetan Plateau can detoxify the toxic secondary metabolites from S. chamaejasme forbs through 1) P450 pair xenobiotic clearance, bile secretion, and xenobiotic clearance pathway37, and 2) reduce chenodeoxycholic acid and prostaglandin in the liver38. The similar physiological detoxification strategies may also apply to plateau pika in the same ecosystems. 
@@ -103,26 +93,139 @@ green <- '#2fc09b'
 
 
 plant_colors <- c(green, pink)
+
+
 ```
 
-```{r}
-#| label: fig-2
-#| fig-cap: "Diet selection of pika and yak and their potential interactions mediated by poisonous plants in the field surveys in July 2021. (a) Feeding and clipping frequency of pika, and (b) grazing frequency of yak on the S. chamaejasme, sedges, grasses, and forbs in the 10 2 m × 2 m plots and the 10 250 m transects, respectively. (c) The relationship between active pika burrow density and S. chamaejasme cover, and (d) the relationship between S. chamaejasme cover and yak grazing activity in the 30 10 m × 10 m plots. (e) Two yak were grazing around the poisonous S. chamaejasme during its flowering season (i.e., May to June) in the study site. Different letters above the bars indicate significant differences at P < 0.05."
+
+```{r reading in data}
+#| label: data-loading
+#| echo: false
+#| warning: false
+#| message: false
+#| results: "hide"
+
+# ============================================================
+#                 DATA LOADING HELPERS
+# ============================================================
+
+# Load a CSV relative to project root
+load_csv <- function(...) {
+  read_csv(here(...), show_col_types = FALSE)
+}
+
+# Generalized function for loading model outputs (emms, letters, summary, contrasts)
+load_model_data <- function(base_dir, name = NULL) {
+  base_path <- if (is.null(name)) here(base_dir) else here(glue("{base_dir}/{name}"))
+  list(
+    emms            = read_csv(file.path(base_path, "emms.csv")),
+    letters         = read_csv(file.path(base_path, "posthoc_letters.csv")),
+    model_summary   = read_csv(file.path(base_path, "model_summary.csv")),
+    model_contrasts = read_csv(file.path(base_path, "posthoc_contrasts.csv"))
+  )
+}
+
+# ============================================================
+#                 FIGURE 2 DATA
+# ============================================================
+
+# Pika
+pika_data            <- load_csv("data/processed/diet_selection/pika_feeding.csv")
+pika_feeding_models  <- load_model_data("data/processed/diet_selection/modeled_data/pika_feeding")
+
+# Yak
+yak_data             <- load_csv("data/processed/diet_selection/yak_grazing.csv")
+yak_feeding_models   <- load_model_data("data/processed/diet_selection/modeled_data/yak_grazing")
+
+# Shared dung/burrow
+dung_burrow_by_plot  <- load_csv("data/processed/diet_selection/dung_burrow_by_plot.csv") |>
+  mutate(plot = factor(plot))
+
+# ============================================================
+#                 FIGURE 3 DATA
+# ============================================================
+
+# Weight gain
+weight_gain <- load_csv("data/processed/experiment_foraging_efficiency/yak_weight_gain.csv") |>
+  mutate(yak = gsub("_[^_]*$", "", yak))
+weight_gain_models <- load_model_data("data/processed/experiment_foraging_efficiency/modeled_data/weight_gain")
+
+# Forage quality (all metrics in one pass)
+quality_metrics <- c("cp", "adf", "ee", "ndf")
+forage_quality  <- load_csv("data/processed/experiment_foraging_quality/plant_foraging_quality.csv")
+forage_quality_models <- map(quality_metrics,
+                             ~ load_model_data("data/processed/experiment_foraging_quality/modeled_data", .x)) |>
+  set_names(quality_metrics)
+
+# Plant cover
+cover_data     <- load_csv("data/processed/experiment_plant_cover/plant_cover_by_treatment.csv")
+grasses_models <- load_model_data("data/processed/experiment_plant_cover/modeled_data/grasses_cover")
+poison_models  <- load_model_data("data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover")
+forbs_models   <- load_model_data("data/processed/experiment_plant_cover/modeled_data/forbs_cover")
+sedges_models  <- load_model_data("data/processed/experiment_plant_cover/modeled_data/sedges_cover")
+
+# Flip grouping for sedges posthoc letters
+sedges_models$letters <- sedges_models$letters |>
+  mutate(.group = ifelse(.group == "a", "b", "a"))
+
+# ============================================================
+#                 FIGURE 4 DATA
+# ============================================================
+
+# Plant bites
+plant_bites <- load_csv("data/processed/experiment_foraging_efficiency/yak_plant_bites.csv") |>
+  mutate(plant = gsub("_[^_]*$", "", plant))
+plant_groups <- c("forbs", "grasses", "sedges", "total")
+plant_bites_models <- map(plant_groups,
+                          ~ load_model_data("data/processed/experiment_foraging_efficiency/modeled_data/plant_bites",
+                                            paste0(.x, "_plant_bites"))) |>
+  set_names(plant_groups)
+
+# Bite/steps
+bite_steps <- load_csv("data/processed/experiment_foraging_efficiency/yak_bite_steps_ratio.csv")
+bite_step_groups <- c("forbs", "grasses", "sedges")
+bite_step_models <- map(bite_step_groups,
+                        ~ load_model_data("data/processed/experiment_foraging_efficiency/modeled_data/bite_steps",
+                                          paste0(.x, "_bite_steps"))) |>
+  set_names(bite_step_groups)
+
+# Total steps
+total_steps <- load_csv("data/processed/experiment_foraging_efficiency/yak_total_steps.csv") |>
+  mutate(yak = gsub("_[^_]*$", "", yak))
+total_steps_models <- load_model_data("data/processed/experiment_foraging_efficiency/modeled_data", "total_steps")
+
+# ============================================================
+#            SUPPLEMENTARY FIGURES/TABLES DATA
+# ============================================================
+
+# Plant cover
+forbs_models   <- load_model_data("data/processed/experiment_plant_cover/modeled_data/forbs_cover")
+sedges_models  <- load_model_data("data/processed/experiment_plant_cover/modeled_data/sedges_cover")
+
+# Forage quality
+ndf_models     <- load_model_data("data/processed/experiment_foraging_quality/modeled_data/ndf")
+
+# Yak grazing
+yak_feeding_model_summary <- yak_feeding_models$model_summary
+yak_feeding_contrasts     <- yak_feeding_models$model_contrasts
+
+
+
+
+```
+
+
+::: {#fig-diet-selection}
+```{r fig-diet-selection}
 #| echo: false
 #| reulsts: asis'
 #| message: false
 #| warning: false
 #| fig-width: 10
 #| fig-height: 8
-
 # -------------------------------------------------------------------
-# 1. Helper Functions
+# 1. Helper Plot Function
 # -------------------------------------------------------------------
-
-# Load a CSV relative to project root
-load_csv <- function(...) {
-  read_csv(here(...), show_col_types = FALSE)
-}
 
 # Create a feeding/grazing plot (shared structure for pika & yak)
 make_feeding_plot <- function(raw_data, emms, letters, yvar, ylabel, 
@@ -131,7 +234,7 @@ make_feeding_plot <- function(raw_data, emms, letters, yvar, ylabel,
     left_join(emms, by = "plant_group") |>
     mutate(plant_group = if (!is.null(x_order)) factor(plant_group, levels = x_order) else plant_group)
   
-  ggplot(data, aes(x = reorder(plant_group,emmean), y = .data[[yvar]])) +
+  ggplot(data, aes(x = reorder(plant_group, emmean), y = .data[[yvar]])) +
     geom_jitter(width = 0.2, height = 0, color = jitter_color) +
     geom_point(aes(y = emmean), size = 5, color = point_color) +
     geom_text(data = letters, aes(label = .group, y = 105)) +
@@ -140,25 +243,7 @@ make_feeding_plot <- function(raw_data, emms, letters, yvar, ylabel,
 }
 
 # -------------------------------------------------------------------
-# 2. Load Data
-# -------------------------------------------------------------------
-
-# Pika
-pika_data              <- load_csv("data/processed/diet_selection/pika_feeding.csv")
-pika_feeding_emms      <- load_csv("data/processed/diet_selection/modeled_data/pika_feeding/emms.csv")
-pika_feeding_letters   <- load_csv("data/processed/diet_selection/modeled_data/pika_feeding/posthoc_letters.csv")
-
-# Yak
-yak_data               <- load_csv("data/processed/diet_selection/yak_grazing.csv")
-yak_feeding_emms       <- load_csv("data/processed/diet_selection/modeled_data/yak_grazing/emms.csv")
-yak_feeding_letters    <- load_csv("data/processed/diet_selection/modeled_data/yak_grazing/posthoc_letters.csv")
-
-# Shared dung/burrow data
-dung_burrow_by_plot    <- load_csv("data/processed/diet_selection/dung_burrow_by_plot.csv") |>
-  mutate(plot = factor(plot))
-
-# -------------------------------------------------------------------
-# 3. Models
+# 2. Models
 # -------------------------------------------------------------------
 
 # GAM for S. chamaejasme cover vs pika burrow density
@@ -175,40 +260,42 @@ burrow_model <- gam(
 gam_ests <- smooth_estimates(burrow_model) |>
   mutate(adj_est = .estimate + coef(burrow_model)[1])
 
-dung_model <- gam(yak_dung_no_100m2 ~ s_chamaejasme_cover_percent, data=dung_burrow_by_plot)
+# Simple GAM/LM for dung vs cover
+dung_model <- gam(yak_dung_no_100m2 ~ s_chamaejasme_cover_percent, data = dung_burrow_by_plot)
 
 # -------------------------------------------------------------------
-# 4. Plots
+# 3. Plots
 # -------------------------------------------------------------------
 
-# Feeding/grazing plots
+# Feeding/clipping plot (pika)
 pika_feeding_plot <- make_feeding_plot(
   raw_data = pika_data,
-  emms = pika_feeding_emms,
-  letters = pika_feeding_letters,
-  yvar = "feeding_clipping_freq",
-  ylabel = "Feeding/clipping frequency (%)"
+  emms     = pika_feeding_emms,
+  letters  = pika_feeding_letters,
+  yvar     = "feeding_clipping_freq",
+  ylabel   = "Feeding/clipping frequency (%)"
 )
 
+# Grazing plot (yak)
 yak_grazing_plot <- make_feeding_plot(
   raw_data = yak_data,
-  emms = (yak_feeding_emms |>
-  bind_rows(tibble(
-    plant_group = "S. chamaejasme",
-    emmean      = 0,
-    SE          = 0,
-    df          = 0,
-    lower.CL    = 0,
-    upper.CL    = 0
-  ))),
-  letters = yak_feeding_letters,
-  yvar = "grazing_freq",
-  ylabel = "Grazing frequency (%)",
-  x_order = c("S. chamaejasme", "Forbs", "Sedges", "Grasses")
+  emms     = (yak_feeding_emms |>
+    bind_rows(tibble(
+      plant_group = "S. chamaejasme",
+      emmean      = 0,
+      SE          = 0,
+      df          = 0,
+      lower.CL    = 0,
+      upper.CL    = 0
+    ))),
+  letters  = yak_feeding_letters,
+  yvar     = "grazing_freq",
+  ylabel   = "Grazing frequency (%)",
+  x_order  = c("S. chamaejasme", "Forbs", "Sedges", "Grasses")
 ) +
   scale_x_discrete(drop = FALSE)
 
-# Burrow vs S. chamaejasme plot
+# Burrow density vs S. chamaejasme cover
 pika_burrow <- ggplot(dung_burrow_by_plot, aes(x = active_pika_burrow_no_100m2, y = s_chamaejasme_cover_percent)) +
   geom_point(color = "darkgrey") +
   geom_ribbon(data = gam_ests,
@@ -221,7 +308,7 @@ pika_burrow <- ggplot(dung_burrow_by_plot, aes(x = active_pika_burrow_no_100m2, 
   labs(x = expression("Active pika burrow density (no/100 m"^2*")"),
        y = expression(italic("S. chamaejasme")~"cover (%)"))
 
-# Dung density vs cover plot
+# Dung density vs cover
 dung_plot <- ggplot(dung_burrow_by_plot, aes(x = s_chamaejasme_cover_percent, y = yak_dung_no_100m2)) +
   geom_point(color = "darkgrey") +
   geom_smooth(method = "lm", se = TRUE, color = "blue") +
@@ -236,15 +323,22 @@ figure_2_plot <- (pika_feeding_plot + yak_grazing_plot) /
   plot_annotation(tag_levels = "A") & theme(legend.position = "bottom")
 
 # -------------------------------------------------------------------
-# 5. Save Output
+# 4. plot Output
 # -------------------------------------------------------------------
 
 figure_2_plot
+
 ```
 
+Diet selection of pika and yak and their potential interactions mediated by poisonous plants in the field surveys in July 2021. (a) Feeding and clipping frequency of pika, and (b) grazing frequency of yak on the S. chamaejasme, sedges, grasses, and forbs in the 10 2 m × 2 m plots and the 10 250 m transects, respectively. 
+(c) The relationship between active pika burrow density and S. chamaejasme cover, and (d) the relationship between S. chamaejasme cover and yak grazing activity in the 30 10 m × 10 m plots. (e) Two yak were grazing around the poisonous S. chamaejasme during its flowering season (i.e., May to June) in the study site. 
+Different letters above the bars indicate significant differences at P < 0.05.
+:::
+
+
+
+::: {#fig-yak-performance}
 ```{r}
-#| label: fig-3
-#| fig-cap: "DCombined effects of 2-yr (2022-2023) pika and poisonous plant removal treatments on yak performance, forage quantity and quality in the field manipulated experiments. (a) yak weight gain, (b) S. chamaejasme cover, (c) grass cover, and (d) crude protein (CP) content of total forage based on dry mass. The average values of each variable in the two years were used for statistical analysis, providing a single data point for each variable in each 150 m × 150 m plot. (e) and (f) Show how S. chamaejasme abundance respond to the absence and presence of pika, respectively. Significant interactions between pika and S. chamaejasme plants were evaluated with post hoc comparisons; means that do not share letters are significantly different. Error bars represent +/- SE."
 #| echo: false
 #| results: asis
 #| message: false
@@ -258,24 +352,6 @@ ABC
 DEF
 "
 
-# -------------------------------------------------------------------
-# 2. Helper Functions
-# -------------------------------------------------------------------
-
-# Load a single CSV relative to project root
-load_csv <- function(...) {
-  read_csv(here(...), show_col_types = FALSE)
-}
-
-# Load a set of model outputs for a given base path
-load_model_data <- function(base_path) {
-  list(
-    emms          = read_csv(file.path(base_path, "emms.csv")),
-    letters       = read_csv(file.path(base_path, "posthoc_letters.csv")),
-    model_summary = read_csv(file.path(base_path, "model_summary.csv")),
-    contrasts     = read_csv(file.path(base_path, "posthoc_contrasts.csv"))
-  )
-}
 # Generic plot for treatment × response with jitter, means, and letters
 make_treatment_plot <- function(data, emms, letters, response_var, y_label, 
                                 label_y = NULL, point_size = 4, text_size = 5) {
@@ -319,38 +395,7 @@ make_treatment_plot <- function(data, emms, letters, response_var, y_label,
 
 
 # -------------------------------------------------------------------
-# 3. Data Loading
-# -------------------------------------------------------------------
-
-# Weight gain
-weight_gain <- load_csv("data/processed/experiment_foraging_efficiency/yak_weight_gain.csv") |>
-  mutate(yak = gsub("_[^_]*$", "", yak))
-
-weight_gain_models <- load_model_data(
-  here("data/processed/experiment_foraging_efficiency/modeled_data/weight_gain")
-)
-
-# Forage quality
-forage_quality <- load_csv("data/processed/experiment_foraging_quality/plant_foraging_quality.csv")
-
-quality_metrics <- c("cp", "adf", "ee")
-forage_quality_models <- map(quality_metrics, ~ load_model_data(
-  here(glue("data/processed/experiment_foraging_quality/modeled_data/{.x}"))
-)) |> set_names(quality_metrics)
-
-# Plant cover
-cover_data <- load_csv("data/processed/experiment_plant_cover/plant_cover_by_treatment.csv")
-
-grasses_models <- load_model_data(
-  here("data/processed/experiment_plant_cover/modeled_data/grasses_cover")
-)
-
-poison_models <- load_model_data(
-  here("data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover")
-)
-
-# -------------------------------------------------------------------
-# 4. Plot Panels
+# Plot Panels
 # -------------------------------------------------------------------
 
 # Panel A: Yak weight gain
@@ -363,7 +408,7 @@ panel_a <- make_treatment_plot(
   label_y = 0.60
 )
 
-# Panels B–D: Forage quality (CP, ADF, EE)
+# Panels D–F: Forage quality (CP, ADF, EE)
 panel_d <- make_treatment_plot(
   data    = forage_quality |> filter(plant == "cp"),
   emms    = forage_quality_models$cp$emms,
@@ -391,7 +436,7 @@ panel_f <- make_treatment_plot(
   label_y = 4
 )
 
-# Panels E–F: Plant cover (grasses & poison plant)
+# Panels B and C: Plant cover (grasses & poison plant)
 panel_c <- make_treatment_plot(
   data    = cover_data |> filter(plant == "grasses"),
   emms    = grasses_models$emms,
@@ -429,9 +474,12 @@ figure_3
 
 ```
 
-```{r}
-#| label: fig-4
-#| fig-cap: "Combined effects of 2-yr (2022-2023) pika and poisonous plant removal treatments on foraging efficiency of yak in the field manipulated experiments. (a) Total bite rate, (b) sedge bite rate, (c) grass bite rate, (d) total step rate, (e) sedge bites per step, and (f) grass bites per step. The average values of each variable in the two years were used for statistical analysis, providing a single data point for each variable in each 150 m × 150 m plot. Significant interactions between pika and S. chamaejasme plants were evaluated with post hoc comparisons; means that do not share letters are significantly different. Error bars represent +/- SE."
+Combined effects of 2-yr (2022-2023) pika and poisonous plant removal treatments on yak performance, forage quantity and quality in the field manipulated experiments. (a) yak weight gain, (b) S. chamaejasme cover, (c) grass cover, and (d) crude protein (CP) content of total forage based on dry mass. The average values of each variable in the two years were used for statistical analysis, providing a single data point for each variable in each 150 m × 150 m plot. (e) and (f) Show how S. chamaejasme abundance respond to the absence and presence of pika, respectively. Significant interactions between pika and S. chamaejasme plants were evaluated with post hoc comparisons; means that do not share letters are significantly different. Error bars represent +/- SE.
+:::
+
+
+::: {#fig-yak-foraging-efficiency}
+```{r fig-yak-foraging-efficiency}
 #| echo: false
 #| results: asis
 #| message: false
@@ -441,34 +489,9 @@ figure_3
 
 
 # ============================================================
-#                 DATA LOADING HELPERS
-# ============================================================
-
-# Generalized function for loading model outputs (emms, contrasts, etc.)
-load_model_data <- function(base_dir, name) {
-  base_path <- here(glue("{base_dir}/{name}"))
-  list(
-    emms          = read_csv(file.path(base_path, "emms.csv")),
-    letters       = read_csv(file.path(base_path, "posthoc_letters.csv")),
-    model_summary = read_csv(file.path(base_path, "model_summary.csv")),
-    model_contrasts = read_csv(file.path(base_path, "posthoc_contrasts.csv"))
-  )
-}
-
-# ============================================================
 #                 PLANT BITE DATA
 # ============================================================
 
-# Load main plant bites dataset
-plant_bites <- read_csv(here("data/processed/experiment_foraging_efficiency/yak_plant_bites.csv")) |>
-  mutate(plant = gsub("_[^_]*$", '', plant))
-
-# Load model outputs for each plant group
-plant_groups <- c("forbs", "grasses", "sedges", "total")
-plant_bites_models <- map(plant_groups,
-                          ~ load_model_data("data/processed/experiment_foraging_efficiency/modeled_data/plant_bites",
-                                            paste0(.x, "_plant_bites"))) |>
-  set_names(plant_groups)
 
 # Adjust letter groupings consistently
 plant_bites_models <- map(plant_bites_models, function(x) {
@@ -479,15 +502,6 @@ plant_bites_models <- map(plant_bites_models, function(x) {
 # ============================================================
 #                 BITE/STEPS DATA
 # ============================================================
-
-bite_steps <- read_csv(here("data/processed/experiment_foraging_efficiency/yak_bite_steps_ratio.csv"))
-
-# Load model outputs for bite/step ratios
-bite_step_groups <- c("forbs", "grasses", "sedges")
-bite_step_models <- map(bite_step_groups,
-                        ~ load_model_data("data/processed/experiment_foraging_efficiency/modeled_data/bite_steps",
-                                          paste0(.x, "_bite_steps"))) |>
-  set_names(bite_step_groups)
 
 # Adjust letter groupings consistently
 bite_step_models <- map(bite_step_models, function(x) {
@@ -654,8 +668,410 @@ figure_4
 
 ```
 
+Combined effects of 2-yr (2022-2023) pika and poisonous plant removal treatments on foraging efficiency of yak in the field manipulated experiments. (a) Total bite rate, (b) sedge bite rate, (c) grass bite rate, (d) total step rate, (e) sedge bites per step, and (f) grass bites per step. The average values of each variable in the two years were used for statistical analysis, providing a single data point for each variable in each 150 m × 150 m plot. Significant interactions between pika and S. chamaejasme plants were evaluated with post hoc comparisons; means that do not share letters are significantly different. Error bars represent +/- SE.
+
+:::
 
 # Supplementary Figures and Tables
+
+
+::: {#suppfig-forb-sedge-cover}
+
+```{r suppfig-forb-sedge-cover}
+#| echo: false
+#| results: asis
+#| message: false
+#| warning: false
+#| fig-width: 10
+#| fig-height: 8
+
+
+
+
+make_cover_plot <- function(plant_name, letters_df, y_label, text_y = 41, letters = TRUE) {
+  p <- cover_data |>
+    filter(plant == plant_name) |>
+    left_join(letters_df, by = c("pika_treatment", "posion_plant_treatment")) |>
+    ggplot(aes(x = pika_treatment, y = cover, color = posion_plant_treatment)) +
+    geom_jitter(
+      size = 1, alpha = 0.4,
+      position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.7)
+    ) +
+    geom_point(
+        data = letters_df,
+        aes(x = pika_treatment, y = response * 100, fill = posion_plant_treatment),
+        position = position_dodge(width = 0.7),
+        size = 4, pch = 21, color = "black"
+    ) +
+    scale_fill_manual(values = c(green, pink)) +
+    scale_color_manual(values = c(green, pink)) +
+    labs(
+      y = y_label,
+      x = "",
+      color = "Poison plant treatment",
+      fill = "Poison plant treatment"
+    ) +
+    theme_pubr(base_size = 10) +
+    theme(legend.position = "bottom", legend.title = element_blank())
+
+  if (letters) {
+    p <- p  +
+      geom_text(
+        data = letters_df,
+        aes(x = pika_treatment, y = text_y, label = .group, group = posion_plant_treatment),
+        position = position_dodge(width = 0.7),
+        size = 5, color = "black", show.legend = FALSE
+      )
+  }
+
+  p
+}
+
+
+panel_a <- make_cover_plot("sedges", sedges_letters, "Sedges cover (%)", text_y = 70,letters=TRUE)
+panel_b <- make_cover_plot("forbs", forbs_letters, "Forbs cover (%)", text_y = 43,letters=TRUE)
+
+
+
+# --- NDF % ---
+
+# Reusable function
+plot_forage_quality <- function(quality_metric, y_label, label_y = NULL, letters = TRUE) {
+  data <- forage_quality |> filter(plant == quality_metric)
+  emms <- forage_quality_models[[quality_metric]]$emms
+  letters_df <- forage_quality_models[[quality_metric]]$letters
+
+  label_y <- label_y %||% max(data$forage_quality, na.rm = TRUE)
+
+  p <- data |>
+    left_join(emms, by = c('pika_treatment', 'posion_plant_treatment')) |>
+    ggplot(aes(x = pika_treatment, y = forage_quality, color = posion_plant_treatment)) +
+    geom_jitter(
+      size = 1, alpha = 0.4,
+      position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.7)
+    ) +
+    geom_point(
+      data = letters_df,
+      aes(x = pika_treatment, y = response * 100, fill = posion_plant_treatment),
+      position = position_dodge(width = 0.7),
+      size = 4, pch = 21, color = "black", inherit.aes = FALSE
+    ) +
+    scale_fill_manual(values = plant_colors) +
+    scale_color_manual(values = plant_colors) +
+    labs(
+      y = y_label,
+      x = "",
+      color = "Poison plant treatment",
+      fill = "Poison plant treatment"
+    ) +
+    theme_pubr(base_size = 15) +
+    theme(legend.position = "bottom", legend.title = element_blank())
+
+    if (letters) {
+        p <- p  +
+        geom_text(
+            data = letters_df,
+            aes(x = pika_treatment, y = label_y, label = .group, group = posion_plant_treatment),
+            position = position_dodge(width = 0.7),
+            size = 5, color = "black", show.legend = FALSE
+        )
+  }
+
+  p
+}
+
+# Call the function for each plant type
+
+panel_c   <- plot_forage_quality("ndf", "ndf (%)",label_y=68,letters=FALSE) + ylim(50,NA)
+
+
+
+
+
+# --- forb bites and bite/steps ---
+
+# Load the bite_steps dataset once
+plant_bites <- read_csv(here("data/processed/experiment_foraging_efficiency/yak_plant_bites.csv")) |>
+  mutate(plant = gsub("_[^_]*$", '',plant))
+
+# Define a function to load model data for a plant group
+load_plant_bites_data <- function(plant) {
+  base_path <- here(glue::glue("data/processed/experiment_foraging_efficiency/modeled_data/plant_bites/{plant}_plant_bites"))
+  list(
+    emms = read_csv(file.path(base_path, "emms.csv")),
+    letters = read_csv(file.path(base_path, "posthoc_letters.csv")),
+    model_summary = read_csv(file.path(base_path, "model_summary.csv")),
+    model_contrasts = read_csv(file.path(base_path, "posthoc_contrasts.csv"))
+  )
+}
+
+
+# Define your plant groups
+plant_groups <- c("forbs")
+
+# Load all model data into a named list
+plant_bites_models <- map(plant_groups, load_plant_bites_data) |> set_names(plant_groups)
+
+# Reusable function
+
+plot_plant_bites <- function(plant_name, y_label, label_y = NULL) {
+  data <- plant_bites |> filter(plant == plant_name)
+  emms <- plant_bites_models[[plant_name]]$emms
+  letters <- plant_bites_models[[plant_name]]$letters
+
+  if ("emmean" %in% names(emms)) {
+    emms <- emms |> rename(response = emmean)
+    letters <- letters |> rename(response = emmean)
+  }
+
+  label_y <- label_y %||% max(data$forage_efficiency, na.rm = TRUE) + 0.05
+
+  data |>
+    left_join(emms, by = c('pika_treatment', 'posion_plant_treatment')) |>
+    ggplot(aes(x = pika_treatment, y = forage_efficiency, color = posion_plant_treatment)) +
+    geom_jitter(
+      size = 1, alpha = 0.4,
+      position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.7)
+    ) +
+    geom_point(
+      data = letters,
+      aes(x = pika_treatment, y = response, fill = posion_plant_treatment),
+      position = position_dodge(width = 0.7),
+      size = 8, pch = 21, color = "black", inherit.aes = FALSE
+    ) +
+    # geom_text(
+    #   data = letters,
+    #   aes(x = pika_treatment, y = label_y, label = .group, group = posion_plant_treatment),
+    #   position = position_dodge(width = 0.7),
+    #   size = 5, color = "black", show.legend = FALSE, inherit.aes = FALSE
+    # ) +
+    scale_fill_manual(values = plant_colors) +
+    scale_color_manual(values = plant_colors) +
+    labs(
+      y = y_label,
+      x = "",
+      color = "Poison plant treatment",
+      fill = "Poison plant treatment"
+    ) +
+    theme_pubr(base_size = 15) +
+    theme(legend.position = "bottom", legend.title = element_blank())
+}
+
+# Call the function for each plant type
+panel_d  <- plot_plant_bites("forbs", "forb bites", label_y = 200)
+
+
+
+# Plant bites
+
+# Reusable function
+
+plot_plant_bites <- function(plant_name, y_label, label_y = NULL) {
+  data <- plant_bites |> filter(plant == plant_name)
+  emms <- plant_bites_models[[plant_name]]$emms
+  letters <- plant_bites_models[[plant_name]]$letters
+
+  if ("emmean" %in% names(emms)) {
+    emms <- emms |> rename(response = emmean)
+    letters <- letters |> rename(response = emmean)
+  }
+
+  label_y <- label_y %||% max(data$forage_efficiency, na.rm = TRUE) + 0.05
+
+  data |>
+    left_join(emms, by = c('pika_treatment', 'posion_plant_treatment')) |>
+    ggplot(aes(x = pika_treatment, y = forage_efficiency, color = posion_plant_treatment)) +
+    geom_jitter(
+      size = 1, alpha = 0.4,
+      position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.7)
+    ) +
+    geom_point(
+      data = letters,
+      aes(x = pika_treatment, y = response, fill = posion_plant_treatment),
+      position = position_dodge(width = 0.7),
+      size = 4, pch = 21, color = "black", inherit.aes = FALSE
+    ) +
+    # geom_text(
+    #   data = letters,
+    #   aes(x = pika_treatment, y = label_y, label = .group, group = posion_plant_treatment),
+    #   position = position_dodge(width = 0.7),
+    #   size = 5, color = "black", show.legend = FALSE, inherit.aes = FALSE
+    # ) +
+    scale_fill_manual(values = plant_colors) +
+    scale_color_manual(values = plant_colors) +
+    labs(
+      y = y_label,
+      x = "",
+      color = "Poison plant treatment",
+      fill = "Poison plant treatment"
+    ) +
+    theme_pubr(base_size = 15) +
+    theme(legend.position = "bottom", legend.title = element_blank())
+}
+
+# Call the function for each plant type
+panel_d   <- plot_plant_bites("forbs", "forb bites", label_y = 200)
+
+# plant bite steps
+
+
+# Reusable function
+plot_bite_steps <- function(plant_name, y_label, label_y = NULL, letters = TRUE)  {
+  data <- bite_steps |> filter(plant == plant_name)
+  emms <- bite_step_models[[plant_name]]$emms
+  letters_df <- bite_step_models[[plant_name]]$letters
+
+  label_y <- label_y %||% max(data$bites_steps_ratio, na.rm = TRUE) + 0.05
+
+  p <- data |>
+    left_join(emms, by = c('pika_treatment', 'posion_plant_treatment')) |>
+    ggplot(aes(x = pika_treatment, y = bites_steps_ratio, color = posion_plant_treatment)) +
+    geom_jitter(
+      size = 1, alpha = 0.4,
+      position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.7)
+    ) +
+    geom_point(
+      data = letters_df,
+      aes(x = pika_treatment, y = response, fill = posion_plant_treatment),
+      position = position_dodge(width = 0.7),
+      size = 4, pch = 21, color = "black", inherit.aes = FALSE
+    ) +
+    scale_fill_manual(values = plant_colors) +
+    scale_color_manual(values = plant_colors) +
+    labs(
+      y = y_label,
+      x = "",
+      color = "Poison plant treatment",
+      fill = "Poison plant treatment"
+    ) +
+    theme_pubr(base_size = 15) +
+    theme(legend.position = "bottom", legend.title = element_blank())
+
+    if (letters) {
+        p <- p  +
+        geom_text(
+            data = letters_df,
+            aes(x = pika_treatment, y = label_y, label = .group, group = posion_plant_treatment),
+            position = position_dodge(width = 0.7),
+            size = 5, color = "black", show.legend = FALSE
+        )
+  }
+
+  p
+}
+
+panel_e   <- plot_bite_steps("forbs", "forbs bite/steps", label_y = 0.4,letters=FALSE)
+
+
+
+
+
+layout <- "
+ABC
+DE#
+"
+
+
+
+supp_fig_2 <- panel_a + panel_b + panel_c + panel_d + panel_e +
+  plot_annotation(tag_levels = 'A') +
+  plot_layout(guides = "collect",design = layout) & theme(legend.position = 'bottom')
+
+
+supp_fig_2
+
+
+```
+
+Forb and Sedge cover within pika and *S. chamaejasme* plots.
+:::
+
+
+
+::: {#supptbl-pika-yak-feeding-model-summary}
+```{r}
+#| echo: false
+#| reulsts: 'asis'
+#| message: false
+#| warning: false
+
+library(knitr)
+library(kableExtra)
+library(gt)
+
+bind_rows(
+  pika_feeding_models$model_summary |> mutate(model = "Pika feeding"),
+  yak_feeding_models$model_summary  |> mutate(model = "Yak feeding")
+) |>
+  mutate(term = case_when(str_detect(term,'sd__') ~ group,
+    TRUE ~ term),
+    effect = ifelse(effect == 'ran_pars','random','fixed'),
+    term = gsub('plant_group','',term)) |>
+  select(-c(component,group)) |>
+  gt(groupname_col = "model") |>
+  fmt_number(columns = where(is.numeric), decimals = 2)
+
+
+```
+
+Model summary for pika and yak feeding.
+::: 
+
+
+::: {#supptbl-pika-yak-feeding-model-contrast}
+```{r}
+#| echo: false
+#| reulsts: 'asis'
+#| message: false
+#| warning: false
+
+library(knitr)
+library(kableExtra)
+library(gt)
+
+bind_rows(
+  pika_feeding_models$model_contrasts |> mutate(model = "Pika feeding"),
+  yak_feeding_models$model_contrasts  |> mutate(model = "Yak feeding")
+) |>
+  gt(groupname_col = "model") |>
+  fmt_number(columns = where(is.numeric), decimals = 2)
+
+
+```
+
+Model contrasts for pika and yak feeding.
+::: 
+
+
+
+
+
+
+<!-- 
+
+
+::: {#supptbl-pika-feeding-model-summary}
+```{r}
+#| echo: false
+#| reulsts: 'asis'
+#| message: false
+#| warning: false
+
+library(knitr)
+library(kableExtra)
+pika_feeding_model_summary <- read_csv(here('data/processed/diet_selection/modeled_data/pika_feeding/model_summary.csv'),show_col_types = FALSE)
+
+pika_feeding_model_summary |>
+  kable(format = "html", booktabs = TRUE, digits = 2) |>
+  kable_styling(latex_options = c("striped"))
+```
+
+Model summary for pika feeding.
+::: 
+
+
+
+
 
 
 
@@ -796,7 +1212,7 @@ Model summary for yak weight gain.
 #| echo: false
 #| results: "hide"
 #| message: false
-#| warning: falseß
+#| warning: false
 
 grasses_emms <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/emms.csv'))
 grasses_letters <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/posthoc_letters.csv'))
@@ -962,7 +1378,7 @@ Model summary for ADF.
 
 
 ::: {#supptbl-adf-model-contrast}
-```{r}
+```{r adf model contrast}
 #| echo: false
 #| message: false
 #| warning: false
@@ -977,7 +1393,7 @@ Model contrasts for ADF.
 
 
 ::: {#supptbl-cp-model-summary}
-```{r}
+```{r cp model summary}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1002,7 +1418,7 @@ Model summary for CP.
 
 
 ::: {#supptbl-cp-model-contrasts}
-```{r}
+```{r cp model constrasts}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1017,7 +1433,7 @@ Model contrasts for CP.
 
 
 ::: {#supptbl-ee-model-summary}
-```{r}
+```{r ee model summary}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1041,9 +1457,7 @@ Model summary for EE.
 ::: 
 
 ::: {#supptbl-ee-model-contrasts}
-```{r}
-#| label: tbl-ee-model-contrasts
-#| tbl-cap: "Estimated marginal means contrasts for EE by treatment group."
+```{r ee model contrast}
 #| echo: false
 #| message: false
 #| warning: false
@@ -1055,3 +1469,311 @@ forag_quality_models$ee$model_contrasts |>
 
 Model contrasts for EE.
 ::: 
+
+
+```{r reading in step and bite data}
+#| echo: false
+#| message: false
+#| warning: false
+
+
+# Define a function to load model data for a plant group
+load_data <- function(base_path) {
+  list(
+    emms = read_csv(file.path(base_path, "emms.csv")),
+    letters = read_csv(file.path(base_path, "posthoc_letters.csv")),
+    model_summary = read_csv(file.path(base_path, "model_summary.csv")),
+    model_contrasts = read_csv(file.path(base_path, "posthoc_contrasts.csv"))
+  )
+}
+
+total_steps_models <- load_data(here('data/processed/experiment_foraging_efficiency/modeled_data/total_steps'))
+
+total_steps_models$letters <- total_steps_models$letters |>
+    mutate(.group = case_when(
+        pika_treatment == 'no pika' & posion_plant_treatment == 'S. chamaejasme' ~ 'B',
+        TRUE ~ .group
+    ))
+
+
+
+# Load the bite_steps dataset once
+bite_steps <- read_csv(here("data/processed/experiment_foraging_efficiency/yak_bite_steps_ratio.csv"))
+
+# Define a function to load model data for a plant group
+load_bite_step_data <- function(plant) {
+  base_path <- here(glue::glue("data/processed/experiment_foraging_efficiency/modeled_data/bite_steps/{plant}_bite_steps"))
+  list(
+    emms = read_csv(file.path(base_path, "emms.csv")),
+    letters = read_csv(file.path(base_path, "posthoc_letters.csv")),
+    model_summary = read_csv(file.path(base_path, "model_summary.csv")),
+    model_contrasts = read_csv(file.path(base_path, "posthoc_contrasts.csv"))
+  )
+}
+
+# Define your plant groups
+plant_groups <- c("forbs", "grasses", "sedges")
+
+# Load all model data into a named list
+bite_step_models <- map(plant_groups, load_bite_step_data) |> set_names(plant_groups)
+
+```
+
+::: {supptbl-grass-bite-step-summary} 
+```{r grass bite step summary}
+#| echo: false
+#| message: false
+#| warning: false
+
+bite_step_models$grasses$model_summary |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  select(!c(component,group)) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+
+```
+Model summary for yak grass bite steps.
+:::
+
+::: {supptbl-grass-bite-step-contrast} 
+```{r grass bite step contrast}
+#| echo: false
+#| message: false
+#| warning: false
+
+bite_step_models$grasses$model_contrasts |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+
+```
+Estimated marginal means contrasts for grass bite/steps by treatment group.
+:::
+
+::: {supptbl-sedges-bite-step-summary} 
+```{r sedge bite step summary}
+#| echo: false
+#| message: false
+#| warning: false
+
+bite_step_models$sedges$model_summary |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  select(!c(component,group)) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+Model summary for sedge bite/steps.
+:::
+
+
+::: {supptbl-sedges-bite-step-contrast} 
+```{r sedge bit step contrast}
+#| echo: false
+#| message: false
+#| warning: false
+
+bite_step_models$sedges$model_contrasts |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+Estimated marginal means contrasts for grass bite/steps by treatment group.
+:::
+
+
+
+::: {supptbl-forb-bite-step-summary} 
+```{r forb bite step summary}
+#| echo: false
+#| message: false
+#| warning: false
+
+bite_step_models$forbs$model_summary  |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  select(!c(component,group)) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+Model summary for forb bite/steps.
+:::
+
+::: {supptbl-forb-bite-step-contrast} 
+```{r forb bite step contrast}
+#| echo: false
+#| message: false
+#| warning: false
+#| 
+bite_step_models$forbs$model_contrasts |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+Estimated marginal means contrasts for forbs bite/steps by treatment group.
+:::
+
+
+
+::: {supptbl-grasses-bite-summary} 
+```{r grass bite summary}
+#| echo: false
+#| message: false
+#| warning: false
+#| 
+plant_bites_models$grasses$model_summary  |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  select(!c(component,group)) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+Model summary for grass bites.
+:::
+
+::: {supptbl-grasses-bite-contrast} 
+```{r grass bite contrast}
+#| echo: false
+#| message: false
+#| warning: false
+plant_bites_models$grasses$model_contrasts |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+Estimated marginal means contrasts for grass bites by treatment group.
+:::
+
+
+::: {supptbl-forbs-bite-summary} 
+```{r forb bite summary}
+#| echo: false
+#| message: false
+#| warning: false
+#| 
+plant_bites_models$forbs$model_summary  |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  select(!c(component,group)) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+Model summary for forbs bites.
+:::
+
+::: {supptbl-forbs-bite-contrast} 
+```{r forb bite contrast}
+#| echo: false
+#| message: false
+#| warning: false
+plant_bites_models$forbs$model_contrasts |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+Estimated marginal means contrasts for forbs bites by treatment group.
+:::
+
+
+
+::: {supptbl-sedges-bite-summary} 
+```{r sedge bite summary}
+#| echo: false
+#| message: false
+#| warning: false
+#| 
+plant_bites_models$sedges$model_summary  |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  select(!c(component,group)) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+Model summary for sedges bites.
+:::
+
+::: {supptbl-sedges-bite-contrast} 
+```{r sedge bite contrast}
+#| echo: false
+#| message: false
+#| warning: false
+plant_bites_models$sedges$model_contrasts |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+Estimated marginal means contrasts for sedges bites by treatment group.
+:::
+
+
+::: {supptbl-total-bite-summary} 
+```{r total bite summary}
+#| echo: false
+#| message: false
+#| warning: false
+#| 
+plant_bites_models$total$model_summary  |>
+  mutate(
+    term = case_when(
+        term == 'pika_treatmentpika' ~ 'pika',
+        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
+        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
+        effect == 'ran_pars' ~ group,
+        TRUE ~ term
+    )
+  ) |>
+  select(!c(component,group)) |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+Model summary for total bites.
+:::
+
+::: {supptbl-total-bite-contrast} 
+```{r total bite contrast}
+#| echo: false
+#| message: false
+#| warning: false
+plant_bites_models$total$model_contrasts |>
+  kable(format = "html", booktabs = TRUE, digits = 3) |>
+  kable_styling(latex_options = c("striped","scale_down"))
+```
+Estimated marginal means contrasts for total bites by treatment group.
+::: -->

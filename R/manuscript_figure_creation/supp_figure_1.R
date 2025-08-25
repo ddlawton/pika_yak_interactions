@@ -91,6 +91,6 @@ supp_figure_1 <- panel_a +
   panel_e +
   plot_annotation(tag_levels = 'A') +
   plot_layout(design = layout, guides = "collect") & theme(legend.position = 'bottom')
-  
+
 
 ggsave(supp_figure_1,file=here('output/supp_figures/supp_fig_1.png'),width = 4, height=8)
