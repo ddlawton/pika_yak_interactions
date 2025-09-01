@@ -1,5 +1,8 @@
 project:
   type: website
+  output-dir: _site
+  resources:
+    - R/statistical_reports/*.docx
 
 website:
   title: "Pika-Yak interactions"
@@ -15,6 +18,11 @@ website:
         href: R/statistical_reports/experiment_foraging_efficiency.qmd
       - text: "Plant Cover"
         href: R/statistical_reports/experiment_plant_cover.qmd
+      - text: "Methods and Results"
+        href: R/statistical_reports/manuscript_figures_and_text.qmd
+        menu:
+          - text: "Download Word (.docx)"
+            href: R/statistical_reports/experiment_plant_cover.docx
 
 format:
   html:
