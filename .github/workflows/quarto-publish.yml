@@ -26,7 +26,8 @@ jobs:
             libfribidi-dev \
             libpng-dev \
             libtiff-dev \
-            libcairo2-dev
+            libcairo2-dev \
+            libmagick
       - name: Set up R
         uses: r-lib/actions/setup-r@v2
 
