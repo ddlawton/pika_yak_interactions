@@ -1,0 +1,97 @@
+block,pika_treatment,posion_plant_treatment,year,month,active_burrows
+1,no pika,No S. chamaejasme,2022,June,12
+1,no pika,No S. chamaejasme,2022,July,15
+1,no pika,No S. chamaejasme,2022,August,10
+2,no pika,No S. chamaejasme,2022,June,27
+2,no pika,No S. chamaejasme,2022,July,26
+2,no pika,No S. chamaejasme,2022,August,24
+3,no pika,No S. chamaejasme,2022,June,39
+3,no pika,No S. chamaejasme,2022,July,17
+3,no pika,No S. chamaejasme,2022,August,14
+4,no pika,No S. chamaejasme,2022,June,13
+4,no pika,No S. chamaejasme,2022,July,16
+4,no pika,No S. chamaejasme,2022,August,18
+1,pika,No S. chamaejasme,2022,June,342
+1,pika,No S. chamaejasme,2022,July,127
+1,pika,No S. chamaejasme,2022,August,269
+2,pika,No S. chamaejasme,2022,June,165
+2,pika,No S. chamaejasme,2022,July,103
+2,pika,No S. chamaejasme,2022,August,58
+3,pika,No S. chamaejasme,2022,June,228
+3,pika,No S. chamaejasme,2022,July,141
+3,pika,No S. chamaejasme,2022,August,154
+4,pika,No S. chamaejasme,2022,June,127
+4,pika,No S. chamaejasme,2022,July,143
+4,pika,No S. chamaejasme,2022,August,170
+1,no pika,S. chamaejasme,2022,June,15
+1,no pika,S. chamaejasme,2022,July,6
+1,no pika,S. chamaejasme,2022,August,12
+2,no pika,S. chamaejasme,2022,June,19
+2,no pika,S. chamaejasme,2022,July,15
+2,no pika,S. chamaejasme,2022,August,9
+3,no pika,S. chamaejasme,2022,June,21
+3,no pika,S. chamaejasme,2022,July,23
+3,no pika,S. chamaejasme,2022,August,26
+4,no pika,S. chamaejasme,2022,June,27
+4,no pika,S. chamaejasme,2022,July,19
+4,no pika,S. chamaejasme,2022,August,13
+1,pika,S. chamaejasme,2022,June,54
+1,pika,S. chamaejasme,2022,July,82
+1,pika,S. chamaejasme,2022,August,127
+2,pika,S. chamaejasme,2022,June,95
+2,pika,S. chamaejasme,2022,July,133
+2,pika,S. chamaejasme,2022,August,156
+3,pika,S. chamaejasme,2022,June,329
+3,pika,S. chamaejasme,2022,July,352
+3,pika,S. chamaejasme,2022,August,216
+4,pika,S. chamaejasme,2022,June,105
+4,pika,S. chamaejasme,2022,July,110
+4,pika,S. chamaejasme,2022,August,88
+1,no pika,No S. chamaejasme,2023,June,23
+1,no pika,No S. chamaejasme,2023,July,17
+1,no pika,No S. chamaejasme,2023,August,13
+2,no pika,No S. chamaejasme,2023,June,19
+2,no pika,No S. chamaejasme,2023,July,14
+2,no pika,No S. chamaejasme,2023,August,6
+3,no pika,No S. chamaejasme,2023,June,31
+3,no pika,No S. chamaejasme,2023,July,21
+3,no pika,No S. chamaejasme,2023,August,24
+4,no pika,No S. chamaejasme,2023,June,23
+4,no pika,No S. chamaejasme,2023,July,35
+4,no pika,No S. chamaejasme,2023,August,28
+1,pika,No S. chamaejasme,2023,June,424
+1,pika,No S. chamaejasme,2023,July,358
+1,pika,No S. chamaejasme,2023,August,306
+2,pika,No S. chamaejasme,2023,June,98
+2,pika,No S. chamaejasme,2023,July,121
+2,pika,No S. chamaejasme,2023,August,256
+3,pika,No S. chamaejasme,2023,June,56
+3,pika,No S. chamaejasme,2023,July,95
+3,pika,No S. chamaejasme,2023,August,41
+4,pika,No S. chamaejasme,2023,June,64
+4,pika,No S. chamaejasme,2023,July,132
+4,pika,No S. chamaejasme,2023,August,99
+1,no pika,S. chamaejasme,2023,June,19
+1,no pika,S. chamaejasme,2023,July,7
+1,no pika,S. chamaejasme,2023,August,10
+2,no pika,S. chamaejasme,2023,June,26
+2,no pika,S. chamaejasme,2023,July,35
+2,no pika,S. chamaejasme,2023,August,26
+3,no pika,S. chamaejasme,2023,June,12
+3,no pika,S. chamaejasme,2023,July,24
+3,no pika,S. chamaejasme,2023,August,28
+4,no pika,S. chamaejasme,2023,June,11
+4,no pika,S. chamaejasme,2023,July,9
+4,no pika,S. chamaejasme,2023,August,15
+1,pika,S. chamaejasme,2023,June,249
+1,pika,S. chamaejasme,2023,July,302
+1,pika,S. chamaejasme,2023,August,283
+2,pika,S. chamaejasme,2023,June,456
+2,pika,S. chamaejasme,2023,July,418
+2,pika,S. chamaejasme,2023,August,351
+3,pika,S. chamaejasme,2023,June,67
+3,pika,S. chamaejasme,2023,July,112
+3,pika,S. chamaejasme,2023,August,164
+4,pika,S. chamaejasme,2023,June,95
+4,pika,S. chamaejasme,2023,July,153
+4,pika,S. chamaejasme,2023,August,204

@@ -1,0 +1,193 @@
+block,pika_treatment,posion_plant_treatment,year,weight_gain,month,yak
+1,no pika,No S. chamaejasme,2022,0.266666666666667,June,yak_1
+1,no pika,No S. chamaejasme,2022,0.233333333333333,June,yak_2
+1,no pika,No S. chamaejasme,2022,0.4,July,yak_1
+1,no pika,No S. chamaejasme,2022,0.366666666666667,July,yak_2
+1,no pika,No S. chamaejasme,2022,0.366666666666667,August,yak_1
+1,no pika,No S. chamaejasme,2022,0.433333333333333,August,yak_2
+2,no pika,No S. chamaejasme,2022,0.3,June,yak_1
+2,no pika,No S. chamaejasme,2022,0.366666666666667,June,yak_2
+2,no pika,No S. chamaejasme,2022,0.366666666666667,July,yak_1
+2,no pika,No S. chamaejasme,2022,0.266666666666667,July,yak_2
+2,no pika,No S. chamaejasme,2022,0.4,August,yak_1
+2,no pika,No S. chamaejasme,2022,0.266666666666667,August,yak_2
+3,no pika,No S. chamaejasme,2022,0.266666666666667,June,yak_1
+3,no pika,No S. chamaejasme,2022,0.233333333333333,June,yak_2
+3,no pika,No S. chamaejasme,2022,0.466666666666667,July,yak_1
+3,no pika,No S. chamaejasme,2022,0.4,July,yak_2
+3,no pika,No S. chamaejasme,2022,0.333333333333333,August,yak_1
+3,no pika,No S. chamaejasme,2022,0.366666666666667,August,yak_2
+4,no pika,No S. chamaejasme,2022,0.333333333333333,June,yak_1
+4,no pika,No S. chamaejasme,2022,0.2,June,yak_2
+4,no pika,No S. chamaejasme,2022,0.5,July,yak_1
+4,no pika,No S. chamaejasme,2022,0.333333333333333,July,yak_2
+4,no pika,No S. chamaejasme,2022,0.366666666666667,August,yak_1
+4,no pika,No S. chamaejasme,2022,0.2,August,yak_2
+1,pika,No S. chamaejasme,2022,0.266666666666667,June,yak_1
+1,pika,No S. chamaejasme,2022,0.166666666666667,June,yak_2
+1,pika,No S. chamaejasme,2022,0.2,July,yak_1
+1,pika,No S. chamaejasme,2022,0.3,July,yak_2
+1,pika,No S. chamaejasme,2022,0.466666666666667,August,yak_1
+1,pika,No S. chamaejasme,2022,0.266666666666667,August,yak_2
+2,pika,No S. chamaejasme,2022,0.166666666666667,June,yak_1
+2,pika,No S. chamaejasme,2022,0.233333333333333,June,yak_2
+2,pika,No S. chamaejasme,2022,0.3,July,yak_1
+2,pika,No S. chamaejasme,2022,0.433333333333333,July,yak_2
+2,pika,No S. chamaejasme,2022,0.5,August,yak_1
+2,pika,No S. chamaejasme,2022,0.466666666666667,August,yak_2
+3,pika,No S. chamaejasme,2022,0.366666666666667,June,yak_1
+3,pika,No S. chamaejasme,2022,0.266666666666667,June,yak_2
+3,pika,No S. chamaejasme,2022,0.433333333333333,July,yak_1
+3,pika,No S. chamaejasme,2022,0.466666666666667,July,yak_2
+3,pika,No S. chamaejasme,2022,0.466666666666667,August,yak_1
+3,pika,No S. chamaejasme,2022,0.366666666666667,August,yak_2
+4,pika,No S. chamaejasme,2022,0.4,June,yak_1
+4,pika,No S. chamaejasme,2022,0.3,June,yak_2
+4,pika,No S. chamaejasme,2022,0.466666666666667,July,yak_1
+4,pika,No S. chamaejasme,2022,0.433333333333333,July,yak_2
+4,pika,No S. chamaejasme,2022,0.533333333333333,August,yak_1
+4,pika,No S. chamaejasme,2022,0.466666666666667,August,yak_2
+1,no pika,S. chamaejasme,2022,0.133333333333333,June,yak_1
+1,no pika,S. chamaejasme,2022,0.166666666666667,June,yak_2
+1,no pika,S. chamaejasme,2022,0.2,July,yak_1
+1,no pika,S. chamaejasme,2022,0.3,July,yak_2
+1,no pika,S. chamaejasme,2022,0.233333333333333,August,yak_1
+1,no pika,S. chamaejasme,2022,0.166666666666667,August,yak_2
+2,no pika,S. chamaejasme,2022,0.2,June,yak_1
+2,no pika,S. chamaejasme,2022,0.166666666666667,June,yak_2
+2,no pika,S. chamaejasme,2022,0.166666666666667,July,yak_1
+2,no pika,S. chamaejasme,2022,0.266666666666667,July,yak_2
+2,no pika,S. chamaejasme,2022,0.2,August,yak_1
+2,no pika,S. chamaejasme,2022,0.3,August,yak_2
+3,no pika,S. chamaejasme,2022,0.166666666666667,June,yak_1
+3,no pika,S. chamaejasme,2022,0.1,June,yak_2
+3,no pika,S. chamaejasme,2022,0.233333333333333,July,yak_1
+3,no pika,S. chamaejasme,2022,0.133333333333333,July,yak_2
+3,no pika,S. chamaejasme,2022,0.166666666666667,August,yak_1
+3,no pika,S. chamaejasme,2022,0.233333333333333,August,yak_2
+4,no pika,S. chamaejasme,2022,0.133333333333333,June,yak_1
+4,no pika,S. chamaejasme,2022,0.2,June,yak_2
+4,no pika,S. chamaejasme,2022,0.266666666666667,July,yak_1
+4,no pika,S. chamaejasme,2022,0.233333333333333,July,yak_2
+4,no pika,S. chamaejasme,2022,0.333333333333333,August,yak_1
+4,no pika,S. chamaejasme,2022,0.2,August,yak_2
+1,pika,S. chamaejasme,2022,0.266666666666667,June,yak_1
+1,pika,S. chamaejasme,2022,0.3,June,yak_2
+1,pika,S. chamaejasme,2022,0.333333333333333,July,yak_1
+1,pika,S. chamaejasme,2022,0.366666666666667,July,yak_2
+1,pika,S. chamaejasme,2022,0.4,August,yak_1
+1,pika,S. chamaejasme,2022,0.5,August,yak_2
+2,pika,S. chamaejasme,2022,0.333333333333333,June,yak_1
+2,pika,S. chamaejasme,2022,0.266666666666667,June,yak_2
+2,pika,S. chamaejasme,2022,0.366666666666667,July,yak_1
+2,pika,S. chamaejasme,2022,0.466666666666667,July,yak_2
+2,pika,S. chamaejasme,2022,0.3,August,yak_1
+2,pika,S. chamaejasme,2022,0.466666666666667,August,yak_2
+3,pika,S. chamaejasme,2022,0.366666666666667,June,yak_1
+3,pika,S. chamaejasme,2022,0.333333333333333,June,yak_2
+3,pika,S. chamaejasme,2022,0.4,July,yak_1
+3,pika,S. chamaejasme,2022,0.333333333333333,July,yak_2
+3,pika,S. chamaejasme,2022,0.4,August,yak_1
+3,pika,S. chamaejasme,2022,0.466666666666667,August,yak_2
+4,pika,S. chamaejasme,2022,0.3,June,yak_1
+4,pika,S. chamaejasme,2022,0.333333333333333,June,yak_2
+4,pika,S. chamaejasme,2022,0.333333333333333,July,yak_1
+4,pika,S. chamaejasme,2022,0.366666666666667,July,yak_2
+4,pika,S. chamaejasme,2022,0.366666666666667,August,yak_1
+4,pika,S. chamaejasme,2022,0.433333333333333,August,yak_2
+1,no pika,No S. chamaejasme,2023,0.233333333333333,June,yak_1
+1,no pika,No S. chamaejasme,2023,0.2,June,yak_2
+1,no pika,No S. chamaejasme,2023,0.4,July,yak_1
+1,no pika,No S. chamaejasme,2023,0.333333333333333,July,yak_2
+1,no pika,No S. chamaejasme,2023,0.266666666666667,August,yak_1
+1,no pika,No S. chamaejasme,2023,0.433333333333333,August,yak_2
+2,no pika,No S. chamaejasme,2023,0.166666666666667,June,yak_1
+2,no pika,No S. chamaejasme,2023,0.233333333333333,June,yak_2
+2,no pika,No S. chamaejasme,2023,0.233333333333333,July,yak_1
+2,no pika,No S. chamaejasme,2023,0.3,July,yak_2
+2,no pika,No S. chamaejasme,2023,0.3,August,yak_1
+2,no pika,No S. chamaejasme,2023,0.333333333333333,August,yak_2
+3,no pika,No S. chamaejasme,2023,0.333333333333333,June,yak_1
+3,no pika,No S. chamaejasme,2023,0.3,June,yak_2
+3,no pika,No S. chamaejasme,2023,0.366666666666667,July,yak_1
+3,no pika,No S. chamaejasme,2023,0.433333333333333,July,yak_2
+3,no pika,No S. chamaejasme,2023,0.3,August,yak_1
+3,no pika,No S. chamaejasme,2023,0.4,August,yak_2
+4,no pika,No S. chamaejasme,2023,0.166666666666667,June,yak_1
+4,no pika,No S. chamaejasme,2023,0.266666666666667,June,yak_2
+4,no pika,No S. chamaejasme,2023,0.2,July,yak_1
+4,no pika,No S. chamaejasme,2023,0.366666666666667,July,yak_2
+4,no pika,No S. chamaejasme,2023,0.466666666666667,August,yak_1
+4,no pika,No S. chamaejasme,2023,0.366666666666667,August,yak_2
+1,pika,No S. chamaejasme,2023,0.2,June,yak_1
+1,pika,No S. chamaejasme,2023,0.233333333333333,June,yak_2
+1,pika,No S. chamaejasme,2023,0.366666666666667,July,yak_1
+1,pika,No S. chamaejasme,2023,0.4,July,yak_2
+1,pika,No S. chamaejasme,2023,0.333333333333333,August,yak_1
+1,pika,No S. chamaejasme,2023,0.266666666666667,August,yak_2
+2,pika,No S. chamaejasme,2023,0.3,June,yak_1
+2,pika,No S. chamaejasme,2023,0.366666666666667,June,yak_2
+2,pika,No S. chamaejasme,2023,0.333333333333333,July,yak_1
+2,pika,No S. chamaejasme,2023,0.266666666666667,July,yak_2
+2,pika,No S. chamaejasme,2023,0.433333333333333,August,yak_1
+2,pika,No S. chamaejasme,2023,0.4,August,yak_2
+3,pika,No S. chamaejasme,2023,0.2,June,yak_1
+3,pika,No S. chamaejasme,2023,0.233333333333333,June,yak_2
+3,pika,No S. chamaejasme,2023,0.366666666666667,July,yak_1
+3,pika,No S. chamaejasme,2023,0.3,July,yak_2
+3,pika,No S. chamaejasme,2023,0.266666666666667,August,yak_1
+3,pika,No S. chamaejasme,2023,0.233333333333333,August,yak_2
+4,pika,No S. chamaejasme,2023,0.2,June,yak_1
+4,pika,No S. chamaejasme,2023,0.266666666666667,June,yak_2
+4,pika,No S. chamaejasme,2023,0.4,July,yak_1
+4,pika,No S. chamaejasme,2023,0.3,July,yak_2
+4,pika,No S. chamaejasme,2023,0.233333333333333,August,yak_1
+4,pika,No S. chamaejasme,2023,0.3,August,yak_2
+1,no pika,S. chamaejasme,2023,0.133333333333333,June,yak_1
+1,no pika,S. chamaejasme,2023,0.2,June,yak_2
+1,no pika,S. chamaejasme,2023,0.333333333333333,July,yak_1
+1,no pika,S. chamaejasme,2023,0.233333333333333,July,yak_2
+1,no pika,S. chamaejasme,2023,0.266666666666667,August,yak_1
+1,no pika,S. chamaejasme,2023,0.3,August,yak_2
+2,no pika,S. chamaejasme,2023,0.1,June,yak_1
+2,no pika,S. chamaejasme,2023,0.1,June,yak_2
+2,no pika,S. chamaejasme,2023,0.233333333333333,July,yak_1
+2,no pika,S. chamaejasme,2023,0.2,July,yak_2
+2,no pika,S. chamaejasme,2023,0.233333333333333,August,yak_1
+2,no pika,S. chamaejasme,2023,0.133333333333333,August,yak_2
+3,no pika,S. chamaejasme,2023,0.2,June,yak_1
+3,no pika,S. chamaejasme,2023,0.166666666666667,June,yak_2
+3,no pika,S. chamaejasme,2023,0.2,July,yak_1
+3,no pika,S. chamaejasme,2023,0.266666666666667,July,yak_2
+3,no pika,S. chamaejasme,2023,0.366666666666667,August,yak_1
+3,no pika,S. chamaejasme,2023,0.2,August,yak_2
+4,no pika,S. chamaejasme,2023,0.133333333333333,June,yak_1
+4,no pika,S. chamaejasme,2023,0.0666666666666667,June,yak_2
+4,no pika,S. chamaejasme,2023,0.266666666666667,July,yak_1
+4,no pika,S. chamaejasme,2023,0.166666666666667,July,yak_2
+4,no pika,S. chamaejasme,2023,0.433333333333333,August,yak_1
+4,no pika,S. chamaejasme,2023,0.4,August,yak_2
+1,pika,S. chamaejasme,2023,0.4,June,yak_1
+1,pika,S. chamaejasme,2023,0.433333333333333,June,yak_2
+1,pika,S. chamaejasme,2023,0.233333333333333,July,yak_1
+1,pika,S. chamaejasme,2023,0.433333333333333,July,yak_2
+1,pika,S. chamaejasme,2023,0.4,August,yak_1
+1,pika,S. chamaejasme,2023,0.366666666666667,August,yak_2
+2,pika,S. chamaejasme,2023,0.166666666666667,June,yak_1
+2,pika,S. chamaejasme,2023,0.233333333333333,June,yak_2
+2,pika,S. chamaejasme,2023,0.3,July,yak_1
+2,pika,S. chamaejasme,2023,0.266666666666667,July,yak_2
+2,pika,S. chamaejasme,2023,0.333333333333333,August,yak_1
+2,pika,S. chamaejasme,2023,0.333333333333333,August,yak_2
+3,pika,S. chamaejasme,2023,0.3,June,yak_1
+3,pika,S. chamaejasme,2023,0.333333333333333,June,yak_2
+3,pika,S. chamaejasme,2023,0.433333333333333,July,yak_1
+3,pika,S. chamaejasme,2023,0.4,July,yak_2
+3,pika,S. chamaejasme,2023,0.5,August,yak_1
+3,pika,S. chamaejasme,2023,0.333333333333333,August,yak_2
+4,pika,S. chamaejasme,2023,0.266666666666667,June,yak_1
+4,pika,S. chamaejasme,2023,0.3,June,yak_2
+4,pika,S. chamaejasme,2023,0.333333333333333,July,yak_1
+4,pika,S. chamaejasme,2023,0.366666666666667,July,yak_2
+4,pika,S. chamaejasme,2023,0.4,August,yak_1
+4,pika,S. chamaejasme,2023,0.4,August,yak_2
