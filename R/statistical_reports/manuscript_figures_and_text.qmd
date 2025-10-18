@@ -57,6 +57,7 @@ library(mgcv)
 library(knitr)
 library(kableExtra)
 library(gratia)   
+library(cowplot)
 library(glue)
 library(gt)
 
@@ -146,6 +147,13 @@ sedges_models  <- load_model_data("data/processed/experiment_plant_cover/modeled
 sedges_models$letters <- sedges_models$letters |>
   mutate(.group = ifelse(.group == "a", "b", "a"))
 
+# Active burrow count by treatment
+act_burrow_count_dat <- read_csv(here('data/processed/additional_data/modeled_data/active_burrow_dat.csv'),show_col_types=FALSE)
+
+#weight by burrow count
+weight_burrow_raw <- read_csv(here('data/processed/additional_data/modeled_data/weight_gain_raw.csv'),show_col_types=FALSE)
+weight_burrow_modeled <- read_csv(here('data/processed/additional_data/modeled_data/weight_gain_modeled_dat.csv'),show_col_types=FALSE)
+
 # ============================================================
 #                 FIGURE 4 DATA
 # ============================================================
@@ -190,8 +198,6 @@ yak_feeding_contrasts     <- yak_feeding_models$model_contrasts
 ```
 
 
-
-
 ::: {#fig-hypothesis}
 ```{r fig-hypothesis}
 #| echo: false
@@ -211,6 +217,7 @@ hypoth_pic
 
 
 ```
+
 The hypothesized facilitative effects of pika on yak in the Tibetan Plateau. In the absence of pika, the poisonous Stellera chamaejasme forbs should exert a strong negative effect on yak growth performance by competing with the palatable grasses and sedges, decreasing their food availability and foraging efficiency (Fig. 1a). However, such negative effects of poisonous plants should be mitigated in the presence of pika, whom eliminate S. chamaejasme forbs by their feeding and clipping activities, leading to a facilitative effect on yak (Fig. 1b). The negative effects of poisonous plants on yak were indicated as black dashed lines, the competition between plant groups were indicated by the black solid lines, and the pathway that pika suppress poisonous plants was indicated by red solid line. The sizes of the lines indicate the strengths of species interactions. Credits: Xiaona Zheng (photographs).
 :::
 
@@ -255,7 +262,7 @@ ee_increase <- calc_pct_increase(forage_quality_models$ee$emms)
 
 ```
 
-Food quantity and quality are key drivers of individual performance and population dynamics in large herbivores^30–32^. In the presence of *S. chamaejasme* forbs, pika doubled the cover of yak’s most preferred grasses (@fig-diet-selection C, @supptbl-yak-performance-model-summary, @supptbl-yak-performance-model-contrast) and increased the crude protein content of total forage by approximately `r {cp_increase}`% (@fig-yak-performance D, @supptbl-yak-performance-model-summary, @supptbl-yak-performance-model-contrast), suggesting that pika facilitate yak by enhancing both the quantity and quality of forage. Acid detergent fibre (`r {adf_increase}`%) was higher in pika plots, while ether extract also differed significantly between treatments (@fig-yak-performance E,F, @supptbl-yak-performance-model-summary, @supptbl-yak-performance-model-contrast). These increases in grass abundance and forage quality were likely driven by the decline in poisonous plants induced by pika (@fig-yak-performance B), which reduced interspecific competition for shared resources (e.g., light, soil moisture, nutrients) and allowed grasses to expand^27–28^. In the absence of S. chamaejasme forbs, however, the positive effects of pika on food resources and yak weight gain disappeared (@fig-yak-performance A,C,D). Pika and poisonous plants influenced sedge cover in a similar way as grass cover (@suppfig-other-figs A), while interactions with forb cover were more complex (@suppfig-other-figs B). There was no impact of pika or poisonous plants on neutral detergent fibre (@suppfig-other-figs C).
+Food quantity and quality are key drivers of individual performance and population dynamics in large herbivores^30–32^. In the presence of *S. chamaejasme* forbs, pika doubled the cover of yak’s most preferred grasses (@fig-diet-selection C, @supptbl-yak-performance-model-summary, @supptbl-yak-performance-model-contrast) and increased the crude protein content of total forage by approximately `r {cp_increase}`% (@fig-yak-performance D, @supptbl-yak-performance-model-summary, @supptbl-yak-performance-model-contrast), suggesting that pika facilitate yak by enhancing both the quantity and quality of forage. Acid detergent fibre (`r {adf_increase}`%) was higher in pika plots, while ether extract also differed significantly between treatments (@fig-yak-performance E,F, @supptbl-yak-performance-model-summary, @supptbl-yak-performance-model-contrast). These increases in grass abundance and forage quality were likely driven by the decline in poisonous plants induced by pika (@fig-yak-performance B), which reduced interspecific competition for shared resources (e.g., light, soil moisture, nutrients) and allowed grasses to expand^27–28^. In the absence of S. chamaejasme forbs, however, the positive effects of pika on food resources and yak weight gain disappeared (@fig-yak-performance A,C,D). The relationship between active burrow count and treatments aswell as the relationship between yak weight gain and burrow density can be seen in @fig-yak-performance G and H respectively. Pika and poisonous plants influenced sedge cover in a similar way as grass cover (@suppfig-other-figs A), while interactions with forb cover were more complex (@suppfig-other-figs B). There was no impact of pika or poisonous plants on neutral detergent fibre (@suppfig-other-figs C).
 
 ```{r}
 #| label: bite-increase
@@ -544,6 +551,40 @@ panel_b <- make_treatment_plot(
   label_y = 43
 )
 
+
+# Plot G and H: burrow count and weight gain x burrow count relationship
+
+panel_g <- ggplot(act_burrow_count_dat, aes(x = pika_treatment, y = active_burrows, 
+  color = posion_plant_treatment)) +
+    geom_jitter(
+    size = 1, alpha = 0.4,
+    position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.7)
+    ) +
+    geom_point(
+    aes(x = pika_treatment, y = emmean, fill = posion_plant_treatment),
+    position = position_dodge(width = 0.7),
+    size = 4, pch = 21, color = "black", inherit.aes = FALSE
+    ) +
+    scale_fill_manual(values = plant_colors) +
+    scale_color_manual(values = plant_colors) +
+    labs(x = NULL, y = 'No. active burrows/ha', color = NULL, fill = NULL) +
+    theme_pubr(base_size = base_size) +
+    theme(legend.position = "bottom")
+
+
+
+panel_h <- weight_burrow_modeled  |>
+  ggplot(aes(x=active_burrows,y=adj_est)) +
+    geom_point(data=weight_burrow_raw,aes(y=weight_gain_mean),color = plant_colors[2])+
+    #geom_ribbon(aes(ymin=adj_est-.se, ymax=adj_est+.se)) +
+    geom_line(aes(y = adj_est),size=1) + 
+    theme_pubr() +
+    xlab('No. active burrows/ha') +
+    ylab('Weight gain kg/yak/day') +
+    xlim(0,500)  +
+    ylim(0,0.5)
+
+
 # -------------------------------------------------------------------
 # 5. Combine into Figure
 # -------------------------------------------------------------------
@@ -561,8 +602,10 @@ EF
 EF
 GH
 GH
+GH
+IJ
+IJ
 "
-
 
 poison_plant_pic <-  png::readPNG(here('data/photos/yak_performance_posion_photo.png'), native = TRUE)
 burrow_pic <-  png::readPNG(here('data/photos/yak_performance_pika_photo.png'), native = TRUE)
@@ -577,6 +620,8 @@ figure_3 <- panel_a +
   panel_d +
   panel_e +
   panel_f +
+  panel_g +
+  panel_h +
   poison_plot +
   burrow_plot +
   plot_annotation(tag_levels = "A")  +

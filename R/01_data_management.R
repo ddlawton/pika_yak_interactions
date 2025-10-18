@@ -166,6 +166,41 @@ initial_plant_condition <- read_excel(raw_file, skip = 4, sheet = "initial plant
   remove_empty() |>
   clean_names()
 
+
+# ---- Active Burrow & Yak Weight Gain Relationship  ----
+
+
+weight_gain <- read_excel(here('data/raw/burrow data.xlsx'), skip = 2, sheet = "Sheet1") |>
+  remove_empty() |>
+  clean_names() |>
+  select(block,pika_treatment,posion_plant_treatment,year,yak_1_6:yak_2_11) |>
+  pivot_longer(cols = starts_with('yak_'),values_to = 'weight_gain') |>
+  mutate(
+    month = case_when(
+      str_detect(name,'_6|_7') ~ 'June',
+      str_detect(name,'_8|_9') ~ 'July',
+      str_detect(name,'_10|_11') ~ 'August'
+    ),
+    yak = sub("_[^_]+$", "", name)
+  ) |>
+  select(!name)
+
+active_burrows <- read_excel(here('data/raw/burrow data.xlsx'), skip = 2, sheet = "Sheet1") |>
+  remove_empty() |>
+  clean_names() |>
+  select(block,pika_treatment,posion_plant_treatment,year,x19,x20,x21) |>
+  pivot_longer(cols = starts_with('x'),values_to = 'active_burrows') |>
+  mutate(
+    month = case_when(
+      name == 'x19' ~ 'June',
+      name == 'x20' ~ 'July',
+      name == 'x21' ~ 'August'
+    )
+  ) |>
+  select(block,pika_treatment,posion_plant_treatment,year,month,active_burrows)
+
+
+
 # ---- Utility to Save CSVs ----
 write_clean_csv <- function(df, path, name) {
   write_csv(df, here(path, paste0(name, ".csv")))
@@ -193,3 +228,6 @@ write_clean_csv(fig3d_s2_quality, "data/processed/experiment_foraging_quality", 
 ## Initial condition
 write_clean_csv(initial_plant_condition, "data/processed/initial_conditions", "initial_plant_condition")
 
+## Active burrows and Yak Gain Weight
+write_clean_csv(weight_gain, "data/processed/additional_data", "yak_weight_gain")
+write_clean_csv(active_burrows, "data/processed/additional_data", "active_burrows")
