@@ -40,7 +40,6 @@ crossref:
       space-before-numbering: true
       latex-list-of-description: Supplementary Table
 ---
- 
 
 ```{r}
 #| label: gloabl settings
@@ -75,8 +74,6 @@ plant_colors <- c(green, pink)
 base_size = 16
 geom_text_size = 7
 ```
-
-
 
 ```{r reading in data}
 #| echo: false
@@ -149,6 +146,9 @@ sedges_models$letters <- sedges_models$letters |>
 
 # Active burrow count by treatment
 act_burrow_count_dat <- read_csv(here('data/processed/additional_data/modeled_data/active_burrow_dat.csv'),show_col_types=FALSE)
+burrow_count_models  <- load_model_data("data/processed/additional_data/modeled_data/active_burrow_count")
+weight_gain_burrow_regression_models  <- load_model_data("data/processed/additional_data/modeled_data/weight_gain")
+
 
 #weight by burrow count
 weight_burrow_raw <- read_csv(here('data/processed/additional_data/modeled_data/weight_gain_raw.csv'),show_col_types=FALSE)
@@ -197,7 +197,6 @@ yak_feeding_contrasts     <- yak_feeding_models$model_contrasts
 
 ```
 
-
 ::: {#fig-hypothesis}
 ```{r fig-hypothesis}
 #| echo: false
@@ -221,10 +220,10 @@ hypoth_pic
 The hypothesized facilitative effects of pika on yak in the Tibetan Plateau. In the absence of pika, the poisonous Stellera chamaejasme forbs should exert a strong negative effect on yak growth performance by competing with the palatable grasses and sedges, decreasing their food availability and foraging efficiency (Fig. 1a). However, such negative effects of poisonous plants should be mitigated in the presence of pika, whom eliminate S. chamaejasme forbs by their feeding and clipping activities, leading to a facilitative effect on yak (Fig. 1b). The negative effects of poisonous plants on yak were indicated as black dashed lines, the competition between plant groups were indicated by the black solid lines, and the pathway that pika suppress poisonous plants was indicated by red solid line. The sizes of the lines indicate the strengths of species interactions. Credits: Xiaona Zheng (photographs).
 :::
 
-
 # Methods
 
 ## Statistical analyses
+
 All data were analyzed using linear models, generalized linear mixed models, or generalized additive models, with the choice of model and statistical family guided by the structure and distribution of the data. Posthoc comparisons were conducted only when the pika × S. chamaejasme interaction term was significant. For the 2021 field surveys, we fit generalized linear mixed models with plot and month as random effects. We then used generalized additive mixed models for S. chamaejasme cover and active pika burrow density, with plot as a random effect, and linear regression models for dung density and S. chamaejasme cover. For the field manipulation experiments in 2022 and 2023, we constructed generalized linear mixed models with the dependent variables (e.g., grass bites per step, sedge total bites, weight gain) regressed against the interactive effect of pika and S. chamaejasme treatments, while including block, year, and month as random effects to capture the hierarchical structure of the data. Models assumed gaussian, beta (for proportions), or tweedie (for non-normal data) distributions, selected based on data type and model fit. A significance threshold of P = 0.05 was applied, with TukeyHSD or Sidak posthoc tests used where appropriate. All data management, modeling, and visualization were carried out in R, with dependencies managed using *renv*. The main modeling packages were *glmmTMB* and *mgcv*, with *DHARMa* used for model diagnostics. Data management relied on the *tidyverse* suite of packages. A complete record of package versions is available in the renv.lock file in the repository: <https://github.com/ddlawton/pika_yak_interactions>.
 
 # Results and Discussion
@@ -232,7 +231,6 @@ All data were analyzed using linear models, generalized linear mixed models, or 
 First, we carried out a set of field observational experiments to investigate diet selection by pika and yak, as well as the associations among pika abundance, S. chamaejasme abundance, and yak activity under natural field conditions. Consistent with previous studies^5,11,24–25^, we found that pika and yak have distinct diet preferences: yaks preferred grasses and sedges, while pika preferred the poisonous S. chamaejasme (@fig-diet-selection A,B, @supptbl-pika-yak-feeding-model-summary, @supptbl-pika-yak-feeding-model-contrast). We also found that S. chamaejasme abundance was negatively associated with active pika burrow abundance (@fig-diet-selection C) and with yak foraging activity, as indicated by dung density (@fig-diet-selection D).
 
 Building on these results, we conducted an in-situ manipulative field experiment using fenced enclosures to test the interactive effects of pika and S. chamaejasme on yak weight gain, foraging quantity and quality, and grazing behavior. For weight gain, yaks gained less in poison-plant plots than in non-poison plots, and there was a significant interaction between pika and S. chamaejasme treatments (@supptbl-yak-performance-model-summary). When pika were present, yaks showed higher weight gain (@supptbl-yak-performance-model-contrast). This effect was driven by pika feeding on S. chamaejasme (@fig-diet-selection B, @supptbl-yak-performance-model-summary, @supptbl-yak-performance-model-contrast), which increased grass cover (@fig-diet-selection C, @supptbl-yak-performance-model-summary, @supptbl-yak-performance-model-contrast) compared to plots with S. chamaejasme but no pika.
-
 
 ```{r}
 #| label: forage-qaulity
@@ -262,7 +260,7 @@ ee_increase <- calc_pct_increase(forage_quality_models$ee$emms)
 
 ```
 
-Food quantity and quality are key drivers of individual performance and population dynamics in large herbivores^30–32^. In the presence of *S. chamaejasme* forbs, pika doubled the cover of yak’s most preferred grasses (@fig-diet-selection C, @supptbl-yak-performance-model-summary, @supptbl-yak-performance-model-contrast) and increased the crude protein content of total forage by approximately `r {cp_increase}`% (@fig-yak-performance D, @supptbl-yak-performance-model-summary, @supptbl-yak-performance-model-contrast), suggesting that pika facilitate yak by enhancing both the quantity and quality of forage. Acid detergent fibre (`r {adf_increase}`%) was higher in pika plots, while ether extract also differed significantly between treatments (@fig-yak-performance E,F, @supptbl-yak-performance-model-summary, @supptbl-yak-performance-model-contrast). These increases in grass abundance and forage quality were likely driven by the decline in poisonous plants induced by pika (@fig-yak-performance B), which reduced interspecific competition for shared resources (e.g., light, soil moisture, nutrients) and allowed grasses to expand^27–28^. In the absence of S. chamaejasme forbs, however, the positive effects of pika on food resources and yak weight gain disappeared (@fig-yak-performance A,C,D). The relationship between active burrow count and treatments aswell as the relationship between yak weight gain and burrow density can be seen in @fig-yak-performance G and H respectively. Pika and poisonous plants influenced sedge cover in a similar way as grass cover (@suppfig-other-figs A), while interactions with forb cover were more complex (@suppfig-other-figs B). There was no impact of pika or poisonous plants on neutral detergent fibre (@suppfig-other-figs C).
+Food quantity and quality are key drivers of individual performance and population dynamics in large herbivores^30–32^. In the presence of *S. chamaejasme* forbs, pika doubled the cover of yak’s most preferred grasses (@fig-diet-selection C, @supptbl-yak-performance-model-summary, @supptbl-yak-performance-model-contrast) and increased the crude protein content of total forage by approximately `r {cp_increase}`% (@fig-yak-performance D, @supptbl-yak-performance-model-summary, @supptbl-yak-performance-model-contrast), suggesting that pika facilitate yak by enhancing both the quantity and quality of forage. Acid detergent fibre (`r {adf_increase}`%) was higher in pika plots, while ether extract also differed significantly between treatments (@fig-yak-performance E,F, @supptbl-yak-performance-model-summary, @supptbl-yak-performance-model-contrast). These increases in grass abundance and forage quality were likely driven by the decline in poisonous plants induced by pika (@fig-yak-performance B), which reduced interspecific competition for shared resources (e.g., light, soil moisture, nutrients) and allowed grasses to expand^27–28^. In the absence of S. chamaejasme forbs, however, the positive effects of pika on food resources and yak weight gain disappeared (@fig-yak-performance A,C,D). The relationships between active burrow count and treatments, as well as between yak weight gain and burrow density, are presented in @fig-yak-performance (panels G and H) and in @supptbl-pika-burrow-count and @supptbl-weight-gain-burrow-regression, respectively. Pika and poisonous plants influenced sedge cover in a similar way as grass cover (@suppfig-other-figs A), while interactions with forb cover were more complex (@suppfig-other-figs B). There was no impact of pika or poisonous plants on neutral detergent fibre (@suppfig-other-figs C).
 
 ```{r}
 #| label: bite-increase
@@ -279,11 +277,9 @@ sedge_bite_steps <- calc_pct_increase(plant_bites_models$sedges$emm,value_col = 
   
 ```
 
-
 Pika-yak facilitation was also linked to improved foraging efficiency in yak when grazing alongside pika. Optimal foraging theory predicts that animals minimize energy costs to exploit high-quality food items and maximize intake of digestible nutrients, thereby improving performance^33^. In ruminants, bite rate, step rate, and bites per step are key predictors of foraging efficiency^34^ and, ultimately, animal performance^35^. In the presence of *S. chamaejasme* forbs, yak total, sedge, and grass bite rates increased by roughly `r {total_bite_increase}`% (@fig-yak-foraging-efficiency A), `r {sedge_bite_increase}`% (@fig-yak-foraging-efficiency B), and `r {grass_bite_steps}`% (@fig-yak-foraging-efficiency C), respectively, in the treatment where they coexisted with pika (@supptbl-yak-foraging-efficiency-summary, @supptbl-yak-foraging-efficiency-contrast). Yak stepped more often in the presence of *S. chamaejasme* forbs without pika, which meant they consumed more grasses and sedges per step in plots where pika were present.
 
-Yak total steps were also higher in the presence of *S. chamaejasme* forbs when pika were absent (@fig-yak-foraging-efficiency D). In contrast, sedge bites per step and grass bites per step increased significantly by r {sedge_bite_steps}% (@fig-yak-foraging-efficiency E) and `r {grass_bite_steps}`% (@fig-yak-performance F) in plots with pika. These gains in foraging efficiency can be attributed to the decline in *S. chamaejasme* forbs (@fig-yak-performance B), which improved access to palatable grasses and sedges. In this system, increased food availability (@fig-yak-performance C,D) and enhanced foraging efficiency (@fig-yak-performance) likely work together to shape the facilitative effects of pika on yak performance (@fig-yak-performance A).
-
+Yak total steps were also higher in the presence of *S. chamaejasme* forbs when pika were absent (@fig-yak-foraging-efficiency D). In contrast, sedge bites per step and grass bites per step increased significantly by `r {sedge_bite_steps}`% (@fig-yak-foraging-efficiency E) and `r {grass_bite_steps}`% (@fig-yak-performance F) in plots with pika. These gains in foraging efficiency can be attributed to the decline in *S. chamaejasme* forbs (@fig-yak-performance B), which improved access to palatable grasses and sedges. In this system, increased food availability (@fig-yak-performance C,D) and enhanced foraging efficiency (@fig-yak-performance) likely work together to shape the facilitative effects of pika on yak performance (@fig-yak-performance A).
 
 ::: {#fig-diet-selection}
 ```{r fig-diet-selection}
@@ -1180,6 +1176,45 @@ bind_rows(
 ```
 
 Model contrasts for pika and yak feeding.
+:::
+
+::: {#supptbl-pika-burrow-count}
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+
+
+burrow_count_models$model_summary  |>
+  mutate(term = case_when(str_detect(term,'sd__') ~ group,
+    TRUE ~ term),
+    effect = ifelse(effect == 'ran_pars','random','fixed'),
+    term = gsub('plant_group','',term)) |>
+  dplyr::select(-c(component,group)) |>
+  gt(groupname_col = "model") |>
+  fmt_number(columns = where(is.numeric), decimals = 2)
+
+```
+
+Model summary for active burrow count between treatment levels. Estimates are from a generalized linear mixed model with block, year, and month as random effects.
+:::
+
+::: {#supptbl-weight-gain-burrow-regression}
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+
+
+weight_gain_burrow_regression_models$model_summary  |>
+  gt() |>
+  fmt_number(columns = where(is.numeric), decimals = 2)
+
+```
+
+Model summary for yak weight gain regressed on active burrow count. Estimates are from a generalized additive mixed model with block, year, and month as random effects.
 :::
 
 ::: {#supptbl-yak-performance-model-summary}

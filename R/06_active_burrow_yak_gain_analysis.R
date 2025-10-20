@@ -66,6 +66,10 @@ burrow_mod <- glmmTMB(active_burrows ~ pika_treatment * posion_plant_treatment +
 burrow_emms <- emmeans(burrow_mod, ~pika_treatment * posion_plant_treatment) |>
   as_tibble()
 
+tidy(burrow_mod)
+
+
+
 ggplot(burrow_dat, aes(x = pika_treatment, y = active_burrows, 
   color = posion_plant_treatment)) +
     geom_jitter(
@@ -178,3 +182,39 @@ weight_gain_raw <- combined
 write_csv(combined_dat,file=here('data/processed/additional_data/modeled_data/weight_gain_raw.csv'))
 
 write_csv(ests,file=here('data/processed/additional_data/modeled_data/weight_gain_modeled_dat.csv'))
+
+
+
+
+# Exporting model output tables
+
+# Function to compute and save outputs
+save_model_outputs <- function(model, path,emm_variable) {
+  # Define base output path
+  base_dir <- here(path)
+  dir.create(base_dir, recursive = TRUE, showWarnings = FALSE)
+  
+  # === Model summary ===
+  model_summary <- broom.mixed::tidy(model)
+  write_csv(model_summary, file.path(base_dir, "model_summary.csv"))
+  
+  # === Estimated Marginal Means ===
+  emm_formula <- as.formula(paste("~", emm_variable))
+  emms <- emmeans(model, emm_formula)
+  emms_df <- as_tibble(emms)
+  write_csv(emms_df, file.path(base_dir, "emms.csv"))
+  
+  # === Post hoc contrasts ===
+  contrasts <- as_tibble(pairs(emms))
+  write_csv(contrasts, file.path(base_dir, "posthoc_contrasts.csv"))
+  
+  # === Post hoc letters (grouping) ===
+  letters <- cld(emms, Letters = letters, type = "response") |>
+    as_tibble() 
+
+  write_csv(letters, file.path(base_dir, "posthoc_letters.csv"))
+}
+
+
+save_model_outputs(burrow_mod,"data/processed/additional_data/modeled_data/active_burrow_count",emm_variable= 'pika_treatment * posion_plant_treatment')
+save_model_outputs(weight_gain_mod,"data/processed/additional_data/modeled_data/weight_gain",emm_variable= 'active_burrows')
