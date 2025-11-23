@@ -1,17 +1,17 @@
-block,pika_treatment,poisonous_plants_treatment,s_chamaejasme_cover_percent,sedge_cover_percent,grass_cover_percent,forb_cover_percent,species_richness,active_pika_burrow_100m2
-1,no pika,no S. chamaejasme,18,38,22,27,26,10
-2,no pika,no S. chamaejasme,19,47,17,19,29,9
-3,no pika,no S. chamaejasme,31,42,27,21,31,15
-4,no pika,no S. chamaejasme,25,61,21,16,23,13
-1,pika,no S. chamaejasme,22,49,24,18,27,6
-2,pika,no S. chamaejasme,16,63,13,24,22,9
-3,pika,no S. chamaejasme,27,57,18,22,21,14
-4,pika,no S. chamaejasme,23,40,25,29,26,7
-1,no pika,S. chamaejasme,19,56,24,19,32,9
-2,no pika,S. chamaejasme,26,39,27,21,25,14
-3,no pika,S. chamaejasme,27,48,18,27,28,6
-4,no pika,S. chamaejasme,32,54,24,23,23,10
-1,pika,S. chamaejasme,28,46,23,26,21,12
-2,pika,S. chamaejasme,21,33,19,18,29,11
-3,pika,S. chamaejasme,24,48,25,26,25,8
-4,pika,S. chamaejasme,18,57,21,15,20,13
+block,pika_treatment,poisonous_plants_treatment,grass_cover_percent,sedge_cover_percent,forb_cover_percent,s_chamaejasme_cover_percent,species_richness,active_pika_burrow_ha
+1,no pika,no S. chamaejasme,22,38,27,18,26,184
+2,no pika,no S. chamaejasme,17,47,19,19,29,231
+3,no pika,no S. chamaejasme,27,42,21,31,32,143
+4,no pika,no S. chamaejasme,21,61,16,25,23,98
+1,pika,no S. chamaejasme,24,49,18,22,29,307
+2,pika,no S. chamaejasme,13,63,24,16,24,143
+3,pika,no S. chamaejasme,18,57,22,27,21,210
+4,pika,no S. chamaejasme,25,40,29,23,26,95
+1,no pika,S. chamaejasme,24,56,19,19,32,124
+2,no pika,S. chamaejasme,27,39,21,26,25,181
+3,no pika,S. chamaejasme,18,48,27,27,28,73
+4,no pika,S. chamaejasme,24,54,23,32,23,166
+1,pika,S. chamaejasme,23,46,26,28,21,83
+2,pika,S. chamaejasme,19,33,18,21,29,121
+3,pika,S. chamaejasme,25,48,26,24,25,287
+4,pika,S. chamaejasme,21,57,15,18,20,94

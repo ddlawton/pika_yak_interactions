@@ -20,6 +20,7 @@ here::i_am("README.md")
 
 # ---- Define File Path to Raw Excel Workbook ----
 raw_file <- here("data/raw/Raw data-pika-yak interaction - 副本.xls")
+initial_plant_condition_path <- here('data/raw/Initial plant and pika condition in May 2022.xlsx')
 
 # ---- Utility Function to Extract Month from Column Names ----
 extract_month <- function(name, june_pattern, july_pattern, aug_pattern) {
@@ -162,10 +163,9 @@ fig4ef_s3b_ratio <- read_excel(raw_file, skip = 2, sheet = "Fig.4d-f and Fig.S3b
   )
 
 # ---- Initial Plant Condition ----
-initial_plant_condition <- read_excel(raw_file, skip = 4, sheet = "initial plant condition") |>
-  remove_empty() |>
+initial_plant_condition <- read_excel(initial_plant_condition_path, skip = 4, sheet = 1) |>
+  remove_empty(c("rows", "cols")) |>
   clean_names()
-
 
 # ---- Active Burrow & Yak Weight Gain Relationship  ----
 
