@@ -448,19 +448,23 @@ make_treatment_plot <- function(data, emms, letters, response_var, y_label, labe
     stop("emms must contain either 'response' or 'emmean' column")
   }
   label_y <- label_y %||% max(data[[response_var]], na.rm = TRUE)
-  ggplot(data, aes(x = pika_treatment, y = .data[[response_var]], fill = posion_plant_treatment)) +
+  p <- ggplot(data, aes(x = pika_treatment, y = .data[[response_var]], fill = posion_plant_treatment)) +
     geom_boxplot(position = position_dodge(width = 1), color = "black", outlier.shape = NA) +
-    geom_text(
-      data = letters,
-      aes(x = pika_treatment, y = label_y, label = .group, group = posion_plant_treatment),
-      position = position_dodge(width = 1),
-      size = geom_text_size, color = "black", show.legend = FALSE
-    ) +
     scale_fill_manual(values = plant_colors) +
     scale_color_manual(values = plant_colors) +
     labs(x = NULL, y = y_label, color = NULL, fill = NULL) +
     theme_pubr(base_size = base_size) +
     theme(legend.position = "bottom")
+  if (!is.null(letters)) {
+    p <- p +
+      geom_text(
+        data = letters,
+        aes(x = pika_treatment, y = label_y, label = .group, group = posion_plant_treatment),
+        position = position_dodge(width = 1),
+        size = geom_text_size, color = "black", show.legend = FALSE
+      )
+  }
+  p
 }
 
 # Update letter groupings
@@ -518,19 +522,19 @@ panel_e <- make_treatment_plot(
 
 sedge_plot <- make_treatment_plot(
   data    = cover_data |> filter(plant == "sedges"),
-  emms    = poison_models$emms,
-  letters = poison_models$letters,
+  emms    = sedges_models$emms,
+  letters = sedges_models$letters,
   response_var = "cover",
-  y_label = expression(italic("S. chamaejasme") ~ "cover (%)"),
+  y_label = "Sedge cover (%)",
   label_y = 70
 )
 
 forbs_plot <- make_treatment_plot(
   data    = cover_data |> filter(plant == "forbs"),
-  emms    = poison_models$emms,
-  letters = poison_models$letters,
+  emms    = sedges_models$emms,
+  letters = sedges_models$letters,
   response_var = "cover",
-  y_label = expression(italic("S. chamaejasme") ~ "cover (%)"),
+  y_label = "Forb cover (%)",
   label_y = 45
 )
 
@@ -608,7 +612,7 @@ bite_step_models <- map(bite_step_models, function(x) {
 #                 REUSABLE PLOTTING FUNCTIONS
 # ============================================================
 # --- Plant Bites Plot (panels A–C) ---
-plot_plant_bites <- function(plant_name, y_label, label_y = NULL) {
+plot_plant_bites <- function(plant_name, y_label, label_y = NULL, letters = TRUE) {
   data <- plant_bites |> filter(plant == plant_name)
   model <- plant_bites_models[[plant_name]]
   
@@ -623,11 +627,11 @@ plot_plant_bites <- function(plant_name, y_label, label_y = NULL) {
   }
   
   # Standardize letters table
-  letters <- model$letters
-  if ("response" %in% names(letters)) {
-    letters <- letters |> mutate(.mean_val = response)
-  } else if ("emmean" %in% names(letters)) {
-    letters <- letters |> mutate(.mean_val = emmean)
+  letters_df <- model$letters
+  if ("response" %in% names(letters_df)) {
+    letters_df <- letters_df |> mutate(.mean_val = response)
+  } else if ("emmean" %in% names(letters_df)) {
+    letters_df <- letters_df |> mutate(.mean_val = emmean)
   } else {
     stop("model$letters must contain either 'response' or 'emmean'")
   }
@@ -635,14 +639,8 @@ plot_plant_bites <- function(plant_name, y_label, label_y = NULL) {
   # Set default y-position for labels if not supplied
   label_y <- label_y %||% (max(data$forage_efficiency, na.rm = TRUE) + 0.05)
 
-  ggplot(data, aes(x = pika_treatment, y = forage_efficiency, fill = posion_plant_treatment)) +
+  p <- ggplot(data, aes(x = pika_treatment, y = forage_efficiency, fill = posion_plant_treatment)) +
     geom_boxplot(position = position_dodge(width = 1), color = "black", outlier.shape = NA) +
-    geom_text(
-      data = letters,
-      aes(x = pika_treatment, y = label_y, label = .group, group = posion_plant_treatment),
-      position = position_dodge(width = 1),
-      size = geom_text_size, color = "black", show.legend = FALSE, inherit.aes = FALSE
-    ) +
     scale_fill_manual(values = plant_colors) +
     labs(
       y = y_label, x = "",
@@ -650,6 +648,17 @@ plot_plant_bites <- function(plant_name, y_label, label_y = NULL) {
     ) +
     theme_pubr(base_size = base_size) +
     theme(legend.position = "bottom", legend.title = element_blank())
+  
+  if (letters) {
+    p <- p +
+      geom_text(
+        data = letters_df,
+        aes(x = pika_treatment, y = label_y, label = .group, group = posion_plant_treatment),
+        position = position_dodge(width = 1),
+        size = geom_text_size, color = "black", show.legend = FALSE, inherit.aes = FALSE
+      )
+  }
+  p
 }
 
 # --- Bite/Step Ratio Plot (panels E and F) ---
@@ -685,8 +694,8 @@ panel_a <- plot_plant_bites("sedges", "Sedge bites", label_y = 450)
 panel_b <- plot_plant_bites("grasses", "Grass bites", label_y = 350)
 
 # Generate bite/step panels
-panel_c <- plot_bite_steps("sedges", "Sedges bite/steps", label_y = 1)
-panel_d <- plot_bite_steps("grasses", "Grass bite/steps")
+panel_c <- plot_bite_steps("sedges", "Sedge bite/step", label_y = 1)
+panel_d <- plot_bite_steps("grasses", "Grass bite/step")
 
 # Layout specification
 layout <- "
@@ -719,7 +728,7 @@ Combined effects of 2-yr (2022-2023) pika and poisonous plant removal treatments
 ndf_plot <- make_treatment_plot(
   data    = forage_quality |> filter(plant == "ndf"),
   emms    = forage_quality_models$ndf$emms,
-  letters = forage_quality_models$ndf$letters,
+  letters = NULL,#forage_quality_models$ndf$letters,
   response_var = "forage_quality",
   y_label = "NDF (%)",
   label_y = 70
@@ -742,10 +751,10 @@ Combined effects of 2-yr (2022-2023) pika and *S. chamaejasme* removal treatment
 #| warning: false
 
 # Generate bite panels
-panel_a <- plot_plant_bites("forbs", "Forb bites", label_y = 200)
+panel_a <- plot_plant_bites("forbs", "Forb bites", label_y = 200,letters=FALSE)
 
 # Generate bite/step panels
-panel_b <- plot_bite_steps("forbs", "Forbs bite/steps", label_y = 0.5)
+panel_b <- plot_bite_steps("forbs", "Forbs bite/steps", label_y = 0.4, add_letters = FALSE)
 
 # Layout specification
 layout <- "
