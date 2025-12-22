@@ -59,8 +59,7 @@ dung_burrow_by_plot <- read_csv(here('data/processed/diet_selection/dung_burrow_
     mutate(plot = factor(plot))
 
 burrow_model <- gam(s_chamaejasme_cover_percent ~
-  s(active_pika_burrow_no_100m2, k = 8, bs = 'ts') +
-    s(plot, bs = 're'),
+  s(active_pika_burrow_no_100m2, k = 8, bs = 'ts'),
   data = dung_burrow_by_plot,
   family = gaussian(),
   select = TRUE
@@ -69,6 +68,7 @@ burrow_model <- gam(s_chamaejasme_cover_percent ~
 gam_ests <- gratia::smooth_estimates(burrow_model)
 gam_ests$adj_est <- gam_ests$.estimate + coef(burrow_model)[1]
 
+summary(burrow_model)
 ```
 
 The following figure (@fig-diet_selection_figure) shows pika feeding frequency (A) and yak grazing frequency (B) by each pika and poison plant treatment, with significance indicated by letters. It also shows the relationship between pika burrow density (C) and yak dung density (D) with S. chamaejasme cover. Overall, these results align with those seen in the original figure.

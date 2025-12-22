@@ -222,6 +222,13 @@ fig2d_plot <- dung_burrow_by_plot |>
   ylim(0, 25) +
   xlim(0, 35)
 
+dung_mod <- lm(
+  yak_dung_no_100m2 ~ s_chamaejasme_cover_percent,
+  data = dung_burrow_by_plot
+)
+
+summary(dung_mod)
+
 # ---- Export Model Tables ----
 
 

@@ -149,7 +149,7 @@ weight_gain_mod <- gam(
   select=TRUE,
   data=combined_dat
 )
-
+summary(weight_gain_mod)
 ests <- smooth_estimates(weight_gain_mod)
 ests$adj_est <- ests$.estimate + coef(weight_gain_mod)[1] 
 
