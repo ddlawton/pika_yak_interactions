@@ -438,8 +438,20 @@ Diet selection of pika and yak and their potential interactions mediated by pois
 #| warning: false
 #| fig-width: 10
 #| fig-height: 12
+
+# Helper to check if interaction is significant
+interaction_significant <- function(model_summary, interaction_pattern = "pika.*:.*chamaejasme", alpha = 0.05) {
+  # Find the interaction row (term contains both pika and chamaejasme)
+  row <- model_summary[grepl(interaction_pattern, model_summary$term), ]
+  if (nrow(row) == 0) return(FALSE)
+  # Use p.value or p.value column (could be named differently)
+  pval_col <- intersect(c("p.value", "pvalue", "p_val", "p.val"), names(row))
+  if (length(pval_col) == 0) return(FALSE)
+  return(any(row[[pval_col[1]]] < alpha, na.rm = TRUE))
+}
+
 # Generic plot for treatment × response with jitter, means, and letters
-make_treatment_plot <- function(data, emms, letters, response_var, y_label, label_y = NULL) {
+make_treatment_plot <- function(data, emms, letters, response_var, y_label, label_y = NULL, model_summary = NULL) {
   if ("response" %in% names(emms)) {
     emms <- emms |> mutate(.mean_val = response * 100)
   } else if ("emmean" %in% names(emms)) {
@@ -448,6 +460,11 @@ make_treatment_plot <- function(data, emms, letters, response_var, y_label, labe
     stop("emms must contain either 'response' or 'emmean' column")
   }
   label_y <- label_y %||% max(data[[response_var]], na.rm = TRUE)
+  # Only show letters if interaction is significant
+  show_letters <- TRUE
+  if (!is.null(model_summary)) {
+    show_letters <- interaction_significant(model_summary)
+  }
   p <- ggplot(data, aes(x = pika_treatment, y = .data[[response_var]], fill = posion_plant_treatment)) +
     geom_boxplot(position = position_dodge(width = 1), color = "black", outlier.shape = NA) +
     scale_fill_manual(values = plant_colors) +
@@ -455,7 +472,7 @@ make_treatment_plot <- function(data, emms, letters, response_var, y_label, labe
     labs(x = NULL, y = y_label, color = NULL, fill = NULL) +
     theme_pubr(base_size = base_size) +
     theme(legend.position = "bottom")
-  if (!is.null(letters)) {
+  if (!is.null(letters) && show_letters) {
     p <- p +
       geom_text(
         data = letters,
@@ -467,21 +484,22 @@ make_treatment_plot <- function(data, emms, letters, response_var, y_label, labe
   p
 }
 
+
 # Update letter groupings
 weight_gain_models$letters <- weight_gain_models$letters |> mutate(.group = ifelse(.group == 'a','b','a'))
 grasses_models$letters <- grasses_models$letters |> mutate(.group = ifelse(.group == 'a','b','a'))
 forage_quality_models$cp$letters <- forage_quality_models$cp$letters |> mutate(.group = ifelse(.group == 'a','b','a'))
 forage_quality_models$adf$letters <- forage_quality_models$adf$letters |> mutate(.group = ifelse(.group == 'a','b','a'))
 
-# Panels
-# Panels
+# Panels (letters only if interaction significant)
 panel_a <- make_treatment_plot(
   data    = weight_gain,
   emms    = weight_gain_models$emms,
   letters = weight_gain_models$letters,
   response_var = "weight_gain",
   y_label = "Weight gain (kg/yak/day)",
-  label_y = 0.60
+  label_y = 0.60,
+  model_summary = weight_gain_models$model_summary
 )
 
 panel_b <- make_treatment_plot(
@@ -490,7 +508,8 @@ panel_b <- make_treatment_plot(
   letters = poison_models$letters,
   response_var = "cover",
   y_label = expression(italic("S. chamaejasme") ~ "cover (%)"),
-  label_y = 43
+  label_y = 43,
+  model_summary = poison_models$model_summary
 )
 
 panel_c <- make_treatment_plot(
@@ -499,7 +518,8 @@ panel_c <- make_treatment_plot(
   letters = grasses_models$letters,
   response_var = "cover",
   y_label = "Grass cover (%)",
-  label_y = 41
+  label_y = 41,
+  model_summary = grasses_models$model_summary
 )
 
 panel_d <- make_treatment_plot(
@@ -508,7 +528,8 @@ panel_d <- make_treatment_plot(
   letters = forage_quality_models$cp$letters,
   response_var = "forage_quality",
   y_label = "CP (%)",
-  label_y = 10
+  label_y = 10,
+  model_summary = forage_quality_models$cp$model_summary
 )
 
 panel_e <- make_treatment_plot(
@@ -517,7 +538,8 @@ panel_e <- make_treatment_plot(
   letters = forage_quality_models$adf$letters,
   response_var = "forage_quality",
   y_label = "ADF (%)",
-  label_y = 36
+  label_y = 36,
+  model_summary = forage_quality_models$adf$model_summary
 )
 
 sedge_plot <- make_treatment_plot(
@@ -526,16 +548,18 @@ sedge_plot <- make_treatment_plot(
   letters = sedges_models$letters,
   response_var = "cover",
   y_label = "Sedge cover (%)",
-  label_y = 70
+  label_y = 70,
+  model_summary = sedges_models$model_summary
 )
 
 forbs_plot <- make_treatment_plot(
   data    = cover_data |> filter(plant == "forbs"),
-  emms    = sedges_models$emms,
-  letters = sedges_models$letters,
+  emms    = forbs_models$emms,
+  letters = forbs_models$letters,
   response_var = "cover",
   y_label = "Forb cover (%)",
-  label_y = 45
+  label_y = 45,
+  model_summary = forbs_models$model_summary
 )
 
 panel_g <- ggplot(act_burrow_count_dat, aes(x = pika_treatment, y = active_burrows, color = posion_plant_treatment)) +
@@ -615,7 +639,6 @@ bite_step_models <- map(bite_step_models, function(x) {
 plot_plant_bites <- function(plant_name, y_label, label_y = NULL, letters = TRUE) {
   data <- plant_bites |> filter(plant == plant_name)
   model <- plant_bites_models[[plant_name]]
-  
   # Standardize emms table
   emms <- model$emms
   if ("response" %in% names(emms)) {
@@ -625,7 +648,6 @@ plot_plant_bites <- function(plant_name, y_label, label_y = NULL, letters = TRUE
   } else {
     stop("model$emms must contain either 'response' or 'emmean'")
   }
-  
   # Standardize letters table
   letters_df <- model$letters
   if ("response" %in% names(letters_df)) {
@@ -635,10 +657,13 @@ plot_plant_bites <- function(plant_name, y_label, label_y = NULL, letters = TRUE
   } else {
     stop("model$letters must contain either 'response' or 'emmean'")
   }
-
   # Set default y-position for labels if not supplied
   label_y <- label_y %||% (max(data$forage_efficiency, na.rm = TRUE) + 0.05)
-
+  # Only show letters if interaction is significant
+  show_letters <- TRUE
+  if (!is.null(model$model_summary)) {
+    show_letters <- interaction_significant(model$model_summary)
+  }
   p <- ggplot(data, aes(x = pika_treatment, y = forage_efficiency, fill = posion_plant_treatment)) +
     geom_boxplot(position = position_dodge(width = 1), color = "black", outlier.shape = NA) +
     scale_fill_manual(values = plant_colors) +
@@ -648,8 +673,7 @@ plot_plant_bites <- function(plant_name, y_label, label_y = NULL, letters = TRUE
     ) +
     theme_pubr(base_size = base_size) +
     theme(legend.position = "bottom", legend.title = element_blank())
-  
-  if (letters) {
+  if (letters && show_letters) {
     p <- p +
       geom_text(
         data = letters_df,
@@ -665,17 +689,19 @@ plot_plant_bites <- function(plant_name, y_label, label_y = NULL, letters = TRUE
 plot_bite_steps <- function(plant_name, y_label, label_y = NULL, add_letters = TRUE) {
   data <- bite_steps |> filter(plant == plant_name)
   model <- bite_step_models[[plant_name]]
-
   label_y <- label_y %||% max(data$bites_steps_ratio, na.rm = TRUE) + 0.05
-
+  # Only show letters if interaction is significant
+  show_letters <- TRUE
+  if (!is.null(model$model_summary)) {
+    show_letters <- interaction_significant(model$model_summary)
+  }
   p <- ggplot(data, aes(x = pika_treatment, y = bites_steps_ratio, fill = posion_plant_treatment)) +
     geom_boxplot(position = position_dodge(width = 1), color = "black", outlier.shape = NA) +
     scale_fill_manual(values = plant_colors) +
     labs(y = y_label, x = "", fill = "Poison plant treatment") +
     theme_pubr(base_size = base_size) +
     theme(legend.position = "bottom", legend.title = element_blank())
-
-  if (add_letters) {
+  if (add_letters && show_letters) {
     p <- p + geom_text(data = model$letters,
                        aes(x = pika_treatment, y = label_y, label = .group, group = posion_plant_treatment),
                        position = position_dodge(width = 1),
