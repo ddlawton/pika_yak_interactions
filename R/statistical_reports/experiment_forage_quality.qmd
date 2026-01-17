@@ -60,7 +60,7 @@ load_forage_quality_data <- function(quality_metric) {
 
 
 # Define your plant groups
-quality_metrics <- c("adf", "cp", "ee","ndf")
+quality_metrics <- c("adf", "cp","ndf")
 
 # Load all model data into a named list
 forag_quality_models <- map(quality_metrics, load_forage_quality_data) |> set_names(quality_metrics)
@@ -131,12 +131,11 @@ plot_forage_quality <- function(quality_metric, y_label, label_y = NULL, letters
 
 adf_plot <- plot_forage_quality("adf", "adf (%)",label_y=36)
 cp_plot  <- plot_forage_quality("cp", "cp (%)",label_y = 12)
-ee_plot   <- plot_forage_quality("ee", "ee (%)",label_y=5)
 ndf_plot   <- plot_forage_quality("ndf", "ndf (%)",label_y=68,letters=FALSE)
 
 
 
-(adf_plot + cp_plot) / (ee_plot + ndf_plot) + 
+(adf_plot + cp_plot) / (ndf_plot + plot_spacer()) + 
   plot_annotation(tag_levels = 'A') + 
   plot_layout(guides = "collect") & theme(legend.position = 'bottom')
 
@@ -152,10 +151,6 @@ ADF content was slightly but significantly reduced by the poison plant (S. chama
 # CP model summary
 
 Crude protein (CP) content was significantly reduced by the poison plant (S. chamaejasme) treatment, while pika presence alone had a marginally non-significant positive effect (@tbl-cp-model-summary). A strong positive interaction showed that pika presence substantially mitigated the reduction in CP caused by the poison plant. Contrasts confirmed lower CP in treated plots without pika, but this reduction was much smaller in pika-present plots (@tbl-cp-model-contrasts). Random variation across blocks and months was minimal, with no variation across years.
-
-# EE model summary
-
-Ether extract (EE) content was slightly reduced by pika presence, while the poison plant (S. chamaejasme) treatment alone had no significant effect (@tbl-ee-model-summary). A significant positive interaction indicated that pika mitigated the small negative effect of the poison plant on EE. Contrasts revealed only minor and inconsistent differences among treatment combinations, with most effects small in magnitude (@tbl-ee-model-contrasts). Random variation across months was minimal, with no variation across blocks or years.
 
 # NDF model summary
 
@@ -233,40 +228,6 @@ forag_quality_models$cp$model_contrasts |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```
 
-
-```{r}
-#| label: tbl-ee-model-summary
-#| tbl-cap: "Model summary for EE."
-#| echo: false
-#| message: false
-#| warning: false
-
-
-forag_quality_models$ee$model_summary |>
-  mutate(
-    term = case_when(
-        term == 'pika_treatmentpika' ~ 'pika',
-        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
-        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
-        effect == 'ran_pars' ~ group,
-        TRUE ~ term
-    )
-  ) |>
-  kable(format = "html", booktabs = TRUE, digits = 3)|>
-  kable_styling(latex_options = c("striped","scale_down"))
-```
-
-```{r}
-#| label: tbl-ee-model-contrasts
-#| tbl-cap: "Estimated marginal means contrasts for EE by treatment group."
-#| echo: false
-#| message: false
-#| warning: false
-
-forag_quality_models$ee$model_contrasts |>
-  kable(format = "html", booktabs = TRUE, digits = 3)|>
-  kable_styling(latex_options = c("striped","scale_down"))
-```
 
 
 ```{r}

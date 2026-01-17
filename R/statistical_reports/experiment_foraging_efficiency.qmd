@@ -177,7 +177,7 @@ load_plant_bites_data <- function(plant) {
 
 
 # Define your plant groups
-plant_groups <- c("forbs", "grasses", "sedges","total")
+plant_groups <- c("forbs", "grasses", "sedges")
 
 # Load all model data into a named list
 plant_bites_models <- map(plant_groups, load_plant_bites_data) |> set_names(plant_groups)
@@ -249,11 +249,10 @@ plot_plant_bites <- function(plant_name, y_label, label_y = NULL) {
 grasses_plot <- plot_plant_bites("grasses", "grass bites", label_y = 350)
 sedges_plot  <- plot_plant_bites("sedges", "sedge bites", label_y = 410)
 forbs_plot   <- plot_plant_bites("forbs", "forb bites", label_y = 200)
-total_plot   <- plot_plant_bites("total", "total bites", label_y = 800)
 
 
 
-(grasses_plot + sedges_plot) / (forbs_plot + total_plot) + 
+(grasses_plot + sedges_plot) / (forbs_plot + plot_spacer()) + 
   plot_annotation(tag_levels = 'A') + 
   plot_layout(guides = "collect") & theme(legend.position = 'bottom')
 
@@ -273,12 +272,7 @@ Yak bites on forbs were generally low and showed no significant differences acro
 
 Grazing on sedges was significantly reduced by *S. chamaejasme* treatment (estimate = -0.42), indicating fewer yak bites in plots with the poisonous plant. Pika presence alone had no significant effect, but the pika × *S. chamaejasme* interaction was strongly positive (+0.36), showing that pika presence offsets the reduction caused by the poisonous plant. Contrasts reveal that sedge grazing decreases with *S. chamaejasme* unless pikas are present, which helps maintain grazing levels.
 
-## Total Plant Bites
-
-Yak grazing overall was significantly reduced by *S. chamaejasme* treatment, with 131 fewer bites on average compared to control plots without the poisonous plant. Pika presence alone did not significantly influence total bites. However, the strong positive interaction term (+119.5) indicates that pika presence substantially offsets the negative effect of *S. chamaejasme*, restoring grazing rates close to control levels. Contrasts confirm that while *S. chamaejasme* sharply reduces total bites, this effect is largely absent when pikas are present.
-
-
-# total steps and weight gain
+# weight gain
 
 ```{r}
 #| label: loading in steps and weight data
@@ -286,10 +280,6 @@ Yak grazing overall was significantly reduced by *S. chamaejasme* treatment, wit
 #| results: "hide"
 #| message: false
 #| warning: false
-
-# Load the bite_steps dataset once
-total_steps <- read_csv(here("data/processed/experiment_foraging_efficiency/yak_total_steps.csv")) |>
-  mutate(yak = gsub("_[^_]*$", '',yak))
 
 weight_gain <- read_csv(here("data/processed/experiment_foraging_efficiency/yak_weight_gain.csv")) |>
   mutate(yak = gsub("_[^_]*$", '',yak))
@@ -305,53 +295,18 @@ load_data <- function(base_path) {
 }
 
 
-total_steps_models <- load_data(here('data/processed/experiment_foraging_efficiency/modeled_data/total_steps'))
 weight_gain_models <- load_data(here('data/processed/experiment_foraging_efficiency/modeled_data/weight_gain'))
-total_steps_models$letters <- total_steps_models$letters |>
-    mutate(.group = case_when(
-        pika_treatment == 'no pika' & posion_plant_treatment == 'S. chamaejasme' ~ 'B',
-        TRUE ~ .group
-    ))
 ```
 
 ```{r}
-#| label: fig-total-step-weight-gain
-#| fig-cap: "Yak total steps and weight gain by treatment"
+#| label: fig-weight-gain
+#| fig-cap: "Yak weight gain by treatment"
 #| echo: false
 #| reulsts: asis
 #| message: false
 #| warning: false
 #| fig-width: 10
 #| fig-height: 8
-total_step_plot <- total_steps |>
-  left_join(total_steps_models$emms, by = c('pika_treatment', 'posion_plant_treatment')) |>
-  ggplot(aes(x = pika_treatment, y = total_steps, color = posion_plant_treatment)) +
-  geom_jitter(
-    size = 1, alpha = 0.4,
-    position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.7)
-  ) +
-  geom_point(
-    data = total_steps_models$letters,
-    aes(x = pika_treatment, y = emmean, fill = posion_plant_treatment),
-    position = position_dodge(width = 0.7),
-    size = 8, pch = 21, color = "black", inherit.aes = FALSE
-  ) +
-  geom_text(
-    data = total_steps_models$letters,
-    aes(x = pika_treatment, y = 1000, label = .group, group = posion_plant_treatment),
-    position = position_dodge(width = 0.7),
-    size = 5, color = "black", show.legend = FALSE, inherit.aes = FALSE
-  ) +
-  scale_fill_manual(values = plant_colors) +
-  scale_color_manual(values = plant_colors) +
-  labs(
-    y = 'total steps',
-    x = "",
-    color = "Poison plant treatment",
-    fill = "Poison plant treatment"
-  ) +
-  theme_pubr(base_size = 15) +
-  theme(legend.position = "bottom", legend.title = element_blank())
 
 weight_gain_plot <- weight_gain |>
   left_join(weight_gain_models$emms, by = c('pika_treatment', 'posion_plant_treatment')) |>
@@ -383,16 +338,14 @@ weight_gain_plot <- weight_gain |>
   theme_pubr(base_size = 15) +
   theme(legend.position = "bottom", legend.title = element_blank())
 
-(total_step_plot + weight_gain_plot) + 
+(weight_gain_plot) + 
   plot_annotation(tag_levels = 'A') + 
   plot_layout(guides = "collect") & theme(legend.position = 'bottom')
 
 
 ```
 
-## Total Step Model Summary
 
-Yak movement (total steps) was significantly higher in *S. chamaejasme* plots, with an average increase of 113 steps compared to control plots without the poisonous plant (@tbl-total-step-model-summary). Pika presence alone did not significantly affect step counts. However, the strong negative interaction term (−136.1, @tbl-total-step-model-summary) indicates that when pikas were present, the *S. chamaejasme*-induced increase in movement was eliminated. Contrasts show that while *S. chamaejasme* alone led to more steps, this effect was absent or reversed in the presence of pikas, suggesting that pikas dampen the plant’s impact on yak movement patterns (@tbl-total-step-model-contrasts).
 
 ## Weight Gain Summary
 
@@ -591,77 +544,6 @@ plant_bites_models$sedges$model_summary  |>
 #| warning: false
 
 plant_bites_models$sedges$model_contrasts |>
-  kable(format = "html", booktabs = TRUE, digits = 3) |>
-  kable_styling(latex_options = c("striped","scale_down"))
-```
-
-```{r}
-#| label: tbl-total-plant-bites-model-summary
-#| tbl-cap: "Model summary for total bites."
-#| echo: false
-#| message: false
-#| warning: false
-
-
-plant_bites_models$total$model_summary  |>
-  mutate(
-    term = case_when(
-        term == 'pika_treatmentpika' ~ 'pika',
-        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
-        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
-        effect == 'ran_pars' ~ group,
-        TRUE ~ term
-    )
-  ) |>
-  select(!c(component,group)) |>
-  kable(format = "html", booktabs = TRUE, digits = 3) |>
-  kable_styling(latex_options = c("striped","scale_down"))
-```
-
-```{r}
-#| label: tbl-total-plant-bite-model-contrasts
-#| tbl-cap: "Estimated marginal means contrasts for total bites by treatment group."
-#| echo: false
-#| message: false
-#| warning: false
-
-plant_bites_models$total$model_contrasts |>
-  kable(format = "html", booktabs = TRUE, digits = 3) |>
-  kable_styling(latex_options = c("striped","scale_down"))
-```
-
-```{r}
-#| label: tbl-total-step-model-summary
-#| tbl-cap: "Model summary for total steps."
-#| echo: false
-#| message: false
-#| warning: false
-
-
-total_steps_models$model_summary  |>
-  mutate(
-    term = case_when(
-        term == 'pika_treatmentpika' ~ 'pika',
-        term == 'posion_plant_treatmentS. chamaejasme' ~ 'poison plant',
-        term == 'pika_treatmentpika:posion_plant_treatmentS. chamaejasme' ~ 'pika : poison treamtent',
-        effect == 'ran_pars' ~ group,
-        TRUE ~ term
-    )
-  ) |>
-  select(!c(component,group)) |>
-  kable(format = "html", booktabs = TRUE, digits = 3) |>
-  kable_styling(latex_options = c("striped","scale_down"))
-```
-
-```{r}
-#| label: tbl-total-step-model-contrasts
-#| tbl-cap: "Estimated marginal means contrasts for total steps by treatment group."
-#| echo: false
-#| message: false
-#| warning: false
-
-
-total_steps_models$model_contrasts |>
   kable(format = "html", booktabs = TRUE, digits = 3) |>
   kable_styling(latex_options = c("striped","scale_down"))
 ```

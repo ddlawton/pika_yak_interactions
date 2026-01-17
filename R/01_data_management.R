@@ -97,7 +97,7 @@ fig3bc_s1_plant_cover <- read_excel(raw_file, skip = 3, sheet = "Fig. 3b,c and F
 fig3d_s2_quality <- read_excel(raw_file, skip = 2, sheet = "Fig. 3d and Fig. S2") |>
   remove_empty() |>
   clean_names() |>
-  pivot_longer(cols = cp_percent_6:ee_percent_17,
+  pivot_longer(cols = cp_percent_6:ndf_percent_15,
                names_to = "plant", values_to = "forage_quality") |>
   mutate(
     month = extract_month(plant, "_6$|_7$|_8$|_9$", "_10$|_11$|_12$|_13$", "_14$|_15$|_16$|_17$"),
@@ -108,56 +108,40 @@ fig3d_s2_quality <- read_excel(raw_file, skip = 2, sheet = "Fig. 3d and Fig. S2"
 fig4ac_s3a_bites <- read_excel(raw_file, skip = 3, sheet = "Fig.4a-c and Fig. S3a") |>
   remove_empty() |>
   clean_names() |>
-  pivot_longer(cols = sedges_6:total_29,
+  pivot_longer(cols = sedges_6:forbs_23,
                names_to = "plant", values_to = "forage_efficiency") |>
   mutate(
     num = as.numeric(str_extract(plant, "\\d+$")),
     yak = case_when(
-      num %in% c(6:9, 14:17, 22:29) ~ "yak_1",
-      num %in% c(10:13, 18:21) ~ "yak_2",
+      num %in% c(6:8, 12:14, 18:20) ~ "yak_1",
+      num %in% c(9:11, 15:17,21:23) ~ "yak_2",
       TRUE ~ NA_character_
     ),
     month = case_when(
-      num %in% 6:13 ~ "June",
-      num %in% 14:21 ~ "July",
-      num %in% 22:29 ~ "August"
+      num %in% 6:11 ~ "June",
+      num %in% 12:17 ~ "July",
+      num %in% 18:23 ~ "August"
     )
   ) |>
   select(-num)
 
-# ---- Figure 4D: Total Steps by Yak ----
-fig4d_steps <- read_excel(raw_file, skip = 2, sheet = "Fig.4d-f and Fig.S3b") |>
-  remove_empty() |>
-  clean_names() |>
-  select(block:yak_2_11) |>
-  pivot_longer(cols = yak_1_6:yak_2_11, names_to = "yak", values_to = "total_steps") |>
-  mutate(
-    num = as.numeric(str_extract(yak, "\\d+$")),
-    month = case_when(
-      num %in% 6:7 ~ "June",
-      num %in% 8:9 ~ "July",
-      num %in% 10:11 ~ "August"
-    )
-  ) |>
-  select(-num)
 
 # ---- Figure 4E/F and S3B: Bite-to-Step Ratio ----
 fig4ef_s3b_ratio <- read_excel(raw_file, skip = 2, sheet = "Fig.4d-f and Fig.S3b") |>
   remove_empty() |>
   clean_names() |>
-  select(block:year, sedges_13:forbs_30) |>
-  pivot_longer(cols = sedges_13:forbs_30,
+  pivot_longer(cols = sedges_5:forbs_22,
                names_to = "plant", values_to = "bites_steps_ratio") |>
   mutate(
     num = as.numeric(str_extract(plant, "\\d+$")),
     yak_num = case_when(
-      num %in% c(13:15, 19:21, 25:30) ~ "yak_1",
-      num %in% c(16:18, 22:24) ~ "yak_2"
+      num %in% c(5:7, 11:13, 17:19) ~ "yak_1",
+      num %in% c(8:10, 14:16,20:22) ~ "yak_2"
     ),
     month = case_when(
-      num %in% 13:18 ~ "June",
-      num %in% 19:24 ~ "July",
-      num %in% 25:30 ~ "August"
+      num %in% 5:10 ~ "June",
+      num %in% 11:16 ~ "July",
+      num %in% 17:22 ~ "August"
     ),
     plant = gsub("_[0-9]+$", "", plant)
   )

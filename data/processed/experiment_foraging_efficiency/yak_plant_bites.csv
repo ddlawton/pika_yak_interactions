@@ -2,768 +2,576 @@ block,pika_treatment,posion_plant_treatment,year,plant,forage_efficiency,yak,mon
 1,no pika,No S. chamaejasme,2022,sedges_6,197.7,yak_1,June
 1,no pika,No S. chamaejasme,2022,grasses_7,74.9,yak_1,June
 1,no pika,No S. chamaejasme,2022,forbs_8,82.9,yak_1,June
-1,no pika,No S. chamaejasme,2022,total_9,355.5,yak_1,June
-1,no pika,No S. chamaejasme,2022,sedges_10,247.3,yak_2,June
-1,no pika,No S. chamaejasme,2022,grasses_11,124.1,yak_2,June
-1,no pika,No S. chamaejasme,2022,forbs_12,105.8,yak_2,June
-1,no pika,No S. chamaejasme,2022,total_13,477.2,yak_2,June
-1,no pika,No S. chamaejasme,2022,sedges_14,340.6,yak_1,July
-1,no pika,No S. chamaejasme,2022,grasses_15,202.6,yak_1,July
-1,no pika,No S. chamaejasme,2022,forbs_16,49.6,yak_1,July
-1,no pika,No S. chamaejasme,2022,total_17,592.8,yak_1,July
-1,no pika,No S. chamaejasme,2022,sedges_18,369.9,yak_2,July
-1,no pika,No S. chamaejasme,2022,grasses_19,149.8,yak_2,July
-1,no pika,No S. chamaejasme,2022,forbs_20,87.1,yak_2,July
-1,no pika,No S. chamaejasme,2022,total_21,606.8,yak_2,July
-1,no pika,No S. chamaejasme,2022,sedges_22,321.4,yak_1,August
-1,no pika,No S. chamaejasme,2022,grasses_23,168.6,yak_1,August
-1,no pika,No S. chamaejasme,2022,forbs_24,90.8,yak_1,August
-1,no pika,No S. chamaejasme,2022,total_25,580.8,yak_1,August
-1,no pika,No S. chamaejasme,2022,sedges_26,263.3,yak_1,August
-1,no pika,No S. chamaejasme,2022,grasses_27,111.8,yak_1,August
-1,no pika,No S. chamaejasme,2022,forbs_28,47.3,yak_1,August
-1,no pika,No S. chamaejasme,2022,total_29,422.3,yak_1,August
+1,no pika,No S. chamaejasme,2022,sedges_9,247.3,yak_2,June
+1,no pika,No S. chamaejasme,2022,grasses_10,124.1,yak_2,June
+1,no pika,No S. chamaejasme,2022,forbs_11,105.8,yak_2,June
+1,no pika,No S. chamaejasme,2022,sedges_12,340.6,yak_1,July
+1,no pika,No S. chamaejasme,2022,grasses_13,202.6,yak_1,July
+1,no pika,No S. chamaejasme,2022,forbs_14,49.6,yak_1,July
+1,no pika,No S. chamaejasme,2022,sedges_15,369.9,yak_2,July
+1,no pika,No S. chamaejasme,2022,grasses_16,149.8,yak_2,July
+1,no pika,No S. chamaejasme,2022,forbs_17,87.1,yak_2,July
+1,no pika,No S. chamaejasme,2022,sedges_18,321.4,yak_1,August
+1,no pika,No S. chamaejasme,2022,grasses_19,168.6,yak_1,August
+1,no pika,No S. chamaejasme,2022,forbs_20,90.8,yak_1,August
+1,no pika,No S. chamaejasme,2022,sedges_21,263.3,yak_2,August
+1,no pika,No S. chamaejasme,2022,grasses_22,111.8,yak_2,August
+1,no pika,No S. chamaejasme,2022,forbs_23,47.3,yak_2,August
 2,no pika,No S. chamaejasme,2022,sedges_6,300.8,yak_1,June
 2,no pika,No S. chamaejasme,2022,grasses_7,174.6,yak_1,June
 2,no pika,No S. chamaejasme,2022,forbs_8,132.3,yak_1,June
-2,no pika,No S. chamaejasme,2022,total_9,607.6,yak_1,June
-2,no pika,No S. chamaejasme,2022,sedges_10,282.9,yak_2,June
-2,no pika,No S. chamaejasme,2022,grasses_11,118.7,yak_2,June
-2,no pika,No S. chamaejasme,2022,forbs_12,91.1,yak_2,June
-2,no pika,No S. chamaejasme,2022,total_13,492.7,yak_2,June
-2,no pika,No S. chamaejasme,2022,sedges_14,263.8,yak_1,July
-2,no pika,No S. chamaejasme,2022,grasses_15,100.6,yak_1,July
-2,no pika,No S. chamaejasme,2022,forbs_16,69.3,yak_1,July
-2,no pika,No S. chamaejasme,2022,total_17,433.8,yak_1,July
-2,no pika,No S. chamaejasme,2022,sedges_18,393.1,yak_2,July
-2,no pika,No S. chamaejasme,2022,grasses_19,197.7,yak_2,July
-2,no pika,No S. chamaejasme,2022,forbs_20,108,yak_2,July
-2,no pika,No S. chamaejasme,2022,total_21,698.8,yak_2,July
-2,no pika,No S. chamaejasme,2022,sedges_22,273.4,yak_1,August
-2,no pika,No S. chamaejasme,2022,grasses_23,128.9,yak_1,August
-2,no pika,No S. chamaejasme,2022,forbs_24,122.7,yak_1,August
-2,no pika,No S. chamaejasme,2022,total_25,525,yak_1,August
-2,no pika,No S. chamaejasme,2022,sedges_26,302.3,yak_1,August
-2,no pika,No S. chamaejasme,2022,grasses_27,214.6,yak_1,August
-2,no pika,No S. chamaejasme,2022,forbs_28,121.6,yak_1,August
-2,no pika,No S. chamaejasme,2022,total_29,638.4,yak_1,August
+2,no pika,No S. chamaejasme,2022,sedges_9,282.9,yak_2,June
+2,no pika,No S. chamaejasme,2022,grasses_10,118.7,yak_2,June
+2,no pika,No S. chamaejasme,2022,forbs_11,91.1,yak_2,June
+2,no pika,No S. chamaejasme,2022,sedges_12,263.8,yak_1,July
+2,no pika,No S. chamaejasme,2022,grasses_13,100.6,yak_1,July
+2,no pika,No S. chamaejasme,2022,forbs_14,69.3,yak_1,July
+2,no pika,No S. chamaejasme,2022,sedges_15,393.1,yak_2,July
+2,no pika,No S. chamaejasme,2022,grasses_16,197.7,yak_2,July
+2,no pika,No S. chamaejasme,2022,forbs_17,108,yak_2,July
+2,no pika,No S. chamaejasme,2022,sedges_18,273.4,yak_1,August
+2,no pika,No S. chamaejasme,2022,grasses_19,128.9,yak_1,August
+2,no pika,No S. chamaejasme,2022,forbs_20,122.7,yak_1,August
+2,no pika,No S. chamaejasme,2022,sedges_21,302.3,yak_2,August
+2,no pika,No S. chamaejasme,2022,grasses_22,214.6,yak_2,August
+2,no pika,No S. chamaejasme,2022,forbs_23,121.6,yak_2,August
 3,no pika,No S. chamaejasme,2022,sedges_6,360.4,yak_1,June
 3,no pika,No S. chamaejasme,2022,grasses_7,128.2,yak_1,June
 3,no pika,No S. chamaejasme,2022,forbs_8,89.6,yak_1,June
-3,no pika,No S. chamaejasme,2022,total_9,578.2,yak_1,June
-3,no pika,No S. chamaejasme,2022,sedges_10,262.3,yak_2,June
-3,no pika,No S. chamaejasme,2022,grasses_11,71.1,yak_2,June
-3,no pika,No S. chamaejasme,2022,forbs_12,62.3,yak_2,June
-3,no pika,No S. chamaejasme,2022,total_13,395.6,yak_2,June
-3,no pika,No S. chamaejasme,2022,sedges_14,223.6,yak_1,July
-3,no pika,No S. chamaejasme,2022,grasses_15,63,yak_1,July
-3,no pika,No S. chamaejasme,2022,forbs_16,24.8,yak_1,July
-3,no pika,No S. chamaejasme,2022,total_17,311.3,yak_1,July
-3,no pika,No S. chamaejasme,2022,sedges_18,297.3,yak_2,July
-3,no pika,No S. chamaejasme,2022,grasses_19,113.3,yak_2,July
-3,no pika,No S. chamaejasme,2022,forbs_20,60.3,yak_2,July
-3,no pika,No S. chamaejasme,2022,total_21,470.9,yak_2,July
-3,no pika,No S. chamaejasme,2022,sedges_22,252.9,yak_1,August
-3,no pika,No S. chamaejasme,2022,grasses_23,113.5,yak_1,August
-3,no pika,No S. chamaejasme,2022,forbs_24,41.6,yak_1,August
-3,no pika,No S. chamaejasme,2022,total_25,408,yak_1,August
-3,no pika,No S. chamaejasme,2022,sedges_26,194.9,yak_1,August
-3,no pika,No S. chamaejasme,2022,grasses_27,64,yak_1,August
-3,no pika,No S. chamaejasme,2022,forbs_28,29.3,yak_1,August
-3,no pika,No S. chamaejasme,2022,total_29,288.3,yak_1,August
+3,no pika,No S. chamaejasme,2022,sedges_9,262.3,yak_2,June
+3,no pika,No S. chamaejasme,2022,grasses_10,71.1,yak_2,June
+3,no pika,No S. chamaejasme,2022,forbs_11,62.3,yak_2,June
+3,no pika,No S. chamaejasme,2022,sedges_12,223.6,yak_1,July
+3,no pika,No S. chamaejasme,2022,grasses_13,63,yak_1,July
+3,no pika,No S. chamaejasme,2022,forbs_14,24.8,yak_1,July
+3,no pika,No S. chamaejasme,2022,sedges_15,297.3,yak_2,July
+3,no pika,No S. chamaejasme,2022,grasses_16,113.3,yak_2,July
+3,no pika,No S. chamaejasme,2022,forbs_17,60.3,yak_2,July
+3,no pika,No S. chamaejasme,2022,sedges_18,252.9,yak_1,August
+3,no pika,No S. chamaejasme,2022,grasses_19,113.5,yak_1,August
+3,no pika,No S. chamaejasme,2022,forbs_20,41.6,yak_1,August
+3,no pika,No S. chamaejasme,2022,sedges_21,194.9,yak_2,August
+3,no pika,No S. chamaejasme,2022,grasses_22,64,yak_2,August
+3,no pika,No S. chamaejasme,2022,forbs_23,29.3,yak_2,August
 4,no pika,No S. chamaejasme,2022,sedges_6,296.8,yak_1,June
 4,no pika,No S. chamaejasme,2022,grasses_7,204.3,yak_1,June
 4,no pika,No S. chamaejasme,2022,forbs_8,80,yak_1,June
-4,no pika,No S. chamaejasme,2022,total_9,581,yak_1,June
-4,no pika,No S. chamaejasme,2022,sedges_10,273.6,yak_2,June
-4,no pika,No S. chamaejasme,2022,grasses_11,107.1,yak_2,June
-4,no pika,No S. chamaejasme,2022,forbs_12,93,yak_2,June
-4,no pika,No S. chamaejasme,2022,total_13,473.7,yak_2,June
-4,no pika,No S. chamaejasme,2022,sedges_14,352.9,yak_1,July
-4,no pika,No S. chamaejasme,2022,grasses_15,186.2,yak_1,July
-4,no pika,No S. chamaejasme,2022,forbs_16,118.8,yak_1,July
-4,no pika,No S. chamaejasme,2022,total_17,657.8,yak_1,July
-4,no pika,No S. chamaejasme,2022,sedges_18,285.7,yak_2,July
-4,no pika,No S. chamaejasme,2022,grasses_19,204.4,yak_2,July
-4,no pika,No S. chamaejasme,2022,forbs_20,97.4,yak_2,July
-4,no pika,No S. chamaejasme,2022,total_21,587.5,yak_2,July
-4,no pika,No S. chamaejasme,2022,sedges_22,298.7,yak_1,August
-4,no pika,No S. chamaejasme,2022,grasses_23,205.1,yak_1,August
-4,no pika,No S. chamaejasme,2022,forbs_24,43.6,yak_1,August
-4,no pika,No S. chamaejasme,2022,total_25,547.3,yak_1,August
-4,no pika,No S. chamaejasme,2022,sedges_26,182.7,yak_1,August
-4,no pika,No S. chamaejasme,2022,grasses_27,159.1,yak_1,August
-4,no pika,No S. chamaejasme,2022,forbs_28,119.6,yak_1,August
-4,no pika,No S. chamaejasme,2022,total_29,461.3,yak_1,August
+4,no pika,No S. chamaejasme,2022,sedges_9,273.6,yak_2,June
+4,no pika,No S. chamaejasme,2022,grasses_10,107.1,yak_2,June
+4,no pika,No S. chamaejasme,2022,forbs_11,93,yak_2,June
+4,no pika,No S. chamaejasme,2022,sedges_12,352.9,yak_1,July
+4,no pika,No S. chamaejasme,2022,grasses_13,186.2,yak_1,July
+4,no pika,No S. chamaejasme,2022,forbs_14,118.8,yak_1,July
+4,no pika,No S. chamaejasme,2022,sedges_15,285.7,yak_2,July
+4,no pika,No S. chamaejasme,2022,grasses_16,204.4,yak_2,July
+4,no pika,No S. chamaejasme,2022,forbs_17,97.4,yak_2,July
+4,no pika,No S. chamaejasme,2022,sedges_18,298.7,yak_1,August
+4,no pika,No S. chamaejasme,2022,grasses_19,205.1,yak_1,August
+4,no pika,No S. chamaejasme,2022,forbs_20,43.6,yak_1,August
+4,no pika,No S. chamaejasme,2022,sedges_21,182.7,yak_2,August
+4,no pika,No S. chamaejasme,2022,grasses_22,159.1,yak_2,August
+4,no pika,No S. chamaejasme,2022,forbs_23,119.6,yak_2,August
 1,pika,No S. chamaejasme,2022,sedges_6,262.7,yak_1,June
 1,pika,No S. chamaejasme,2022,grasses_7,93.1,yak_1,June
 1,pika,No S. chamaejasme,2022,forbs_8,79,yak_1,June
-1,pika,No S. chamaejasme,2022,total_9,434.8,yak_1,June
-1,pika,No S. chamaejasme,2022,sedges_10,220.3,yak_2,June
-1,pika,No S. chamaejasme,2022,grasses_11,126.9,yak_2,June
-1,pika,No S. chamaejasme,2022,forbs_12,32.4,yak_2,June
-1,pika,No S. chamaejasme,2022,total_13,379.7,yak_2,June
-1,pika,No S. chamaejasme,2022,sedges_14,248.4,yak_1,July
-1,pika,No S. chamaejasme,2022,grasses_15,81.1,yak_1,July
-1,pika,No S. chamaejasme,2022,forbs_16,32,yak_1,July
-1,pika,No S. chamaejasme,2022,total_17,361.5,yak_1,July
-1,pika,No S. chamaejasme,2022,sedges_18,248.1,yak_2,July
-1,pika,No S. chamaejasme,2022,grasses_19,127.1,yak_2,July
-1,pika,No S. chamaejasme,2022,forbs_20,40,yak_2,July
-1,pika,No S. chamaejasme,2022,total_21,415.2,yak_2,July
-1,pika,No S. chamaejasme,2022,sedges_22,289.3,yak_1,August
-1,pika,No S. chamaejasme,2022,grasses_23,143.8,yak_1,August
-1,pika,No S. chamaejasme,2022,forbs_24,86.7,yak_1,August
-1,pika,No S. chamaejasme,2022,total_25,519.7,yak_1,August
-1,pika,No S. chamaejasme,2022,sedges_26,282.3,yak_1,August
-1,pika,No S. chamaejasme,2022,grasses_27,168.6,yak_1,August
-1,pika,No S. chamaejasme,2022,forbs_28,97.3,yak_1,August
-1,pika,No S. chamaejasme,2022,total_29,548.2,yak_1,August
+1,pika,No S. chamaejasme,2022,sedges_9,220.3,yak_2,June
+1,pika,No S. chamaejasme,2022,grasses_10,126.9,yak_2,June
+1,pika,No S. chamaejasme,2022,forbs_11,32.4,yak_2,June
+1,pika,No S. chamaejasme,2022,sedges_12,248.4,yak_1,July
+1,pika,No S. chamaejasme,2022,grasses_13,81.1,yak_1,July
+1,pika,No S. chamaejasme,2022,forbs_14,32,yak_1,July
+1,pika,No S. chamaejasme,2022,sedges_15,248.1,yak_2,July
+1,pika,No S. chamaejasme,2022,grasses_16,127.1,yak_2,July
+1,pika,No S. chamaejasme,2022,forbs_17,40,yak_2,July
+1,pika,No S. chamaejasme,2022,sedges_18,289.3,yak_1,August
+1,pika,No S. chamaejasme,2022,grasses_19,143.8,yak_1,August
+1,pika,No S. chamaejasme,2022,forbs_20,86.7,yak_1,August
+1,pika,No S. chamaejasme,2022,sedges_21,282.3,yak_2,August
+1,pika,No S. chamaejasme,2022,grasses_22,168.6,yak_2,August
+1,pika,No S. chamaejasme,2022,forbs_23,97.3,yak_2,August
 2,pika,No S. chamaejasme,2022,sedges_6,289.4,yak_1,June
 2,pika,No S. chamaejasme,2022,grasses_7,153.6,yak_1,June
 2,pika,No S. chamaejasme,2022,forbs_8,82.6,yak_1,June
-2,pika,No S. chamaejasme,2022,total_9,525.6,yak_1,June
-2,pika,No S. chamaejasme,2022,sedges_10,211.6,yak_2,June
-2,pika,No S. chamaejasme,2022,grasses_11,68.1,yak_2,June
-2,pika,No S. chamaejasme,2022,forbs_12,122.6,yak_2,June
-2,pika,No S. chamaejasme,2022,total_13,402.3,yak_2,June
-2,pika,No S. chamaejasme,2022,sedges_14,268.7,yak_1,July
-2,pika,No S. chamaejasme,2022,grasses_15,137.6,yak_1,July
-2,pika,No S. chamaejasme,2022,forbs_16,124.9,yak_1,July
-2,pika,No S. chamaejasme,2022,total_17,531.2,yak_1,July
-2,pika,No S. chamaejasme,2022,sedges_18,205.3,yak_2,July
-2,pika,No S. chamaejasme,2022,grasses_19,100,yak_2,July
-2,pika,No S. chamaejasme,2022,forbs_20,104.4,yak_2,July
-2,pika,No S. chamaejasme,2022,total_21,409.8,yak_2,July
-2,pika,No S. chamaejasme,2022,sedges_22,254.7,yak_1,August
-2,pika,No S. chamaejasme,2022,grasses_23,161.3,yak_1,August
-2,pika,No S. chamaejasme,2022,forbs_24,129.8,yak_1,August
-2,pika,No S. chamaejasme,2022,total_25,545.8,yak_1,August
-2,pika,No S. chamaejasme,2022,sedges_26,298.7,yak_1,August
-2,pika,No S. chamaejasme,2022,grasses_27,129.6,yak_1,August
-2,pika,No S. chamaejasme,2022,forbs_28,144.2,yak_1,August
-2,pika,No S. chamaejasme,2022,total_29,572.4,yak_1,August
+2,pika,No S. chamaejasme,2022,sedges_9,211.6,yak_2,June
+2,pika,No S. chamaejasme,2022,grasses_10,68.1,yak_2,June
+2,pika,No S. chamaejasme,2022,forbs_11,122.6,yak_2,June
+2,pika,No S. chamaejasme,2022,sedges_12,268.7,yak_1,July
+2,pika,No S. chamaejasme,2022,grasses_13,137.6,yak_1,July
+2,pika,No S. chamaejasme,2022,forbs_14,124.9,yak_1,July
+2,pika,No S. chamaejasme,2022,sedges_15,205.3,yak_2,July
+2,pika,No S. chamaejasme,2022,grasses_16,100,yak_2,July
+2,pika,No S. chamaejasme,2022,forbs_17,104.4,yak_2,July
+2,pika,No S. chamaejasme,2022,sedges_18,254.7,yak_1,August
+2,pika,No S. chamaejasme,2022,grasses_19,161.3,yak_1,August
+2,pika,No S. chamaejasme,2022,forbs_20,129.8,yak_1,August
+2,pika,No S. chamaejasme,2022,sedges_21,298.7,yak_2,August
+2,pika,No S. chamaejasme,2022,grasses_22,129.6,yak_2,August
+2,pika,No S. chamaejasme,2022,forbs_23,144.2,yak_2,August
 3,pika,No S. chamaejasme,2022,sedges_6,267.8,yak_1,June
 3,pika,No S. chamaejasme,2022,grasses_7,102.7,yak_1,June
 3,pika,No S. chamaejasme,2022,forbs_8,77.9,yak_1,June
-3,pika,No S. chamaejasme,2022,total_9,448.4,yak_1,June
-3,pika,No S. chamaejasme,2022,sedges_10,318.4,yak_2,June
-3,pika,No S. chamaejasme,2022,grasses_11,171.6,yak_2,June
-3,pika,No S. chamaejasme,2022,forbs_12,143,yak_2,June
-3,pika,No S. chamaejasme,2022,total_13,633,yak_2,June
-3,pika,No S. chamaejasme,2022,sedges_14,284.9,yak_1,July
-3,pika,No S. chamaejasme,2022,grasses_15,124,yak_1,July
-3,pika,No S. chamaejasme,2022,forbs_16,21.2,yak_1,July
-3,pika,No S. chamaejasme,2022,total_17,430.1,yak_1,July
-3,pika,No S. chamaejasme,2022,sedges_18,336.6,yak_2,July
-3,pika,No S. chamaejasme,2022,grasses_19,163.1,yak_2,July
-3,pika,No S. chamaejasme,2022,forbs_20,81,yak_2,July
-3,pika,No S. chamaejasme,2022,total_21,580.7,yak_2,July
-3,pika,No S. chamaejasme,2022,sedges_22,350.8,yak_1,August
-3,pika,No S. chamaejasme,2022,grasses_23,153.3,yak_1,August
-3,pika,No S. chamaejasme,2022,forbs_24,101.1,yak_1,August
-3,pika,No S. chamaejasme,2022,total_25,605.2,yak_1,August
-3,pika,No S. chamaejasme,2022,sedges_26,363.8,yak_1,August
-3,pika,No S. chamaejasme,2022,grasses_27,158.7,yak_1,August
-3,pika,No S. chamaejasme,2022,forbs_28,153.5,yak_1,August
-3,pika,No S. chamaejasme,2022,total_29,675.9,yak_1,August
+3,pika,No S. chamaejasme,2022,sedges_9,318.4,yak_2,June
+3,pika,No S. chamaejasme,2022,grasses_10,171.6,yak_2,June
+3,pika,No S. chamaejasme,2022,forbs_11,143,yak_2,June
+3,pika,No S. chamaejasme,2022,sedges_12,284.9,yak_1,July
+3,pika,No S. chamaejasme,2022,grasses_13,124,yak_1,July
+3,pika,No S. chamaejasme,2022,forbs_14,21.2,yak_1,July
+3,pika,No S. chamaejasme,2022,sedges_15,336.6,yak_2,July
+3,pika,No S. chamaejasme,2022,grasses_16,163.1,yak_2,July
+3,pika,No S. chamaejasme,2022,forbs_17,81,yak_2,July
+3,pika,No S. chamaejasme,2022,sedges_18,350.8,yak_1,August
+3,pika,No S. chamaejasme,2022,grasses_19,153.3,yak_1,August
+3,pika,No S. chamaejasme,2022,forbs_20,101.1,yak_1,August
+3,pika,No S. chamaejasme,2022,sedges_21,363.8,yak_2,August
+3,pika,No S. chamaejasme,2022,grasses_22,158.7,yak_2,August
+3,pika,No S. chamaejasme,2022,forbs_23,153.5,yak_2,August
 4,pika,No S. chamaejasme,2022,sedges_6,253,yak_1,June
 4,pika,No S. chamaejasme,2022,grasses_7,128.2,yak_1,June
 4,pika,No S. chamaejasme,2022,forbs_8,72.8,yak_1,June
-4,pika,No S. chamaejasme,2022,total_9,454,yak_1,June
-4,pika,No S. chamaejasme,2022,sedges_10,323.1,yak_2,June
-4,pika,No S. chamaejasme,2022,grasses_11,180.3,yak_2,June
-4,pika,No S. chamaejasme,2022,forbs_12,102.9,yak_2,June
-4,pika,No S. chamaejasme,2022,total_13,606.3,yak_2,June
-4,pika,No S. chamaejasme,2022,sedges_14,302.3,yak_1,July
-4,pika,No S. chamaejasme,2022,grasses_15,118.8,yak_1,July
-4,pika,No S. chamaejasme,2022,forbs_16,33.6,yak_1,July
-4,pika,No S. chamaejasme,2022,total_17,454.8,yak_1,July
-4,pika,No S. chamaejasme,2022,sedges_18,204.7,yak_2,July
-4,pika,No S. chamaejasme,2022,grasses_19,218,yak_2,July
-4,pika,No S. chamaejasme,2022,forbs_20,48.4,yak_2,July
-4,pika,No S. chamaejasme,2022,total_21,471.1,yak_2,July
-4,pika,No S. chamaejasme,2022,sedges_22,242.6,yak_1,August
-4,pika,No S. chamaejasme,2022,grasses_23,227.1,yak_1,August
-4,pika,No S. chamaejasme,2022,forbs_24,110.7,yak_1,August
-4,pika,No S. chamaejasme,2022,total_25,580.3,yak_1,August
-4,pika,No S. chamaejasme,2022,sedges_26,301.9,yak_1,August
-4,pika,No S. chamaejasme,2022,grasses_27,196.9,yak_1,August
-4,pika,No S. chamaejasme,2022,forbs_28,182.9,yak_1,August
-4,pika,No S. chamaejasme,2022,total_29,681.8,yak_1,August
+4,pika,No S. chamaejasme,2022,sedges_9,323.1,yak_2,June
+4,pika,No S. chamaejasme,2022,grasses_10,180.3,yak_2,June
+4,pika,No S. chamaejasme,2022,forbs_11,102.9,yak_2,June
+4,pika,No S. chamaejasme,2022,sedges_12,302.3,yak_1,July
+4,pika,No S. chamaejasme,2022,grasses_13,118.8,yak_1,July
+4,pika,No S. chamaejasme,2022,forbs_14,33.6,yak_1,July
+4,pika,No S. chamaejasme,2022,sedges_15,204.7,yak_2,July
+4,pika,No S. chamaejasme,2022,grasses_16,218,yak_2,July
+4,pika,No S. chamaejasme,2022,forbs_17,48.4,yak_2,July
+4,pika,No S. chamaejasme,2022,sedges_18,242.6,yak_1,August
+4,pika,No S. chamaejasme,2022,grasses_19,227.1,yak_1,August
+4,pika,No S. chamaejasme,2022,forbs_20,110.7,yak_1,August
+4,pika,No S. chamaejasme,2022,sedges_21,301.9,yak_2,August
+4,pika,No S. chamaejasme,2022,grasses_22,196.9,yak_2,August
+4,pika,No S. chamaejasme,2022,forbs_23,182.9,yak_2,August
 1,no pika,S. chamaejasme,2022,sedges_6,157.3,yak_1,June
 1,no pika,S. chamaejasme,2022,grasses_7,78.8,yak_1,June
 1,no pika,S. chamaejasme,2022,forbs_8,104.8,yak_1,June
-1,no pika,S. chamaejasme,2022,total_9,340.8,yak_1,June
-1,no pika,S. chamaejasme,2022,sedges_10,213.1,yak_2,June
-1,no pika,S. chamaejasme,2022,grasses_11,98.3,yak_2,June
-1,no pika,S. chamaejasme,2022,forbs_12,86.6,yak_2,June
-1,no pika,S. chamaejasme,2022,total_13,406.3,yak_2,June
-1,no pika,S. chamaejasme,2022,sedges_14,152.3,yak_1,July
-1,no pika,S. chamaejasme,2022,grasses_15,88.1,yak_1,July
-1,no pika,S. chamaejasme,2022,forbs_16,109.6,yak_1,July
-1,no pika,S. chamaejasme,2022,total_17,349.9,yak_1,July
-1,no pika,S. chamaejasme,2022,sedges_18,309.1,yak_2,July
-1,no pika,S. chamaejasme,2022,grasses_19,114.7,yak_2,July
-1,no pika,S. chamaejasme,2022,forbs_20,101.3,yak_2,July
-1,no pika,S. chamaejasme,2022,total_21,525,yak_2,July
-1,no pika,S. chamaejasme,2022,sedges_22,264.4,yak_1,August
-1,no pika,S. chamaejasme,2022,grasses_23,108.8,yak_1,August
-1,no pika,S. chamaejasme,2022,forbs_24,112,yak_1,August
-1,no pika,S. chamaejasme,2022,total_25,485.3,yak_1,August
-1,no pika,S. chamaejasme,2022,sedges_26,193,yak_1,August
-1,no pika,S. chamaejasme,2022,grasses_27,93.8,yak_1,August
-1,no pika,S. chamaejasme,2022,forbs_28,125.3,yak_1,August
-1,no pika,S. chamaejasme,2022,total_29,412.1,yak_1,August
+1,no pika,S. chamaejasme,2022,sedges_9,213.1,yak_2,June
+1,no pika,S. chamaejasme,2022,grasses_10,98.3,yak_2,June
+1,no pika,S. chamaejasme,2022,forbs_11,86.6,yak_2,June
+1,no pika,S. chamaejasme,2022,sedges_12,152.3,yak_1,July
+1,no pika,S. chamaejasme,2022,grasses_13,88.1,yak_1,July
+1,no pika,S. chamaejasme,2022,forbs_14,109.6,yak_1,July
+1,no pika,S. chamaejasme,2022,sedges_15,309.1,yak_2,July
+1,no pika,S. chamaejasme,2022,grasses_16,114.7,yak_2,July
+1,no pika,S. chamaejasme,2022,forbs_17,101.3,yak_2,July
+1,no pika,S. chamaejasme,2022,sedges_18,264.4,yak_1,August
+1,no pika,S. chamaejasme,2022,grasses_19,108.8,yak_1,August
+1,no pika,S. chamaejasme,2022,forbs_20,112,yak_1,August
+1,no pika,S. chamaejasme,2022,sedges_21,193,yak_2,August
+1,no pika,S. chamaejasme,2022,grasses_22,93.8,yak_2,August
+1,no pika,S. chamaejasme,2022,forbs_23,125.3,yak_2,August
 2,no pika,S. chamaejasme,2022,sedges_6,245.3,yak_1,June
 2,no pika,S. chamaejasme,2022,grasses_7,61.3,yak_1,June
 2,no pika,S. chamaejasme,2022,forbs_8,122.3,yak_1,June
-2,no pika,S. chamaejasme,2022,total_9,429,yak_1,June
-2,no pika,S. chamaejasme,2022,sedges_10,118.6,yak_2,June
-2,no pika,S. chamaejasme,2022,grasses_11,108,yak_2,June
-2,no pika,S. chamaejasme,2022,forbs_12,143.8,yak_2,June
-2,no pika,S. chamaejasme,2022,total_13,370.3,yak_2,June
-2,no pika,S. chamaejasme,2022,sedges_14,244.8,yak_1,July
-2,no pika,S. chamaejasme,2022,grasses_15,92,yak_1,July
-2,no pika,S. chamaejasme,2022,forbs_16,74.1,yak_1,July
-2,no pika,S. chamaejasme,2022,total_17,410.9,yak_1,July
-2,no pika,S. chamaejasme,2022,sedges_18,205.4,yak_2,July
-2,no pika,S. chamaejasme,2022,grasses_19,70.7,yak_2,July
-2,no pika,S. chamaejasme,2022,forbs_20,88.3,yak_2,July
-2,no pika,S. chamaejasme,2022,total_21,364.3,yak_2,July
-2,no pika,S. chamaejasme,2022,sedges_22,206.8,yak_1,August
-2,no pika,S. chamaejasme,2022,grasses_23,80.6,yak_1,August
-2,no pika,S. chamaejasme,2022,forbs_24,64.6,yak_1,August
-2,no pika,S. chamaejasme,2022,total_25,351.9,yak_1,August
-2,no pika,S. chamaejasme,2022,sedges_26,285.1,yak_1,August
-2,no pika,S. chamaejasme,2022,grasses_27,77.3,yak_1,August
-2,no pika,S. chamaejasme,2022,forbs_28,123.3,yak_1,August
-2,no pika,S. chamaejasme,2022,total_29,485.7,yak_1,August
+2,no pika,S. chamaejasme,2022,sedges_9,118.6,yak_2,June
+2,no pika,S. chamaejasme,2022,grasses_10,108,yak_2,June
+2,no pika,S. chamaejasme,2022,forbs_11,143.8,yak_2,June
+2,no pika,S. chamaejasme,2022,sedges_12,244.8,yak_1,July
+2,no pika,S. chamaejasme,2022,grasses_13,92,yak_1,July
+2,no pika,S. chamaejasme,2022,forbs_14,74.1,yak_1,July
+2,no pika,S. chamaejasme,2022,sedges_15,205.4,yak_2,July
+2,no pika,S. chamaejasme,2022,grasses_16,70.7,yak_2,July
+2,no pika,S. chamaejasme,2022,forbs_17,88.3,yak_2,July
+2,no pika,S. chamaejasme,2022,sedges_18,206.8,yak_1,August
+2,no pika,S. chamaejasme,2022,grasses_19,80.6,yak_1,August
+2,no pika,S. chamaejasme,2022,forbs_20,64.6,yak_1,August
+2,no pika,S. chamaejasme,2022,sedges_21,285.1,yak_2,August
+2,no pika,S. chamaejasme,2022,grasses_22,77.3,yak_2,August
+2,no pika,S. chamaejasme,2022,forbs_23,123.3,yak_2,August
 3,no pika,S. chamaejasme,2022,sedges_6,111.8,yak_1,June
 3,no pika,S. chamaejasme,2022,grasses_7,115,yak_1,June
 3,no pika,S. chamaejasme,2022,forbs_8,113.3,yak_1,June
-3,no pika,S. chamaejasme,2022,total_9,340,yak_1,June
-3,no pika,S. chamaejasme,2022,sedges_10,173.8,yak_2,June
-3,no pika,S. chamaejasme,2022,grasses_11,133.3,yak_2,June
-3,no pika,S. chamaejasme,2022,forbs_12,47.3,yak_2,June
-3,no pika,S. chamaejasme,2022,total_13,354.3,yak_2,June
-3,no pika,S. chamaejasme,2022,sedges_14,156.6,yak_1,July
-3,no pika,S. chamaejasme,2022,grasses_15,167.6,yak_1,July
-3,no pika,S. chamaejasme,2022,forbs_16,114.6,yak_1,July
-3,no pika,S. chamaejasme,2022,total_17,438.8,yak_1,July
-3,no pika,S. chamaejasme,2022,sedges_18,223.6,yak_2,July
-3,no pika,S. chamaejasme,2022,grasses_19,124,yak_2,July
-3,no pika,S. chamaejasme,2022,forbs_20,99.4,yak_2,July
-3,no pika,S. chamaejasme,2022,total_21,447,yak_2,July
-3,no pika,S. chamaejasme,2022,sedges_22,169.1,yak_1,August
-3,no pika,S. chamaejasme,2022,grasses_23,125.3,yak_1,August
-3,no pika,S. chamaejasme,2022,forbs_24,45.2,yak_1,August
-3,no pika,S. chamaejasme,2022,total_25,339.6,yak_1,August
-3,no pika,S. chamaejasme,2022,sedges_26,192.3,yak_1,August
-3,no pika,S. chamaejasme,2022,grasses_27,135.3,yak_1,August
-3,no pika,S. chamaejasme,2022,forbs_28,58.5,yak_1,August
-3,no pika,S. chamaejasme,2022,total_29,386.1,yak_1,August
+3,no pika,S. chamaejasme,2022,sedges_9,173.8,yak_2,June
+3,no pika,S. chamaejasme,2022,grasses_10,133.3,yak_2,June
+3,no pika,S. chamaejasme,2022,forbs_11,47.3,yak_2,June
+3,no pika,S. chamaejasme,2022,sedges_12,156.6,yak_1,July
+3,no pika,S. chamaejasme,2022,grasses_13,167.6,yak_1,July
+3,no pika,S. chamaejasme,2022,forbs_14,114.6,yak_1,July
+3,no pika,S. chamaejasme,2022,sedges_15,223.6,yak_2,July
+3,no pika,S. chamaejasme,2022,grasses_16,124,yak_2,July
+3,no pika,S. chamaejasme,2022,forbs_17,99.4,yak_2,July
+3,no pika,S. chamaejasme,2022,sedges_18,169.1,yak_1,August
+3,no pika,S. chamaejasme,2022,grasses_19,125.3,yak_1,August
+3,no pika,S. chamaejasme,2022,forbs_20,45.2,yak_1,August
+3,no pika,S. chamaejasme,2022,sedges_21,192.3,yak_2,August
+3,no pika,S. chamaejasme,2022,grasses_22,135.3,yak_2,August
+3,no pika,S. chamaejasme,2022,forbs_23,58.5,yak_2,August
 4,no pika,S. chamaejasme,2022,sedges_6,143.8,yak_1,June
 4,no pika,S. chamaejasme,2022,grasses_7,69.3,yak_1,June
 4,no pika,S. chamaejasme,2022,forbs_8,143.6,yak_1,June
-4,no pika,S. chamaejasme,2022,total_9,356.7,yak_1,June
-4,no pika,S. chamaejasme,2022,sedges_10,106.7,yak_2,June
-4,no pika,S. chamaejasme,2022,grasses_11,76,yak_2,June
-4,no pika,S. chamaejasme,2022,forbs_12,124.7,yak_2,June
-4,no pika,S. chamaejasme,2022,total_13,307.3,yak_2,June
-4,no pika,S. chamaejasme,2022,sedges_14,116,yak_1,July
-4,no pika,S. chamaejasme,2022,grasses_15,96.3,yak_1,July
-4,no pika,S. chamaejasme,2022,forbs_16,61.8,yak_1,July
-4,no pika,S. chamaejasme,2022,total_17,274.2,yak_1,July
-4,no pika,S. chamaejasme,2022,sedges_18,126,yak_2,July
-4,no pika,S. chamaejasme,2022,grasses_19,105.1,yak_2,July
-4,no pika,S. chamaejasme,2022,forbs_20,73.1,yak_2,July
-4,no pika,S. chamaejasme,2022,total_21,304.2,yak_2,July
-4,no pika,S. chamaejasme,2022,sedges_22,154.3,yak_1,August
-4,no pika,S. chamaejasme,2022,grasses_23,93.8,yak_1,August
-4,no pika,S. chamaejasme,2022,forbs_24,85.1,yak_1,August
-4,no pika,S. chamaejasme,2022,total_25,333.1,yak_1,August
-4,no pika,S. chamaejasme,2022,sedges_26,139.2,yak_1,August
-4,no pika,S. chamaejasme,2022,grasses_27,180.1,yak_1,August
-4,no pika,S. chamaejasme,2022,forbs_28,84.8,yak_1,August
-4,no pika,S. chamaejasme,2022,total_29,404,yak_1,August
+4,no pika,S. chamaejasme,2022,sedges_9,106.7,yak_2,June
+4,no pika,S. chamaejasme,2022,grasses_10,76,yak_2,June
+4,no pika,S. chamaejasme,2022,forbs_11,124.7,yak_2,June
+4,no pika,S. chamaejasme,2022,sedges_12,116,yak_1,July
+4,no pika,S. chamaejasme,2022,grasses_13,96.3,yak_1,July
+4,no pika,S. chamaejasme,2022,forbs_14,61.8,yak_1,July
+4,no pika,S. chamaejasme,2022,sedges_15,126,yak_2,July
+4,no pika,S. chamaejasme,2022,grasses_16,105.1,yak_2,July
+4,no pika,S. chamaejasme,2022,forbs_17,73.1,yak_2,July
+4,no pika,S. chamaejasme,2022,sedges_18,154.3,yak_1,August
+4,no pika,S. chamaejasme,2022,grasses_19,93.8,yak_1,August
+4,no pika,S. chamaejasme,2022,forbs_20,85.1,yak_1,August
+4,no pika,S. chamaejasme,2022,sedges_21,139.2,yak_2,August
+4,no pika,S. chamaejasme,2022,grasses_22,180.1,yak_2,August
+4,no pika,S. chamaejasme,2022,forbs_23,84.8,yak_2,August
 1,pika,S. chamaejasme,2022,sedges_6,236.1,yak_1,June
 1,pika,S. chamaejasme,2022,grasses_7,103.3,yak_1,June
 1,pika,S. chamaejasme,2022,forbs_8,96,yak_1,June
-1,pika,S. chamaejasme,2022,total_9,435.3,yak_1,June
-1,pika,S. chamaejasme,2022,sedges_10,238.4,yak_2,June
-1,pika,S. chamaejasme,2022,grasses_11,163.8,yak_2,June
-1,pika,S. chamaejasme,2022,forbs_12,116.6,yak_2,June
-1,pika,S. chamaejasme,2022,total_13,518.8,yak_2,June
-1,pika,S. chamaejasme,2022,sedges_14,348.7,yak_1,July
-1,pika,S. chamaejasme,2022,grasses_15,155.7,yak_1,July
-1,pika,S. chamaejasme,2022,forbs_16,188.9,yak_1,July
-1,pika,S. chamaejasme,2022,total_17,693.3,yak_1,July
-1,pika,S. chamaejasme,2022,sedges_18,265.1,yak_2,July
-1,pika,S. chamaejasme,2022,grasses_19,156,yak_2,July
-1,pika,S. chamaejasme,2022,forbs_20,59.6,yak_2,July
-1,pika,S. chamaejasme,2022,total_21,480.7,yak_2,July
-1,pika,S. chamaejasme,2022,sedges_22,307,yak_1,August
-1,pika,S. chamaejasme,2022,grasses_23,163.6,yak_1,August
-1,pika,S. chamaejasme,2022,forbs_24,80.6,yak_1,August
-1,pika,S. chamaejasme,2022,total_25,551.2,yak_1,August
-1,pika,S. chamaejasme,2022,sedges_26,296.9,yak_1,August
-1,pika,S. chamaejasme,2022,grasses_27,122.7,yak_1,August
-1,pika,S. chamaejasme,2022,forbs_28,122.1,yak_1,August
-1,pika,S. chamaejasme,2022,total_29,541.7,yak_1,August
+1,pika,S. chamaejasme,2022,sedges_9,238.4,yak_2,June
+1,pika,S. chamaejasme,2022,grasses_10,163.8,yak_2,June
+1,pika,S. chamaejasme,2022,forbs_11,116.6,yak_2,June
+1,pika,S. chamaejasme,2022,sedges_12,348.7,yak_1,July
+1,pika,S. chamaejasme,2022,grasses_13,155.7,yak_1,July
+1,pika,S. chamaejasme,2022,forbs_14,188.9,yak_1,July
+1,pika,S. chamaejasme,2022,sedges_15,265.1,yak_2,July
+1,pika,S. chamaejasme,2022,grasses_16,156,yak_2,July
+1,pika,S. chamaejasme,2022,forbs_17,59.6,yak_2,July
+1,pika,S. chamaejasme,2022,sedges_18,307,yak_1,August
+1,pika,S. chamaejasme,2022,grasses_19,163.6,yak_1,August
+1,pika,S. chamaejasme,2022,forbs_20,80.6,yak_1,August
+1,pika,S. chamaejasme,2022,sedges_21,296.9,yak_2,August
+1,pika,S. chamaejasme,2022,grasses_22,122.7,yak_2,August
+1,pika,S. chamaejasme,2022,forbs_23,122.1,yak_2,August
 2,pika,S. chamaejasme,2022,sedges_6,215.9,yak_1,June
 2,pika,S. chamaejasme,2022,grasses_7,162.7,yak_1,June
 2,pika,S. chamaejasme,2022,forbs_8,85.7,yak_1,June
-2,pika,S. chamaejasme,2022,total_9,464.3,yak_1,June
-2,pika,S. chamaejasme,2022,sedges_10,268.6,yak_2,June
-2,pika,S. chamaejasme,2022,grasses_11,120.9,yak_2,June
-2,pika,S. chamaejasme,2022,forbs_12,128.1,yak_2,June
-2,pika,S. chamaejasme,2022,total_13,517.6,yak_2,June
-2,pika,S. chamaejasme,2022,sedges_14,273.4,yak_1,July
-2,pika,S. chamaejasme,2022,grasses_15,180.6,yak_1,July
-2,pika,S. chamaejasme,2022,forbs_16,115.1,yak_1,July
-2,pika,S. chamaejasme,2022,total_17,569.1,yak_1,July
-2,pika,S. chamaejasme,2022,sedges_18,280.8,yak_2,July
-2,pika,S. chamaejasme,2022,grasses_19,181.3,yak_2,July
-2,pika,S. chamaejasme,2022,forbs_20,89.8,yak_2,July
-2,pika,S. chamaejasme,2022,total_21,551.9,yak_2,July
-2,pika,S. chamaejasme,2022,sedges_22,343.8,yak_1,August
-2,pika,S. chamaejasme,2022,grasses_23,142.7,yak_1,August
-2,pika,S. chamaejasme,2022,forbs_24,72,yak_1,August
-2,pika,S. chamaejasme,2022,total_25,558.4,yak_1,August
-2,pika,S. chamaejasme,2022,sedges_26,352,yak_1,August
-2,pika,S. chamaejasme,2022,grasses_27,140.8,yak_1,August
-2,pika,S. chamaejasme,2022,forbs_28,77.3,yak_1,August
-2,pika,S. chamaejasme,2022,total_29,570.1,yak_1,August
+2,pika,S. chamaejasme,2022,sedges_9,268.6,yak_2,June
+2,pika,S. chamaejasme,2022,grasses_10,120.9,yak_2,June
+2,pika,S. chamaejasme,2022,forbs_11,128.1,yak_2,June
+2,pika,S. chamaejasme,2022,sedges_12,273.4,yak_1,July
+2,pika,S. chamaejasme,2022,grasses_13,180.6,yak_1,July
+2,pika,S. chamaejasme,2022,forbs_14,115.1,yak_1,July
+2,pika,S. chamaejasme,2022,sedges_15,280.8,yak_2,July
+2,pika,S. chamaejasme,2022,grasses_16,181.3,yak_2,July
+2,pika,S. chamaejasme,2022,forbs_17,89.8,yak_2,July
+2,pika,S. chamaejasme,2022,sedges_18,343.8,yak_1,August
+2,pika,S. chamaejasme,2022,grasses_19,142.7,yak_1,August
+2,pika,S. chamaejasme,2022,forbs_20,72,yak_1,August
+2,pika,S. chamaejasme,2022,sedges_21,352,yak_2,August
+2,pika,S. chamaejasme,2022,grasses_22,140.8,yak_2,August
+2,pika,S. chamaejasme,2022,forbs_23,77.3,yak_2,August
 3,pika,S. chamaejasme,2022,sedges_6,206.3,yak_1,June
 3,pika,S. chamaejasme,2022,grasses_7,127.1,yak_1,June
 3,pika,S. chamaejasme,2022,forbs_8,56.3,yak_1,June
-3,pika,S. chamaejasme,2022,total_9,389.6,yak_1,June
-3,pika,S. chamaejasme,2022,sedges_10,222.3,yak_2,June
-3,pika,S. chamaejasme,2022,grasses_11,230,yak_2,June
-3,pika,S. chamaejasme,2022,forbs_12,65.5,yak_2,June
-3,pika,S. chamaejasme,2022,total_13,517.8,yak_2,June
-3,pika,S. chamaejasme,2022,sedges_14,235.4,yak_1,July
-3,pika,S. chamaejasme,2022,grasses_15,110.3,yak_1,July
-3,pika,S. chamaejasme,2022,forbs_16,40.4,yak_1,July
-3,pika,S. chamaejasme,2022,total_17,386.1,yak_1,July
-3,pika,S. chamaejasme,2022,sedges_18,263.8,yak_2,July
-3,pika,S. chamaejasme,2022,grasses_19,158,yak_2,July
-3,pika,S. chamaejasme,2022,forbs_20,70.8,yak_2,July
-3,pika,S. chamaejasme,2022,total_21,492.6,yak_2,July
-3,pika,S. chamaejasme,2022,sedges_22,246.9,yak_1,August
-3,pika,S. chamaejasme,2022,grasses_23,134.6,yak_1,August
-3,pika,S. chamaejasme,2022,forbs_24,118.9,yak_1,August
-3,pika,S. chamaejasme,2022,total_25,500.4,yak_1,August
-3,pika,S. chamaejasme,2022,sedges_26,369.3,yak_1,August
-3,pika,S. chamaejasme,2022,grasses_27,102.3,yak_1,August
-3,pika,S. chamaejasme,2022,forbs_28,85.6,yak_1,August
-3,pika,S. chamaejasme,2022,total_29,557.1,yak_1,August
+3,pika,S. chamaejasme,2022,sedges_9,222.3,yak_2,June
+3,pika,S. chamaejasme,2022,grasses_10,230,yak_2,June
+3,pika,S. chamaejasme,2022,forbs_11,65.5,yak_2,June
+3,pika,S. chamaejasme,2022,sedges_12,235.4,yak_1,July
+3,pika,S. chamaejasme,2022,grasses_13,110.3,yak_1,July
+3,pika,S. chamaejasme,2022,forbs_14,40.4,yak_1,July
+3,pika,S. chamaejasme,2022,sedges_15,263.8,yak_2,July
+3,pika,S. chamaejasme,2022,grasses_16,158,yak_2,July
+3,pika,S. chamaejasme,2022,forbs_17,70.8,yak_2,July
+3,pika,S. chamaejasme,2022,sedges_18,246.9,yak_1,August
+3,pika,S. chamaejasme,2022,grasses_19,134.6,yak_1,August
+3,pika,S. chamaejasme,2022,forbs_20,118.9,yak_1,August
+3,pika,S. chamaejasme,2022,sedges_21,369.3,yak_2,August
+3,pika,S. chamaejasme,2022,grasses_22,102.3,yak_2,August
+3,pika,S. chamaejasme,2022,forbs_23,85.6,yak_2,August
 4,pika,S. chamaejasme,2022,sedges_6,288.1,yak_1,June
 4,pika,S. chamaejasme,2022,grasses_7,118.3,yak_1,June
 4,pika,S. chamaejasme,2022,forbs_8,113.4,yak_1,June
-4,pika,S. chamaejasme,2022,total_9,519.8,yak_1,June
-4,pika,S. chamaejasme,2022,sedges_10,303.8,yak_2,June
-4,pika,S. chamaejasme,2022,grasses_11,127.3,yak_2,June
-4,pika,S. chamaejasme,2022,forbs_12,160.4,yak_2,June
-4,pika,S. chamaejasme,2022,total_13,591.5,yak_2,June
-4,pika,S. chamaejasme,2022,sedges_14,303,yak_1,July
-4,pika,S. chamaejasme,2022,grasses_15,172.3,yak_1,July
-4,pika,S. chamaejasme,2022,forbs_16,96,yak_1,July
-4,pika,S. chamaejasme,2022,total_17,571.3,yak_1,July
-4,pika,S. chamaejasme,2022,sedges_18,162.9,yak_2,July
-4,pika,S. chamaejasme,2022,grasses_19,145.3,yak_2,July
-4,pika,S. chamaejasme,2022,forbs_20,37.7,yak_2,July
-4,pika,S. chamaejasme,2022,total_21,345.9,yak_2,July
-4,pika,S. chamaejasme,2022,sedges_22,337.3,yak_1,August
-4,pika,S. chamaejasme,2022,grasses_23,118.9,yak_1,August
-4,pika,S. chamaejasme,2022,forbs_24,88,yak_1,August
-4,pika,S. chamaejasme,2022,total_25,544.3,yak_1,August
-4,pika,S. chamaejasme,2022,sedges_26,229.6,yak_1,August
-4,pika,S. chamaejasme,2022,grasses_27,140.8,yak_1,August
-4,pika,S. chamaejasme,2022,forbs_28,61.6,yak_1,August
-4,pika,S. chamaejasme,2022,total_29,432,yak_1,August
+4,pika,S. chamaejasme,2022,sedges_9,303.8,yak_2,June
+4,pika,S. chamaejasme,2022,grasses_10,127.3,yak_2,June
+4,pika,S. chamaejasme,2022,forbs_11,160.4,yak_2,June
+4,pika,S. chamaejasme,2022,sedges_12,303,yak_1,July
+4,pika,S. chamaejasme,2022,grasses_13,172.3,yak_1,July
+4,pika,S. chamaejasme,2022,forbs_14,96,yak_1,July
+4,pika,S. chamaejasme,2022,sedges_15,162.9,yak_2,July
+4,pika,S. chamaejasme,2022,grasses_16,145.3,yak_2,July
+4,pika,S. chamaejasme,2022,forbs_17,37.7,yak_2,July
+4,pika,S. chamaejasme,2022,sedges_18,337.3,yak_1,August
+4,pika,S. chamaejasme,2022,grasses_19,118.9,yak_1,August
+4,pika,S. chamaejasme,2022,forbs_20,88,yak_1,August
+4,pika,S. chamaejasme,2022,sedges_21,229.6,yak_2,August
+4,pika,S. chamaejasme,2022,grasses_22,140.8,yak_2,August
+4,pika,S. chamaejasme,2022,forbs_23,61.6,yak_2,August
 1,no pika,No S. chamaejasme,2023,sedges_6,321.4,yak_1,June
 1,no pika,No S. chamaejasme,2023,grasses_7,110.7,yak_1,June
 1,no pika,No S. chamaejasme,2023,forbs_8,82.7,yak_1,June
-1,no pika,No S. chamaejasme,2023,total_9,514.8,yak_1,June
-1,no pika,No S. chamaejasme,2023,sedges_10,371.8,yak_2,June
-1,no pika,No S. chamaejasme,2023,grasses_11,211.3,yak_2,June
-1,no pika,No S. chamaejasme,2023,forbs_12,63.3,yak_2,June
-1,no pika,No S. chamaejasme,2023,total_13,646.3,yak_2,June
-1,no pika,No S. chamaejasme,2023,sedges_14,348.9,yak_1,July
-1,no pika,No S. chamaejasme,2023,grasses_15,126.6,yak_1,July
-1,no pika,No S. chamaejasme,2023,forbs_16,107.6,yak_1,July
-1,no pika,No S. chamaejasme,2023,total_17,583.1,yak_1,July
-1,no pika,No S. chamaejasme,2023,sedges_18,260.5,yak_2,July
-1,no pika,No S. chamaejasme,2023,grasses_19,179.9,yak_2,July
-1,no pika,No S. chamaejasme,2023,forbs_20,69.3,yak_2,July
-1,no pika,No S. chamaejasme,2023,total_21,509.8,yak_2,July
-1,no pika,No S. chamaejasme,2023,sedges_22,247.8,yak_1,August
-1,no pika,No S. chamaejasme,2023,grasses_23,106.9,yak_1,August
-1,no pika,No S. chamaejasme,2023,forbs_24,52.1,yak_1,August
-1,no pika,No S. chamaejasme,2023,total_25,406.8,yak_1,August
-1,no pika,No S. chamaejasme,2023,sedges_26,253.4,yak_1,August
-1,no pika,No S. chamaejasme,2023,grasses_27,103,yak_1,August
-1,no pika,No S. chamaejasme,2023,forbs_28,98.3,yak_1,August
-1,no pika,No S. chamaejasme,2023,total_29,454.8,yak_1,August
+1,no pika,No S. chamaejasme,2023,sedges_9,371.8,yak_2,June
+1,no pika,No S. chamaejasme,2023,grasses_10,211.3,yak_2,June
+1,no pika,No S. chamaejasme,2023,forbs_11,63.3,yak_2,June
+1,no pika,No S. chamaejasme,2023,sedges_12,348.9,yak_1,July
+1,no pika,No S. chamaejasme,2023,grasses_13,126.6,yak_1,July
+1,no pika,No S. chamaejasme,2023,forbs_14,107.6,yak_1,July
+1,no pika,No S. chamaejasme,2023,sedges_15,260.5,yak_2,July
+1,no pika,No S. chamaejasme,2023,grasses_16,179.9,yak_2,July
+1,no pika,No S. chamaejasme,2023,forbs_17,69.3,yak_2,July
+1,no pika,No S. chamaejasme,2023,sedges_18,247.8,yak_1,August
+1,no pika,No S. chamaejasme,2023,grasses_19,106.9,yak_1,August
+1,no pika,No S. chamaejasme,2023,forbs_20,52.1,yak_1,August
+1,no pika,No S. chamaejasme,2023,sedges_21,253.4,yak_2,August
+1,no pika,No S. chamaejasme,2023,grasses_22,103,yak_2,August
+1,no pika,No S. chamaejasme,2023,forbs_23,98.3,yak_2,August
 2,no pika,No S. chamaejasme,2023,sedges_6,286.3,yak_1,June
 2,no pika,No S. chamaejasme,2023,grasses_7,204.6,yak_1,June
 2,no pika,No S. chamaejasme,2023,forbs_8,72.1,yak_1,June
-2,no pika,No S. chamaejasme,2023,total_9,563,yak_1,June
-2,no pika,No S. chamaejasme,2023,sedges_10,271,yak_2,June
-2,no pika,No S. chamaejasme,2023,grasses_11,249.3,yak_2,June
-2,no pika,No S. chamaejasme,2023,forbs_12,68.6,yak_2,June
-2,no pika,No S. chamaejasme,2023,total_13,588.9,yak_2,June
-2,no pika,No S. chamaejasme,2023,sedges_14,326.8,yak_1,July
-2,no pika,No S. chamaejasme,2023,grasses_15,152.3,yak_1,July
-2,no pika,No S. chamaejasme,2023,forbs_16,84,yak_1,July
-2,no pika,No S. chamaejasme,2023,total_17,563,yak_1,July
-2,no pika,No S. chamaejasme,2023,sedges_18,297.3,yak_2,July
-2,no pika,No S. chamaejasme,2023,grasses_19,198.7,yak_2,July
-2,no pika,No S. chamaejasme,2023,forbs_20,101.3,yak_2,July
-2,no pika,No S. chamaejasme,2023,total_21,597.3,yak_2,July
-2,no pika,No S. chamaejasme,2023,sedges_22,295.5,yak_1,August
-2,no pika,No S. chamaejasme,2023,grasses_23,195.8,yak_1,August
-2,no pika,No S. chamaejasme,2023,forbs_24,69.1,yak_1,August
-2,no pika,No S. chamaejasme,2023,total_25,560.3,yak_1,August
-2,no pika,No S. chamaejasme,2023,sedges_26,210.8,yak_1,August
-2,no pika,No S. chamaejasme,2023,grasses_27,145.4,yak_1,August
-2,no pika,No S. chamaejasme,2023,forbs_28,65.3,yak_1,August
-2,no pika,No S. chamaejasme,2023,total_29,421.6,yak_1,August
+2,no pika,No S. chamaejasme,2023,sedges_9,271,yak_2,June
+2,no pika,No S. chamaejasme,2023,grasses_10,249.3,yak_2,June
+2,no pika,No S. chamaejasme,2023,forbs_11,68.6,yak_2,June
+2,no pika,No S. chamaejasme,2023,sedges_12,326.8,yak_1,July
+2,no pika,No S. chamaejasme,2023,grasses_13,152.3,yak_1,July
+2,no pika,No S. chamaejasme,2023,forbs_14,84,yak_1,July
+2,no pika,No S. chamaejasme,2023,sedges_15,297.3,yak_2,July
+2,no pika,No S. chamaejasme,2023,grasses_16,198.7,yak_2,July
+2,no pika,No S. chamaejasme,2023,forbs_17,101.3,yak_2,July
+2,no pika,No S. chamaejasme,2023,sedges_18,295.5,yak_1,August
+2,no pika,No S. chamaejasme,2023,grasses_19,195.8,yak_1,August
+2,no pika,No S. chamaejasme,2023,forbs_20,69.1,yak_1,August
+2,no pika,No S. chamaejasme,2023,sedges_21,210.8,yak_2,August
+2,no pika,No S. chamaejasme,2023,grasses_22,145.4,yak_2,August
+2,no pika,No S. chamaejasme,2023,forbs_23,65.3,yak_2,August
 3,no pika,No S. chamaejasme,2023,sedges_6,243.4,yak_1,June
 3,no pika,No S. chamaejasme,2023,grasses_7,71.7,yak_1,June
 3,no pika,No S. chamaejasme,2023,forbs_8,103,yak_1,June
-3,no pika,No S. chamaejasme,2023,total_9,418.1,yak_1,June
-3,no pika,No S. chamaejasme,2023,sedges_10,344.6,yak_2,June
-3,no pika,No S. chamaejasme,2023,grasses_11,113.8,yak_2,June
-3,no pika,No S. chamaejasme,2023,forbs_12,102.1,yak_2,June
-3,no pika,No S. chamaejasme,2023,total_13,560.4,yak_2,June
-3,no pika,No S. chamaejasme,2023,sedges_14,427.9,yak_1,July
-3,no pika,No S. chamaejasme,2023,grasses_15,120,yak_1,July
-3,no pika,No S. chamaejasme,2023,forbs_16,52.3,yak_1,July
-3,no pika,No S. chamaejasme,2023,total_17,600.2,yak_1,July
-3,no pika,No S. chamaejasme,2023,sedges_18,247.3,yak_2,July
-3,no pika,No S. chamaejasme,2023,grasses_19,209.4,yak_2,July
-3,no pika,No S. chamaejasme,2023,forbs_20,44.1,yak_2,July
-3,no pika,No S. chamaejasme,2023,total_21,500.8,yak_2,July
-3,no pika,No S. chamaejasme,2023,sedges_22,182.7,yak_1,August
-3,no pika,No S. chamaejasme,2023,grasses_23,310.4,yak_1,August
-3,no pika,No S. chamaejasme,2023,forbs_24,97.3,yak_1,August
-3,no pika,No S. chamaejasme,2023,total_25,590.3,yak_1,August
-3,no pika,No S. chamaejasme,2023,sedges_26,309.3,yak_1,August
-3,no pika,No S. chamaejasme,2023,grasses_27,180,yak_1,August
-3,no pika,No S. chamaejasme,2023,forbs_28,38.5,yak_1,August
-3,no pika,No S. chamaejasme,2023,total_29,527.8,yak_1,August
+3,no pika,No S. chamaejasme,2023,sedges_9,344.6,yak_2,June
+3,no pika,No S. chamaejasme,2023,grasses_10,113.8,yak_2,June
+3,no pika,No S. chamaejasme,2023,forbs_11,102.1,yak_2,June
+3,no pika,No S. chamaejasme,2023,sedges_12,427.9,yak_1,July
+3,no pika,No S. chamaejasme,2023,grasses_13,120,yak_1,July
+3,no pika,No S. chamaejasme,2023,forbs_14,52.3,yak_1,July
+3,no pika,No S. chamaejasme,2023,sedges_15,247.3,yak_2,July
+3,no pika,No S. chamaejasme,2023,grasses_16,209.4,yak_2,July
+3,no pika,No S. chamaejasme,2023,forbs_17,44.1,yak_2,July
+3,no pika,No S. chamaejasme,2023,sedges_18,182.7,yak_1,August
+3,no pika,No S. chamaejasme,2023,grasses_19,310.4,yak_1,August
+3,no pika,No S. chamaejasme,2023,forbs_20,97.3,yak_1,August
+3,no pika,No S. chamaejasme,2023,sedges_21,309.3,yak_2,August
+3,no pika,No S. chamaejasme,2023,grasses_22,180,yak_2,August
+3,no pika,No S. chamaejasme,2023,forbs_23,38.5,yak_2,August
 4,no pika,No S. chamaejasme,2023,sedges_6,254.7,yak_1,June
 4,no pika,No S. chamaejasme,2023,grasses_7,167.7,yak_1,June
 4,no pika,No S. chamaejasme,2023,forbs_8,87.7,yak_1,June
-4,no pika,No S. chamaejasme,2023,total_9,510,yak_1,June
-4,no pika,No S. chamaejasme,2023,sedges_10,195.8,yak_2,June
-4,no pika,No S. chamaejasme,2023,grasses_11,245.9,yak_2,June
-4,no pika,No S. chamaejasme,2023,forbs_12,91.3,yak_2,June
-4,no pika,No S. chamaejasme,2023,total_13,533,yak_2,June
-4,no pika,No S. chamaejasme,2023,sedges_14,410.7,yak_1,July
-4,no pika,No S. chamaejasme,2023,grasses_15,105.8,yak_1,July
-4,no pika,No S. chamaejasme,2023,forbs_16,95.4,yak_1,July
-4,no pika,No S. chamaejasme,2023,total_17,611.8,yak_1,July
-4,no pika,No S. chamaejasme,2023,sedges_18,180,yak_2,July
-4,no pika,No S. chamaejasme,2023,grasses_19,113.2,yak_2,July
-4,no pika,No S. chamaejasme,2023,forbs_20,123.4,yak_2,July
-4,no pika,No S. chamaejasme,2023,total_21,416.6,yak_2,July
-4,no pika,No S. chamaejasme,2023,sedges_22,310.1,yak_1,August
-4,no pika,No S. chamaejasme,2023,grasses_23,104,yak_1,August
-4,no pika,No S. chamaejasme,2023,forbs_24,86.8,yak_1,August
-4,no pika,No S. chamaejasme,2023,total_25,500.9,yak_1,August
-4,no pika,No S. chamaejasme,2023,sedges_26,197.8,yak_1,August
-4,no pika,No S. chamaejasme,2023,grasses_27,169.8,yak_1,August
-4,no pika,No S. chamaejasme,2023,forbs_28,74.2,yak_1,August
-4,no pika,No S. chamaejasme,2023,total_29,441.8,yak_1,August
+4,no pika,No S. chamaejasme,2023,sedges_9,195.8,yak_2,June
+4,no pika,No S. chamaejasme,2023,grasses_10,245.9,yak_2,June
+4,no pika,No S. chamaejasme,2023,forbs_11,91.3,yak_2,June
+4,no pika,No S. chamaejasme,2023,sedges_12,410.7,yak_1,July
+4,no pika,No S. chamaejasme,2023,grasses_13,105.8,yak_1,July
+4,no pika,No S. chamaejasme,2023,forbs_14,95.4,yak_1,July
+4,no pika,No S. chamaejasme,2023,sedges_15,180,yak_2,July
+4,no pika,No S. chamaejasme,2023,grasses_16,113.2,yak_2,July
+4,no pika,No S. chamaejasme,2023,forbs_17,123.4,yak_2,July
+4,no pika,No S. chamaejasme,2023,sedges_18,310.1,yak_1,August
+4,no pika,No S. chamaejasme,2023,grasses_19,104,yak_1,August
+4,no pika,No S. chamaejasme,2023,forbs_20,86.8,yak_1,August
+4,no pika,No S. chamaejasme,2023,sedges_21,197.8,yak_2,August
+4,no pika,No S. chamaejasme,2023,grasses_22,169.8,yak_2,August
+4,no pika,No S. chamaejasme,2023,forbs_23,74.2,yak_2,August
 1,pika,No S. chamaejasme,2023,sedges_6,420.4,yak_1,June
 1,pika,No S. chamaejasme,2023,grasses_7,237.8,yak_1,June
 1,pika,No S. chamaejasme,2023,forbs_8,87.3,yak_1,June
-1,pika,No S. chamaejasme,2023,total_9,745.4,yak_1,June
-1,pika,No S. chamaejasme,2023,sedges_10,347.9,yak_2,June
-1,pika,No S. chamaejasme,2023,grasses_11,98.2,yak_2,June
-1,pika,No S. chamaejasme,2023,forbs_12,114.3,yak_2,June
-1,pika,No S. chamaejasme,2023,total_13,560.3,yak_2,June
-1,pika,No S. chamaejasme,2023,sedges_14,349.8,yak_1,July
-1,pika,No S. chamaejasme,2023,grasses_15,176.9,yak_1,July
-1,pika,No S. chamaejasme,2023,forbs_16,141.3,yak_1,July
-1,pika,No S. chamaejasme,2023,total_17,668.1,yak_1,July
-1,pika,No S. chamaejasme,2023,sedges_18,236.3,yak_2,July
-1,pika,No S. chamaejasme,2023,grasses_19,136,yak_2,July
-1,pika,No S. chamaejasme,2023,forbs_20,86.7,yak_2,July
-1,pika,No S. chamaejasme,2023,total_21,458.9,yak_2,July
-1,pika,No S. chamaejasme,2023,sedges_22,313.2,yak_1,August
-1,pika,No S. chamaejasme,2023,grasses_23,177.4,yak_1,August
-1,pika,No S. chamaejasme,2023,forbs_24,109.1,yak_1,August
-1,pika,No S. chamaejasme,2023,total_25,599.7,yak_1,August
-1,pika,No S. chamaejasme,2023,sedges_26,327.9,yak_1,August
-1,pika,No S. chamaejasme,2023,grasses_27,179.6,yak_1,August
-1,pika,No S. chamaejasme,2023,forbs_28,97.9,yak_1,August
-1,pika,No S. chamaejasme,2023,total_29,605.4,yak_1,August
+1,pika,No S. chamaejasme,2023,sedges_9,347.9,yak_2,June
+1,pika,No S. chamaejasme,2023,grasses_10,98.2,yak_2,June
+1,pika,No S. chamaejasme,2023,forbs_11,114.3,yak_2,June
+1,pika,No S. chamaejasme,2023,sedges_12,349.8,yak_1,July
+1,pika,No S. chamaejasme,2023,grasses_13,176.9,yak_1,July
+1,pika,No S. chamaejasme,2023,forbs_14,141.3,yak_1,July
+1,pika,No S. chamaejasme,2023,sedges_15,236.3,yak_2,July
+1,pika,No S. chamaejasme,2023,grasses_16,136,yak_2,July
+1,pika,No S. chamaejasme,2023,forbs_17,86.7,yak_2,July
+1,pika,No S. chamaejasme,2023,sedges_18,313.2,yak_1,August
+1,pika,No S. chamaejasme,2023,grasses_19,177.4,yak_1,August
+1,pika,No S. chamaejasme,2023,forbs_20,109.1,yak_1,August
+1,pika,No S. chamaejasme,2023,sedges_21,327.9,yak_2,August
+1,pika,No S. chamaejasme,2023,grasses_22,179.6,yak_2,August
+1,pika,No S. chamaejasme,2023,forbs_23,97.9,yak_2,August
 2,pika,No S. chamaejasme,2023,sedges_6,377.4,yak_1,June
 2,pika,No S. chamaejasme,2023,grasses_7,187.4,yak_1,June
 2,pika,No S. chamaejasme,2023,forbs_8,53.2,yak_1,June
-2,pika,No S. chamaejasme,2023,total_9,618,yak_1,June
-2,pika,No S. chamaejasme,2023,sedges_10,232,yak_2,June
-2,pika,No S. chamaejasme,2023,grasses_11,222.1,yak_2,June
-2,pika,No S. chamaejasme,2023,forbs_12,81.3,yak_2,June
-2,pika,No S. chamaejasme,2023,total_13,535.4,yak_2,June
-2,pika,No S. chamaejasme,2023,sedges_14,260.4,yak_1,July
-2,pika,No S. chamaejasme,2023,grasses_15,160.4,yak_1,July
-2,pika,No S. chamaejasme,2023,forbs_16,70.3,yak_1,July
-2,pika,No S. chamaejasme,2023,total_17,491.1,yak_1,July
-2,pika,No S. chamaejasme,2023,sedges_18,358.7,yak_2,July
-2,pika,No S. chamaejasme,2023,grasses_19,119.8,yak_2,July
-2,pika,No S. chamaejasme,2023,forbs_20,61.4,yak_2,July
-2,pika,No S. chamaejasme,2023,total_21,539.8,yak_2,July
-2,pika,No S. chamaejasme,2023,sedges_22,257.8,yak_1,August
-2,pika,No S. chamaejasme,2023,grasses_23,103.8,yak_1,August
-2,pika,No S. chamaejasme,2023,forbs_24,86.3,yak_1,August
-2,pika,No S. chamaejasme,2023,total_25,447.9,yak_1,August
-2,pika,No S. chamaejasme,2023,sedges_26,195.8,yak_1,August
-2,pika,No S. chamaejasme,2023,grasses_27,112.3,yak_1,August
-2,pika,No S. chamaejasme,2023,forbs_28,101.3,yak_1,August
-2,pika,No S. chamaejasme,2023,total_29,409.3,yak_1,August
+2,pika,No S. chamaejasme,2023,sedges_9,232,yak_2,June
+2,pika,No S. chamaejasme,2023,grasses_10,222.1,yak_2,June
+2,pika,No S. chamaejasme,2023,forbs_11,81.3,yak_2,June
+2,pika,No S. chamaejasme,2023,sedges_12,260.4,yak_1,July
+2,pika,No S. chamaejasme,2023,grasses_13,160.4,yak_1,July
+2,pika,No S. chamaejasme,2023,forbs_14,70.3,yak_1,July
+2,pika,No S. chamaejasme,2023,sedges_15,358.7,yak_2,July
+2,pika,No S. chamaejasme,2023,grasses_16,119.8,yak_2,July
+2,pika,No S. chamaejasme,2023,forbs_17,61.4,yak_2,July
+2,pika,No S. chamaejasme,2023,sedges_18,257.8,yak_1,August
+2,pika,No S. chamaejasme,2023,grasses_19,103.8,yak_1,August
+2,pika,No S. chamaejasme,2023,forbs_20,86.3,yak_1,August
+2,pika,No S. chamaejasme,2023,sedges_21,195.8,yak_2,August
+2,pika,No S. chamaejasme,2023,grasses_22,112.3,yak_2,August
+2,pika,No S. chamaejasme,2023,forbs_23,101.3,yak_2,August
 3,pika,No S. chamaejasme,2023,sedges_6,336.9,yak_1,June
 3,pika,No S. chamaejasme,2023,grasses_7,114.7,yak_1,June
 3,pika,No S. chamaejasme,2023,forbs_8,112.3,yak_1,June
-3,pika,No S. chamaejasme,2023,total_9,563.8,yak_1,June
-3,pika,No S. chamaejasme,2023,sedges_10,357,yak_2,June
-3,pika,No S. chamaejasme,2023,grasses_11,119.8,yak_2,June
-3,pika,No S. chamaejasme,2023,forbs_12,96.8,yak_2,June
-3,pika,No S. chamaejasme,2023,total_13,573.5,yak_2,June
-3,pika,No S. chamaejasme,2023,sedges_14,405.3,yak_1,July
-3,pika,No S. chamaejasme,2023,grasses_15,98.7,yak_1,July
-3,pika,No S. chamaejasme,2023,forbs_16,63,yak_1,July
-3,pika,No S. chamaejasme,2023,total_17,567,yak_1,July
-3,pika,No S. chamaejasme,2023,sedges_18,334.3,yak_2,July
-3,pika,No S. chamaejasme,2023,grasses_19,129.1,yak_2,July
-3,pika,No S. chamaejasme,2023,forbs_20,96.2,yak_2,July
-3,pika,No S. chamaejasme,2023,total_21,559.5,yak_2,July
-3,pika,No S. chamaejasme,2023,sedges_22,245.4,yak_1,August
-3,pika,No S. chamaejasme,2023,grasses_23,148,yak_1,August
-3,pika,No S. chamaejasme,2023,forbs_24,71.1,yak_1,August
-3,pika,No S. chamaejasme,2023,total_25,464.5,yak_1,August
-3,pika,No S. chamaejasme,2023,sedges_26,211.5,yak_1,August
-3,pika,No S. chamaejasme,2023,grasses_27,139.1,yak_1,August
-3,pika,No S. chamaejasme,2023,forbs_28,86.5,yak_1,August
-3,pika,No S. chamaejasme,2023,total_29,437.1,yak_1,August
+3,pika,No S. chamaejasme,2023,sedges_9,357,yak_2,June
+3,pika,No S. chamaejasme,2023,grasses_10,119.8,yak_2,June
+3,pika,No S. chamaejasme,2023,forbs_11,96.8,yak_2,June
+3,pika,No S. chamaejasme,2023,sedges_12,405.3,yak_1,July
+3,pika,No S. chamaejasme,2023,grasses_13,98.7,yak_1,July
+3,pika,No S. chamaejasme,2023,forbs_14,63,yak_1,July
+3,pika,No S. chamaejasme,2023,sedges_15,334.3,yak_2,July
+3,pika,No S. chamaejasme,2023,grasses_16,129.1,yak_2,July
+3,pika,No S. chamaejasme,2023,forbs_17,96.2,yak_2,July
+3,pika,No S. chamaejasme,2023,sedges_18,245.4,yak_1,August
+3,pika,No S. chamaejasme,2023,grasses_19,148,yak_1,August
+3,pika,No S. chamaejasme,2023,forbs_20,71.1,yak_1,August
+3,pika,No S. chamaejasme,2023,sedges_21,211.5,yak_2,August
+3,pika,No S. chamaejasme,2023,grasses_22,139.1,yak_2,August
+3,pika,No S. chamaejasme,2023,forbs_23,86.5,yak_2,August
 4,pika,No S. chamaejasme,2023,sedges_6,285.6,yak_1,June
 4,pika,No S. chamaejasme,2023,grasses_7,206.8,yak_1,June
 4,pika,No S. chamaejasme,2023,forbs_8,46.6,yak_1,June
-4,pika,No S. chamaejasme,2023,total_9,538.9,yak_1,June
-4,pika,No S. chamaejasme,2023,sedges_10,438.4,yak_2,June
-4,pika,No S. chamaejasme,2023,grasses_11,207.9,yak_2,June
-4,pika,No S. chamaejasme,2023,forbs_12,52.3,yak_2,June
-4,pika,No S. chamaejasme,2023,total_13,698.7,yak_2,June
-4,pika,No S. chamaejasme,2023,sedges_14,356.7,yak_1,July
-4,pika,No S. chamaejasme,2023,grasses_15,132.6,yak_1,July
-4,pika,No S. chamaejasme,2023,forbs_16,77.9,yak_1,July
-4,pika,No S. chamaejasme,2023,total_17,567.2,yak_1,July
-4,pika,No S. chamaejasme,2023,sedges_18,277.1,yak_2,July
-4,pika,No S. chamaejasme,2023,grasses_19,248,yak_2,July
-4,pika,No S. chamaejasme,2023,forbs_20,83.2,yak_2,July
-4,pika,No S. chamaejasme,2023,total_21,608.3,yak_2,July
-4,pika,No S. chamaejasme,2023,sedges_22,286.6,yak_1,August
-4,pika,No S. chamaejasme,2023,grasses_23,126.7,yak_1,August
-4,pika,No S. chamaejasme,2023,forbs_24,62.7,yak_1,August
-4,pika,No S. chamaejasme,2023,total_25,475.9,yak_1,August
-4,pika,No S. chamaejasme,2023,sedges_26,336,yak_1,August
-4,pika,No S. chamaejasme,2023,grasses_27,227.6,yak_1,August
-4,pika,No S. chamaejasme,2023,forbs_28,52.1,yak_1,August
-4,pika,No S. chamaejasme,2023,total_29,615.7,yak_1,August
+4,pika,No S. chamaejasme,2023,sedges_9,438.4,yak_2,June
+4,pika,No S. chamaejasme,2023,grasses_10,207.9,yak_2,June
+4,pika,No S. chamaejasme,2023,forbs_11,52.3,yak_2,June
+4,pika,No S. chamaejasme,2023,sedges_12,356.7,yak_1,July
+4,pika,No S. chamaejasme,2023,grasses_13,132.6,yak_1,July
+4,pika,No S. chamaejasme,2023,forbs_14,77.9,yak_1,July
+4,pika,No S. chamaejasme,2023,sedges_15,277.1,yak_2,July
+4,pika,No S. chamaejasme,2023,grasses_16,248,yak_2,July
+4,pika,No S. chamaejasme,2023,forbs_17,83.2,yak_2,July
+4,pika,No S. chamaejasme,2023,sedges_18,286.6,yak_1,August
+4,pika,No S. chamaejasme,2023,grasses_19,126.7,yak_1,August
+4,pika,No S. chamaejasme,2023,forbs_20,62.7,yak_1,August
+4,pika,No S. chamaejasme,2023,sedges_21,336,yak_2,August
+4,pika,No S. chamaejasme,2023,grasses_22,227.6,yak_2,August
+4,pika,No S. chamaejasme,2023,forbs_23,52.1,yak_2,August
 1,no pika,S. chamaejasme,2023,sedges_6,261.3,yak_1,June
 1,no pika,S. chamaejasme,2023,grasses_7,88,yak_1,June
 1,no pika,S. chamaejasme,2023,forbs_8,78.1,yak_1,June
-1,no pika,S. chamaejasme,2023,total_9,427.3,yak_1,June
-1,no pika,S. chamaejasme,2023,sedges_10,253,yak_2,June
-1,no pika,S. chamaejasme,2023,grasses_11,96.9,yak_2,June
-1,no pika,S. chamaejasme,2023,forbs_12,128.8,yak_2,June
-1,no pika,S. chamaejasme,2023,total_13,478.8,yak_2,June
-1,no pika,S. chamaejasme,2023,sedges_14,187.9,yak_1,July
-1,no pika,S. chamaejasme,2023,grasses_15,87.6,yak_1,July
-1,no pika,S. chamaejasme,2023,forbs_16,101.9,yak_1,July
-1,no pika,S. chamaejasme,2023,total_17,377.4,yak_1,July
-1,no pika,S. chamaejasme,2023,sedges_18,230.5,yak_2,July
-1,no pika,S. chamaejasme,2023,grasses_19,106.5,yak_2,July
-1,no pika,S. chamaejasme,2023,forbs_20,69,yak_2,July
-1,no pika,S. chamaejasme,2023,total_21,406,yak_2,July
-1,no pika,S. chamaejasme,2023,sedges_22,154.3,yak_1,August
-1,no pika,S. chamaejasme,2023,grasses_23,64.6,yak_1,August
-1,no pika,S. chamaejasme,2023,forbs_24,123.9,yak_1,August
-1,no pika,S. chamaejasme,2023,total_25,342.8,yak_1,August
-1,no pika,S. chamaejasme,2023,sedges_26,267.3,yak_1,August
-1,no pika,S. chamaejasme,2023,grasses_27,104.5,yak_1,August
-1,no pika,S. chamaejasme,2023,forbs_28,125.3,yak_1,August
-1,no pika,S. chamaejasme,2023,total_29,497.1,yak_1,August
+1,no pika,S. chamaejasme,2023,sedges_9,253,yak_2,June
+1,no pika,S. chamaejasme,2023,grasses_10,96.9,yak_2,June
+1,no pika,S. chamaejasme,2023,forbs_11,128.8,yak_2,June
+1,no pika,S. chamaejasme,2023,sedges_12,187.9,yak_1,July
+1,no pika,S. chamaejasme,2023,grasses_13,87.6,yak_1,July
+1,no pika,S. chamaejasme,2023,forbs_14,101.9,yak_1,July
+1,no pika,S. chamaejasme,2023,sedges_15,230.5,yak_2,July
+1,no pika,S. chamaejasme,2023,grasses_16,106.5,yak_2,July
+1,no pika,S. chamaejasme,2023,forbs_17,69,yak_2,July
+1,no pika,S. chamaejasme,2023,sedges_18,154.3,yak_1,August
+1,no pika,S. chamaejasme,2023,grasses_19,64.6,yak_1,August
+1,no pika,S. chamaejasme,2023,forbs_20,123.9,yak_1,August
+1,no pika,S. chamaejasme,2023,sedges_21,267.3,yak_2,August
+1,no pika,S. chamaejasme,2023,grasses_22,104.5,yak_2,August
+1,no pika,S. chamaejasme,2023,forbs_23,125.3,yak_2,August
 2,no pika,S. chamaejasme,2023,sedges_6,145.8,yak_1,June
 2,no pika,S. chamaejasme,2023,grasses_7,99.3,yak_1,June
 2,no pika,S. chamaejasme,2023,forbs_8,68.8,yak_1,June
-2,no pika,S. chamaejasme,2023,total_9,313.9,yak_1,June
-2,no pika,S. chamaejasme,2023,sedges_10,157.9,yak_2,June
-2,no pika,S. chamaejasme,2023,grasses_11,140,yak_2,June
-2,no pika,S. chamaejasme,2023,forbs_12,71.4,yak_2,June
-2,no pika,S. chamaejasme,2023,total_13,369.3,yak_2,June
-2,no pika,S. chamaejasme,2023,sedges_14,252.3,yak_1,July
-2,no pika,S. chamaejasme,2023,grasses_15,131,yak_1,July
-2,no pika,S. chamaejasme,2023,forbs_16,67.1,yak_1,July
-2,no pika,S. chamaejasme,2023,total_17,450.3,yak_1,July
-2,no pika,S. chamaejasme,2023,sedges_18,257.9,yak_2,July
-2,no pika,S. chamaejasme,2023,grasses_19,73.9,yak_2,July
-2,no pika,S. chamaejasme,2023,forbs_20,89.3,yak_2,July
-2,no pika,S. chamaejasme,2023,total_21,421.2,yak_2,July
-2,no pika,S. chamaejasme,2023,sedges_22,222.8,yak_1,August
-2,no pika,S. chamaejasme,2023,grasses_23,94.7,yak_1,August
-2,no pika,S. chamaejasme,2023,forbs_24,99.5,yak_1,August
-2,no pika,S. chamaejasme,2023,total_25,416.9,yak_1,August
-2,no pika,S. chamaejasme,2023,sedges_26,163,yak_1,August
-2,no pika,S. chamaejasme,2023,grasses_27,127.4,yak_1,August
-2,no pika,S. chamaejasme,2023,forbs_28,86.4,yak_1,August
-2,no pika,S. chamaejasme,2023,total_29,376.8,yak_1,August
+2,no pika,S. chamaejasme,2023,sedges_9,157.9,yak_2,June
+2,no pika,S. chamaejasme,2023,grasses_10,140,yak_2,June
+2,no pika,S. chamaejasme,2023,forbs_11,71.4,yak_2,June
+2,no pika,S. chamaejasme,2023,sedges_12,252.3,yak_1,July
+2,no pika,S. chamaejasme,2023,grasses_13,131,yak_1,July
+2,no pika,S. chamaejasme,2023,forbs_14,67.1,yak_1,July
+2,no pika,S. chamaejasme,2023,sedges_15,257.9,yak_2,July
+2,no pika,S. chamaejasme,2023,grasses_16,73.9,yak_2,July
+2,no pika,S. chamaejasme,2023,forbs_17,89.3,yak_2,July
+2,no pika,S. chamaejasme,2023,sedges_18,222.8,yak_1,August
+2,no pika,S. chamaejasme,2023,grasses_19,94.7,yak_1,August
+2,no pika,S. chamaejasme,2023,forbs_20,99.5,yak_1,August
+2,no pika,S. chamaejasme,2023,sedges_21,163,yak_2,August
+2,no pika,S. chamaejasme,2023,grasses_22,127.4,yak_2,August
+2,no pika,S. chamaejasme,2023,forbs_23,86.4,yak_2,August
 3,no pika,S. chamaejasme,2023,sedges_6,132.8,yak_1,June
 3,no pika,S. chamaejasme,2023,grasses_7,107.3,yak_1,June
 3,no pika,S. chamaejasme,2023,forbs_8,126.1,yak_1,June
-3,no pika,S. chamaejasme,2023,total_9,366.2,yak_1,June
-3,no pika,S. chamaejasme,2023,sedges_10,177.8,yak_2,June
-3,no pika,S. chamaejasme,2023,grasses_11,114.3,yak_2,June
-3,no pika,S. chamaejasme,2023,forbs_12,79.8,yak_2,June
-3,no pika,S. chamaejasme,2023,total_13,371.9,yak_2,June
-3,no pika,S. chamaejasme,2023,sedges_14,178.4,yak_1,July
-3,no pika,S. chamaejasme,2023,grasses_15,105.8,yak_1,July
-3,no pika,S. chamaejasme,2023,forbs_16,52.3,yak_1,July
-3,no pika,S. chamaejasme,2023,total_17,336.5,yak_1,July
-3,no pika,S. chamaejasme,2023,sedges_18,209.4,yak_2,July
-3,no pika,S. chamaejasme,2023,grasses_19,115.9,yak_2,July
-3,no pika,S. chamaejasme,2023,forbs_20,76.3,yak_2,July
-3,no pika,S. chamaejasme,2023,total_21,401.6,yak_2,July
-3,no pika,S. chamaejasme,2023,sedges_22,229,yak_1,August
-3,no pika,S. chamaejasme,2023,grasses_23,81.5,yak_1,August
-3,no pika,S. chamaejasme,2023,forbs_24,68.8,yak_1,August
-3,no pika,S. chamaejasme,2023,total_25,379.3,yak_1,August
-3,no pika,S. chamaejasme,2023,sedges_26,181.1,yak_1,August
-3,no pika,S. chamaejasme,2023,grasses_27,206.1,yak_1,August
-3,no pika,S. chamaejasme,2023,forbs_28,73.5,yak_1,August
-3,no pika,S. chamaejasme,2023,total_29,460.7,yak_1,August
+3,no pika,S. chamaejasme,2023,sedges_9,177.8,yak_2,June
+3,no pika,S. chamaejasme,2023,grasses_10,114.3,yak_2,June
+3,no pika,S. chamaejasme,2023,forbs_11,79.8,yak_2,June
+3,no pika,S. chamaejasme,2023,sedges_12,178.4,yak_1,July
+3,no pika,S. chamaejasme,2023,grasses_13,105.8,yak_1,July
+3,no pika,S. chamaejasme,2023,forbs_14,52.3,yak_1,July
+3,no pika,S. chamaejasme,2023,sedges_15,209.4,yak_2,July
+3,no pika,S. chamaejasme,2023,grasses_16,115.9,yak_2,July
+3,no pika,S. chamaejasme,2023,forbs_17,76.3,yak_2,July
+3,no pika,S. chamaejasme,2023,sedges_18,229,yak_1,August
+3,no pika,S. chamaejasme,2023,grasses_19,81.5,yak_1,August
+3,no pika,S. chamaejasme,2023,forbs_20,68.8,yak_1,August
+3,no pika,S. chamaejasme,2023,sedges_21,181.1,yak_2,August
+3,no pika,S. chamaejasme,2023,grasses_22,206.1,yak_2,August
+3,no pika,S. chamaejasme,2023,forbs_23,73.5,yak_2,August
 4,no pika,S. chamaejasme,2023,sedges_6,137.3,yak_1,June
 4,no pika,S. chamaejasme,2023,grasses_7,122.1,yak_1,June
 4,no pika,S. chamaejasme,2023,forbs_8,173.8,yak_1,June
-4,no pika,S. chamaejasme,2023,total_9,433.2,yak_1,June
-4,no pika,S. chamaejasme,2023,sedges_10,137.6,yak_2,June
-4,no pika,S. chamaejasme,2023,grasses_11,129,yak_2,June
-4,no pika,S. chamaejasme,2023,forbs_12,63.3,yak_2,June
-4,no pika,S. chamaejasme,2023,total_13,329.9,yak_2,June
-4,no pika,S. chamaejasme,2023,sedges_14,83.2,yak_1,July
-4,no pika,S. chamaejasme,2023,grasses_15,100.7,yak_1,July
-4,no pika,S. chamaejasme,2023,forbs_16,44,yak_1,July
-4,no pika,S. chamaejasme,2023,total_17,227.8,yak_1,July
-4,no pika,S. chamaejasme,2023,sedges_18,121.5,yak_2,July
-4,no pika,S. chamaejasme,2023,grasses_19,81.3,yak_2,July
-4,no pika,S. chamaejasme,2023,forbs_20,117.3,yak_2,July
-4,no pika,S. chamaejasme,2023,total_21,320.2,yak_2,July
-4,no pika,S. chamaejasme,2023,sedges_22,237.1,yak_1,August
-4,no pika,S. chamaejasme,2023,grasses_23,122,yak_1,August
-4,no pika,S. chamaejasme,2023,forbs_24,82.8,yak_1,August
-4,no pika,S. chamaejasme,2023,total_25,441.8,yak_1,August
-4,no pika,S. chamaejasme,2023,sedges_26,188.8,yak_1,August
-4,no pika,S. chamaejasme,2023,grasses_27,112.3,yak_1,August
-4,no pika,S. chamaejasme,2023,forbs_28,68.8,yak_1,August
-4,no pika,S. chamaejasme,2023,total_29,369.8,yak_1,August
+4,no pika,S. chamaejasme,2023,sedges_9,137.6,yak_2,June
+4,no pika,S. chamaejasme,2023,grasses_10,129,yak_2,June
+4,no pika,S. chamaejasme,2023,forbs_11,63.3,yak_2,June
+4,no pika,S. chamaejasme,2023,sedges_12,83.2,yak_1,July
+4,no pika,S. chamaejasme,2023,grasses_13,100.7,yak_1,July
+4,no pika,S. chamaejasme,2023,forbs_14,44,yak_1,July
+4,no pika,S. chamaejasme,2023,sedges_15,121.5,yak_2,July
+4,no pika,S. chamaejasme,2023,grasses_16,81.3,yak_2,July
+4,no pika,S. chamaejasme,2023,forbs_17,117.3,yak_2,July
+4,no pika,S. chamaejasme,2023,sedges_18,237.1,yak_1,August
+4,no pika,S. chamaejasme,2023,grasses_19,122,yak_1,August
+4,no pika,S. chamaejasme,2023,forbs_20,82.8,yak_1,August
+4,no pika,S. chamaejasme,2023,sedges_21,188.8,yak_2,August
+4,no pika,S. chamaejasme,2023,grasses_22,112.3,yak_2,August
+4,no pika,S. chamaejasme,2023,forbs_23,68.8,yak_2,August
 1,pika,S. chamaejasme,2023,sedges_6,211.7,yak_1,June
 1,pika,S. chamaejasme,2023,grasses_7,297.6,yak_1,June
 1,pika,S. chamaejasme,2023,forbs_8,70.1,yak_1,June
-1,pika,S. chamaejasme,2023,total_9,579.3,yak_1,June
-1,pika,S. chamaejasme,2023,sedges_10,195.8,yak_2,June
-1,pika,S. chamaejasme,2023,grasses_11,168,yak_2,June
-1,pika,S. chamaejasme,2023,forbs_12,126,yak_2,June
-1,pika,S. chamaejasme,2023,total_13,489.8,yak_2,June
-1,pika,S. chamaejasme,2023,sedges_14,414.1,yak_1,July
-1,pika,S. chamaejasme,2023,grasses_15,121.3,yak_1,July
-1,pika,S. chamaejasme,2023,forbs_16,104.6,yak_1,July
-1,pika,S. chamaejasme,2023,total_17,640,yak_1,July
-1,pika,S. chamaejasme,2023,sedges_18,326.8,yak_2,July
-1,pika,S. chamaejasme,2023,grasses_19,147.1,yak_2,July
-1,pika,S. chamaejasme,2023,forbs_20,140,yak_2,July
-1,pika,S. chamaejasme,2023,total_21,613.8,yak_2,July
-1,pika,S. chamaejasme,2023,sedges_22,383.1,yak_1,August
-1,pika,S. chamaejasme,2023,grasses_23,171.9,yak_1,August
-1,pika,S. chamaejasme,2023,forbs_24,82.9,yak_1,August
-1,pika,S. chamaejasme,2023,total_25,637.9,yak_1,August
-1,pika,S. chamaejasme,2023,sedges_26,344.3,yak_1,August
-1,pika,S. chamaejasme,2023,grasses_27,146.8,yak_1,August
-1,pika,S. chamaejasme,2023,forbs_28,113.2,yak_1,August
-1,pika,S. chamaejasme,2023,total_29,604.3,yak_1,August
+1,pika,S. chamaejasme,2023,sedges_9,195.8,yak_2,June
+1,pika,S. chamaejasme,2023,grasses_10,168,yak_2,June
+1,pika,S. chamaejasme,2023,forbs_11,126,yak_2,June
+1,pika,S. chamaejasme,2023,sedges_12,414.1,yak_1,July
+1,pika,S. chamaejasme,2023,grasses_13,121.3,yak_1,July
+1,pika,S. chamaejasme,2023,forbs_14,104.6,yak_1,July
+1,pika,S. chamaejasme,2023,sedges_15,326.8,yak_2,July
+1,pika,S. chamaejasme,2023,grasses_16,147.1,yak_2,July
+1,pika,S. chamaejasme,2023,forbs_17,140,yak_2,July
+1,pika,S. chamaejasme,2023,sedges_18,383.1,yak_1,August
+1,pika,S. chamaejasme,2023,grasses_19,171.9,yak_1,August
+1,pika,S. chamaejasme,2023,forbs_20,82.9,yak_1,August
+1,pika,S. chamaejasme,2023,sedges_21,344.3,yak_2,August
+1,pika,S. chamaejasme,2023,grasses_22,146.8,yak_2,August
+1,pika,S. chamaejasme,2023,forbs_23,113.2,yak_2,August
 2,pika,S. chamaejasme,2023,sedges_6,281.8,yak_1,June
 2,pika,S. chamaejasme,2023,grasses_7,129.3,yak_1,June
 2,pika,S. chamaejasme,2023,forbs_8,131.5,yak_1,June
-2,pika,S. chamaejasme,2023,total_9,542.6,yak_1,June
-2,pika,S. chamaejasme,2023,sedges_10,321.4,yak_2,June
-2,pika,S. chamaejasme,2023,grasses_11,77.9,yak_2,June
-2,pika,S. chamaejasme,2023,forbs_12,122.9,yak_2,June
-2,pika,S. chamaejasme,2023,total_13,522.3,yak_2,June
-2,pika,S. chamaejasme,2023,sedges_14,308.7,yak_1,July
-2,pika,S. chamaejasme,2023,grasses_15,196.9,yak_1,July
-2,pika,S. chamaejasme,2023,forbs_16,55.7,yak_1,July
-2,pika,S. chamaejasme,2023,total_17,561.3,yak_1,July
-2,pika,S. chamaejasme,2023,sedges_18,272.7,yak_2,July
-2,pika,S. chamaejasme,2023,grasses_19,169.9,yak_2,July
-2,pika,S. chamaejasme,2023,forbs_20,113.4,yak_2,July
-2,pika,S. chamaejasme,2023,total_21,556,yak_2,July
-2,pika,S. chamaejasme,2023,sedges_22,275.3,yak_1,August
-2,pika,S. chamaejasme,2023,grasses_23,144.3,yak_1,August
-2,pika,S. chamaejasme,2023,forbs_24,72.6,yak_1,August
-2,pika,S. chamaejasme,2023,total_25,492.3,yak_1,August
-2,pika,S. chamaejasme,2023,sedges_26,323.3,yak_1,August
-2,pika,S. chamaejasme,2023,grasses_27,101.3,yak_1,August
-2,pika,S. chamaejasme,2023,forbs_28,93.8,yak_1,August
-2,pika,S. chamaejasme,2023,total_29,518.3,yak_1,August
+2,pika,S. chamaejasme,2023,sedges_9,321.4,yak_2,June
+2,pika,S. chamaejasme,2023,grasses_10,77.9,yak_2,June
+2,pika,S. chamaejasme,2023,forbs_11,122.9,yak_2,June
+2,pika,S. chamaejasme,2023,sedges_12,308.7,yak_1,July
+2,pika,S. chamaejasme,2023,grasses_13,196.9,yak_1,July
+2,pika,S. chamaejasme,2023,forbs_14,55.7,yak_1,July
+2,pika,S. chamaejasme,2023,sedges_15,272.7,yak_2,July
+2,pika,S. chamaejasme,2023,grasses_16,169.9,yak_2,July
+2,pika,S. chamaejasme,2023,forbs_17,113.4,yak_2,July
+2,pika,S. chamaejasme,2023,sedges_18,275.3,yak_1,August
+2,pika,S. chamaejasme,2023,grasses_19,144.3,yak_1,August
+2,pika,S. chamaejasme,2023,forbs_20,72.6,yak_1,August
+2,pika,S. chamaejasme,2023,sedges_21,323.3,yak_2,August
+2,pika,S. chamaejasme,2023,grasses_22,101.3,yak_2,August
+2,pika,S. chamaejasme,2023,forbs_23,93.8,yak_2,August
 3,pika,S. chamaejasme,2023,sedges_6,176.8,yak_1,June
 3,pika,S. chamaejasme,2023,grasses_7,86.6,yak_1,June
 3,pika,S. chamaejasme,2023,forbs_8,88.3,yak_1,June
-3,pika,S. chamaejasme,2023,total_9,351.7,yak_1,June
-3,pika,S. chamaejasme,2023,sedges_10,225.9,yak_2,June
-3,pika,S. chamaejasme,2023,grasses_11,136.4,yak_2,June
-3,pika,S. chamaejasme,2023,forbs_12,105.3,yak_2,June
-3,pika,S. chamaejasme,2023,total_13,467.7,yak_2,June
-3,pika,S. chamaejasme,2023,sedges_14,360.3,yak_1,July
-3,pika,S. chamaejasme,2023,grasses_15,148.8,yak_1,July
-3,pika,S. chamaejasme,2023,forbs_16,37.6,yak_1,July
-3,pika,S. chamaejasme,2023,total_17,546.7,yak_1,July
-3,pika,S. chamaejasme,2023,sedges_18,188.3,yak_2,July
-3,pika,S. chamaejasme,2023,grasses_19,143.8,yak_2,July
-3,pika,S. chamaejasme,2023,forbs_20,91.5,yak_2,July
-3,pika,S. chamaejasme,2023,total_21,423.6,yak_2,July
-3,pika,S. chamaejasme,2023,sedges_22,271.3,yak_1,August
-3,pika,S. chamaejasme,2023,grasses_23,213.4,yak_1,August
-3,pika,S. chamaejasme,2023,forbs_24,89,yak_1,August
-3,pika,S. chamaejasme,2023,total_25,573.7,yak_1,August
-3,pika,S. chamaejasme,2023,sedges_26,302.8,yak_1,August
-3,pika,S. chamaejasme,2023,grasses_27,110.4,yak_1,August
-3,pika,S. chamaejasme,2023,forbs_28,86.5,yak_1,August
-3,pika,S. chamaejasme,2023,total_29,499.8,yak_1,August
+3,pika,S. chamaejasme,2023,sedges_9,225.9,yak_2,June
+3,pika,S. chamaejasme,2023,grasses_10,136.4,yak_2,June
+3,pika,S. chamaejasme,2023,forbs_11,105.3,yak_2,June
+3,pika,S. chamaejasme,2023,sedges_12,360.3,yak_1,July
+3,pika,S. chamaejasme,2023,grasses_13,148.8,yak_1,July
+3,pika,S. chamaejasme,2023,forbs_14,37.6,yak_1,July
+3,pika,S. chamaejasme,2023,sedges_15,188.3,yak_2,July
+3,pika,S. chamaejasme,2023,grasses_16,143.8,yak_2,July
+3,pika,S. chamaejasme,2023,forbs_17,91.5,yak_2,July
+3,pika,S. chamaejasme,2023,sedges_18,271.3,yak_1,August
+3,pika,S. chamaejasme,2023,grasses_19,213.4,yak_1,August
+3,pika,S. chamaejasme,2023,forbs_20,89,yak_1,August
+3,pika,S. chamaejasme,2023,sedges_21,302.8,yak_2,August
+3,pika,S. chamaejasme,2023,grasses_22,110.4,yak_2,August
+3,pika,S. chamaejasme,2023,forbs_23,86.5,yak_2,August
 4,pika,S. chamaejasme,2023,sedges_6,161.7,yak_1,June
 4,pika,S. chamaejasme,2023,grasses_7,124.6,yak_1,June
 4,pika,S. chamaejasme,2023,forbs_8,136,yak_1,June
-4,pika,S. chamaejasme,2023,total_9,422.3,yak_1,June
-4,pika,S. chamaejasme,2023,sedges_10,218.8,yak_2,June
-4,pika,S. chamaejasme,2023,grasses_11,127.1,yak_2,June
-4,pika,S. chamaejasme,2023,forbs_12,60.9,yak_2,June
-4,pika,S. chamaejasme,2023,total_13,406.8,yak_2,June
-4,pika,S. chamaejasme,2023,sedges_14,241.9,yak_1,July
-4,pika,S. chamaejasme,2023,grasses_15,129,yak_1,July
-4,pika,S. chamaejasme,2023,forbs_16,69.3,yak_1,July
-4,pika,S. chamaejasme,2023,total_17,440.3,yak_1,July
-4,pika,S. chamaejasme,2023,sedges_18,224.5,yak_2,July
-4,pika,S. chamaejasme,2023,grasses_19,153.9,yak_2,July
-4,pika,S. chamaejasme,2023,forbs_20,119,yak_2,July
-4,pika,S. chamaejasme,2023,total_21,497.4,yak_2,July
-4,pika,S. chamaejasme,2023,sedges_22,392.4,yak_1,August
-4,pika,S. chamaejasme,2023,grasses_23,261.7,yak_1,August
-4,pika,S. chamaejasme,2023,forbs_24,132.7,yak_1,August
-4,pika,S. chamaejasme,2023,total_25,786.8,yak_1,August
-4,pika,S. chamaejasme,2023,sedges_26,290,yak_1,August
-4,pika,S. chamaejasme,2023,grasses_27,190.1,yak_1,August
-4,pika,S. chamaejasme,2023,forbs_28,116,yak_1,August
-4,pika,S. chamaejasme,2023,total_29,596.1,yak_1,August
+4,pika,S. chamaejasme,2023,sedges_9,218.8,yak_2,June
+4,pika,S. chamaejasme,2023,grasses_10,127.1,yak_2,June
+4,pika,S. chamaejasme,2023,forbs_11,60.9,yak_2,June
+4,pika,S. chamaejasme,2023,sedges_12,241.9,yak_1,July
+4,pika,S. chamaejasme,2023,grasses_13,129,yak_1,July
+4,pika,S. chamaejasme,2023,forbs_14,69.3,yak_1,July
+4,pika,S. chamaejasme,2023,sedges_15,224.5,yak_2,July
+4,pika,S. chamaejasme,2023,grasses_16,153.9,yak_2,July
+4,pika,S. chamaejasme,2023,forbs_17,119,yak_2,July
+4,pika,S. chamaejasme,2023,sedges_18,392.4,yak_1,August
+4,pika,S. chamaejasme,2023,grasses_19,261.7,yak_1,August
+4,pika,S. chamaejasme,2023,forbs_20,132.7,yak_1,August
+4,pika,S. chamaejasme,2023,sedges_21,290,yak_2,August
+4,pika,S. chamaejasme,2023,grasses_22,190.1,yak_2,August
+4,pika,S. chamaejasme,2023,forbs_23,116,yak_2,August
