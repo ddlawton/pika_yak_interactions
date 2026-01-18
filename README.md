@@ -4,7 +4,20 @@ This repository contains all data, code, and analyses for the manuscript:
 
 **"Density-dependent facilitation of livestock by small mammal ecosystem engineers"**
 
-Douglas Lawton et al.
+Zhiwei Zhong<sup>1,2,3</sup>, Bingbo Ni<sup>2</sup>, Douglas Lawton<sup>4</sup>, Xiaofei Li<sup>1</sup>, Xiaona Zheng<sup>1</sup>, Huakun Zhou<sup>3</sup>, Junhu Su<sup>5</sup>, Wenjin Li<sup>6</sup>, Zhenggang Guo<sup>6</sup>, Fujiang Hou<sup>6</sup>, Quanmin Dong<sup>7</sup>, Shikui Dong<sup>8</sup>, Christopher R. Dickman<sup>9</sup>, Jens-Christian Svenning<sup>10</sup>, Ying Gao<sup>1*</sup>, Zhibin Zhang<sup>11,12*</sup>
+
+<sup>1</sup> Key Laboratory of Vegetation Ecology of the Ministry of Education, Songnen Grassland Ecosystem National Observation and Research Station, Northeast Normal University, Changchun, Jilin, China.  
+<sup>2</sup> Northeast Institute of Geography and Agroecology, Chinese Academy of Sciences, Changchun, Jilin, China.  
+<sup>3</sup> Key Laboratory of Cold Regions Restoration Ecology, Northwest Institute of Plateau Biology, Chinese Academy of Sciences, Xining 810008, China.  
+<sup>4</sup> School of Sustainability, Arizona State University, Tempe, AZ, USA  
+<sup>5</sup> College of Grassland Science, Key Laboratory of Grassland Ecosystem (Ministry of Education), Gansu Agricultural University, Lanzhou, China  
+<sup>6</sup> State Key Laboratory of Grassland Agro-Ecosystems, College of Pastoral Agriculture Science and Technology, Lanzhou University, Lanzhou City 730020, PR China  
+<sup>7</sup> State Key Laboratory of Plateau Ecology and Agriculture, Qinghai Academy of Animal and Veterinary Science, Qinghai University, Xining 810016, China  
+<sup>8</sup> School of Grassland Science, Beijing Forestry University, Beijing, 100083, China  
+<sup>9</sup> School of Life and Environmental Sciences, The University of Sydney, Sydney, NSW 2006, Australia  
+<sup>10</sup> Department of Biology, Center for Ecological Dynamics in a Novel Biosphere, Aarhus University, Aarhus DK-8000, Denmark  
+<sup>11</sup> School of Ecology, Hainan International One Health Institute, Hainan Province Key Laboratory of One Health, Hainan University, Haikou, Hainan 570228, China  
+<sup>12</sup> State Key Laboratory of Integrated Management of Pest Insects and Rodents, Institute of Zoology, Chinese Academy of Sciences, 1 Beichen West Road, Chaoyang District, Beijing 100101, China
 
 ## Overview
 
@@ -127,11 +140,6 @@ Processed data files are included in `data/processed/`. Raw field data are avail
 If you use data or code from this repository, please cite:
 
 [Citation information will be added upon publication]
-
-## Contact
-
-Douglas Lawton
-[Contact information]
 
 ## License
 
