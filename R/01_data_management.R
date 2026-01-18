@@ -1,5 +1,5 @@
 #####
-# Pika facilitates yaks by suppressing poisonous plants in the Tibetan Plateau
+# Density-dependent facilitation of livestock by small mammal ecosystem engineers
 # Data Management Script
 #
 # This script reads the raw Excel file and transforms each figure panel's data 

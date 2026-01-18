@@ -1,5 +1,5 @@
 ---
-title: "Pika-Yak Interaction: Plant Cover"
+title: "Methods and Results"
 author: "Douglas Lawton"
 date: today
 format:

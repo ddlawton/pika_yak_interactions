@@ -2,7 +2,7 @@
 # Script: 03_active_burrow_yak_gain_analysis.R
 # Author: Douglas Lawton
 # Date: 2025-10-18
-# Project: Pika Facilitates Yaks by Suppressing Poisonous Plants
+# Project: Density-dependent facilitation of livestock by small mammal ecosystem engineers
 # ===============================================================
 #
 # Description:

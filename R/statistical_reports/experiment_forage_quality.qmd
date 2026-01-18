@@ -1,5 +1,5 @@
 ---
-title: "Pika-Yak Interaction: Foraging Quality"
+title: "Forage Quality: Exploratory Analysis"
 author: "Douglas Lawton"
 date: today
 format:
@@ -11,6 +11,12 @@ format:
     theme: cosmo
 editor: source
 ---
+
+::: {.callout-note}
+## About This Report
+
+This report documents the exploratory analysis of forage quality data that informed the final manuscript analyses. The finalized methods, results, and figures are presented in the **Methods and Results** document.
+:::
 
 ```{r}
 #| echo: false
