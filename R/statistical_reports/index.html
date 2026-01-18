@@ -9,7 +9,7 @@
 <meta name="author" content="Douglas Lawton">
 <meta name="dcterms.date" content="2026-01-18">
 
-<title>Pika–Yak Interactions: Statistical Modeling Overview – Pika-Yak interactions</title>
+<title>Statistical Analyses Overview – Pika-Yak Interactions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -117,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
-    <span class="navbar-title">Pika-Yak interactions</span>
+    <span class="navbar-title">Pika-Yak Interactions</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -128,28 +128,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
     <a class="nav-link active" href="../../R/statistical_reports/index.html" aria-current="page"> 
-<span class="menu-text">Statistics Introduction</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../R/statistical_reports/diet_selection_report.html"> 
-<span class="menu-text">Diet Selection</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../R/statistical_reports/experiment_forage_quality.html"> 
-<span class="menu-text">Forage Quality</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../R/statistical_reports/experiment_foraging_efficiency.html"> 
-<span class="menu-text">Foraging Efficiency</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../R/statistical_reports/experiment_plant_cover.html"> 
-<span class="menu-text">Plant Cover</span></a>
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../R/statistical_reports/manuscript_figures_and_text.html"> 
 <span class="menu-text">Methods and Results</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-exploratory-reports" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Exploratory Reports</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-exploratory-reports">    
+        <li>
+    <a class="dropdown-item" href="../../R/statistical_reports/diet_selection_report.html">
+ <span class="dropdown-text">Diet Selection</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R/statistical_reports/experiment_plant_cover.html">
+ <span class="dropdown-text">Plant Cover</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R/statistical_reports/experiment_foraging_efficiency.html">
+ <span class="dropdown-text">Foraging Efficiency</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../R/statistical_reports/experiment_forage_quality.html">
+ <span class="dropdown-text">Forage Quality</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -166,10 +173,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#overview-of-statistical-models" id="toc-overview-of-statistical-models" class="nav-link" data-scroll-target="#overview-of-statistical-models"><span class="header-section-number">2</span> Overview of Statistical Models</a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a>
   <ul class="collapse">
-  <li><a href="#statistical-families-used" id="toc-statistical-families-used" class="nav-link" data-scroll-target="#statistical-families-used"><span class="header-section-number">2.1</span> Statistical Families Used</a></li>
+  <li><a href="#website-structure" id="toc-website-structure" class="nav-link" data-scroll-target="#website-structure"><span class="header-section-number">1.1</span> Website Structure</a></li>
+  <li><a href="#data-organization" id="toc-data-organization" class="nav-link" data-scroll-target="#data-organization"><span class="header-section-number">1.2</span> Data Organization</a></li>
+  </ul></li>
+  <li><a href="#statistical-modeling-framework" id="toc-statistical-modeling-framework" class="nav-link" data-scroll-target="#statistical-modeling-framework"><span class="header-section-number">2</span> Statistical Modeling Framework</a>
+  <ul class="collapse">
+  <li><a href="#model-structure" id="toc-model-structure" class="nav-link" data-scroll-target="#model-structure"><span class="header-section-number">2.1</span> Model Structure</a></li>
+  <li><a href="#statistical-families" id="toc-statistical-families" class="nav-link" data-scroll-target="#statistical-families"><span class="header-section-number">2.2</span> Statistical Families</a></li>
+  <li><a href="#posthoc-comparisons" id="toc-posthoc-comparisons" class="nav-link" data-scroll-target="#posthoc-comparisons"><span class="header-section-number">2.3</span> Posthoc Comparisons</a></li>
+  <li><a href="#software-and-reproducibility" id="toc-software-and-reproducibility" class="nav-link" data-scroll-target="#software-and-reproducibility"><span class="header-section-number">2.4</span> Software and Reproducibility</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -179,7 +193,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Pika–Yak Interactions: Statistical Modeling Overview</h1>
+<h1 class="title">Statistical Analyses Overview</h1>
 </div>
 
 
@@ -210,90 +224,152 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="introduction" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
-<p>This webpage provides an overview of the final statistical models, diagnostics, and effect estimates used in the manuscript:<br>
-<strong><em>“Pika facilitates yaks by suppressing poisonous plants in the Tibetan Plateau”</em></strong>.</p>
-<p>All analyses were conducted in <strong>R</strong> using <code>glmmTMB</code>, <code>emmeans</code>, and the tidyverse ecosystem. For each major response variable, the corresponding figures, model summaries, and estimated contrasts are presented.</p>
-<p>The full analysis workflow, including all code and data, is available in the project’s GitHub repository:<br>
-<a href="https://github.com/ddlawton/pika_yak_interactions" class="uri">https://github.com/ddlawton/pika_yak_interactions</a></p>
-<hr>
-<p>Rather than organizing results by manuscript figure number, models are grouped here by <strong>data type</strong> for easier navigation:</p>
-<p><strong>Diet Selection</strong><br>
-- Pika feeding<br>
-- Yak grazing<br>
-- Dung density<br>
-- Pika burrow density</p>
-<p><strong>Experiment: Plant Cover</strong><br>
-- Forbs<br>
-- Grasses<br>
-- <em>S. chamaejasme</em><br>
-- Sedges</p>
-<p><strong>Experiment: Foraging Efficiency</strong><br>
-- Yak bite/step ratios<br>
-- Yak bites by type<br>
-- Yak total steps<br>
-- Yak weight gain</p>
-<p><strong>Experiment: Foraging Quality</strong><br>
-- ADF<br>
-- CP<br>
-- EE<br>
-- NDF</p>
-<p>Each variable was modeled separately, following the approach described below.</p>
-<hr>
+<p>This website provides reproducible documentation of all statistical analyses conducted for the manuscript:</p>
+<p><strong>“Density-dependent facilitation of livestock by small mammal ecosystem engineers”</strong></p>
+<p>The study investigates how plateau pikas (Ochotona curzoniae) facilitate yak growth and foraging efficiency on the Tibetan Plateau by suppressing the poisonous forb Stellera chamaejasme. Through field surveys and manipulative experiments, we demonstrate that pikas enhance forage quantity and quality for yaks, leading to measurable improvements in yak performance.</p>
+<p>All analyses were conducted in R using <code>glmmTMB</code>, <code>mgcv</code>, <code>emmeans</code>, and the tidyverse ecosystem. The full analysis workflow, including all code, data, and reproducible reports, is available in the project repository at <a href="https://github.com/ddlawton/pika_yak_interactions" class="uri">https://github.com/ddlawton/pika_yak_interactions</a>.</p>
+<section id="website-structure" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="website-structure"><span class="header-section-number">1.1</span> Website Structure</h2>
+<p>This website contains several interconnected reports:</p>
+<p><strong>Methods and Results</strong> is the primary document containing:</p>
+<ul>
+<li>Complete methods section</li>
+<li>Integrated results and discussion</li>
+<li>All manuscript figures (Figures 1-4)</li>
+<li>Supplementary figures and tables</li>
+<li>Full model summaries and posthoc comparisons</li>
+</ul>
+<p>The remaining reports (Diet Selection, Plant Cover, Foraging Efficiency, Foraging Quality) represent earlier exploratory analyses where we developed and refined our statistical approaches. These reports contain detailed model diagnostics, alternative model specifications, and extended visualizations that informed the final analyses presented in the manuscript.</p>
 </section>
-<section id="overview-of-statistical-models" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Overview of Statistical Models</h1>
-<p>The modeling strategy aimed to account for the <strong>hierarchical structure</strong> of the data while avoiding overfitting.<br>
-Because the design was fully factorial, the fixed-effect structure was consistent across analyses; differences between models were driven primarily by whether or not they included a <strong>random effect for individual yak</strong>.</p>
-<p><strong>Without individual yak:</strong></p>
+<section id="data-organization" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="data-organization"><span class="header-section-number">1.2</span> Data Organization</h2>
+<p>Analyses are organized by study component:</p>
+<p><strong>Diet Selection (2021 Field Survey)</strong></p>
+<ul>
+<li>Pika feeding preferences across plant groups</li>
+<li>Yak grazing preferences across plant groups</li>
+<li>Relationship between pika burrow density and S. chamaejasme cover</li>
+<li>Relationship between S. chamaejasme cover and yak dung density</li>
+</ul>
+<p><strong>Manipulative Experiments (2022-2023)</strong></p>
+<ul>
+<li>Plant Cover: Effects on forbs, grasses, sedges, and S. chamaejasme</li>
+<li>Foraging Efficiency: Yak bite rates, step rates, and bite/step ratios</li>
+<li>Foraging Quality: Crude protein (CP), acid detergent fiber (ADF), neutral detergent fiber (NDF), and ether extract (EE)</li>
+<li>Yak Performance: Weight gain as a function of treatments and pika burrow density</li>
+</ul>
+</section>
+</section>
+<section id="statistical-modeling-framework" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Statistical Modeling Framework</h1>
+<section id="model-structure" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="model-structure"><span class="header-section-number">2.1</span> Model Structure</h2>
+<p>The modeling strategy accounts for the hierarchical structure of the data while maintaining interpretability. The experimental design was fully factorial (pika presence × S. chamaejasme presence), and all models included this two-way interaction as the primary fixed effect.</p>
+<section id="experimental-data-2022-2023" class="level3" data-number="2.1.1">
+<h3 data-number="2.1.1" class="anchored" data-anchor-id="experimental-data-2022-2023"><span class="header-section-number">2.1.1</span> Experimental Data (2022-2023)</h3>
+<p>For the manipulative experiments, most models followed this structure:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>response <span class="sc">~</span> pika_treatment <span class="sc">*</span> poison_plant_treatment <span class="sc">+</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>response <span class="sc">~</span> pika_treatment <span class="sc">*</span> posion_plant_treatment <span class="sc">+</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">|</span> block) <span class="sc">+</span> </span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">|</span> year) <span class="sc">+</span> </span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">|</span> month)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><strong>With individual yak:</strong></p>
+<p>Where:</p>
+<ul>
+<li><code>pika_treatment</code>: pika presence vs.&nbsp;pika exclusion</li>
+<li><code>posion_plant_treatment</code>: S. chamaejasme presence vs.&nbsp;S. chamaejasme removal</li>
+<li>Random effects account for spatial blocks, interannual variation, and within-season temporal variation</li>
+</ul>
+<p>For yak-specific behavioral measurements (e.g., bite rates, step rates), individual yak identity was included:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>response <span class="sc">~</span> pika_treatment <span class="sc">*</span> poison_plant_treatment <span class="sc">+</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>response <span class="sc">~</span> pika_treatment <span class="sc">*</span> posion_plant_treatment <span class="sc">+</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">|</span> block) <span class="sc">+</span> </span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">|</span> year) <span class="sc">+</span> </span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">|</span> month) <span class="sc">+</span> </span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">|</span> yak)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<hr>
-<section id="statistical-families-used" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="statistical-families-used"><span class="header-section-number">2.1</span> Statistical Families Used</h2>
+</section>
+<section id="field-survey-data-2021" class="level3" data-number="2.1.2">
+<h3 data-number="2.1.2" class="anchored" data-anchor-id="field-survey-data-2021"><span class="header-section-number">2.1.2</span> Field Survey Data (2021)</h3>
+<p>For observational diet selection data, random effects reflected the sampling design:</p>
+<p><strong>Pika feeding frequency:</strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>feeding_frequency <span class="sc">~</span> plant_group <span class="sc">+</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">|</span> plot) <span class="sc">+</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">|</span> month)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Yak grazing frequency:</strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>grazing_frequency <span class="sc">~</span> plant_group <span class="sc">+</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">|</span> transect) <span class="sc">+</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">|</span> month)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>S. chamaejasme cover vs.&nbsp;pika burrow density:</strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>s_chamaejasme_cover <span class="sc">~</span> <span class="fu">s</span>(active_pika_burrow_density, <span class="at">k =</span> <span class="dv">8</span>, <span class="at">bs =</span> <span class="st">"ts"</span>) <span class="sc">+</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">s</span>(plot, <span class="at">bs =</span> <span class="st">"re"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>This generalized additive model (GAM) allows for nonlinear relationships while accounting for spatial variation among plots.</p>
+<p><strong>Yak weight gain vs.&nbsp;pika burrow density:</strong></p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>weight_gain <span class="sc">~</span> <span class="fu">s</span>(active_burrow_count) <span class="sc">+</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">|</span> block) <span class="sc">+</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">|</span> year) <span class="sc">+</span> </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">|</span> month)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+</section>
+<section id="statistical-families" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="statistical-families"><span class="header-section-number">2.2</span> Statistical Families</h2>
+<p>Model families were selected based on the distribution and structure of each response variable:</p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 15%">
-<col style="width: 84%">
+<col style="width: 12%">
+<col style="width: 66%">
+<col style="width: 21%">
 </colgroup>
 <thead>
 <tr class="header">
 <th>Family</th>
 <th>Application</th>
+<th>Example Variables</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>Gaussian</td>
-<td>Default; used when residuals were approximately homoscedastic</td>
+<td>Continuous data with symmetric residuals</td>
+<td>Weight gain, bite rates</td>
 </tr>
 <tr class="even">
 <td>Beta</td>
-<td>Percent/proportion data (when convergence was stable)</td>
+<td>Proportions and percentages (0-1 scale, excluding 0 and 1)</td>
+<td>Plant cover, foraging quality metrics</td>
 </tr>
 <tr class="odd">
 <td>Tweedie</td>
-<td>Data with overdispersion, skew, or zero inflation</td>
+<td>Overdispersed, zero-inflated, or right-skewed data</td>
+<td>Step counts, bite counts</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Model family selection</strong><br>
-- Percent/proportion data were modeled with the Beta family whenever possible.<br>
-- If Beta models failed to converge or fit poorly, the Gaussian family was used instead.<br>
-- The Tweedie distribution was employed as a flexible alternative for skewed or zero-inflated data.</p>
-<p><strong>Random effects</strong><br>
-Random terms for <code>block</code>, <code>year</code>, and <code>month</code> were retained in all models to reflect the experimental design and sampling structure. Even when these effects explained minimal variance, their inclusion helped prevent pseudoreplication and maintain the integrity of the hierarchical model structure.</p>
+<p>For proportion data, we first attempted Beta family models. If convergence failed or model diagnostics were poor, we used Gaussian models on logit-transformed or untransformed proportions. Model selection was guided by residual diagnostics using the <code>DHARMa</code> package.</p>
+</section>
+<section id="posthoc-comparisons" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="posthoc-comparisons"><span class="header-section-number">2.3</span> Posthoc Comparisons</h2>
+<p>When the pika × S. chamaejasme interaction was statistically significant (P &lt; 0.05), we conducted posthoc pairwise comparisons using Tukey HSD or Sidak adjustments via <code>emmeans</code>. Estimated marginal means and compact letter displays are reported in the Methods and Results document and supplementary tables.</p>
+</section>
+<section id="software-and-reproducibility" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="software-and-reproducibility"><span class="header-section-number">2.4</span> Software and Reproducibility</h2>
+<p>All analyses were conducted in R version 4.3.1 or later. Package management is handled through <code>renv</code> to ensure long-term reproducibility. Key packages include:</p>
+<ul>
+<li><code>glmmTMB</code>: Generalized linear mixed models</li>
+<li><code>mgcv</code>: Generalized additive models</li>
+<li><code>emmeans</code>: Estimated marginal means and contrasts</li>
+<li><code>DHARMa</code>: Residual diagnostics for GLMMs</li>
+<li><code>tidyverse</code>: Data manipulation and visualization</li>
+</ul>
+<p>Complete package versions are recorded in the <code>renv.lock</code> file in the project repository.</p>
 <hr>
 
 
