@@ -21,13 +21,13 @@ Zhiwei Zhong<sup>1,2,3</sup>, Bingbo Ni<sup>2</sup>, Douglas Lawton<sup>4</sup>,
 
 ## Overview
 
-This study investigates the facilitative interactions between plateau pikas (Ochotona curzoniae) and domestic yaks on the Tibetan Plateau. Through field surveys and manipulative experiments, we demonstrate that pikas enhance yak growth performance by suppressing the poisonous forb Stellera chamaejasme, thereby improving forage quantity, quality, and foraging efficiency for yaks.
+This study investigates the facilitative interactions between plateau pikas (*Ochotona curzoniae*) and domestic yaks on the Tibetan Plateau. Through field surveys and manipulative experiments, we demonstrate that pikas enhance yak growth performance by suppressing the poisonous forb *Stellera chamaejasme*, thereby improving forage quantity, quality, and foraging efficiency for yaks.
 
 ### Key Findings
 
-- Pikas preferentially feed on and clip S. chamaejasme, reducing its cover
+- Pikas preferentially feed on and clip *S. chamaejasme*, reducing its cover
 - Pika presence increases grass and sedge abundance (preferred yak forage)
-- Yaks gain more weight in plots with pikas, particularly when S. chamaejasme is present
+- Yaks gain more weight in plots with pikas, particularly when *S. chamaejasme* is present
 - Pika presence improves forage quality (crude protein) and foraging efficiency (bites per step)
 - Effects are density-dependent: yak weight gain increases with active pika burrow density
 
