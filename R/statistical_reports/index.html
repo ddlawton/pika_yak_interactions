@@ -226,7 +226,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
 <p>This website provides reproducible documentation of all statistical analyses conducted for the manuscript:</p>
 <p><strong>“Density-dependent facilitation of livestock by small mammal ecosystem engineers”</strong></p>
-<p>The study investigates how plateau pikas (Ochotona curzoniae) facilitate yak growth and foraging efficiency on the Tibetan Plateau by suppressing the poisonous forb Stellera chamaejasme. Through field surveys and manipulative experiments, we demonstrate that pikas enhance forage quantity and quality for yaks, leading to measurable improvements in yak performance.</p>
+<p>The study investigates how plateau pikas (<em>Ochotona curzoniae</em>) facilitate yak growth and foraging efficiency on the Tibetan Plateau by suppressing the poisonous forb <em>Stellera chamaejasme</em>. Through field surveys and manipulative experiments, we demonstrate that pikas enhance forage quantity and quality for yaks, leading to measurable improvements in yak performance.</p>
 <p>All analyses were conducted in R using <code>glmmTMB</code>, <code>mgcv</code>, <code>emmeans</code>, and the tidyverse ecosystem. The full analysis workflow, including all code, data, and reproducible reports, is available in the project repository at <a href="https://github.com/ddlawton/pika_yak_interactions" class="uri">https://github.com/ddlawton/pika_yak_interactions</a>.</p>
 <section id="website-structure" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="website-structure"><span class="header-section-number">1.1</span> Website Structure</h2>
@@ -248,14 +248,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>Pika feeding preferences across plant groups</li>
 <li>Yak grazing preferences across plant groups</li>
-<li>Relationship between pika burrow density and S. chamaejasme cover</li>
-<li>Relationship between S. chamaejasme cover and yak dung density</li>
+<li>Relationship between pika burrow density and <em>S. chamaejasme</em> cover</li>
+<li>Relationship between <em>S. chamaejasme</em> cover and yak dung density</li>
 </ul>
 <p><strong>Manipulative Experiments (2022-2023)</strong></p>
 <ul>
-<li>Plant Cover: Effects on forbs, grasses, sedges, and S. chamaejasme</li>
+<li>Plant Cover: Effects on forbs, grasses, sedges, and <em>S. chamaejasme</em></li>
 <li>Foraging Efficiency: Yak bite rates, step rates, and bite/step ratios</li>
-<li>Foraging Quality: Crude protein (CP), acid detergent fiber (ADF), neutral detergent fiber (NDF), and ether extract (EE)</li>
+<li>Foraging Quality: Crude protein (CP), acid detergent fiber (ADF), and neutral detergent fiber (NDF)</li>
 <li>Yak Performance: Weight gain as a function of treatments and pika burrow density</li>
 </ul>
 </section>
@@ -264,7 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1 data-number="2"><span class="header-section-number">2</span> Statistical Modeling Framework</h1>
 <section id="model-structure" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="model-structure"><span class="header-section-number">2.1</span> Model Structure</h2>
-<p>The modeling strategy accounts for the hierarchical structure of the data while maintaining interpretability. The experimental design was fully factorial (pika presence × S. chamaejasme presence), and all models included this two-way interaction as the primary fixed effect.</p>
+<p>The modeling strategy accounts for the hierarchical structure of the data while maintaining interpretability. The experimental design was fully factorial (pika presence × <em>S. chamaejasme</em> presence), and all models included this two-way interaction as the primary fixed effect.</p>
 <section id="experimental-data-2022-2023" class="level3" data-number="2.1.1">
 <h3 data-number="2.1.1" class="anchored" data-anchor-id="experimental-data-2022-2023"><span class="header-section-number">2.1.1</span> Experimental Data (2022-2023)</h3>
 <p>For the manipulative experiments, most models followed this structure:</p>
@@ -277,7 +277,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Where:</p>
 <ul>
 <li><code>pika_treatment</code>: pika presence vs.&nbsp;pika exclusion</li>
-<li><code>posion_plant_treatment</code>: S. chamaejasme presence vs.&nbsp;S. chamaejasme removal</li>
+<li><code>posion_plant_treatment</code>: <em>S. chamaejasme</em> presence vs.&nbsp;<em>S. chamaejasme</em> removal</li>
 <li>Random effects account for spatial blocks, interannual variation, and within-season temporal variation</li>
 </ul>
 <p>For yak-specific behavioral measurements (e.g., bite rates, step rates), individual yak identity was included:</p>
@@ -304,7 +304,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">|</span> transect) <span class="sc">+</span> </span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span> <span class="sc">|</span> month)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><strong>S. chamaejasme cover vs.&nbsp;pika burrow density:</strong></p>
+<p><strong><em>S. chamaejasme</em> cover vs.&nbsp;pika burrow density:</strong></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>s_chamaejasme_cover <span class="sc">~</span> <span class="fu">s</span>(active_pika_burrow_density, <span class="at">k =</span> <span class="dv">8</span>, <span class="at">bs =</span> <span class="st">"ts"</span>) <span class="sc">+</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">s</span>(plot, <span class="at">bs =</span> <span class="st">"re"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -357,7 +357,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="posthoc-comparisons" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="posthoc-comparisons"><span class="header-section-number">2.3</span> Posthoc Comparisons</h2>
-<p>When the pika × S. chamaejasme interaction was statistically significant (P &lt; 0.05), we conducted posthoc pairwise comparisons using Tukey HSD or Sidak adjustments via <code>emmeans</code>. Estimated marginal means and compact letter displays are reported in the Methods and Results document and supplementary tables.</p>
+<p>When the pika × <em>S. chamaejasme</em> interaction was statistically significant (P &lt; 0.05), we conducted posthoc pairwise comparisons using Tukey HSD or Sidak adjustments via <code>emmeans</code>. Estimated marginal means and compact letter displays are reported in the Methods and Results document and supplementary tables.</p>
 </section>
 <section id="software-and-reproducibility" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="software-and-reproducibility"><span class="header-section-number">2.4</span> Software and Reproducibility</h2>
