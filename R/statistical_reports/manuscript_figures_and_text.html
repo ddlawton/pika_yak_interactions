@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.8.27">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Douglas Lawton">
-<meta name="dcterms.date" content="2026-01-13">
+<meta name="dcterms.date" content="2026-01-18">
 
 <title>Pika-Yak Interaction: Plant Cover – Pika-Yak interactions</title>
 <style>
@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -162,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 13, 2026</p>
+      <p class="date">January 18, 2026</p>
     </div>
   </div>
   
@@ -188,16 +188,16 @@ Figure&nbsp;1: The hypothesized facilitative effects of pika on yak in the Tibet
 <h1 data-number="1"><span class="header-section-number">1</span> Methods</h1>
 <section id="statistical-analyses" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="statistical-analyses"><span class="header-section-number">1.1</span> Statistical analyses</h2>
-<p>All data were analyzed using linear models, generalized linear mixed models, or generalized additive models, with the choice of model and statistical family guided by the structure and distribution of the data. Posthoc comparisons were conducted only when the pika × S. chamaejasme interaction term was significant. For the 2021 field surveys, we fit generalized linear mixed models with plot and month as random effects. We then used generalized additive mixed models for S. chamaejasme cover and active pika burrow density, with plot as a random effect, and linear regression models for dung density and S. chamaejasme cover. For the field manipulation experiments in 2022 and 2023, we constructed generalized linear mixed models with the dependent variables (e.g., grass bites per step, sedge total bites, weight gain) regressed against the interactive effect of pika and S. chamaejasme treatments, while including block, year, and month as random effects to capture the hierarchical structure of the data. Models assumed gaussian, beta (for proportions), or tweedie (for non-normal data) distributions, selected based on data type and model fit. A significance threshold of P = 0.05 was applied, with TukeyHSD or Sidak posthoc tests used where appropriate. All data management, modeling, and visualization were carried out in R, with dependencies managed using <em>renv</em>. The main modeling packages were <em>glmmTMB</em> and <em>mgcv</em>, with <em>DHARMa</em> used for model diagnostics. Data management relied on the <em>tidyverse</em> suite of packages. A complete record of package versions is available in the renv.lock file in the repository: <a href="https://github.com/ddlawton/pika_yak_interactions" class="uri">https://github.com/ddlawton/pika_yak_interactions</a>.</p>
+<p>All data were analyzed using linear models, generalized linear mixed models, or generalized additive models, with the choice of model and statistical family guided by the structure and distribution of the data. Posthoc comparisons were conducted only when the pika × S. chamaejasme interaction term was significant. For the 2021 field surveys, we fit generalized linear mixed models with plot and month as random effects. We then used generalized additive mixed models for S. chamaejasme cover and active pika burrow density, with plot as a random effect, and linear regression models for dung density and S. chamaejasme cover. For the field manipulation experiments in 2022 and 2023, we constructed generalized linear mixed models with the dependent variables (e.g., grass bites per step, sedge bites, weight gain) regressed against the interactive effect of pika and S. chamaejasme treatments, while including block, year, and month as random effects to capture the hierarchical structure of the data. Models assumed gaussian, beta (for proportions), or tweedie (for non-normal data) distributions, selected based on data type and model fit. A significance threshold of P = 0.05 was applied, with TukeyHSD or Sidak posthoc tests used where appropriate. All data management, modeling, and visualization were carried out in R, with dependencies managed using <em>renv</em>. The main modeling packages were <em>glmmTMB</em> and <em>mgcv</em>, with <em>DHARMa</em> used for model diagnostics. Data management relied on the <em>tidyverse</em> suite of packages. A complete record of package versions is available in the renv.lock file in the repository: <a href="https://github.com/ddlawton/pika_yak_interactions" class="uri">https://github.com/ddlawton/pika_yak_interactions</a>.</p>
 </section>
 </section>
 <section id="results-and-discussion" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Results and Discussion</h1>
 <p>First, we carried out a set of field observational experiments to investigate diet selection by pika and yak, as well as the associations among pika abundance, S. chamaejasme abundance, and yak activity under natural field conditions. Consistent with previous studies<sup>5,11,24–25</sup>, we found that pika and yak have distinct diet preferences: yaks preferred grasses and sedges, while pika preferred the poisonous S. chamaejasme (<a href="#fig-diet-selection" class="quarto-xref">Figure&nbsp;2</a> A,B, <a href="#supptbl-pika-yak-feeding-model-summary" class="quarto-xref">Supplementary Table&nbsp;1</a>, <a href="#supptbl-pika-yak-feeding-model-contrast" class="quarto-xref">Supplementary Table&nbsp;2</a>). We also found that S. chamaejasme abundance was negatively associated with active pika burrow abundance (<a href="#fig-diet-selection" class="quarto-xref">Figure&nbsp;2</a> C) and with yak foraging activity, as indicated by dung density (<a href="#fig-diet-selection" class="quarto-xref">Figure&nbsp;2</a> D).</p>
 <p>Building on these results, we conducted an in-situ manipulative field experiment using fenced enclosures to test the interactive effects of pika and S. chamaejasme on yak weight gain, foraging quantity and quality, and grazing behavior. For weight gain, yaks gained less in poison-plant plots than in non-poison plots, and there was a significant interaction between pika and S. chamaejasme treatments (<a href="#supptbl-yak-performance-model-summary" class="quarto-xref">Supplementary Table&nbsp;5</a>). When pika were present, yaks showed higher weight gain (<a href="#supptbl-yak-performance-model-contrast" class="quarto-xref">Supplementary Table&nbsp;6</a>). This effect was driven by pika feeding on S. chamaejasme (<a href="#fig-diet-selection" class="quarto-xref">Figure&nbsp;2</a> B, <a href="#supptbl-yak-performance-model-summary" class="quarto-xref">Supplementary Table&nbsp;5</a>, <a href="#supptbl-yak-performance-model-contrast" class="quarto-xref">Supplementary Table&nbsp;6</a>), which increased grass cover (<a href="#fig-diet-selection" class="quarto-xref">Figure&nbsp;2</a> C, <a href="#supptbl-yak-performance-model-summary" class="quarto-xref">Supplementary Table&nbsp;5</a>, <a href="#supptbl-yak-performance-model-contrast" class="quarto-xref">Supplementary Table&nbsp;6</a>) compared to plots with S. chamaejasme but no pika.</p>
-<p>Food quantity and quality are key drivers of individual performance and population dynamics in large herbivores<sup>30–32</sup>. In the presence of <em>S. chamaejasme</em> forbs, pika doubled the cover of yak’s most preferred grasses (<a href="#fig-diet-selection" class="quarto-xref">Figure&nbsp;2</a> C, <a href="#supptbl-yak-performance-model-summary" class="quarto-xref">Supplementary Table&nbsp;5</a>, <a href="#supptbl-yak-performance-model-contrast" class="quarto-xref">Supplementary Table&nbsp;6</a>) and increased the crude protein content of total forage by approximately 16% (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> D, <a href="#supptbl-yak-performance-model-summary" class="quarto-xref">Supplementary Table&nbsp;5</a>, <a href="#supptbl-yak-performance-model-contrast" class="quarto-xref">Supplementary Table&nbsp;6</a>), suggesting that pika facilitate yak by enhancing both the quantity and quality of forage. Acid detergent fibre (6%) was higher in pika plots, while ether extract also differed significantly between treatments (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> E,F, <a href="#supptbl-yak-performance-model-summary" class="quarto-xref">Supplementary Table&nbsp;5</a>, <a href="#supptbl-yak-performance-model-contrast" class="quarto-xref">Supplementary Table&nbsp;6</a>). These increases in grass abundance and forage quality were likely driven by the decline in poisonous plants induced by pika (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> B), which reduced interspecific competition for shared resources (e.g., light, soil moisture, nutrients) and allowed grasses to expand<sup>27–28</sup>. In the absence of S. chamaejasme forbs, however, the positive effects of pika on food resources and yak weight gain disappeared (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> A,C,D). The relationships between active burrow count and treatments, as well as between yak weight gain and burrow density, are presented in <a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> (panels G and H) and in <a href="#supptbl-pika-burrow-count" class="quarto-xref">Supplementary Table&nbsp;3</a> and <a href="#supptbl-weight-gain-burrow-regression" class="quarto-xref">Supplementary Table&nbsp;4</a>, respectively.</p>
-<p>Pika-yak facilitation was also linked to improved foraging efficiency in yak when grazing alongside pika. Optimal foraging theory predicts that animals minimize energy costs to exploit high-quality food items and maximize intake of digestible nutrients, thereby improving performance<sup>33</sup>. In ruminants, bite rate, step rate, and bites per step are key predictors of foraging efficiency<sup>34</sup> and, ultimately, animal performance<sup>35</sup>. In the presence of <em>S. chamaejasme</em> forbs, yak total, sedge, and grass bite rates increased by roughly 35% (<a href="#fig-yak-foraging-efficiency" class="quarto-xref">Figure&nbsp;4</a> A), 48% (<a href="#fig-yak-foraging-efficiency" class="quarto-xref">Figure&nbsp;4</a> B), and 41% (<a href="#fig-yak-foraging-efficiency" class="quarto-xref">Figure&nbsp;4</a> C), respectively, in the treatment where they coexisted with pika (<a href="#supptbl-yak-foraging-efficiency-summary" class="quarto-xref">Supplementary Table&nbsp;7</a>, <a href="#supptbl-yak-foraging-efficiency-contrast" class="quarto-xref">Supplementary Table&nbsp;8</a>). Yak stepped more often in the presence of <em>S. chamaejasme</em> forbs without pika, which meant they consumed more grasses and sedges per step in plots where pika were present.</p>
-<p>Yak total steps were also higher in the presence of <em>S. chamaejasme</em> forbs when pika were absent (<a href="#fig-yak-foraging-efficiency" class="quarto-xref">Figure&nbsp;4</a> D). In contrast, sedge bites per step and grass bites per step increased significantly by 48% (<a href="#fig-yak-foraging-efficiency" class="quarto-xref">Figure&nbsp;4</a> E) and 41% (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> F) in plots with pika. These gains in foraging efficiency can be attributed to the decline in <em>S. chamaejasme</em> forbs (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> B), which improved access to palatable grasses and sedges. In this system, increased food availability (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> C,D) and enhanced foraging efficiency (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a>) likely work together to shape the facilitative effects of pika on yak performance (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> A).</p>
+<p>Food quantity and quality are key drivers of individual performance and population dynamics in large herbivores<sup>30–32</sup>. In the presence of <em>S. chamaejasme</em> forbs, pika doubled the cover of yak’s most preferred grasses (<a href="#fig-diet-selection" class="quarto-xref">Figure&nbsp;2</a> C, <a href="#supptbl-yak-performance-model-summary" class="quarto-xref">Supplementary Table&nbsp;5</a>, <a href="#supptbl-yak-performance-model-contrast" class="quarto-xref">Supplementary Table&nbsp;6</a>) and increased the crude protein content by approximately 16% (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> D, <a href="#supptbl-yak-performance-model-summary" class="quarto-xref">Supplementary Table&nbsp;5</a>, <a href="#supptbl-yak-performance-model-contrast" class="quarto-xref">Supplementary Table&nbsp;6</a>), suggesting that pika facilitate yak by enhancing both the quantity and quality of forage. Acid detergent fibre (6%) was higher in pika plots. These increases in grass abundance and forage quality were likely driven by the decline in poisonous plants induced by pika (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> B), which reduced interspecific competition for shared resources (e.g., light, soil moisture, nutrients) and allowed grasses to expand<sup>27–28</sup>. In the absence of S. chamaejasme forbs, however, the positive effects of pika on food resources and yak weight gain disappeared (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> A,C,D). The relationships between active burrow count and treatments, as well as between yak weight gain and burrow density, are presented in <a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> (panels G and H) and in <a href="#supptbl-pika-burrow-count" class="quarto-xref">Supplementary Table&nbsp;3</a> and <a href="#supptbl-weight-gain-burrow-regression" class="quarto-xref">Supplementary Table&nbsp;4</a>, respectively.</p>
+<p>Pika-yak facilitation was also linked to improved foraging efficiency in yak when grazing alongside pika. Optimal foraging theory predicts that animals minimize energy costs to exploit high-quality food items and maximize intake of digestible nutrients, thereby improving performance<sup>33</sup>. In ruminants, bite rate, step rate, and bites per step are key predictors of foraging efficiency<sup>34</sup> and, ultimately, animal performance<sup>35</sup>. In the presence of <em>S. chamaejasme</em> forbs, yak sedge, and grass bite rates increased by roughly 48% (<a href="#fig-yak-foraging-efficiency" class="quarto-xref">Figure&nbsp;4</a> B), and 41% (<a href="#fig-yak-foraging-efficiency" class="quarto-xref">Figure&nbsp;4</a> C), respectively, in the treatment where they coexisted with pika (<a href="#supptbl-yak-foraging-efficiency-summary" class="quarto-xref">Supplementary Table&nbsp;7</a>, <a href="#supptbl-yak-foraging-efficiency-contrast" class="quarto-xref">Supplementary Table&nbsp;8</a>). Yak stepped more often in the presence of <em>S. chamaejasme</em> forbs without pika, which meant they consumed more grasses and sedges per step in plots where pika were present.</p>
+<p>Sedge bites per step and grass bites per step increased significantly by 48% (<a href="#fig-yak-foraging-efficiency" class="quarto-xref">Figure&nbsp;4</a> E) and 41% (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> F) in plots with pika. These gains in foraging efficiency can be attributed to the decline in <em>S. chamaejasme</em> forbs (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> B), which improved access to palatable grasses and sedges. In this system, increased food availability (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> C,D) and enhanced foraging efficiency (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a>) likely work together to shape the facilitative effects of pika on yak performance (<a href="#fig-yak-performance" class="quarto-xref">Figure&nbsp;3</a> A).</p>
 <div id="fig-diet-selection" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-diet-selection-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -214,7 +214,7 @@ Figure&nbsp;2: Diet selection of pikas and yaks and their potential interactions
 <img src="manuscript_figures_and_text_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="960">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-yak-performance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: Combined effects of two-year (2022–2023) pika and Stellera chamaejasme removal treatments on yak growth, forage quantity, and quality in the field manipulative experiment. (A) Pika density (indicated by active burrow density), (B) yak weight gain, (C) relationship between pika density and yak weight gain, (D) S. chamaejasme cover, (E) grass cover, (F) sedge cover, (G) crude protein (CP) content, (H) acid detergent fibre (ADF) content, and (I) neutral detergent fibre (NDF) of total forage (dry mass basis). Average values from both years were used in analyses, yielding one data point per 150 × 150 m plot. Significant interactions between pikas and S. chamaejasme were evaluated using post hoc tests; means not sharing letters differ significantly. For panels A and F, only main effects were significant (Table S3). Error bars indicate +/- SE.
+Figure&nbsp;3: Combined effects of two-year (2022–2023) pika and Stellera chamaejasme removal treatments on yak growth, forage quantity, and quality in the field manipulative experiment. (A) Pika density (indicated by active burrow density), (B) yak weight gain, (C) relationship between pika density and yak weight gain, (D) S. chamaejasme cover, (E) grass cover, (F) sedge cover, (G) crude protein (CP) content, and (H) acid detergent fibre (ADF) content. Average values from both years were used in analyses, yielding one data point per 150 × 150 m plot. Significant interactions between pikas and S. chamaejasme were evaluated using post hoc tests; means not sharing letters differ significantly. For panels A and F, only main effects were significant (Table S3). Error bars indicate +/- SE.
 </figcaption>
 </figure>
 </div>
@@ -254,23 +254,23 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
 <div id="supptbl-pika-yak-feeding-model-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-supptbl figure">
 <div aria-describedby="supptbl-pika-yak-feeding-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="vltpvmnxik" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vltpvmnxik table {
+<div id="lzcscmmqpc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#lzcscmmqpc table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vltpvmnxik thead, #vltpvmnxik tbody, #vltpvmnxik tfoot, #vltpvmnxik tr, #vltpvmnxik td, #vltpvmnxik th {
+#lzcscmmqpc thead, #lzcscmmqpc tbody, #lzcscmmqpc tfoot, #lzcscmmqpc tr, #lzcscmmqpc td, #lzcscmmqpc th {
   border-style: none;
 }
 
-#vltpvmnxik p {
+#lzcscmmqpc p {
   margin: 0;
   padding: 0;
 }
 
-#vltpvmnxik .gt_table {
+#lzcscmmqpc .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -296,12 +296,12 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   border-left-color: #D3D3D3;
 }
 
-#vltpvmnxik .gt_caption {
+#lzcscmmqpc .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vltpvmnxik .gt_title {
+#lzcscmmqpc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -313,7 +313,7 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   border-bottom-width: 0;
 }
 
-#vltpvmnxik .gt_subtitle {
+#lzcscmmqpc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -325,7 +325,7 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   border-top-width: 0;
 }
 
-#vltpvmnxik .gt_heading {
+#lzcscmmqpc .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -337,13 +337,13 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   border-right-color: #D3D3D3;
 }
 
-#vltpvmnxik .gt_bottom_border {
+#lzcscmmqpc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vltpvmnxik .gt_col_headings {
+#lzcscmmqpc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -358,7 +358,7 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   border-right-color: #D3D3D3;
 }
 
-#vltpvmnxik .gt_col_heading {
+#lzcscmmqpc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -378,7 +378,7 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   overflow-x: hidden;
 }
 
-#vltpvmnxik .gt_column_spanner_outer {
+#lzcscmmqpc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -390,15 +390,15 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   padding-right: 4px;
 }
 
-#vltpvmnxik .gt_column_spanner_outer:first-child {
+#lzcscmmqpc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vltpvmnxik .gt_column_spanner_outer:last-child {
+#lzcscmmqpc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vltpvmnxik .gt_column_spanner {
+#lzcscmmqpc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -410,11 +410,11 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   width: 100%;
 }
 
-#vltpvmnxik .gt_spanner_row {
+#lzcscmmqpc .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vltpvmnxik .gt_group_heading {
+#lzcscmmqpc .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -440,7 +440,7 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   text-align: left;
 }
 
-#vltpvmnxik .gt_empty_group_heading {
+#lzcscmmqpc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -455,15 +455,15 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   vertical-align: middle;
 }
 
-#vltpvmnxik .gt_from_md > :first-child {
+#lzcscmmqpc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vltpvmnxik .gt_from_md > :last-child {
+#lzcscmmqpc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vltpvmnxik .gt_row {
+#lzcscmmqpc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -482,7 +482,7 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   overflow-x: hidden;
 }
 
-#vltpvmnxik .gt_stub {
+#lzcscmmqpc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -495,7 +495,7 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   padding-right: 5px;
 }
 
-#vltpvmnxik .gt_stub_row_group {
+#lzcscmmqpc .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -509,15 +509,15 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   vertical-align: top;
 }
 
-#vltpvmnxik .gt_row_group_first td {
+#lzcscmmqpc .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vltpvmnxik .gt_row_group_first th {
+#lzcscmmqpc .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vltpvmnxik .gt_summary_row {
+#lzcscmmqpc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -527,16 +527,16 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   padding-right: 5px;
 }
 
-#vltpvmnxik .gt_first_summary_row {
+#lzcscmmqpc .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vltpvmnxik .gt_first_summary_row.thick {
+#lzcscmmqpc .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vltpvmnxik .gt_last_summary_row {
+#lzcscmmqpc .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -546,7 +546,7 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   border-bottom-color: #D3D3D3;
 }
 
-#vltpvmnxik .gt_grand_summary_row {
+#lzcscmmqpc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -556,7 +556,7 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   padding-right: 5px;
 }
 
-#vltpvmnxik .gt_first_grand_summary_row {
+#lzcscmmqpc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -566,7 +566,7 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   border-top-color: #D3D3D3;
 }
 
-#vltpvmnxik .gt_last_grand_summary_row_top {
+#lzcscmmqpc .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -576,11 +576,11 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   border-bottom-color: #D3D3D3;
 }
 
-#vltpvmnxik .gt_striped {
+#lzcscmmqpc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vltpvmnxik .gt_table_body {
+#lzcscmmqpc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -589,7 +589,7 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   border-bottom-color: #D3D3D3;
 }
 
-#vltpvmnxik .gt_footnotes {
+#lzcscmmqpc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -603,7 +603,7 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   border-right-color: #D3D3D3;
 }
 
-#vltpvmnxik .gt_footnote {
+#lzcscmmqpc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -612,7 +612,7 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   padding-right: 5px;
 }
 
-#vltpvmnxik .gt_sourcenotes {
+#lzcscmmqpc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -626,7 +626,7 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   border-right-color: #D3D3D3;
 }
 
-#vltpvmnxik .gt_sourcenote {
+#lzcscmmqpc .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -634,72 +634,72 @@ Supplementary Figure&nbsp;2: Combined effects of two-year (2022–2023) pika and
   padding-right: 5px;
 }
 
-#vltpvmnxik .gt_left {
+#lzcscmmqpc .gt_left {
   text-align: left;
 }
 
-#vltpvmnxik .gt_center {
+#lzcscmmqpc .gt_center {
   text-align: center;
 }
 
-#vltpvmnxik .gt_right {
+#lzcscmmqpc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vltpvmnxik .gt_font_normal {
+#lzcscmmqpc .gt_font_normal {
   font-weight: normal;
 }
 
-#vltpvmnxik .gt_font_bold {
+#lzcscmmqpc .gt_font_bold {
   font-weight: bold;
 }
 
-#vltpvmnxik .gt_font_italic {
+#lzcscmmqpc .gt_font_italic {
   font-style: italic;
 }
 
-#vltpvmnxik .gt_super {
+#lzcscmmqpc .gt_super {
   font-size: 65%;
 }
 
-#vltpvmnxik .gt_footnote_marks {
+#lzcscmmqpc .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vltpvmnxik .gt_asterisk {
+#lzcscmmqpc .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vltpvmnxik .gt_indent_1 {
+#lzcscmmqpc .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vltpvmnxik .gt_indent_2 {
+#lzcscmmqpc .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vltpvmnxik .gt_indent_3 {
+#lzcscmmqpc .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vltpvmnxik .gt_indent_4 {
+#lzcscmmqpc .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vltpvmnxik .gt_indent_5 {
+#lzcscmmqpc .gt_indent_5 {
   text-indent: 25px;
 }
 
-#vltpvmnxik .katex-display {
+#lzcscmmqpc .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#vltpvmnxik div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#lzcscmmqpc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -839,23 +839,23 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
 <div id="supptbl-pika-yak-feeding-model-contrast" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-supptbl figure">
 <div aria-describedby="supptbl-pika-yak-feeding-model-contrast-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="qqsjzildcw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qqsjzildcw table {
+<div id="bwyelhxgrv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bwyelhxgrv table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qqsjzildcw thead, #qqsjzildcw tbody, #qqsjzildcw tfoot, #qqsjzildcw tr, #qqsjzildcw td, #qqsjzildcw th {
+#bwyelhxgrv thead, #bwyelhxgrv tbody, #bwyelhxgrv tfoot, #bwyelhxgrv tr, #bwyelhxgrv td, #bwyelhxgrv th {
   border-style: none;
 }
 
-#qqsjzildcw p {
+#bwyelhxgrv p {
   margin: 0;
   padding: 0;
 }
 
-#qqsjzildcw .gt_table {
+#bwyelhxgrv .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -881,12 +881,12 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   border-left-color: #D3D3D3;
 }
 
-#qqsjzildcw .gt_caption {
+#bwyelhxgrv .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qqsjzildcw .gt_title {
+#bwyelhxgrv .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -898,7 +898,7 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   border-bottom-width: 0;
 }
 
-#qqsjzildcw .gt_subtitle {
+#bwyelhxgrv .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -910,7 +910,7 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   border-top-width: 0;
 }
 
-#qqsjzildcw .gt_heading {
+#bwyelhxgrv .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -922,13 +922,13 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   border-right-color: #D3D3D3;
 }
 
-#qqsjzildcw .gt_bottom_border {
+#bwyelhxgrv .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qqsjzildcw .gt_col_headings {
+#bwyelhxgrv .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -943,7 +943,7 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   border-right-color: #D3D3D3;
 }
 
-#qqsjzildcw .gt_col_heading {
+#bwyelhxgrv .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -963,7 +963,7 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   overflow-x: hidden;
 }
 
-#qqsjzildcw .gt_column_spanner_outer {
+#bwyelhxgrv .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -975,15 +975,15 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   padding-right: 4px;
 }
 
-#qqsjzildcw .gt_column_spanner_outer:first-child {
+#bwyelhxgrv .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qqsjzildcw .gt_column_spanner_outer:last-child {
+#bwyelhxgrv .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qqsjzildcw .gt_column_spanner {
+#bwyelhxgrv .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -995,11 +995,11 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   width: 100%;
 }
 
-#qqsjzildcw .gt_spanner_row {
+#bwyelhxgrv .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qqsjzildcw .gt_group_heading {
+#bwyelhxgrv .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1025,7 +1025,7 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   text-align: left;
 }
 
-#qqsjzildcw .gt_empty_group_heading {
+#bwyelhxgrv .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1040,15 +1040,15 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   vertical-align: middle;
 }
 
-#qqsjzildcw .gt_from_md > :first-child {
+#bwyelhxgrv .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qqsjzildcw .gt_from_md > :last-child {
+#bwyelhxgrv .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qqsjzildcw .gt_row {
+#bwyelhxgrv .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1067,7 +1067,7 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   overflow-x: hidden;
 }
 
-#qqsjzildcw .gt_stub {
+#bwyelhxgrv .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1080,7 +1080,7 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   padding-right: 5px;
 }
 
-#qqsjzildcw .gt_stub_row_group {
+#bwyelhxgrv .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1094,15 +1094,15 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   vertical-align: top;
 }
 
-#qqsjzildcw .gt_row_group_first td {
+#bwyelhxgrv .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qqsjzildcw .gt_row_group_first th {
+#bwyelhxgrv .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qqsjzildcw .gt_summary_row {
+#bwyelhxgrv .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1112,16 +1112,16 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   padding-right: 5px;
 }
 
-#qqsjzildcw .gt_first_summary_row {
+#bwyelhxgrv .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qqsjzildcw .gt_first_summary_row.thick {
+#bwyelhxgrv .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qqsjzildcw .gt_last_summary_row {
+#bwyelhxgrv .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1131,7 +1131,7 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   border-bottom-color: #D3D3D3;
 }
 
-#qqsjzildcw .gt_grand_summary_row {
+#bwyelhxgrv .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1141,7 +1141,7 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   padding-right: 5px;
 }
 
-#qqsjzildcw .gt_first_grand_summary_row {
+#bwyelhxgrv .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1151,7 +1151,7 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   border-top-color: #D3D3D3;
 }
 
-#qqsjzildcw .gt_last_grand_summary_row_top {
+#bwyelhxgrv .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1161,11 +1161,11 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   border-bottom-color: #D3D3D3;
 }
 
-#qqsjzildcw .gt_striped {
+#bwyelhxgrv .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qqsjzildcw .gt_table_body {
+#bwyelhxgrv .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1174,7 +1174,7 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   border-bottom-color: #D3D3D3;
 }
 
-#qqsjzildcw .gt_footnotes {
+#bwyelhxgrv .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1188,7 +1188,7 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   border-right-color: #D3D3D3;
 }
 
-#qqsjzildcw .gt_footnote {
+#bwyelhxgrv .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1197,7 +1197,7 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   padding-right: 5px;
 }
 
-#qqsjzildcw .gt_sourcenotes {
+#bwyelhxgrv .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1211,7 +1211,7 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   border-right-color: #D3D3D3;
 }
 
-#qqsjzildcw .gt_sourcenote {
+#bwyelhxgrv .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1219,72 +1219,72 @@ Supplementary Table&nbsp;1: Model summary for pika and yak feeding.
   padding-right: 5px;
 }
 
-#qqsjzildcw .gt_left {
+#bwyelhxgrv .gt_left {
   text-align: left;
 }
 
-#qqsjzildcw .gt_center {
+#bwyelhxgrv .gt_center {
   text-align: center;
 }
 
-#qqsjzildcw .gt_right {
+#bwyelhxgrv .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qqsjzildcw .gt_font_normal {
+#bwyelhxgrv .gt_font_normal {
   font-weight: normal;
 }
 
-#qqsjzildcw .gt_font_bold {
+#bwyelhxgrv .gt_font_bold {
   font-weight: bold;
 }
 
-#qqsjzildcw .gt_font_italic {
+#bwyelhxgrv .gt_font_italic {
   font-style: italic;
 }
 
-#qqsjzildcw .gt_super {
+#bwyelhxgrv .gt_super {
   font-size: 65%;
 }
 
-#qqsjzildcw .gt_footnote_marks {
+#bwyelhxgrv .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qqsjzildcw .gt_asterisk {
+#bwyelhxgrv .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qqsjzildcw .gt_indent_1 {
+#bwyelhxgrv .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qqsjzildcw .gt_indent_2 {
+#bwyelhxgrv .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qqsjzildcw .gt_indent_3 {
+#bwyelhxgrv .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qqsjzildcw .gt_indent_4 {
+#bwyelhxgrv .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qqsjzildcw .gt_indent_5 {
+#bwyelhxgrv .gt_indent_5 {
   text-indent: 25px;
 }
 
-#qqsjzildcw .katex-display {
+#bwyelhxgrv .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#qqsjzildcw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#bwyelhxgrv div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1392,23 +1392,23 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
 <div id="supptbl-pika-burrow-count" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-supptbl figure">
 <div aria-describedby="supptbl-pika-burrow-count-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="bcrywxbene" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#bcrywxbene table {
+<div id="wqmzvrmilh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wqmzvrmilh table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#bcrywxbene thead, #bcrywxbene tbody, #bcrywxbene tfoot, #bcrywxbene tr, #bcrywxbene td, #bcrywxbene th {
+#wqmzvrmilh thead, #wqmzvrmilh tbody, #wqmzvrmilh tfoot, #wqmzvrmilh tr, #wqmzvrmilh td, #wqmzvrmilh th {
   border-style: none;
 }
 
-#bcrywxbene p {
+#wqmzvrmilh p {
   margin: 0;
   padding: 0;
 }
 
-#bcrywxbene .gt_table {
+#wqmzvrmilh .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1434,12 +1434,12 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   border-left-color: #D3D3D3;
 }
 
-#bcrywxbene .gt_caption {
+#wqmzvrmilh .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#bcrywxbene .gt_title {
+#wqmzvrmilh .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1451,7 +1451,7 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   border-bottom-width: 0;
 }
 
-#bcrywxbene .gt_subtitle {
+#wqmzvrmilh .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1463,7 +1463,7 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   border-top-width: 0;
 }
 
-#bcrywxbene .gt_heading {
+#wqmzvrmilh .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1475,13 +1475,13 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   border-right-color: #D3D3D3;
 }
 
-#bcrywxbene .gt_bottom_border {
+#wqmzvrmilh .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bcrywxbene .gt_col_headings {
+#wqmzvrmilh .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1496,7 +1496,7 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   border-right-color: #D3D3D3;
 }
 
-#bcrywxbene .gt_col_heading {
+#wqmzvrmilh .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1516,7 +1516,7 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   overflow-x: hidden;
 }
 
-#bcrywxbene .gt_column_spanner_outer {
+#wqmzvrmilh .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1528,15 +1528,15 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   padding-right: 4px;
 }
 
-#bcrywxbene .gt_column_spanner_outer:first-child {
+#wqmzvrmilh .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bcrywxbene .gt_column_spanner_outer:last-child {
+#wqmzvrmilh .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bcrywxbene .gt_column_spanner {
+#wqmzvrmilh .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1548,11 +1548,11 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   width: 100%;
 }
 
-#bcrywxbene .gt_spanner_row {
+#wqmzvrmilh .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#bcrywxbene .gt_group_heading {
+#wqmzvrmilh .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1578,7 +1578,7 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   text-align: left;
 }
 
-#bcrywxbene .gt_empty_group_heading {
+#wqmzvrmilh .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1593,15 +1593,15 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   vertical-align: middle;
 }
 
-#bcrywxbene .gt_from_md > :first-child {
+#wqmzvrmilh .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bcrywxbene .gt_from_md > :last-child {
+#wqmzvrmilh .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bcrywxbene .gt_row {
+#wqmzvrmilh .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1620,7 +1620,7 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   overflow-x: hidden;
 }
 
-#bcrywxbene .gt_stub {
+#wqmzvrmilh .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1633,7 +1633,7 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   padding-right: 5px;
 }
 
-#bcrywxbene .gt_stub_row_group {
+#wqmzvrmilh .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1647,15 +1647,15 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   vertical-align: top;
 }
 
-#bcrywxbene .gt_row_group_first td {
+#wqmzvrmilh .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bcrywxbene .gt_row_group_first th {
+#wqmzvrmilh .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#bcrywxbene .gt_summary_row {
+#wqmzvrmilh .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1665,16 +1665,16 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   padding-right: 5px;
 }
 
-#bcrywxbene .gt_first_summary_row {
+#wqmzvrmilh .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bcrywxbene .gt_first_summary_row.thick {
+#wqmzvrmilh .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bcrywxbene .gt_last_summary_row {
+#wqmzvrmilh .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1684,7 +1684,7 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   border-bottom-color: #D3D3D3;
 }
 
-#bcrywxbene .gt_grand_summary_row {
+#wqmzvrmilh .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1694,7 +1694,7 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   padding-right: 5px;
 }
 
-#bcrywxbene .gt_first_grand_summary_row {
+#wqmzvrmilh .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1704,7 +1704,7 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   border-top-color: #D3D3D3;
 }
 
-#bcrywxbene .gt_last_grand_summary_row_top {
+#wqmzvrmilh .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1714,11 +1714,11 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   border-bottom-color: #D3D3D3;
 }
 
-#bcrywxbene .gt_striped {
+#wqmzvrmilh .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bcrywxbene .gt_table_body {
+#wqmzvrmilh .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1727,7 +1727,7 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   border-bottom-color: #D3D3D3;
 }
 
-#bcrywxbene .gt_footnotes {
+#wqmzvrmilh .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1741,7 +1741,7 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   border-right-color: #D3D3D3;
 }
 
-#bcrywxbene .gt_footnote {
+#wqmzvrmilh .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1750,7 +1750,7 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   padding-right: 5px;
 }
 
-#bcrywxbene .gt_sourcenotes {
+#wqmzvrmilh .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1764,7 +1764,7 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   border-right-color: #D3D3D3;
 }
 
-#bcrywxbene .gt_sourcenote {
+#wqmzvrmilh .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1772,72 +1772,72 @@ Supplementary Table&nbsp;2: Model contrasts for pika and yak feeding.
   padding-right: 5px;
 }
 
-#bcrywxbene .gt_left {
+#wqmzvrmilh .gt_left {
   text-align: left;
 }
 
-#bcrywxbene .gt_center {
+#wqmzvrmilh .gt_center {
   text-align: center;
 }
 
-#bcrywxbene .gt_right {
+#wqmzvrmilh .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bcrywxbene .gt_font_normal {
+#wqmzvrmilh .gt_font_normal {
   font-weight: normal;
 }
 
-#bcrywxbene .gt_font_bold {
+#wqmzvrmilh .gt_font_bold {
   font-weight: bold;
 }
 
-#bcrywxbene .gt_font_italic {
+#wqmzvrmilh .gt_font_italic {
   font-style: italic;
 }
 
-#bcrywxbene .gt_super {
+#wqmzvrmilh .gt_super {
   font-size: 65%;
 }
 
-#bcrywxbene .gt_footnote_marks {
+#wqmzvrmilh .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#bcrywxbene .gt_asterisk {
+#wqmzvrmilh .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bcrywxbene .gt_indent_1 {
+#wqmzvrmilh .gt_indent_1 {
   text-indent: 5px;
 }
 
-#bcrywxbene .gt_indent_2 {
+#wqmzvrmilh .gt_indent_2 {
   text-indent: 10px;
 }
 
-#bcrywxbene .gt_indent_3 {
+#wqmzvrmilh .gt_indent_3 {
   text-indent: 15px;
 }
 
-#bcrywxbene .gt_indent_4 {
+#wqmzvrmilh .gt_indent_4 {
   text-indent: 20px;
 }
 
-#bcrywxbene .gt_indent_5 {
+#wqmzvrmilh .gt_indent_5 {
   text-indent: 25px;
 }
 
-#bcrywxbene .katex-display {
+#wqmzvrmilh .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#bcrywxbene div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#wqmzvrmilh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1923,23 +1923,23 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
 <div id="supptbl-weight-gain-burrow-regression" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-supptbl figure">
 <div aria-describedby="supptbl-weight-gain-burrow-regression-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="dlwfwasjpj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#dlwfwasjpj table {
+<div id="mbancrajlw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mbancrajlw table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#dlwfwasjpj thead, #dlwfwasjpj tbody, #dlwfwasjpj tfoot, #dlwfwasjpj tr, #dlwfwasjpj td, #dlwfwasjpj th {
+#mbancrajlw thead, #mbancrajlw tbody, #mbancrajlw tfoot, #mbancrajlw tr, #mbancrajlw td, #mbancrajlw th {
   border-style: none;
 }
 
-#dlwfwasjpj p {
+#mbancrajlw p {
   margin: 0;
   padding: 0;
 }
 
-#dlwfwasjpj .gt_table {
+#mbancrajlw .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1965,12 +1965,12 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   border-left-color: #D3D3D3;
 }
 
-#dlwfwasjpj .gt_caption {
+#mbancrajlw .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#dlwfwasjpj .gt_title {
+#mbancrajlw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1982,7 +1982,7 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   border-bottom-width: 0;
 }
 
-#dlwfwasjpj .gt_subtitle {
+#mbancrajlw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1994,7 +1994,7 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   border-top-width: 0;
 }
 
-#dlwfwasjpj .gt_heading {
+#mbancrajlw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2006,13 +2006,13 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   border-right-color: #D3D3D3;
 }
 
-#dlwfwasjpj .gt_bottom_border {
+#mbancrajlw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#dlwfwasjpj .gt_col_headings {
+#mbancrajlw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2027,7 +2027,7 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   border-right-color: #D3D3D3;
 }
 
-#dlwfwasjpj .gt_col_heading {
+#mbancrajlw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2047,7 +2047,7 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   overflow-x: hidden;
 }
 
-#dlwfwasjpj .gt_column_spanner_outer {
+#mbancrajlw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2059,15 +2059,15 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   padding-right: 4px;
 }
 
-#dlwfwasjpj .gt_column_spanner_outer:first-child {
+#mbancrajlw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#dlwfwasjpj .gt_column_spanner_outer:last-child {
+#mbancrajlw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#dlwfwasjpj .gt_column_spanner {
+#mbancrajlw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2079,11 +2079,11 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   width: 100%;
 }
 
-#dlwfwasjpj .gt_spanner_row {
+#mbancrajlw .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#dlwfwasjpj .gt_group_heading {
+#mbancrajlw .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2109,7 +2109,7 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   text-align: left;
 }
 
-#dlwfwasjpj .gt_empty_group_heading {
+#mbancrajlw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2124,15 +2124,15 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   vertical-align: middle;
 }
 
-#dlwfwasjpj .gt_from_md > :first-child {
+#mbancrajlw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#dlwfwasjpj .gt_from_md > :last-child {
+#mbancrajlw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#dlwfwasjpj .gt_row {
+#mbancrajlw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2151,7 +2151,7 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   overflow-x: hidden;
 }
 
-#dlwfwasjpj .gt_stub {
+#mbancrajlw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2164,7 +2164,7 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   padding-right: 5px;
 }
 
-#dlwfwasjpj .gt_stub_row_group {
+#mbancrajlw .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2178,15 +2178,15 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   vertical-align: top;
 }
 
-#dlwfwasjpj .gt_row_group_first td {
+#mbancrajlw .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#dlwfwasjpj .gt_row_group_first th {
+#mbancrajlw .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#dlwfwasjpj .gt_summary_row {
+#mbancrajlw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2196,16 +2196,16 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   padding-right: 5px;
 }
 
-#dlwfwasjpj .gt_first_summary_row {
+#mbancrajlw .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#dlwfwasjpj .gt_first_summary_row.thick {
+#mbancrajlw .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#dlwfwasjpj .gt_last_summary_row {
+#mbancrajlw .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2215,7 +2215,7 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   border-bottom-color: #D3D3D3;
 }
 
-#dlwfwasjpj .gt_grand_summary_row {
+#mbancrajlw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2225,7 +2225,7 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   padding-right: 5px;
 }
 
-#dlwfwasjpj .gt_first_grand_summary_row {
+#mbancrajlw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2235,7 +2235,7 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   border-top-color: #D3D3D3;
 }
 
-#dlwfwasjpj .gt_last_grand_summary_row_top {
+#mbancrajlw .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2245,11 +2245,11 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   border-bottom-color: #D3D3D3;
 }
 
-#dlwfwasjpj .gt_striped {
+#mbancrajlw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#dlwfwasjpj .gt_table_body {
+#mbancrajlw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2258,7 +2258,7 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   border-bottom-color: #D3D3D3;
 }
 
-#dlwfwasjpj .gt_footnotes {
+#mbancrajlw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2272,7 +2272,7 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   border-right-color: #D3D3D3;
 }
 
-#dlwfwasjpj .gt_footnote {
+#mbancrajlw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2281,7 +2281,7 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   padding-right: 5px;
 }
 
-#dlwfwasjpj .gt_sourcenotes {
+#mbancrajlw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2295,7 +2295,7 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   border-right-color: #D3D3D3;
 }
 
-#dlwfwasjpj .gt_sourcenote {
+#mbancrajlw .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2303,72 +2303,72 @@ Supplementary Table&nbsp;3: Model summary for active burrow count between treatm
   padding-right: 5px;
 }
 
-#dlwfwasjpj .gt_left {
+#mbancrajlw .gt_left {
   text-align: left;
 }
 
-#dlwfwasjpj .gt_center {
+#mbancrajlw .gt_center {
   text-align: center;
 }
 
-#dlwfwasjpj .gt_right {
+#mbancrajlw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#dlwfwasjpj .gt_font_normal {
+#mbancrajlw .gt_font_normal {
   font-weight: normal;
 }
 
-#dlwfwasjpj .gt_font_bold {
+#mbancrajlw .gt_font_bold {
   font-weight: bold;
 }
 
-#dlwfwasjpj .gt_font_italic {
+#mbancrajlw .gt_font_italic {
   font-style: italic;
 }
 
-#dlwfwasjpj .gt_super {
+#mbancrajlw .gt_super {
   font-size: 65%;
 }
 
-#dlwfwasjpj .gt_footnote_marks {
+#mbancrajlw .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#dlwfwasjpj .gt_asterisk {
+#mbancrajlw .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#dlwfwasjpj .gt_indent_1 {
+#mbancrajlw .gt_indent_1 {
   text-indent: 5px;
 }
 
-#dlwfwasjpj .gt_indent_2 {
+#mbancrajlw .gt_indent_2 {
   text-indent: 10px;
 }
 
-#dlwfwasjpj .gt_indent_3 {
+#mbancrajlw .gt_indent_3 {
   text-indent: 15px;
 }
 
-#dlwfwasjpj .gt_indent_4 {
+#mbancrajlw .gt_indent_4 {
   text-indent: 20px;
 }
 
-#dlwfwasjpj .gt_indent_5 {
+#mbancrajlw .gt_indent_5 {
   text-indent: 25px;
 }
 
-#dlwfwasjpj .katex-display {
+#mbancrajlw .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#dlwfwasjpj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#mbancrajlw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2425,23 +2425,23 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
 <div id="supptbl-yak-performance-model-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-supptbl figure">
 <div aria-describedby="supptbl-yak-performance-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="lffvqzvrbr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#lffvqzvrbr table {
+<div id="kabgfzdjzw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kabgfzdjzw table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#lffvqzvrbr thead, #lffvqzvrbr tbody, #lffvqzvrbr tfoot, #lffvqzvrbr tr, #lffvqzvrbr td, #lffvqzvrbr th {
+#kabgfzdjzw thead, #kabgfzdjzw tbody, #kabgfzdjzw tfoot, #kabgfzdjzw tr, #kabgfzdjzw td, #kabgfzdjzw th {
   border-style: none;
 }
 
-#lffvqzvrbr p {
+#kabgfzdjzw p {
   margin: 0;
   padding: 0;
 }
 
-#lffvqzvrbr .gt_table {
+#kabgfzdjzw .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2467,12 +2467,12 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   border-left-color: #D3D3D3;
 }
 
-#lffvqzvrbr .gt_caption {
+#kabgfzdjzw .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#lffvqzvrbr .gt_title {
+#kabgfzdjzw .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2484,7 +2484,7 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   border-bottom-width: 0;
 }
 
-#lffvqzvrbr .gt_subtitle {
+#kabgfzdjzw .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2496,7 +2496,7 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   border-top-width: 0;
 }
 
-#lffvqzvrbr .gt_heading {
+#kabgfzdjzw .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2508,13 +2508,13 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   border-right-color: #D3D3D3;
 }
 
-#lffvqzvrbr .gt_bottom_border {
+#kabgfzdjzw .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lffvqzvrbr .gt_col_headings {
+#kabgfzdjzw .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2529,7 +2529,7 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   border-right-color: #D3D3D3;
 }
 
-#lffvqzvrbr .gt_col_heading {
+#kabgfzdjzw .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2549,7 +2549,7 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   overflow-x: hidden;
 }
 
-#lffvqzvrbr .gt_column_spanner_outer {
+#kabgfzdjzw .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2561,15 +2561,15 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   padding-right: 4px;
 }
 
-#lffvqzvrbr .gt_column_spanner_outer:first-child {
+#kabgfzdjzw .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lffvqzvrbr .gt_column_spanner_outer:last-child {
+#kabgfzdjzw .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lffvqzvrbr .gt_column_spanner {
+#kabgfzdjzw .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2581,11 +2581,11 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   width: 100%;
 }
 
-#lffvqzvrbr .gt_spanner_row {
+#kabgfzdjzw .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#lffvqzvrbr .gt_group_heading {
+#kabgfzdjzw .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2611,7 +2611,7 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   text-align: left;
 }
 
-#lffvqzvrbr .gt_empty_group_heading {
+#kabgfzdjzw .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2626,15 +2626,15 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   vertical-align: middle;
 }
 
-#lffvqzvrbr .gt_from_md > :first-child {
+#kabgfzdjzw .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lffvqzvrbr .gt_from_md > :last-child {
+#kabgfzdjzw .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lffvqzvrbr .gt_row {
+#kabgfzdjzw .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2653,7 +2653,7 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   overflow-x: hidden;
 }
 
-#lffvqzvrbr .gt_stub {
+#kabgfzdjzw .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2666,7 +2666,7 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   padding-right: 5px;
 }
 
-#lffvqzvrbr .gt_stub_row_group {
+#kabgfzdjzw .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2680,15 +2680,15 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   vertical-align: top;
 }
 
-#lffvqzvrbr .gt_row_group_first td {
+#kabgfzdjzw .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#lffvqzvrbr .gt_row_group_first th {
+#kabgfzdjzw .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#lffvqzvrbr .gt_summary_row {
+#kabgfzdjzw .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2698,16 +2698,16 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   padding-right: 5px;
 }
 
-#lffvqzvrbr .gt_first_summary_row {
+#kabgfzdjzw .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#lffvqzvrbr .gt_first_summary_row.thick {
+#kabgfzdjzw .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#lffvqzvrbr .gt_last_summary_row {
+#kabgfzdjzw .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2717,7 +2717,7 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   border-bottom-color: #D3D3D3;
 }
 
-#lffvqzvrbr .gt_grand_summary_row {
+#kabgfzdjzw .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2727,7 +2727,7 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   padding-right: 5px;
 }
 
-#lffvqzvrbr .gt_first_grand_summary_row {
+#kabgfzdjzw .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2737,7 +2737,7 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   border-top-color: #D3D3D3;
 }
 
-#lffvqzvrbr .gt_last_grand_summary_row_top {
+#kabgfzdjzw .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2747,11 +2747,11 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   border-bottom-color: #D3D3D3;
 }
 
-#lffvqzvrbr .gt_striped {
+#kabgfzdjzw .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lffvqzvrbr .gt_table_body {
+#kabgfzdjzw .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2760,7 +2760,7 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   border-bottom-color: #D3D3D3;
 }
 
-#lffvqzvrbr .gt_footnotes {
+#kabgfzdjzw .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2774,7 +2774,7 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   border-right-color: #D3D3D3;
 }
 
-#lffvqzvrbr .gt_footnote {
+#kabgfzdjzw .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2783,7 +2783,7 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   padding-right: 5px;
 }
 
-#lffvqzvrbr .gt_sourcenotes {
+#kabgfzdjzw .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2797,7 +2797,7 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   border-right-color: #D3D3D3;
 }
 
-#lffvqzvrbr .gt_sourcenote {
+#kabgfzdjzw .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2805,72 +2805,72 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
   padding-right: 5px;
 }
 
-#lffvqzvrbr .gt_left {
+#kabgfzdjzw .gt_left {
   text-align: left;
 }
 
-#lffvqzvrbr .gt_center {
+#kabgfzdjzw .gt_center {
   text-align: center;
 }
 
-#lffvqzvrbr .gt_right {
+#kabgfzdjzw .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lffvqzvrbr .gt_font_normal {
+#kabgfzdjzw .gt_font_normal {
   font-weight: normal;
 }
 
-#lffvqzvrbr .gt_font_bold {
+#kabgfzdjzw .gt_font_bold {
   font-weight: bold;
 }
 
-#lffvqzvrbr .gt_font_italic {
+#kabgfzdjzw .gt_font_italic {
   font-style: italic;
 }
 
-#lffvqzvrbr .gt_super {
+#kabgfzdjzw .gt_super {
   font-size: 65%;
 }
 
-#lffvqzvrbr .gt_footnote_marks {
+#kabgfzdjzw .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#lffvqzvrbr .gt_asterisk {
+#kabgfzdjzw .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#lffvqzvrbr .gt_indent_1 {
+#kabgfzdjzw .gt_indent_1 {
   text-indent: 5px;
 }
 
-#lffvqzvrbr .gt_indent_2 {
+#kabgfzdjzw .gt_indent_2 {
   text-indent: 10px;
 }
 
-#lffvqzvrbr .gt_indent_3 {
+#kabgfzdjzw .gt_indent_3 {
   text-indent: 15px;
 }
 
-#lffvqzvrbr .gt_indent_4 {
+#kabgfzdjzw .gt_indent_4 {
   text-indent: 20px;
 }
 
-#lffvqzvrbr .gt_indent_5 {
+#kabgfzdjzw .gt_indent_5 {
   text-indent: 25px;
 }
 
-#lffvqzvrbr .katex-display {
+#kabgfzdjzw .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#lffvqzvrbr div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#kabgfzdjzw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -3373,30 +3373,30 @@ Supplementary Table&nbsp;4: Model summary for yak weight gain regressed on activ
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-supptbl" id="supptbl-yak-performance-model-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chamaejasme cover, crude protein %, acid detergent fibre %, and ether extract %.
+Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chamaejasme cover, crude protein %, acid detergent fibre %.
 </figcaption>
 </figure>
 </div>
 <div id="supptbl-yak-performance-model-contrast" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-supptbl figure">
 <div aria-describedby="supptbl-yak-performance-model-contrast-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="ewoiidsadk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ewoiidsadk table {
+<div id="ogxgncnmrl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ogxgncnmrl table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ewoiidsadk thead, #ewoiidsadk tbody, #ewoiidsadk tfoot, #ewoiidsadk tr, #ewoiidsadk td, #ewoiidsadk th {
+#ogxgncnmrl thead, #ogxgncnmrl tbody, #ogxgncnmrl tfoot, #ogxgncnmrl tr, #ogxgncnmrl td, #ogxgncnmrl th {
   border-style: none;
 }
 
-#ewoiidsadk p {
+#ogxgncnmrl p {
   margin: 0;
   padding: 0;
 }
 
-#ewoiidsadk .gt_table {
+#ogxgncnmrl .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -3422,12 +3422,12 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   border-left-color: #D3D3D3;
 }
 
-#ewoiidsadk .gt_caption {
+#ogxgncnmrl .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ewoiidsadk .gt_title {
+#ogxgncnmrl .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -3439,7 +3439,7 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   border-bottom-width: 0;
 }
 
-#ewoiidsadk .gt_subtitle {
+#ogxgncnmrl .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -3451,7 +3451,7 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   border-top-width: 0;
 }
 
-#ewoiidsadk .gt_heading {
+#ogxgncnmrl .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -3463,13 +3463,13 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   border-right-color: #D3D3D3;
 }
 
-#ewoiidsadk .gt_bottom_border {
+#ogxgncnmrl .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ewoiidsadk .gt_col_headings {
+#ogxgncnmrl .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3484,7 +3484,7 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   border-right-color: #D3D3D3;
 }
 
-#ewoiidsadk .gt_col_heading {
+#ogxgncnmrl .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3504,7 +3504,7 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   overflow-x: hidden;
 }
 
-#ewoiidsadk .gt_column_spanner_outer {
+#ogxgncnmrl .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3516,15 +3516,15 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   padding-right: 4px;
 }
 
-#ewoiidsadk .gt_column_spanner_outer:first-child {
+#ogxgncnmrl .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ewoiidsadk .gt_column_spanner_outer:last-child {
+#ogxgncnmrl .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ewoiidsadk .gt_column_spanner {
+#ogxgncnmrl .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -3536,11 +3536,11 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   width: 100%;
 }
 
-#ewoiidsadk .gt_spanner_row {
+#ogxgncnmrl .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ewoiidsadk .gt_group_heading {
+#ogxgncnmrl .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3566,7 +3566,7 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   text-align: left;
 }
 
-#ewoiidsadk .gt_empty_group_heading {
+#ogxgncnmrl .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -3581,15 +3581,15 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   vertical-align: middle;
 }
 
-#ewoiidsadk .gt_from_md > :first-child {
+#ogxgncnmrl .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ewoiidsadk .gt_from_md > :last-child {
+#ogxgncnmrl .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ewoiidsadk .gt_row {
+#ogxgncnmrl .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3608,7 +3608,7 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   overflow-x: hidden;
 }
 
-#ewoiidsadk .gt_stub {
+#ogxgncnmrl .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3621,7 +3621,7 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   padding-right: 5px;
 }
 
-#ewoiidsadk .gt_stub_row_group {
+#ogxgncnmrl .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -3635,15 +3635,15 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   vertical-align: top;
 }
 
-#ewoiidsadk .gt_row_group_first td {
+#ogxgncnmrl .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ewoiidsadk .gt_row_group_first th {
+#ogxgncnmrl .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ewoiidsadk .gt_summary_row {
+#ogxgncnmrl .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3653,16 +3653,16 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   padding-right: 5px;
 }
 
-#ewoiidsadk .gt_first_summary_row {
+#ogxgncnmrl .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ewoiidsadk .gt_first_summary_row.thick {
+#ogxgncnmrl .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ewoiidsadk .gt_last_summary_row {
+#ogxgncnmrl .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3672,7 +3672,7 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   border-bottom-color: #D3D3D3;
 }
 
-#ewoiidsadk .gt_grand_summary_row {
+#ogxgncnmrl .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -3682,7 +3682,7 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   padding-right: 5px;
 }
 
-#ewoiidsadk .gt_first_grand_summary_row {
+#ogxgncnmrl .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3692,7 +3692,7 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   border-top-color: #D3D3D3;
 }
 
-#ewoiidsadk .gt_last_grand_summary_row_top {
+#ogxgncnmrl .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -3702,11 +3702,11 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   border-bottom-color: #D3D3D3;
 }
 
-#ewoiidsadk .gt_striped {
+#ogxgncnmrl .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ewoiidsadk .gt_table_body {
+#ogxgncnmrl .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -3715,7 +3715,7 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   border-bottom-color: #D3D3D3;
 }
 
-#ewoiidsadk .gt_footnotes {
+#ogxgncnmrl .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3729,7 +3729,7 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   border-right-color: #D3D3D3;
 }
 
-#ewoiidsadk .gt_footnote {
+#ogxgncnmrl .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -3738,7 +3738,7 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   padding-right: 5px;
 }
 
-#ewoiidsadk .gt_sourcenotes {
+#ogxgncnmrl .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -3752,7 +3752,7 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   border-right-color: #D3D3D3;
 }
 
-#ewoiidsadk .gt_sourcenote {
+#ogxgncnmrl .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -3760,72 +3760,72 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
   padding-right: 5px;
 }
 
-#ewoiidsadk .gt_left {
+#ogxgncnmrl .gt_left {
   text-align: left;
 }
 
-#ewoiidsadk .gt_center {
+#ogxgncnmrl .gt_center {
   text-align: center;
 }
 
-#ewoiidsadk .gt_right {
+#ogxgncnmrl .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ewoiidsadk .gt_font_normal {
+#ogxgncnmrl .gt_font_normal {
   font-weight: normal;
 }
 
-#ewoiidsadk .gt_font_bold {
+#ogxgncnmrl .gt_font_bold {
   font-weight: bold;
 }
 
-#ewoiidsadk .gt_font_italic {
+#ogxgncnmrl .gt_font_italic {
   font-style: italic;
 }
 
-#ewoiidsadk .gt_super {
+#ogxgncnmrl .gt_super {
   font-size: 65%;
 }
 
-#ewoiidsadk .gt_footnote_marks {
+#ogxgncnmrl .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ewoiidsadk .gt_asterisk {
+#ogxgncnmrl .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ewoiidsadk .gt_indent_1 {
+#ogxgncnmrl .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ewoiidsadk .gt_indent_2 {
+#ogxgncnmrl .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ewoiidsadk .gt_indent_3 {
+#ogxgncnmrl .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ewoiidsadk .gt_indent_4 {
+#ogxgncnmrl .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ewoiidsadk .gt_indent_5 {
+#ogxgncnmrl .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ewoiidsadk .katex-display {
+#ogxgncnmrl .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ewoiidsadk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#ogxgncnmrl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4097,87 +4097,36 @@ Supplementary Table&nbsp;5: Model summary for weight gain, grass cover, S. chama
 <td class="gt_row gt_right" headers="acid detergent fibre %  t.ratio">NA</td>
 <td class="gt_row gt_right" headers="acid detergent fibre %  p.value">0.00</td>
 </tr>
-<tr class="gt_group_heading_row even">
-<th colspan="6" id="neutral detergent fiber %" class="gt_group_heading" data-quarto-table-cell-role="th" scope="colgroup">neutral detergent fiber %</th>
-</tr>
-<tr class="gt_row_group_first odd">
-<td class="gt_row gt_left" headers="neutral detergent fiber %  contrast">no pika No S. chamaejasme / pika No S. chamaejasme</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  estimate">NA</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  SE">0.02</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  df">Inf</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  t.ratio">NA</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  p.value">0.73</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="neutral detergent fiber %  contrast">no pika No S. chamaejasme / no pika S. chamaejasme</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  estimate">NA</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  SE">0.03</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  df">Inf</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  t.ratio">NA</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  p.value">0.18</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="neutral detergent fiber %  contrast">no pika No S. chamaejasme / pika S. chamaejasme</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  estimate">NA</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  SE">0.03</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  df">Inf</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  t.ratio">NA</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  p.value">1.00</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="neutral detergent fiber %  contrast">pika No S. chamaejasme / no pika S. chamaejasme</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  estimate">NA</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  SE">0.03</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  df">Inf</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  t.ratio">NA</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  p.value">0.01</td>
-</tr>
-<tr class="odd">
-<td class="gt_row gt_left" headers="neutral detergent fiber %  contrast">pika No S. chamaejasme / pika S. chamaejasme</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  estimate">NA</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  SE">0.03</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  df">Inf</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  t.ratio">NA</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  p.value">0.65</td>
-</tr>
-<tr class="even">
-<td class="gt_row gt_left" headers="neutral detergent fiber %  contrast">no pika S. chamaejasme / pika S. chamaejasme</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  estimate">NA</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  SE">0.02</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  df">Inf</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  t.ratio">NA</td>
-<td class="gt_row gt_right" headers="neutral detergent fiber %  p.value">0.23</td>
-</tr>
 </tbody>
 </table>
 
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-supptbl" id="supptbl-yak-performance-model-contrast-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. chamaejasme cover, crude protein %, acid detergent fibre %, and neutral detergent fiber %.
+Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. chamaejasme cover, crude protein %, and acid detergent fibre % of total forage for yaks
 </figcaption>
 </figure>
 </div>
 <div id="supptbl-yak-foraging-efficiency-summary" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-supptbl figure">
 <div aria-describedby="supptbl-yak-foraging-efficiency-summary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="bjtpppwvtw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#bjtpppwvtw table {
+<div id="pjnsxegzfu" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pjnsxegzfu table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#bjtpppwvtw thead, #bjtpppwvtw tbody, #bjtpppwvtw tfoot, #bjtpppwvtw tr, #bjtpppwvtw td, #bjtpppwvtw th {
+#pjnsxegzfu thead, #pjnsxegzfu tbody, #pjnsxegzfu tfoot, #pjnsxegzfu tr, #pjnsxegzfu td, #pjnsxegzfu th {
   border-style: none;
 }
 
-#bjtpppwvtw p {
+#pjnsxegzfu p {
   margin: 0;
   padding: 0;
 }
 
-#bjtpppwvtw .gt_table {
+#pjnsxegzfu .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -4203,12 +4152,12 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   border-left-color: #D3D3D3;
 }
 
-#bjtpppwvtw .gt_caption {
+#pjnsxegzfu .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#bjtpppwvtw .gt_title {
+#pjnsxegzfu .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -4220,7 +4169,7 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   border-bottom-width: 0;
 }
 
-#bjtpppwvtw .gt_subtitle {
+#pjnsxegzfu .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -4232,7 +4181,7 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   border-top-width: 0;
 }
 
-#bjtpppwvtw .gt_heading {
+#pjnsxegzfu .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -4244,13 +4193,13 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   border-right-color: #D3D3D3;
 }
 
-#bjtpppwvtw .gt_bottom_border {
+#pjnsxegzfu .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bjtpppwvtw .gt_col_headings {
+#pjnsxegzfu .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4265,7 +4214,7 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   border-right-color: #D3D3D3;
 }
 
-#bjtpppwvtw .gt_col_heading {
+#pjnsxegzfu .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4285,7 +4234,7 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   overflow-x: hidden;
 }
 
-#bjtpppwvtw .gt_column_spanner_outer {
+#pjnsxegzfu .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4297,15 +4246,15 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   padding-right: 4px;
 }
 
-#bjtpppwvtw .gt_column_spanner_outer:first-child {
+#pjnsxegzfu .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bjtpppwvtw .gt_column_spanner_outer:last-child {
+#pjnsxegzfu .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bjtpppwvtw .gt_column_spanner {
+#pjnsxegzfu .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -4317,11 +4266,11 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   width: 100%;
 }
 
-#bjtpppwvtw .gt_spanner_row {
+#pjnsxegzfu .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#bjtpppwvtw .gt_group_heading {
+#pjnsxegzfu .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4347,7 +4296,7 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   text-align: left;
 }
 
-#bjtpppwvtw .gt_empty_group_heading {
+#pjnsxegzfu .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -4362,15 +4311,15 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   vertical-align: middle;
 }
 
-#bjtpppwvtw .gt_from_md > :first-child {
+#pjnsxegzfu .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bjtpppwvtw .gt_from_md > :last-child {
+#pjnsxegzfu .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bjtpppwvtw .gt_row {
+#pjnsxegzfu .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4389,7 +4338,7 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   overflow-x: hidden;
 }
 
-#bjtpppwvtw .gt_stub {
+#pjnsxegzfu .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4402,7 +4351,7 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   padding-right: 5px;
 }
 
-#bjtpppwvtw .gt_stub_row_group {
+#pjnsxegzfu .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -4416,15 +4365,15 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   vertical-align: top;
 }
 
-#bjtpppwvtw .gt_row_group_first td {
+#pjnsxegzfu .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bjtpppwvtw .gt_row_group_first th {
+#pjnsxegzfu .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#bjtpppwvtw .gt_summary_row {
+#pjnsxegzfu .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4434,16 +4383,16 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   padding-right: 5px;
 }
 
-#bjtpppwvtw .gt_first_summary_row {
+#pjnsxegzfu .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bjtpppwvtw .gt_first_summary_row.thick {
+#pjnsxegzfu .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bjtpppwvtw .gt_last_summary_row {
+#pjnsxegzfu .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4453,7 +4402,7 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   border-bottom-color: #D3D3D3;
 }
 
-#bjtpppwvtw .gt_grand_summary_row {
+#pjnsxegzfu .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -4463,7 +4412,7 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   padding-right: 5px;
 }
 
-#bjtpppwvtw .gt_first_grand_summary_row {
+#pjnsxegzfu .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4473,7 +4422,7 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   border-top-color: #D3D3D3;
 }
 
-#bjtpppwvtw .gt_last_grand_summary_row_top {
+#pjnsxegzfu .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -4483,11 +4432,11 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   border-bottom-color: #D3D3D3;
 }
 
-#bjtpppwvtw .gt_striped {
+#pjnsxegzfu .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bjtpppwvtw .gt_table_body {
+#pjnsxegzfu .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -4496,7 +4445,7 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   border-bottom-color: #D3D3D3;
 }
 
-#bjtpppwvtw .gt_footnotes {
+#pjnsxegzfu .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4510,7 +4459,7 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   border-right-color: #D3D3D3;
 }
 
-#bjtpppwvtw .gt_footnote {
+#pjnsxegzfu .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -4519,7 +4468,7 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   padding-right: 5px;
 }
 
-#bjtpppwvtw .gt_sourcenotes {
+#pjnsxegzfu .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -4533,7 +4482,7 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   border-right-color: #D3D3D3;
 }
 
-#bjtpppwvtw .gt_sourcenote {
+#pjnsxegzfu .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -4541,72 +4490,72 @@ Supplementary Table&nbsp;6: Model contrasts for weight gain, grass cover, S. cha
   padding-right: 5px;
 }
 
-#bjtpppwvtw .gt_left {
+#pjnsxegzfu .gt_left {
   text-align: left;
 }
 
-#bjtpppwvtw .gt_center {
+#pjnsxegzfu .gt_center {
   text-align: center;
 }
 
-#bjtpppwvtw .gt_right {
+#pjnsxegzfu .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bjtpppwvtw .gt_font_normal {
+#pjnsxegzfu .gt_font_normal {
   font-weight: normal;
 }
 
-#bjtpppwvtw .gt_font_bold {
+#pjnsxegzfu .gt_font_bold {
   font-weight: bold;
 }
 
-#bjtpppwvtw .gt_font_italic {
+#pjnsxegzfu .gt_font_italic {
   font-style: italic;
 }
 
-#bjtpppwvtw .gt_super {
+#pjnsxegzfu .gt_super {
   font-size: 65%;
 }
 
-#bjtpppwvtw .gt_footnote_marks {
+#pjnsxegzfu .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#bjtpppwvtw .gt_asterisk {
+#pjnsxegzfu .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bjtpppwvtw .gt_indent_1 {
+#pjnsxegzfu .gt_indent_1 {
   text-indent: 5px;
 }
 
-#bjtpppwvtw .gt_indent_2 {
+#pjnsxegzfu .gt_indent_2 {
   text-indent: 10px;
 }
 
-#bjtpppwvtw .gt_indent_3 {
+#pjnsxegzfu .gt_indent_3 {
   text-indent: 15px;
 }
 
-#bjtpppwvtw .gt_indent_4 {
+#pjnsxegzfu .gt_indent_4 {
   text-indent: 20px;
 }
 
-#bjtpppwvtw .gt_indent_5 {
+#pjnsxegzfu .gt_indent_5 {
   text-indent: 25px;
 }
 
-#bjtpppwvtw .katex-display {
+#pjnsxegzfu .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#bjtpppwvtw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#pjnsxegzfu div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -4998,23 +4947,23 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
 <div id="supptbl-yak-foraging-efficiency-contrast" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-supptbl figure">
 <div aria-describedby="supptbl-yak-foraging-efficiency-contrast-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="gbcdndllhm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#gbcdndllhm table {
+<div id="kcexhqjhsf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#kcexhqjhsf table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#gbcdndllhm thead, #gbcdndllhm tbody, #gbcdndllhm tfoot, #gbcdndllhm tr, #gbcdndllhm td, #gbcdndllhm th {
+#kcexhqjhsf thead, #kcexhqjhsf tbody, #kcexhqjhsf tfoot, #kcexhqjhsf tr, #kcexhqjhsf td, #kcexhqjhsf th {
   border-style: none;
 }
 
-#gbcdndllhm p {
+#kcexhqjhsf p {
   margin: 0;
   padding: 0;
 }
 
-#gbcdndllhm .gt_table {
+#kcexhqjhsf .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -5040,12 +4989,12 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   border-left-color: #D3D3D3;
 }
 
-#gbcdndllhm .gt_caption {
+#kcexhqjhsf .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#gbcdndllhm .gt_title {
+#kcexhqjhsf .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -5057,7 +5006,7 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   border-bottom-width: 0;
 }
 
-#gbcdndllhm .gt_subtitle {
+#kcexhqjhsf .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -5069,7 +5018,7 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   border-top-width: 0;
 }
 
-#gbcdndllhm .gt_heading {
+#kcexhqjhsf .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -5081,13 +5030,13 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   border-right-color: #D3D3D3;
 }
 
-#gbcdndllhm .gt_bottom_border {
+#kcexhqjhsf .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#gbcdndllhm .gt_col_headings {
+#kcexhqjhsf .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5102,7 +5051,7 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   border-right-color: #D3D3D3;
 }
 
-#gbcdndllhm .gt_col_heading {
+#kcexhqjhsf .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5122,7 +5071,7 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   overflow-x: hidden;
 }
 
-#gbcdndllhm .gt_column_spanner_outer {
+#kcexhqjhsf .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5134,15 +5083,15 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   padding-right: 4px;
 }
 
-#gbcdndllhm .gt_column_spanner_outer:first-child {
+#kcexhqjhsf .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#gbcdndllhm .gt_column_spanner_outer:last-child {
+#kcexhqjhsf .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#gbcdndllhm .gt_column_spanner {
+#kcexhqjhsf .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -5154,11 +5103,11 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   width: 100%;
 }
 
-#gbcdndllhm .gt_spanner_row {
+#kcexhqjhsf .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#gbcdndllhm .gt_group_heading {
+#kcexhqjhsf .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5184,7 +5133,7 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   text-align: left;
 }
 
-#gbcdndllhm .gt_empty_group_heading {
+#kcexhqjhsf .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -5199,15 +5148,15 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   vertical-align: middle;
 }
 
-#gbcdndllhm .gt_from_md > :first-child {
+#kcexhqjhsf .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#gbcdndllhm .gt_from_md > :last-child {
+#kcexhqjhsf .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#gbcdndllhm .gt_row {
+#kcexhqjhsf .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5226,7 +5175,7 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   overflow-x: hidden;
 }
 
-#gbcdndllhm .gt_stub {
+#kcexhqjhsf .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5239,7 +5188,7 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   padding-right: 5px;
 }
 
-#gbcdndllhm .gt_stub_row_group {
+#kcexhqjhsf .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -5253,15 +5202,15 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   vertical-align: top;
 }
 
-#gbcdndllhm .gt_row_group_first td {
+#kcexhqjhsf .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#gbcdndllhm .gt_row_group_first th {
+#kcexhqjhsf .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#gbcdndllhm .gt_summary_row {
+#kcexhqjhsf .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5271,16 +5220,16 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   padding-right: 5px;
 }
 
-#gbcdndllhm .gt_first_summary_row {
+#kcexhqjhsf .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#gbcdndllhm .gt_first_summary_row.thick {
+#kcexhqjhsf .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#gbcdndllhm .gt_last_summary_row {
+#kcexhqjhsf .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5290,7 +5239,7 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   border-bottom-color: #D3D3D3;
 }
 
-#gbcdndllhm .gt_grand_summary_row {
+#kcexhqjhsf .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -5300,7 +5249,7 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   padding-right: 5px;
 }
 
-#gbcdndllhm .gt_first_grand_summary_row {
+#kcexhqjhsf .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5310,7 +5259,7 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   border-top-color: #D3D3D3;
 }
 
-#gbcdndllhm .gt_last_grand_summary_row_top {
+#kcexhqjhsf .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -5320,11 +5269,11 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   border-bottom-color: #D3D3D3;
 }
 
-#gbcdndllhm .gt_striped {
+#kcexhqjhsf .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#gbcdndllhm .gt_table_body {
+#kcexhqjhsf .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -5333,7 +5282,7 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   border-bottom-color: #D3D3D3;
 }
 
-#gbcdndllhm .gt_footnotes {
+#kcexhqjhsf .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5347,7 +5296,7 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   border-right-color: #D3D3D3;
 }
 
-#gbcdndllhm .gt_footnote {
+#kcexhqjhsf .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -5356,7 +5305,7 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   padding-right: 5px;
 }
 
-#gbcdndllhm .gt_sourcenotes {
+#kcexhqjhsf .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -5370,7 +5319,7 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   border-right-color: #D3D3D3;
 }
 
-#gbcdndllhm .gt_sourcenote {
+#kcexhqjhsf .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -5378,72 +5327,72 @@ Supplementary Table&nbsp;7: Model summary for plant bites/h and the bites to ste
   padding-right: 5px;
 }
 
-#gbcdndllhm .gt_left {
+#kcexhqjhsf .gt_left {
   text-align: left;
 }
 
-#gbcdndllhm .gt_center {
+#kcexhqjhsf .gt_center {
   text-align: center;
 }
 
-#gbcdndllhm .gt_right {
+#kcexhqjhsf .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#gbcdndllhm .gt_font_normal {
+#kcexhqjhsf .gt_font_normal {
   font-weight: normal;
 }
 
-#gbcdndllhm .gt_font_bold {
+#kcexhqjhsf .gt_font_bold {
   font-weight: bold;
 }
 
-#gbcdndllhm .gt_font_italic {
+#kcexhqjhsf .gt_font_italic {
   font-style: italic;
 }
 
-#gbcdndllhm .gt_super {
+#kcexhqjhsf .gt_super {
   font-size: 65%;
 }
 
-#gbcdndllhm .gt_footnote_marks {
+#kcexhqjhsf .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#gbcdndllhm .gt_asterisk {
+#kcexhqjhsf .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#gbcdndllhm .gt_indent_1 {
+#kcexhqjhsf .gt_indent_1 {
   text-indent: 5px;
 }
 
-#gbcdndllhm .gt_indent_2 {
+#kcexhqjhsf .gt_indent_2 {
   text-indent: 10px;
 }
 
-#gbcdndllhm .gt_indent_3 {
+#kcexhqjhsf .gt_indent_3 {
   text-indent: 15px;
 }
 
-#gbcdndllhm .gt_indent_4 {
+#kcexhqjhsf .gt_indent_4 {
   text-indent: 20px;
 }
 
-#gbcdndllhm .gt_indent_5 {
+#kcexhqjhsf .gt_indent_5 {
   text-indent: 25px;
 }
 
-#gbcdndllhm .katex-display {
+#kcexhqjhsf .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#gbcdndllhm div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#kcexhqjhsf div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
