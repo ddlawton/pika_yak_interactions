@@ -192,6 +192,29 @@ yak_feeding_contrasts     <- yak_feeding_models$model_contrasts
 
 ```
 
+```{r}
+#| label: sample-sizes
+#| echo: false
+#| results: "hide"
+#| message: false
+#| warning: false
+
+# Calculate sample sizes for inline reporting
+n_pika_plots <- pika_data |> distinct(plot) |> nrow()
+n_yak_transects <- yak_data |> distinct(transect) |> nrow()
+n_burrow_dung_plots <- dung_burrow_by_plot |> distinct(plot) |> nrow()
+
+# Experiment data - plots and treatment combinations
+# Use weight_gain data which has one row per plot
+n_experiment_plots <- weight_gain |> 
+  distinct(pika_treatment, posion_plant_treatment, block) |> 
+  nrow()
+n_treatments <- 4  # 2x2 factorial design (pika yes/no × poison yes/no)
+n_plots_per_treatment <- n_experiment_plots / n_treatments
+n_years_experiment <- 2
+
+```
+
 ::: {#fig-hypothesis}
 ```{r fig-hypothesis}
 #| echo: false
@@ -422,11 +445,11 @@ figure_2_plot
 
 Diet selection of pikas and yaks and their potential interactions
 mediated by poisonous plants based on field surveys in July 2021. (A) Feeding
-and clipping frequencies of pikas, and (B) grazing frequencies of yaks on grasses,
-sedges, forbs, and Stellera chamaejasme across 10 2 × 2 m plots and 10 250 m
+and clipping frequencies of pikas (n = `r n_pika_plots` plots), and (B) grazing frequencies of yaks on grasses,
+sedges, forbs, and Stellera chamaejasme (n = `r n_yak_transects` transects) across `r n_pika_plots` 2 × 2 m plots and `r n_yak_transects` 250 m
 transects, respectively. (C) Relationship between active pika burrow density and S.
-chamaejasme cover, and (D) between S. chamaejasme cover and an index of yak
-grazing activity (dung density) in 30 10 × 10 m plots. (E) Photographs showing (left
+chamaejasme cover (n = `r n_burrow_dung_plots` plots), and (D) between S. chamaejasme cover and an index of yak
+grazing activity (dung density) in `r n_burrow_dung_plots` 10 × 10 m plots. (E) Photographs showing (left
 to right) a pika at its burrow entrance, flowering S. chamaejasme, and a yak grazing
 among S. chamaejasme plants. Different letters above bars indicate significant
 differences at P &lt; 0.05. Credits: Xiaona Zheng (photographs).
@@ -604,7 +627,7 @@ the field manipulative experiment. (A) Pika density (indicated by active burrow
 density), (B) yak weight gain, (C) relationship between pika density and yak weight
 gain, (D) S. chamaejasme cover, (E) grass cover, (F) sedge cover, (G) crude protein
 (CP) content, and (H) acid detergent fibre (ADF) content. Average values from both years were used in
-analyses, yielding one data point per 150 × 150 m plot. Significant interactions
+analyses, yielding one data point per 150 × 150 m plot (n = `r n_experiment_plots` plots: `r n_plots_per_treatment` plots per treatment combination). Significant interactions
 between pikas and S. chamaejasme were evaluated using post hoc tests; means not
 sharing letters differ significantly. For panels A and F, only main effects were
 significant (Table S3). Error bars indicate +/- SE.
@@ -753,7 +776,7 @@ Combined effects of two-year (2022–2023) pika and Stellera
 chamaejasme removal treatments on yak foraging efficiency in the field
 manipulative experiment. (A, B) Bite rates and (C, D) bites per step for sedges and
 grasses, respectively. Mean values from both years were used for analysis (one data
-point per 150 × 150 m plot). Significant interactions between pikas and S.
+point per 150 × 150 m plot; n = `r n_experiment_plots` plots: `r n_plots_per_treatment` plots per treatment combination). Significant interactions between pikas and S.
 chamaejasme were evaluated using post hoc tests; means not sharing letters differ
 significantly. Error bars indicate +/- SE.
 :::
@@ -793,7 +816,7 @@ forbs_plot <- make_treatment_plot(
 Combined effects of two-year (2022–2023) pika and Stellera
 chamaejasme removal on forb cover in the field manipulative experiment. The
 average values of each variable in the two years were used for statistical analysis,
-providing a single data point for each variable in each 150 × 150 m plot. Error bars
+providing a single data point for each variable in each 150 × 150 m plot (n = `r n_experiment_plots` plots: `r n_plots_per_treatment` plots per treatment combination). Error bars
 represent +/- SE.
 :::
 
@@ -830,7 +853,7 @@ supp_fig_2
 Combined effects of two-year (2022–2023) pika and Stellera
 chamaejasme removal on foraging efficiency of yaks in the field manipulative experiment. (A) bite rates and (B) bites per step of yaks for forbs, respectively. The
 average values of each variable in the two years were used for statistical analysis,
-providing a single data point for each variable in each 150 × 150 m plot. Error bars
+providing a single data point for each variable in each 150 × 150 m plot (n = `r n_experiment_plots` plots: `r n_plots_per_treatment` plots per treatment combination). Error bars
 represent +/- SE.
 :::
 
@@ -859,7 +882,7 @@ bind_rows(
 
 ```
 
-Model summary for pika and yak feeding.
+Model summary for pika and yak feeding. Pika feeding model: beta distribution, n = `r n_pika_plots` plots. Yak feeding model: beta distribution, n = `r n_yak_transects` transects.
 :::
 
 ::: {#supptbl-pika-yak-feeding-model-contrast}
@@ -879,7 +902,7 @@ bind_rows(
 
 ```
 
-Model contrasts for pika and yak feeding.
+Model contrasts for pika and yak feeding (pika: n = `r n_pika_plots` plots; yak: n = `r n_yak_transects` transects).
 :::
 
 ::: {#supptbl-pika-burrow-count}
@@ -901,7 +924,34 @@ burrow_count_models$model_summary  |>
 
 ```
 
-Model summary for active burrow count between treatment levels. Estimates are from a generalized linear mixed model with block, year, and month as random effects.
+Model summary for active burrow count between treatment levels. Estimates are from a generalized linear mixed model (Tweedie distribution) with block, year, and month as random effects (n = `r n_experiment_plots` plots, `r n_years_experiment` years).
+:::
+
+::: {#supptbl-pika-burrow-chamaejasme-gam}
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+
+library(broom)
+
+burrow_model_summary <- broom::tidy(burrow_model, parametric = TRUE) |>
+  bind_rows(broom::tidy(burrow_model)) |>
+  mutate(term = case_when(
+    term == "(Intercept)" ~ "Intercept",
+    term == "s(active_pika_burrow_no_100m2)" ~ "s(active pika burrow density)",
+    term == "s(plot)" ~ "s(plot) [random effect]",
+    TRUE ~ term
+  ))
+
+burrow_model_summary |>
+  gt() |>
+  fmt_number(columns = where(is.numeric), decimals = 2)
+
+```
+
+Model summary for S. chamaejasme cover regressed on active pika burrow density. Estimates are from a generalized additive mixed model (Gaussian family) with plot as a random effect (n = `r n_burrow_dung_plots` plots).
 :::
 
 ::: {#supptbl-weight-gain-burrow-regression}
@@ -918,7 +968,7 @@ weight_gain_burrow_regression_models$model_summary  |>
 
 ```
 
-Model summary for yak weight gain regressed on active burrow count. Estimates are from a generalized additive mixed model with block, year, and month as random effects.
+Model summary for yak weight gain regressed on active burrow count. Estimates are from a generalized additive mixed model (Gaussian family) with block, year, and month as random effects (n = `r n_experiment_plots` plots).
 :::
 
 ::: {#supptbl-yak-performance-model-summary}
@@ -949,7 +999,7 @@ yak_performance_summary_table |>
 
 ```
 
-Model summary for weight gain, grass cover, S. chamaejasme cover, crude protein %, acid detergent fibre %.
+Model summary for weight gain, grass cover, S. chamaejasme cover, crude protein %, acid detergent fibre %. All models are generalized linear mixed models with block, year, and month as random effects (n = `r n_experiment_plots` plots, `r n_years_experiment` years). Distributions: weight gain (Gaussian), cover variables (beta), forage quality variables (Gaussian).
 :::
 
 ::: {#supptbl-yak-performance-model-contrast}
@@ -975,7 +1025,7 @@ yak_performance_contrast_table |>
 
 ```
 
-Model contrasts for weight gain, grass cover, S. chamaejasme cover, crude protein %, and acid detergent fibre % of total forage for yaks
+Model contrasts for weight gain, grass cover, S. chamaejasme cover, crude protein %, and acid detergent fibre % of total forage for yaks (n = `r n_experiment_plots` plots, `r n_years_experiment` years).
 
 :::
 
@@ -1007,7 +1057,7 @@ yak_foraging_efficiency_table |>
 
 ```
 
-Model summary for plant bites/h and the bites to step ratio for sedges, grasses, and forbs.
+Model summary for plant bites/h and the bites to step ratio for sedges, grasses, and forbs. All models are generalized linear mixed models (beta distribution for proportions, Gaussian for counts) with block, year, and month as random effects (n = `r n_experiment_plots` plots, `r n_years_experiment` years).
 :::
 
 ::: {#supptbl-yak-foraging-efficiency-contrast}
@@ -1032,5 +1082,64 @@ yak_foraging_efficiency_table |>
 
 ```
 
-Model contrasts for plant bites and the bites to step ratio for sedges, grasses, and forbs.
+Model contrasts for plant bites and the bites to step ratio for sedges, grasses, and forbs (n = `r n_experiment_plots` plots, `r n_years_experiment` years).
+:::
+
+::: {#supptbl-model-overview}
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+
+# Create comprehensive model summary table
+model_overview <- tibble::tribble(
+  ~Analysis, ~`Response Variable`, ~`Model Type`, ~`Distribution/Family`, ~`Random Effects`, ~`Sample Size`,
+  
+  # Field surveys (2021)
+  "Diet selection", "Pika feeding frequency", "GLMM", "Beta", "plot, month", glue("n = {n_pika_plots} plots"),
+  "Diet selection", "Yak grazing frequency", "GLMM", "Beta", "transect, month", glue("n = {n_yak_transects} transects"),
+  "Diet selection", "S. chamaejasme cover vs burrow density", "GAM", "Gaussian", "plot", glue("n = {n_burrow_dung_plots} plots"),
+  "Diet selection", "Dung density vs S. chamaejasme cover", "LM", "Gaussian", "none", glue("n = {n_burrow_dung_plots} plots"),
+  
+  # Field experiments (2022-2023)
+  "Yak performance", "Weight gain", "GLMM", "Gaussian", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
+  "Yak performance", "Weight gain vs burrow density", "GAM", "Gaussian", "block, year, month", glue("n = {n_experiment_plots} plots"),
+  "Plant cover", "Grass cover", "GLMM", "Beta", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
+  "Plant cover", "Sedge cover", "GLMM", "Beta", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
+  "Plant cover", "Forb cover", "GLMM", "Beta", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
+  "Plant cover", "S. chamaejasme cover", "GLMM", "Beta", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
+  "Plant cover", "Active burrow density", "GLMM", "Tweedie", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
+  "Forage quality", "Crude protein (%)", "GLMM", "Gaussian", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
+  "Forage quality", "Acid detergent fiber (%)", "GLMM", "Gaussian", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
+  "Forage quality", "Neutral detergent fiber (%)", "GLMM", "Gaussian", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
+  "Foraging efficiency", "Sedge bite rate", "GLMM", "Gaussian", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
+  "Foraging efficiency", "Grass bite rate", "GLMM", "Gaussian", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
+  "Foraging efficiency", "Forb bite rate", "GLMM", "Gaussian", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
+  "Foraging efficiency", "Sedge bites/step", "GLMM", "Beta", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
+  "Foraging efficiency", "Grass bites/step", "GLMM", "Beta", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
+  "Foraging efficiency", "Forb bites/step", "GLMM", "Beta", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years")
+)
+
+model_overview |>
+  gt(groupname_col = "Analysis") |>
+  tab_header(
+    title = "Statistical Models Summary",
+    subtitle = "Overview of all models used in the study"
+  ) |>
+  cols_label(
+    `Response Variable` = "Response Variable",
+    `Model Type` = "Model Type",
+    `Distribution/Family` = "Distribution/Family",
+    `Random Effects` = "Random Effects",
+    `Sample Size` = "Sample Size"
+  ) |>
+  tab_footnote(
+    footnote = "GLMM = Generalized Linear Mixed Model; GAM = Generalized Additive Mixed Model; LM = Linear Model"
+  ) |>
+  opt_stylize(style = 6, color = "gray")
+
+```
+
+Summary of all statistical models used in the study, including model type, distribution family, random effects structure, and sample sizes. All field experiments (2022-2023) used a 2×2 factorial design with pika presence/absence and S. chamaejasme presence/absence treatments.
 :::
