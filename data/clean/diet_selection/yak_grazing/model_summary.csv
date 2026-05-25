@@ -1,0 +1,7 @@
+effect,component,group,term,estimate,std.error,statistic,p.value
+fixed,cond,NA,(Intercept),16.333325984510093,3.233210674199276,5.051735760632158,4.3781310150133064e-7
+fixed,cond,NA,plant_groupGrasses,57.99992415312612,4.2389239014857045,13.682700020351314,1.2881904310569084e-42
+fixed,cond,NA,plant_groupSedges,28.99990159903069,4.238923901506923,6.841335742951489,7.84581312968802e-12
+ran_pars,cond,transect,sd__(Intercept),3.8332926234065363,NA,NA,NA
+ran_pars,cond,month,sd__(Intercept),5.688689806981845e-4,NA,NA,NA
+ran_pars,cond,Residual,sd__Observation,16.417281676279817,NA,NA,NA

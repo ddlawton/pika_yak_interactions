@@ -1,0 +1,577 @@
+block,pika_treatment,posion_plant_treatment,plant,bites_steps_ratio,month,bites_steps_ratio_beta,yak
+1,no pika,No S. chamaejasme,sedges,0.27,June,0.27119791666666665,B1_AA_yak_1
+1,no pika,No S. chamaejasme,grasses,0.1,June,0.10208333333333335,B1_AA_yak_1
+1,no pika,No S. chamaejasme,forbs,0.12,June,0.12197916666666665,B1_AA_yak_1
+1,no pika,No S. chamaejasme,sedges,0.43,June,0.43036458333333333,B1_AA_yak_2
+1,no pika,No S. chamaejasme,grasses,0.22,June,0.22145833333333334,B1_AA_yak_2
+1,no pika,No S. chamaejasme,forbs,0.19,June,0.19161458333333334,B1_AA_yak_2
+1,no pika,No S. chamaejasme,sedges,0.69,July,0.6890104166666666,B1_AA_yak_1
+1,no pika,No S. chamaejasme,grasses,0.41,July,0.41046875,B1_AA_yak_1
+1,no pika,No S. chamaejasme,forbs,0.1,July,0.10208333333333335,B1_AA_yak_1
+1,no pika,No S. chamaejasme,sedges,0.81,July,0.8083854166666667,B1_AA_yak_2
+1,no pika,No S. chamaejasme,grasses,0.33,July,0.33088541666666665,B1_AA_yak_2
+1,no pika,No S. chamaejasme,forbs,0.19,July,0.19161458333333334,B1_AA_yak_2
+1,no pika,No S. chamaejasme,sedges,0.65,August,0.6492187500000001,B1_AA_yak_1
+1,no pika,No S. chamaejasme,grasses,0.34,August,0.3408333333333333,B1_AA_yak_1
+1,no pika,No S. chamaejasme,forbs,0.18,August,0.18166666666666664,B1_AA_yak_1
+1,no pika,No S. chamaejasme,sedges,0.7,August,0.6989583333333332,B1_AA_yak_2
+1,no pika,No S. chamaejasme,grasses,0.3,August,0.30104166666666665,B1_AA_yak_2
+1,no pika,No S. chamaejasme,forbs,0.13,August,0.13192708333333333,B1_AA_yak_2
+2,no pika,No S. chamaejasme,sedges,0.49,June,0.49005208333333333,B2_AA_yak_1
+2,no pika,No S. chamaejasme,grasses,0.28,June,0.2811458333333334,B2_AA_yak_1
+2,no pika,No S. chamaejasme,forbs,0.22,June,0.22145833333333334,B2_AA_yak_1
+2,no pika,No S. chamaejasme,sedges,0.67,June,0.6691145833333335,B2_AA_yak_2
+2,no pika,No S. chamaejasme,grasses,0.28,June,0.2811458333333334,B2_AA_yak_2
+2,no pika,No S. chamaejasme,forbs,0.21,June,0.21151041666666667,B2_AA_yak_2
+2,no pika,No S. chamaejasme,sedges,0.38,July,0.380625,B2_AA_yak_1
+2,no pika,No S. chamaejasme,grasses,0.14,July,0.141875,B2_AA_yak_1
+2,no pika,No S. chamaejasme,forbs,0.1,July,0.10208333333333335,B2_AA_yak_1
+2,no pika,No S. chamaejasme,sedges,0.82,July,0.8183333333333334,B2_AA_yak_2
+2,no pika,No S. chamaejasme,grasses,0.41,July,0.41046875,B2_AA_yak_2
+2,no pika,No S. chamaejasme,forbs,0.23,July,0.23140625,B2_AA_yak_2
+2,no pika,No S. chamaejasme,sedges,0.48,August,0.4801041666666666,B2_AA_yak_1
+2,no pika,No S. chamaejasme,grasses,0.23,August,0.23140625,B2_AA_yak_1
+2,no pika,No S. chamaejasme,forbs,0.22,August,0.22145833333333334,B2_AA_yak_1
+2,no pika,No S. chamaejasme,sedges,0.47,August,0.47015625,B2_AA_yak_2
+2,no pika,No S. chamaejasme,grasses,0.34,August,0.3408333333333333,B2_AA_yak_2
+2,no pika,No S. chamaejasme,forbs,0.19,August,0.19161458333333334,B2_AA_yak_2
+3,no pika,No S. chamaejasme,sedges,0.65,June,0.6492187500000001,B3_AA_yak_1
+3,no pika,No S. chamaejasme,grasses,0.23,June,0.23140625,B3_AA_yak_1
+3,no pika,No S. chamaejasme,forbs,0.16,June,0.16177083333333334,B3_AA_yak_1
+3,no pika,No S. chamaejasme,sedges,0.49,June,0.49005208333333333,B3_AA_yak_2
+3,no pika,No S. chamaejasme,grasses,0.13,June,0.13192708333333333,B3_AA_yak_2
+3,no pika,No S. chamaejasme,forbs,0.12,June,0.12197916666666665,B3_AA_yak_2
+3,no pika,No S. chamaejasme,sedges,0.35,July,0.35078125,B3_AA_yak_1
+3,no pika,No S. chamaejasme,grasses,0.1,July,0.10208333333333335,B3_AA_yak_1
+3,no pika,No S. chamaejasme,forbs,0.04,July,0.042395833333333334,B3_AA_yak_1
+3,no pika,No S. chamaejasme,sedges,0.43,July,0.43036458333333333,B3_AA_yak_2
+3,no pika,No S. chamaejasme,grasses,0.16,July,0.16177083333333334,B3_AA_yak_2
+3,no pika,No S. chamaejasme,forbs,0.09,July,0.09213541666666665,B3_AA_yak_2
+3,no pika,No S. chamaejasme,sedges,0.37,August,0.3706770833333333,B3_AA_yak_1
+3,no pika,No S. chamaejasme,grasses,0.17,August,0.17171875,B3_AA_yak_1
+3,no pika,No S. chamaejasme,forbs,0.06,August,0.06229166666666666,B3_AA_yak_1
+3,no pika,No S. chamaejasme,sedges,0.44,August,0.44031250000000005,B3_AA_yak_2
+3,no pika,No S. chamaejasme,grasses,0.15,August,0.15182291666666667,B3_AA_yak_2
+3,no pika,No S. chamaejasme,forbs,0.07,August,0.07223958333333334,B3_AA_yak_2
+4,no pika,No S. chamaejasme,sedges,0.4,June,0.4005208333333334,B4_AA_yak_1
+4,no pika,No S. chamaejasme,grasses,0.28,June,0.2811458333333334,B4_AA_yak_1
+4,no pika,No S. chamaejasme,forbs,0.11,June,0.11203125000000001,B4_AA_yak_1
+4,no pika,No S. chamaejasme,sedges,0.42,June,0.42041666666666666,B4_AA_yak_2
+4,no pika,No S. chamaejasme,grasses,0.16,June,0.16177083333333334,B4_AA_yak_2
+4,no pika,No S. chamaejasme,forbs,0.14,June,0.141875,B4_AA_yak_2
+4,no pika,No S. chamaejasme,sedges,0.5,July,0.5,B4_AA_yak_1
+4,no pika,No S. chamaejasme,grasses,0.26,July,0.26125000000000004,B4_AA_yak_1
+4,no pika,No S. chamaejasme,forbs,0.17,July,0.17171875,B4_AA_yak_1
+4,no pika,No S. chamaejasme,sedges,0.37,July,0.3706770833333333,B4_AA_yak_2
+4,no pika,No S. chamaejasme,grasses,0.26,July,0.26125000000000004,B4_AA_yak_2
+4,no pika,No S. chamaejasme,forbs,0.13,July,0.13192708333333333,B4_AA_yak_2
+4,no pika,No S. chamaejasme,sedges,0.38,August,0.380625,B4_AA_yak_1
+4,no pika,No S. chamaejasme,grasses,0.26,August,0.26125000000000004,B4_AA_yak_1
+4,no pika,No S. chamaejasme,forbs,0.06,August,0.06229166666666666,B4_AA_yak_1
+4,no pika,No S. chamaejasme,sedges,0.25,August,0.2513020833333333,B4_AA_yak_2
+4,no pika,No S. chamaejasme,grasses,0.22,August,0.22145833333333334,B4_AA_yak_2
+4,no pika,No S. chamaejasme,forbs,0.16,August,0.16177083333333334,B4_AA_yak_2
+1,pika,No S. chamaejasme,sedges,0.55,June,0.5497395833333334,B1_PA_yak_1
+1,pika,No S. chamaejasme,grasses,0.19,June,0.19161458333333334,B1_PA_yak_1
+1,pika,No S. chamaejasme,forbs,0.17,June,0.17171875,B1_PA_yak_1
+1,pika,No S. chamaejasme,sedges,0.54,June,0.5397916666666667,B1_PA_yak_2
+1,pika,No S. chamaejasme,grasses,0.31,June,0.3109895833333333,B1_PA_yak_2
+1,pika,No S. chamaejasme,forbs,0.08,June,0.08218750000000001,B1_PA_yak_2
+1,pika,No S. chamaejasme,sedges,0.5,July,0.5,B1_PA_yak_1
+1,pika,No S. chamaejasme,grasses,0.16,July,0.16177083333333334,B1_PA_yak_1
+1,pika,No S. chamaejasme,forbs,0.06,July,0.06229166666666666,B1_PA_yak_1
+1,pika,No S. chamaejasme,sedges,0.35,July,0.35078125,B1_PA_yak_2
+1,pika,No S. chamaejasme,grasses,0.18,July,0.18166666666666664,B1_PA_yak_2
+1,pika,No S. chamaejasme,forbs,0.06,July,0.06229166666666666,B1_PA_yak_2
+1,pika,No S. chamaejasme,sedges,0.45,August,0.45026041666666666,B1_PA_yak_1
+1,pika,No S. chamaejasme,grasses,0.22,August,0.22145833333333334,B1_PA_yak_1
+1,pika,No S. chamaejasme,forbs,0.13,August,0.13192708333333333,B1_PA_yak_1
+1,pika,No S. chamaejasme,sedges,0.45,August,0.45026041666666666,B1_PA_yak_2
+1,pika,No S. chamaejasme,grasses,0.27,August,0.27119791666666665,B1_PA_yak_2
+1,pika,No S. chamaejasme,forbs,0.16,August,0.16177083333333334,B1_PA_yak_2
+2,pika,No S. chamaejasme,sedges,0.45,June,0.45026041666666666,B2_PA_yak_1
+2,pika,No S. chamaejasme,grasses,0.24,June,0.24135416666666665,B2_PA_yak_1
+2,pika,No S. chamaejasme,forbs,0.13,June,0.13192708333333333,B2_PA_yak_1
+2,pika,No S. chamaejasme,sedges,0.3,June,0.30104166666666665,B2_PA_yak_2
+2,pika,No S. chamaejasme,grasses,0.1,June,0.10208333333333335,B2_PA_yak_2
+2,pika,No S. chamaejasme,forbs,0.17,June,0.17171875,B2_PA_yak_2
+2,pika,No S. chamaejasme,sedges,0.48,July,0.4801041666666666,B2_PA_yak_1
+2,pika,No S. chamaejasme,grasses,0.25,July,0.2513020833333333,B2_PA_yak_1
+2,pika,No S. chamaejasme,forbs,0.22,July,0.22145833333333334,B2_PA_yak_1
+2,pika,No S. chamaejasme,sedges,0.47,July,0.47015625,B2_PA_yak_2
+2,pika,No S. chamaejasme,grasses,0.23,July,0.23140625,B2_PA_yak_2
+2,pika,No S. chamaejasme,forbs,0.24,July,0.24135416666666665,B2_PA_yak_2
+2,pika,No S. chamaejasme,sedges,0.48,August,0.4801041666666666,B2_PA_yak_1
+2,pika,No S. chamaejasme,grasses,0.31,August,0.3109895833333333,B2_PA_yak_1
+2,pika,No S. chamaejasme,forbs,0.25,August,0.2513020833333333,B2_PA_yak_1
+2,pika,No S. chamaejasme,sedges,0.63,August,0.6293229166666666,B2_PA_yak_2
+2,pika,No S. chamaejasme,grasses,0.27,August,0.27119791666666665,B2_PA_yak_2
+2,pika,No S. chamaejasme,forbs,0.3,August,0.30104166666666665,B2_PA_yak_2
+3,pika,No S. chamaejasme,sedges,0.51,June,0.5099479166666666,B3_PA_yak_1
+3,pika,No S. chamaejasme,grasses,0.19,June,0.19161458333333334,B3_PA_yak_1
+3,pika,No S. chamaejasme,forbs,0.15,June,0.15182291666666667,B3_PA_yak_1
+3,pika,No S. chamaejasme,sedges,0.54,June,0.5397916666666667,B3_PA_yak_2
+3,pika,No S. chamaejasme,grasses,0.29,June,0.29109375,B3_PA_yak_2
+3,pika,No S. chamaejasme,forbs,0.24,June,0.24135416666666665,B3_PA_yak_2
+3,pika,No S. chamaejasme,sedges,0.47,July,0.47015625,B3_PA_yak_1
+3,pika,No S. chamaejasme,grasses,0.2,July,0.2015625,B3_PA_yak_1
+3,pika,No S. chamaejasme,forbs,0.04,July,0.042395833333333334,B3_PA_yak_1
+3,pika,No S. chamaejasme,sedges,0.58,July,0.5795833333333332,B3_PA_yak_2
+3,pika,No S. chamaejasme,grasses,0.28,July,0.2811458333333334,B3_PA_yak_2
+3,pika,No S. chamaejasme,forbs,0.14,July,0.141875,B3_PA_yak_2
+3,pika,No S. chamaejasme,sedges,0.78,August,0.7785416666666668,B3_PA_yak_1
+3,pika,No S. chamaejasme,grasses,0.34,August,0.3408333333333333,B3_PA_yak_1
+3,pika,No S. chamaejasme,forbs,0.23,August,0.23140625,B3_PA_yak_1
+3,pika,No S. chamaejasme,sedges,0.59,August,0.58953125,B3_PA_yak_2
+3,pika,No S. chamaejasme,grasses,0.26,August,0.26125000000000004,B3_PA_yak_2
+3,pika,No S. chamaejasme,forbs,0.25,August,0.2513020833333333,B3_PA_yak_2
+4,pika,No S. chamaejasme,sedges,0.4,June,0.4005208333333334,B4_PA_yak_1
+4,pika,No S. chamaejasme,grasses,0.21,June,0.21151041666666667,B4_PA_yak_1
+4,pika,No S. chamaejasme,forbs,0.12,June,0.12197916666666665,B4_PA_yak_1
+4,pika,No S. chamaejasme,sedges,0.58,June,0.5795833333333332,B4_PA_yak_2
+4,pika,No S. chamaejasme,grasses,0.32,June,0.32093750000000004,B4_PA_yak_2
+4,pika,No S. chamaejasme,forbs,0.19,June,0.19161458333333334,B4_PA_yak_2
+4,pika,No S. chamaejasme,sedges,0.61,July,0.6094270833333333,B4_PA_yak_1
+4,pika,No S. chamaejasme,grasses,0.24,July,0.24135416666666665,B4_PA_yak_1
+4,pika,No S. chamaejasme,forbs,0.07,July,0.07223958333333334,B4_PA_yak_1
+4,pika,No S. chamaejasme,sedges,0.29,July,0.29109375,B4_PA_yak_2
+4,pika,No S. chamaejasme,grasses,0.31,July,0.3109895833333333,B4_PA_yak_2
+4,pika,No S. chamaejasme,forbs,0.07,July,0.07223958333333334,B4_PA_yak_2
+4,pika,No S. chamaejasme,sedges,0.34,August,0.3408333333333333,B4_PA_yak_1
+4,pika,No S. chamaejasme,grasses,0.32,August,0.32093750000000004,B4_PA_yak_1
+4,pika,No S. chamaejasme,forbs,0.16,August,0.16177083333333334,B4_PA_yak_1
+4,pika,No S. chamaejasme,sedges,0.56,August,0.5596875,B4_PA_yak_2
+4,pika,No S. chamaejasme,grasses,0.37,August,0.3706770833333333,B4_PA_yak_2
+4,pika,No S. chamaejasme,forbs,0.34,August,0.3408333333333333,B4_PA_yak_2
+1,no pika,S. chamaejasme,sedges,0.23,June,0.23140625,B1_AP_yak_1
+1,no pika,S. chamaejasme,grasses,0.11,June,0.11203125000000001,B1_AP_yak_1
+1,no pika,S. chamaejasme,forbs,0.15,June,0.15182291666666667,B1_AP_yak_1
+1,no pika,S. chamaejasme,sedges,0.27,June,0.27119791666666665,B1_AP_yak_2
+1,no pika,S. chamaejasme,grasses,0.12,June,0.12197916666666665,B1_AP_yak_2
+1,no pika,S. chamaejasme,forbs,0.11,June,0.11203125000000001,B1_AP_yak_2
+1,no pika,S. chamaejasme,sedges,0.29,July,0.29109375,B1_AP_yak_1
+1,no pika,S. chamaejasme,grasses,0.17,July,0.17171875,B1_AP_yak_1
+1,no pika,S. chamaejasme,forbs,0.21,July,0.21151041666666667,B1_AP_yak_1
+1,no pika,S. chamaejasme,sedges,0.38,July,0.380625,B1_AP_yak_2
+1,no pika,S. chamaejasme,grasses,0.14,July,0.141875,B1_AP_yak_2
+1,no pika,S. chamaejasme,forbs,0.13,July,0.13192708333333333,B1_AP_yak_2
+1,no pika,S. chamaejasme,sedges,0.33,August,0.33088541666666665,B1_AP_yak_1
+1,no pika,S. chamaejasme,grasses,0.14,August,0.141875,B1_AP_yak_1
+1,no pika,S. chamaejasme,forbs,0.14,August,0.141875,B1_AP_yak_1
+1,no pika,S. chamaejasme,sedges,0.27,August,0.27119791666666665,B1_AP_yak_2
+1,no pika,S. chamaejasme,grasses,0.13,August,0.13192708333333333,B1_AP_yak_2
+1,no pika,S. chamaejasme,forbs,0.18,August,0.18166666666666664,B1_AP_yak_2
+2,no pika,S. chamaejasme,sedges,0.42,June,0.42041666666666666,B2_AP_yak_1
+2,no pika,S. chamaejasme,grasses,0.1,June,0.10208333333333335,B2_AP_yak_1
+2,no pika,S. chamaejasme,forbs,0.21,June,0.21151041666666667,B2_AP_yak_1
+2,no pika,S. chamaejasme,sedges,0.21,June,0.21151041666666667,B2_AP_yak_2
+2,no pika,S. chamaejasme,grasses,0.19,June,0.19161458333333334,B2_AP_yak_2
+2,no pika,S. chamaejasme,forbs,0.26,June,0.26125000000000004,B2_AP_yak_2
+2,no pika,S. chamaejasme,sedges,0.4,July,0.4005208333333334,B2_AP_yak_1
+2,no pika,S. chamaejasme,grasses,0.15,July,0.15182291666666667,B2_AP_yak_1
+2,no pika,S. chamaejasme,forbs,0.12,July,0.12197916666666665,B2_AP_yak_1
+2,no pika,S. chamaejasme,sedges,0.29,July,0.29109375,B2_AP_yak_2
+2,no pika,S. chamaejasme,grasses,0.1,July,0.10208333333333335,B2_AP_yak_2
+2,no pika,S. chamaejasme,forbs,0.13,July,0.13192708333333333,B2_AP_yak_2
+2,no pika,S. chamaejasme,sedges,0.29,August,0.29109375,B2_AP_yak_1
+2,no pika,S. chamaejasme,grasses,0.11,August,0.11203125000000001,B2_AP_yak_1
+2,no pika,S. chamaejasme,forbs,0.09,August,0.09213541666666665,B2_AP_yak_1
+2,no pika,S. chamaejasme,sedges,0.47,August,0.47015625,B2_AP_yak_2
+2,no pika,S. chamaejasme,grasses,0.13,August,0.13192708333333333,B2_AP_yak_2
+2,no pika,S. chamaejasme,forbs,0.2,August,0.2015625,B2_AP_yak_2
+3,no pika,S. chamaejasme,sedges,0.2,June,0.2015625,B3_AP_yak_1
+3,no pika,S. chamaejasme,grasses,0.21,June,0.21151041666666667,B3_AP_yak_1
+3,no pika,S. chamaejasme,forbs,0.21,June,0.21151041666666667,B3_AP_yak_1
+3,no pika,S. chamaejasme,sedges,0.2,June,0.2015625,B3_AP_yak_2
+3,no pika,S. chamaejasme,grasses,0.15,June,0.15182291666666667,B3_AP_yak_2
+3,no pika,S. chamaejasme,forbs,0.05,June,0.05234375,B3_AP_yak_2
+3,no pika,S. chamaejasme,sedges,0.21,July,0.21151041666666667,B3_AP_yak_1
+3,no pika,S. chamaejasme,grasses,0.22,July,0.22145833333333334,B3_AP_yak_1
+3,no pika,S. chamaejasme,forbs,0.15,July,0.15182291666666667,B3_AP_yak_1
+3,no pika,S. chamaejasme,sedges,0.32,July,0.32093750000000004,B3_AP_yak_2
+3,no pika,S. chamaejasme,grasses,0.18,July,0.18166666666666664,B3_AP_yak_2
+3,no pika,S. chamaejasme,forbs,0.14,July,0.141875,B3_AP_yak_2
+3,no pika,S. chamaejasme,sedges,0.31,August,0.3109895833333333,B3_AP_yak_1
+3,no pika,S. chamaejasme,grasses,0.23,August,0.23140625,B3_AP_yak_1
+3,no pika,S. chamaejasme,forbs,0.08,August,0.08218750000000001,B3_AP_yak_1
+3,no pika,S. chamaejasme,sedges,0.24,August,0.24135416666666665,B3_AP_yak_2
+3,no pika,S. chamaejasme,grasses,0.17,August,0.17171875,B3_AP_yak_2
+3,no pika,S. chamaejasme,forbs,0.07,August,0.07223958333333334,B3_AP_yak_2
+4,no pika,S. chamaejasme,sedges,0.29,June,0.29109375,B4_AP_yak_1
+4,no pika,S. chamaejasme,grasses,0.14,June,0.141875,B4_AP_yak_1
+4,no pika,S. chamaejasme,forbs,0.29,June,0.29109375,B4_AP_yak_1
+4,no pika,S. chamaejasme,sedges,0.14,June,0.141875,B4_AP_yak_2
+4,no pika,S. chamaejasme,grasses,0.1,June,0.10208333333333335,B4_AP_yak_2
+4,no pika,S. chamaejasme,forbs,0.16,June,0.16177083333333334,B4_AP_yak_2
+4,no pika,S. chamaejasme,sedges,0.21,July,0.21151041666666667,B4_AP_yak_1
+4,no pika,S. chamaejasme,grasses,0.17,July,0.17171875,B4_AP_yak_1
+4,no pika,S. chamaejasme,forbs,0.11,July,0.11203125000000001,B4_AP_yak_1
+4,no pika,S. chamaejasme,sedges,0.26,July,0.26125000000000004,B4_AP_yak_2
+4,no pika,S. chamaejasme,grasses,0.22,July,0.22145833333333334,B4_AP_yak_2
+4,no pika,S. chamaejasme,forbs,0.15,July,0.15182291666666667,B4_AP_yak_2
+4,no pika,S. chamaejasme,sedges,0.2,August,0.2015625,B4_AP_yak_1
+4,no pika,S. chamaejasme,grasses,0.12,August,0.12197916666666665,B4_AP_yak_1
+4,no pika,S. chamaejasme,forbs,0.11,August,0.11203125000000001,B4_AP_yak_1
+4,no pika,S. chamaejasme,sedges,0.2,August,0.2015625,B4_AP_yak_2
+4,no pika,S. chamaejasme,grasses,0.26,August,0.26125000000000004,B4_AP_yak_2
+4,no pika,S. chamaejasme,forbs,0.12,August,0.12197916666666665,B4_AP_yak_2
+1,pika,S. chamaejasme,sedges,0.51,June,0.5099479166666666,B1_PP_yak_1
+1,pika,S. chamaejasme,grasses,0.22,June,0.22145833333333334,B1_PP_yak_1
+1,pika,S. chamaejasme,forbs,0.21,June,0.21151041666666667,B1_PP_yak_1
+1,pika,S. chamaejasme,sedges,0.45,June,0.45026041666666666,B1_PP_yak_2
+1,pika,S. chamaejasme,grasses,0.31,June,0.3109895833333333,B1_PP_yak_2
+1,pika,S. chamaejasme,forbs,0.22,June,0.22145833333333334,B1_PP_yak_2
+1,pika,S. chamaejasme,sedges,0.87,July,0.8680729166666666,B1_PP_yak_1
+1,pika,S. chamaejasme,grasses,0.39,July,0.3905729166666667,B1_PP_yak_1
+1,pika,S. chamaejasme,forbs,0.47,July,0.47015625,B1_PP_yak_1
+1,pika,S. chamaejasme,sedges,0.51,July,0.5099479166666666,B1_PP_yak_2
+1,pika,S. chamaejasme,grasses,0.3,July,0.30104166666666665,B1_PP_yak_2
+1,pika,S. chamaejasme,forbs,0.12,July,0.12197916666666665,B1_PP_yak_2
+1,pika,S. chamaejasme,sedges,0.45,August,0.45026041666666666,B1_PP_yak_1
+1,pika,S. chamaejasme,grasses,0.24,August,0.24135416666666665,B1_PP_yak_1
+1,pika,S. chamaejasme,forbs,0.12,August,0.12197916666666665,B1_PP_yak_1
+1,pika,S. chamaejasme,sedges,0.69,August,0.6890104166666666,B1_PP_yak_2
+1,pika,S. chamaejasme,grasses,0.29,August,0.29109375,B1_PP_yak_2
+1,pika,S. chamaejasme,forbs,0.28,August,0.2811458333333334,B1_PP_yak_2
+2,pika,S. chamaejasme,sedges,0.4,June,0.4005208333333334,B2_PP_yak_1
+2,pika,S. chamaejasme,grasses,0.3,June,0.30104166666666665,B2_PP_yak_1
+2,pika,S. chamaejasme,forbs,0.16,June,0.16177083333333334,B2_PP_yak_1
+2,pika,S. chamaejasme,sedges,0.51,June,0.5099479166666666,B2_PP_yak_2
+2,pika,S. chamaejasme,grasses,0.23,June,0.23140625,B2_PP_yak_2
+2,pika,S. chamaejasme,forbs,0.24,June,0.24135416666666665,B2_PP_yak_2
+2,pika,S. chamaejasme,sedges,0.57,July,0.5696354166666666,B2_PP_yak_1
+2,pika,S. chamaejasme,grasses,0.37,July,0.3706770833333333,B2_PP_yak_1
+2,pika,S. chamaejasme,forbs,0.24,July,0.24135416666666665,B2_PP_yak_1
+2,pika,S. chamaejasme,sedges,0.46,July,0.46020833333333333,B2_PP_yak_2
+2,pika,S. chamaejasme,grasses,0.3,July,0.30104166666666665,B2_PP_yak_2
+2,pika,S. chamaejasme,forbs,0.15,July,0.15182291666666667,B2_PP_yak_2
+2,pika,S. chamaejasme,sedges,0.55,August,0.5497395833333334,B2_PP_yak_1
+2,pika,S. chamaejasme,grasses,0.23,August,0.23140625,B2_PP_yak_1
+2,pika,S. chamaejasme,forbs,0.11,August,0.11203125000000001,B2_PP_yak_1
+2,pika,S. chamaejasme,sedges,0.5,August,0.5,B2_PP_yak_2
+2,pika,S. chamaejasme,grasses,0.2,August,0.2015625,B2_PP_yak_2
+2,pika,S. chamaejasme,forbs,0.11,August,0.11203125000000001,B2_PP_yak_2
+3,pika,S. chamaejasme,sedges,0.3,June,0.30104166666666665,B3_PP_yak_1
+3,pika,S. chamaejasme,grasses,0.19,June,0.19161458333333334,B3_PP_yak_1
+3,pika,S. chamaejasme,forbs,0.08,June,0.08218750000000001,B3_PP_yak_1
+3,pika,S. chamaejasme,sedges,0.41,June,0.41046875,B3_PP_yak_2
+3,pika,S. chamaejasme,grasses,0.42,June,0.42041666666666666,B3_PP_yak_2
+3,pika,S. chamaejasme,forbs,0.12,June,0.12197916666666665,B3_PP_yak_2
+3,pika,S. chamaejasme,sedges,0.39,July,0.3905729166666667,B3_PP_yak_1
+3,pika,S. chamaejasme,grasses,0.18,July,0.18166666666666664,B3_PP_yak_1
+3,pika,S. chamaejasme,forbs,0.07,July,0.07223958333333334,B3_PP_yak_1
+3,pika,S. chamaejasme,sedges,0.53,July,0.5298437500000001,B3_PP_yak_2
+3,pika,S. chamaejasme,grasses,0.32,July,0.32093750000000004,B3_PP_yak_2
+3,pika,S. chamaejasme,forbs,0.14,July,0.141875,B3_PP_yak_2
+3,pika,S. chamaejasme,sedges,0.47,August,0.47015625,B3_PP_yak_1
+3,pika,S. chamaejasme,grasses,0.26,August,0.26125000000000004,B3_PP_yak_1
+3,pika,S. chamaejasme,forbs,0.23,August,0.23140625,B3_PP_yak_1
+3,pika,S. chamaejasme,sedges,0.64,August,0.6392708333333333,B3_PP_yak_2
+3,pika,S. chamaejasme,grasses,0.18,August,0.18166666666666664,B3_PP_yak_2
+3,pika,S. chamaejasme,forbs,0.15,August,0.15182291666666667,B3_PP_yak_2
+4,pika,S. chamaejasme,sedges,0.53,June,0.5298437500000001,B4_PP_yak_1
+4,pika,S. chamaejasme,grasses,0.22,June,0.22145833333333334,B4_PP_yak_1
+4,pika,S. chamaejasme,forbs,0.21,June,0.21151041666666667,B4_PP_yak_1
+4,pika,S. chamaejasme,sedges,0.48,June,0.4801041666666666,B4_PP_yak_2
+4,pika,S. chamaejasme,grasses,0.2,June,0.2015625,B4_PP_yak_2
+4,pika,S. chamaejasme,forbs,0.25,June,0.2513020833333333,B4_PP_yak_2
+4,pika,S. chamaejasme,sedges,0.55,July,0.5497395833333334,B4_PP_yak_1
+4,pika,S. chamaejasme,grasses,0.31,July,0.3109895833333333,B4_PP_yak_1
+4,pika,S. chamaejasme,forbs,0.18,July,0.18166666666666664,B4_PP_yak_1
+4,pika,S. chamaejasme,sedges,0.26,July,0.26125000000000004,B4_PP_yak_2
+4,pika,S. chamaejasme,grasses,0.23,July,0.23140625,B4_PP_yak_2
+4,pika,S. chamaejasme,forbs,0.06,July,0.06229166666666666,B4_PP_yak_2
+4,pika,S. chamaejasme,sedges,0.54,August,0.5397916666666667,B4_PP_yak_1
+4,pika,S. chamaejasme,grasses,0.19,August,0.19161458333333334,B4_PP_yak_1
+4,pika,S. chamaejasme,forbs,0.14,August,0.141875,B4_PP_yak_1
+4,pika,S. chamaejasme,sedges,0.39,August,0.3905729166666667,B4_PP_yak_2
+4,pika,S. chamaejasme,grasses,0.24,August,0.24135416666666665,B4_PP_yak_2
+4,pika,S. chamaejasme,forbs,0.1,August,0.10208333333333335,B4_PP_yak_2
+1,no pika,No S. chamaejasme,sedges,0.52,June,0.5198958333333333,B1_AA_yak_1
+1,no pika,No S. chamaejasme,grasses,0.18,June,0.18166666666666664,B1_AA_yak_1
+1,no pika,No S. chamaejasme,forbs,0.13,June,0.13192708333333333,B1_AA_yak_1
+1,no pika,No S. chamaejasme,sedges,0.75,June,0.7486979166666666,B1_AA_yak_2
+1,no pika,No S. chamaejasme,grasses,0.43,June,0.43036458333333333,B1_AA_yak_2
+1,no pika,No S. chamaejasme,forbs,0.13,June,0.13192708333333333,B1_AA_yak_2
+1,no pika,No S. chamaejasme,sedges,0.55,July,0.5497395833333334,B1_AA_yak_1
+1,no pika,No S. chamaejasme,grasses,0.2,July,0.2015625,B1_AA_yak_1
+1,no pika,No S. chamaejasme,forbs,0.17,July,0.17171875,B1_AA_yak_1
+1,no pika,No S. chamaejasme,sedges,0.45,July,0.45026041666666666,B1_AA_yak_2
+1,no pika,No S. chamaejasme,grasses,0.31,July,0.3109895833333333,B1_AA_yak_2
+1,no pika,No S. chamaejasme,forbs,0.12,July,0.12197916666666665,B1_AA_yak_2
+1,no pika,No S. chamaejasme,sedges,0.55,August,0.5497395833333334,B1_AA_yak_1
+1,no pika,No S. chamaejasme,grasses,0.24,August,0.24135416666666665,B1_AA_yak_1
+1,no pika,No S. chamaejasme,forbs,0.12,August,0.12197916666666665,B1_AA_yak_1
+1,no pika,No S. chamaejasme,sedges,0.5,August,0.5,B1_AA_yak_2
+1,no pika,No S. chamaejasme,grasses,0.2,August,0.2015625,B1_AA_yak_2
+1,no pika,No S. chamaejasme,forbs,0.19,August,0.19161458333333334,B1_AA_yak_2
+2,no pika,No S. chamaejasme,sedges,0.59,June,0.58953125,B2_AA_yak_1
+2,no pika,No S. chamaejasme,grasses,0.42,June,0.42041666666666666,B2_AA_yak_1
+2,no pika,No S. chamaejasme,forbs,0.15,June,0.15182291666666667,B2_AA_yak_1
+2,no pika,No S. chamaejasme,sedges,0.65,June,0.6492187500000001,B2_AA_yak_2
+2,no pika,No S. chamaejasme,grasses,0.6,June,0.5994791666666667,B2_AA_yak_2
+2,no pika,No S. chamaejasme,forbs,0.17,June,0.17171875,B2_AA_yak_2
+2,no pika,No S. chamaejasme,sedges,0.51,July,0.5099479166666666,B2_AA_yak_1
+2,no pika,No S. chamaejasme,grasses,0.24,July,0.24135416666666665,B2_AA_yak_1
+2,no pika,No S. chamaejasme,forbs,0.13,July,0.13192708333333333,B2_AA_yak_1
+2,no pika,No S. chamaejasme,sedges,0.42,July,0.42041666666666666,B2_AA_yak_2
+2,no pika,No S. chamaejasme,grasses,0.28,July,0.2811458333333334,B2_AA_yak_2
+2,no pika,No S. chamaejasme,forbs,0.14,July,0.141875,B2_AA_yak_2
+2,no pika,No S. chamaejasme,sedges,0.51,August,0.5099479166666666,B2_AA_yak_1
+2,no pika,No S. chamaejasme,grasses,0.34,August,0.3408333333333333,B2_AA_yak_1
+2,no pika,No S. chamaejasme,forbs,0.12,August,0.12197916666666665,B2_AA_yak_1
+2,no pika,No S. chamaejasme,sedges,0.34,August,0.3408333333333333,B2_AA_yak_2
+2,no pika,No S. chamaejasme,grasses,0.23,August,0.23140625,B2_AA_yak_2
+2,no pika,No S. chamaejasme,forbs,0.1,August,0.10208333333333335,B2_AA_yak_2
+3,no pika,No S. chamaejasme,sedges,0.45,June,0.45026041666666666,B3_AA_yak_1
+3,no pika,No S. chamaejasme,grasses,0.13,June,0.13192708333333333,B3_AA_yak_1
+3,no pika,No S. chamaejasme,forbs,0.19,June,0.19161458333333334,B3_AA_yak_1
+3,no pika,No S. chamaejasme,sedges,0.53,June,0.5298437500000001,B3_AA_yak_2
+3,no pika,No S. chamaejasme,grasses,0.18,June,0.18166666666666664,B3_AA_yak_2
+3,no pika,No S. chamaejasme,forbs,0.16,June,0.16177083333333334,B3_AA_yak_2
+3,no pika,No S. chamaejasme,sedges,0.62,July,0.619375,B3_AA_yak_1
+3,no pika,No S. chamaejasme,grasses,0.17,July,0.17171875,B3_AA_yak_1
+3,no pika,No S. chamaejasme,forbs,0.08,July,0.08218750000000001,B3_AA_yak_1
+3,no pika,No S. chamaejasme,sedges,0.46,July,0.46020833333333333,B3_AA_yak_2
+3,no pika,No S. chamaejasme,grasses,0.39,July,0.3905729166666667,B3_AA_yak_2
+3,no pika,No S. chamaejasme,forbs,0.08,July,0.08218750000000001,B3_AA_yak_2
+3,no pika,No S. chamaejasme,sedges,0.25,August,0.2513020833333333,B3_AA_yak_1
+3,no pika,No S. chamaejasme,grasses,0.42,August,0.42041666666666666,B3_AA_yak_1
+3,no pika,No S. chamaejasme,forbs,0.13,August,0.13192708333333333,B3_AA_yak_1
+3,no pika,No S. chamaejasme,sedges,0.91,August,0.9078645833333333,B3_AA_yak_2
+3,no pika,No S. chamaejasme,grasses,0.53,August,0.5298437500000001,B3_AA_yak_2
+3,no pika,No S. chamaejasme,forbs,0.11,August,0.11203125000000001,B3_AA_yak_2
+4,no pika,No S. chamaejasme,sedges,0.42,June,0.42041666666666666,B4_AA_yak_1
+4,no pika,No S. chamaejasme,grasses,0.28,June,0.2811458333333334,B4_AA_yak_1
+4,no pika,No S. chamaejasme,forbs,0.15,June,0.15182291666666667,B4_AA_yak_1
+4,no pika,No S. chamaejasme,sedges,0.41,June,0.41046875,B4_AA_yak_2
+4,no pika,No S. chamaejasme,grasses,0.52,June,0.5198958333333333,B4_AA_yak_2
+4,no pika,No S. chamaejasme,forbs,0.19,June,0.19161458333333334,B4_AA_yak_2
+4,no pika,No S. chamaejasme,sedges,0.77,July,0.76859375,B4_AA_yak_1
+4,no pika,No S. chamaejasme,grasses,0.2,July,0.2015625,B4_AA_yak_1
+4,no pika,No S. chamaejasme,forbs,0.18,July,0.18166666666666664,B4_AA_yak_1
+4,no pika,No S. chamaejasme,sedges,0.3,July,0.30104166666666665,B4_AA_yak_2
+4,no pika,No S. chamaejasme,grasses,0.19,July,0.19161458333333334,B4_AA_yak_2
+4,no pika,No S. chamaejasme,forbs,0.2,July,0.2015625,B4_AA_yak_2
+4,no pika,No S. chamaejasme,sedges,0.5,August,0.5,B4_AA_yak_1
+4,no pika,No S. chamaejasme,grasses,0.17,August,0.17171875,B4_AA_yak_1
+4,no pika,No S. chamaejasme,forbs,0.14,August,0.141875,B4_AA_yak_1
+4,no pika,No S. chamaejasme,sedges,0.38,August,0.380625,B4_AA_yak_2
+4,no pika,No S. chamaejasme,grasses,0.33,August,0.33088541666666665,B4_AA_yak_2
+4,no pika,No S. chamaejasme,forbs,0.14,August,0.141875,B4_AA_yak_2
+1,pika,No S. chamaejasme,sedges,0.73,June,0.7288020833333334,B1_PA_yak_1
+1,pika,No S. chamaejasme,grasses,0.41,June,0.41046875,B1_PA_yak_1
+1,pika,No S. chamaejasme,forbs,0.15,June,0.15182291666666667,B1_PA_yak_1
+1,pika,No S. chamaejasme,sedges,0.55,June,0.5497395833333334,B1_PA_yak_2
+1,pika,No S. chamaejasme,grasses,0.16,June,0.16177083333333334,B1_PA_yak_2
+1,pika,No S. chamaejasme,forbs,0.18,June,0.18166666666666664,B1_PA_yak_2
+1,pika,No S. chamaejasme,sedges,0.71,July,0.70890625,B1_PA_yak_1
+1,pika,No S. chamaejasme,grasses,0.36,July,0.3607291666666666,B1_PA_yak_1
+1,pika,No S. chamaejasme,forbs,0.28,July,0.2811458333333334,B1_PA_yak_1
+1,pika,No S. chamaejasme,sedges,0.43,July,0.43036458333333333,B1_PA_yak_2
+1,pika,No S. chamaejasme,grasses,0.25,July,0.2513020833333333,B1_PA_yak_2
+1,pika,No S. chamaejasme,forbs,0.16,July,0.16177083333333334,B1_PA_yak_2
+1,pika,No S. chamaejasme,sedges,0.55,August,0.5497395833333334,B1_PA_yak_1
+1,pika,No S. chamaejasme,grasses,0.31,August,0.3109895833333333,B1_PA_yak_1
+1,pika,No S. chamaejasme,forbs,0.19,August,0.19161458333333334,B1_PA_yak_1
+1,pika,No S. chamaejasme,sedges,0.5,August,0.5,B1_PA_yak_2
+1,pika,No S. chamaejasme,grasses,0.28,August,0.2811458333333334,B1_PA_yak_2
+1,pika,No S. chamaejasme,forbs,0.15,August,0.15182291666666667,B1_PA_yak_2
+2,pika,No S. chamaejasme,sedges,0.93,June,0.9277604166666666,B2_PA_yak_1
+2,pika,No S. chamaejasme,grasses,0.46,June,0.46020833333333333,B2_PA_yak_1
+2,pika,No S. chamaejasme,forbs,0.13,June,0.13192708333333333,B2_PA_yak_1
+2,pika,No S. chamaejasme,sedges,0.44,June,0.44031250000000005,B2_PA_yak_2
+2,pika,No S. chamaejasme,grasses,0.42,June,0.42041666666666666,B2_PA_yak_2
+2,pika,No S. chamaejasme,forbs,0.15,June,0.15182291666666667,B2_PA_yak_2
+2,pika,No S. chamaejasme,sedges,0.49,July,0.49005208333333333,B2_PA_yak_1
+2,pika,No S. chamaejasme,grasses,0.3,July,0.30104166666666665,B2_PA_yak_1
+2,pika,No S. chamaejasme,forbs,0.13,July,0.13192708333333333,B2_PA_yak_1
+2,pika,No S. chamaejasme,sedges,0.74,July,0.73875,B2_PA_yak_2
+2,pika,No S. chamaejasme,grasses,0.25,July,0.2513020833333333,B2_PA_yak_2
+2,pika,No S. chamaejasme,forbs,0.13,July,0.13192708333333333,B2_PA_yak_2
+2,pika,No S. chamaejasme,sedges,0.57,August,0.5696354166666666,B2_PA_yak_1
+2,pika,No S. chamaejasme,grasses,0.23,August,0.23140625,B2_PA_yak_1
+2,pika,No S. chamaejasme,forbs,0.19,August,0.19161458333333334,B2_PA_yak_1
+2,pika,No S. chamaejasme,sedges,0.26,August,0.26125000000000004,B2_PA_yak_2
+2,pika,No S. chamaejasme,grasses,0.15,August,0.15182291666666667,B2_PA_yak_2
+2,pika,No S. chamaejasme,forbs,0.14,August,0.141875,B2_PA_yak_2
+3,pika,No S. chamaejasme,sedges,0.7,June,0.6989583333333332,B3_PA_yak_1
+3,pika,No S. chamaejasme,grasses,0.24,June,0.24135416666666665,B3_PA_yak_1
+3,pika,No S. chamaejasme,forbs,0.23,June,0.23140625,B3_PA_yak_1
+3,pika,No S. chamaejasme,sedges,0.48,June,0.4801041666666666,B3_PA_yak_2
+3,pika,No S. chamaejasme,grasses,0.16,June,0.16177083333333334,B3_PA_yak_2
+3,pika,No S. chamaejasme,forbs,0.13,June,0.13192708333333333,B3_PA_yak_2
+3,pika,No S. chamaejasme,sedges,0.61,July,0.6094270833333333,B3_PA_yak_1
+3,pika,No S. chamaejasme,grasses,0.15,July,0.15182291666666667,B3_PA_yak_1
+3,pika,No S. chamaejasme,forbs,0.09,July,0.09213541666666665,B3_PA_yak_1
+3,pika,No S. chamaejasme,sedges,0.59,July,0.58953125,B3_PA_yak_2
+3,pika,No S. chamaejasme,grasses,0.23,July,0.23140625,B3_PA_yak_2
+3,pika,No S. chamaejasme,forbs,0.17,July,0.17171875,B3_PA_yak_2
+3,pika,No S. chamaejasme,sedges,0.4,August,0.4005208333333334,B3_PA_yak_1
+3,pika,No S. chamaejasme,grasses,0.24,August,0.24135416666666665,B3_PA_yak_1
+3,pika,No S. chamaejasme,forbs,0.12,August,0.12197916666666665,B3_PA_yak_1
+3,pika,No S. chamaejasme,sedges,0.38,August,0.380625,B3_PA_yak_2
+3,pika,No S. chamaejasme,grasses,0.25,August,0.2513020833333333,B3_PA_yak_2
+3,pika,No S. chamaejasme,forbs,0.15,August,0.15182291666666667,B3_PA_yak_2
+4,pika,No S. chamaejasme,sedges,0.46,June,0.46020833333333333,B4_PA_yak_1
+4,pika,No S. chamaejasme,grasses,0.33,June,0.33088541666666665,B4_PA_yak_1
+4,pika,No S. chamaejasme,forbs,0.07,June,0.07223958333333334,B4_PA_yak_1
+4,pika,No S. chamaejasme,sedges,0.77,June,0.76859375,B4_PA_yak_2
+4,pika,No S. chamaejasme,grasses,0.37,June,0.3706770833333333,B4_PA_yak_2
+4,pika,No S. chamaejasme,forbs,0.09,June,0.09213541666666665,B4_PA_yak_2
+4,pika,No S. chamaejasme,sedges,0.51,July,0.5099479166666666,B4_PA_yak_1
+4,pika,No S. chamaejasme,grasses,0.19,July,0.19161458333333334,B4_PA_yak_1
+4,pika,No S. chamaejasme,forbs,0.11,July,0.11203125000000001,B4_PA_yak_1
+4,pika,No S. chamaejasme,sedges,0.42,July,0.42041666666666666,B4_PA_yak_2
+4,pika,No S. chamaejasme,grasses,0.38,July,0.380625,B4_PA_yak_2
+4,pika,No S. chamaejasme,forbs,0.13,July,0.13192708333333333,B4_PA_yak_2
+4,pika,No S. chamaejasme,sedges,0.58,August,0.5795833333333332,B4_PA_yak_1
+4,pika,No S. chamaejasme,grasses,0.26,August,0.26125000000000004,B4_PA_yak_1
+4,pika,No S. chamaejasme,forbs,0.13,August,0.13192708333333333,B4_PA_yak_1
+4,pika,No S. chamaejasme,sedges,0.57,August,0.5696354166666666,B4_PA_yak_2
+4,pika,No S. chamaejasme,grasses,0.38,August,0.380625,B4_PA_yak_2
+4,pika,No S. chamaejasme,forbs,0.09,August,0.09213541666666665,B4_PA_yak_2
+1,no pika,S. chamaejasme,sedges,0.31,June,0.3109895833333333,B1_AP_yak_1
+1,no pika,S. chamaejasme,grasses,0.11,June,0.11203125000000001,B1_AP_yak_1
+1,no pika,S. chamaejasme,forbs,0.09,June,0.09213541666666665,B1_AP_yak_1
+1,no pika,S. chamaejasme,sedges,0.28,June,0.2811458333333334,B1_AP_yak_2
+1,no pika,S. chamaejasme,grasses,0.11,June,0.11203125000000001,B1_AP_yak_2
+1,no pika,S. chamaejasme,forbs,0.14,June,0.141875,B1_AP_yak_2
+1,no pika,S. chamaejasme,sedges,0.29,July,0.29109375,B1_AP_yak_1
+1,no pika,S. chamaejasme,grasses,0.14,July,0.141875,B1_AP_yak_1
+1,no pika,S. chamaejasme,forbs,0.16,July,0.16177083333333334,B1_AP_yak_1
+1,no pika,S. chamaejasme,sedges,0.45,July,0.45026041666666666,B1_AP_yak_2
+1,no pika,S. chamaejasme,grasses,0.21,July,0.21151041666666667,B1_AP_yak_2
+1,no pika,S. chamaejasme,forbs,0.13,July,0.13192708333333333,B1_AP_yak_2
+1,no pika,S. chamaejasme,sedges,0.19,August,0.19161458333333334,B1_AP_yak_1
+1,no pika,S. chamaejasme,grasses,0.08,August,0.08218750000000001,B1_AP_yak_1
+1,no pika,S. chamaejasme,forbs,0.15,August,0.15182291666666667,B1_AP_yak_1
+1,no pika,S. chamaejasme,sedges,0.29,August,0.29109375,B1_AP_yak_2
+1,no pika,S. chamaejasme,grasses,0.11,August,0.11203125000000001,B1_AP_yak_2
+1,no pika,S. chamaejasme,forbs,0.14,August,0.141875,B1_AP_yak_2
+2,no pika,S. chamaejasme,sedges,0.2,June,0.2015625,B2_AP_yak_1
+2,no pika,S. chamaejasme,grasses,0.14,June,0.141875,B2_AP_yak_1
+2,no pika,S. chamaejasme,forbs,0.1,June,0.10208333333333335,B2_AP_yak_1
+2,no pika,S. chamaejasme,sedges,0.23,June,0.23140625,B2_AP_yak_2
+2,no pika,S. chamaejasme,grasses,0.21,June,0.21151041666666667,B2_AP_yak_2
+2,no pika,S. chamaejasme,forbs,0.11,June,0.11203125000000001,B2_AP_yak_2
+2,no pika,S. chamaejasme,sedges,0.32,July,0.32093750000000004,B2_AP_yak_1
+2,no pika,S. chamaejasme,grasses,0.17,July,0.17171875,B2_AP_yak_1
+2,no pika,S. chamaejasme,forbs,0.08,July,0.08218750000000001,B2_AP_yak_1
+2,no pika,S. chamaejasme,sedges,0.42,July,0.42041666666666666,B2_AP_yak_2
+2,no pika,S. chamaejasme,grasses,0.12,July,0.12197916666666665,B2_AP_yak_2
+2,no pika,S. chamaejasme,forbs,0.15,July,0.15182291666666667,B2_AP_yak_2
+2,no pika,S. chamaejasme,sedges,0.36,August,0.3607291666666666,B2_AP_yak_1
+2,no pika,S. chamaejasme,grasses,0.15,August,0.15182291666666667,B2_AP_yak_1
+2,no pika,S. chamaejasme,forbs,0.16,August,0.16177083333333334,B2_AP_yak_1
+2,no pika,S. chamaejasme,sedges,0.31,August,0.3109895833333333,B2_AP_yak_2
+2,no pika,S. chamaejasme,grasses,0.24,August,0.24135416666666665,B2_AP_yak_2
+2,no pika,S. chamaejasme,forbs,0.16,August,0.16177083333333334,B2_AP_yak_2
+3,no pika,S. chamaejasme,sedges,0.25,June,0.2513020833333333,B3_AP_yak_1
+3,no pika,S. chamaejasme,grasses,0.2,June,0.2015625,B3_AP_yak_1
+3,no pika,S. chamaejasme,forbs,0.24,June,0.24135416666666665,B3_AP_yak_1
+3,no pika,S. chamaejasme,sedges,0.18,June,0.18166666666666664,B3_AP_yak_2
+3,no pika,S. chamaejasme,grasses,0.12,June,0.12197916666666665,B3_AP_yak_2
+3,no pika,S. chamaejasme,forbs,0.08,June,0.08218750000000001,B3_AP_yak_2
+3,no pika,S. chamaejasme,sedges,0.26,July,0.26125000000000004,B3_AP_yak_1
+3,no pika,S. chamaejasme,grasses,0.15,July,0.15182291666666667,B3_AP_yak_1
+3,no pika,S. chamaejasme,forbs,0.07,July,0.07223958333333334,B3_AP_yak_1
+3,no pika,S. chamaejasme,sedges,0.28,July,0.2811458333333334,B3_AP_yak_2
+3,no pika,S. chamaejasme,grasses,0.15,July,0.15182291666666667,B3_AP_yak_2
+3,no pika,S. chamaejasme,forbs,0.1,July,0.10208333333333335,B3_AP_yak_2
+3,no pika,S. chamaejasme,sedges,0.33,August,0.33088541666666665,B3_AP_yak_1
+3,no pika,S. chamaejasme,grasses,0.12,August,0.12197916666666665,B3_AP_yak_1
+3,no pika,S. chamaejasme,forbs,0.1,August,0.10208333333333335,B3_AP_yak_1
+3,no pika,S. chamaejasme,sedges,0.23,August,0.23140625,B3_AP_yak_2
+3,no pika,S. chamaejasme,grasses,0.27,August,0.27119791666666665,B3_AP_yak_2
+3,no pika,S. chamaejasme,forbs,0.1,August,0.10208333333333335,B3_AP_yak_2
+4,no pika,S. chamaejasme,sedges,0.21,June,0.21151041666666667,B4_AP_yak_1
+4,no pika,S. chamaejasme,grasses,0.19,June,0.19161458333333334,B4_AP_yak_1
+4,no pika,S. chamaejasme,forbs,0.27,June,0.27119791666666665,B4_AP_yak_1
+4,no pika,S. chamaejasme,sedges,0.19,June,0.19161458333333334,B4_AP_yak_2
+4,no pika,S. chamaejasme,grasses,0.18,June,0.18166666666666664,B4_AP_yak_2
+4,no pika,S. chamaejasme,forbs,0.09,June,0.09213541666666665,B4_AP_yak_2
+4,no pika,S. chamaejasme,sedges,0.15,July,0.15182291666666667,B4_AP_yak_1
+4,no pika,S. chamaejasme,grasses,0.18,July,0.18166666666666664,B4_AP_yak_1
+4,no pika,S. chamaejasme,forbs,0.08,July,0.08218750000000001,B4_AP_yak_1
+4,no pika,S. chamaejasme,sedges,0.18,July,0.18166666666666664,B4_AP_yak_2
+4,no pika,S. chamaejasme,grasses,0.12,July,0.12197916666666665,B4_AP_yak_2
+4,no pika,S. chamaejasme,forbs,0.17,July,0.17171875,B4_AP_yak_2
+4,no pika,S. chamaejasme,sedges,0.29,August,0.29109375,B4_AP_yak_1
+4,no pika,S. chamaejasme,grasses,0.15,August,0.15182291666666667,B4_AP_yak_1
+4,no pika,S. chamaejasme,forbs,0.1,August,0.10208333333333335,B4_AP_yak_1
+4,no pika,S. chamaejasme,sedges,0.23,August,0.23140625,B4_AP_yak_2
+4,no pika,S. chamaejasme,grasses,0.14,August,0.141875,B4_AP_yak_2
+4,no pika,S. chamaejasme,forbs,0.08,August,0.08218750000000001,B4_AP_yak_2
+1,pika,S. chamaejasme,sedges,0.47,June,0.47015625,B1_PP_yak_1
+1,pika,S. chamaejasme,grasses,0.66,June,0.6591666666666667,B1_PP_yak_1
+1,pika,S. chamaejasme,forbs,0.16,June,0.16177083333333334,B1_PP_yak_1
+1,pika,S. chamaejasme,sedges,0.56,June,0.5596875,B1_PP_yak_2
+1,pika,S. chamaejasme,grasses,0.48,June,0.4801041666666666,B1_PP_yak_2
+1,pika,S. chamaejasme,forbs,0.36,June,0.3607291666666666,B1_PP_yak_2
+1,pika,S. chamaejasme,sedges,1,July,0.9973958333333334,B1_PP_yak_1
+1,pika,S. chamaejasme,grasses,0.29,July,0.29109375,B1_PP_yak_1
+1,pika,S. chamaejasme,forbs,0.25,July,0.2513020833333333,B1_PP_yak_1
+1,pika,S. chamaejasme,sedges,0.97,July,0.9675520833333332,B1_PP_yak_2
+1,pika,S. chamaejasme,grasses,0.44,July,0.44031250000000005,B1_PP_yak_2
+1,pika,S. chamaejasme,forbs,0.42,July,0.42041666666666666,B1_PP_yak_2
+1,pika,S. chamaejasme,sedges,0.5,August,0.5,B1_PP_yak_1
+1,pika,S. chamaejasme,grasses,0.23,August,0.23140625,B1_PP_yak_1
+1,pika,S. chamaejasme,forbs,0.11,August,0.11203125000000001,B1_PP_yak_1
+1,pika,S. chamaejasme,sedges,0.65,August,0.6492187500000001,B1_PP_yak_2
+1,pika,S. chamaejasme,grasses,0.28,August,0.2811458333333334,B1_PP_yak_2
+1,pika,S. chamaejasme,forbs,0.21,August,0.21151041666666667,B1_PP_yak_2
+2,pika,S. chamaejasme,sedges,0.53,June,0.5298437500000001,B2_PP_yak_1
+2,pika,S. chamaejasme,grasses,0.24,June,0.24135416666666665,B2_PP_yak_1
+2,pika,S. chamaejasme,forbs,0.25,June,0.2513020833333333,B2_PP_yak_1
+2,pika,S. chamaejasme,sedges,0.69,June,0.6890104166666666,B2_PP_yak_2
+2,pika,S. chamaejasme,grasses,0.17,June,0.17171875,B2_PP_yak_2
+2,pika,S. chamaejasme,forbs,0.26,June,0.26125000000000004,B2_PP_yak_2
+2,pika,S. chamaejasme,sedges,0.54,July,0.5397916666666667,B2_PP_yak_1
+2,pika,S. chamaejasme,grasses,0.35,July,0.35078125,B2_PP_yak_1
+2,pika,S. chamaejasme,forbs,0.1,July,0.10208333333333335,B2_PP_yak_1
+2,pika,S. chamaejasme,sedges,0.42,July,0.42041666666666666,B2_PP_yak_2
+2,pika,S. chamaejasme,grasses,0.26,July,0.26125000000000004,B2_PP_yak_2
+2,pika,S. chamaejasme,forbs,0.17,July,0.17171875,B2_PP_yak_2
+2,pika,S. chamaejasme,sedges,0.44,August,0.44031250000000005,B2_PP_yak_1
+2,pika,S. chamaejasme,grasses,0.23,August,0.23140625,B2_PP_yak_1
+2,pika,S. chamaejasme,forbs,0.12,August,0.12197916666666665,B2_PP_yak_1
+2,pika,S. chamaejasme,sedges,0.46,August,0.46020833333333333,B2_PP_yak_2
+2,pika,S. chamaejasme,grasses,0.15,August,0.15182291666666667,B2_PP_yak_2
+2,pika,S. chamaejasme,forbs,0.13,August,0.13192708333333333,B2_PP_yak_2
+3,pika,S. chamaejasme,sedges,0.29,June,0.29109375,B3_PP_yak_1
+3,pika,S. chamaejasme,grasses,0.14,June,0.141875,B3_PP_yak_1
+3,pika,S. chamaejasme,forbs,0.15,June,0.15182291666666667,B3_PP_yak_1
+3,pika,S. chamaejasme,sedges,0.38,June,0.380625,B3_PP_yak_2
+3,pika,S. chamaejasme,grasses,0.23,June,0.23140625,B3_PP_yak_2
+3,pika,S. chamaejasme,forbs,0.18,June,0.18166666666666664,B3_PP_yak_2
+3,pika,S. chamaejasme,sedges,0.77,July,0.76859375,B3_PP_yak_1
+3,pika,S. chamaejasme,grasses,0.32,July,0.32093750000000004,B3_PP_yak_1
+3,pika,S. chamaejasme,forbs,0.08,July,0.08218750000000001,B3_PP_yak_1
+3,pika,S. chamaejasme,sedges,0.26,July,0.26125000000000004,B3_PP_yak_2
+3,pika,S. chamaejasme,grasses,0.2,July,0.2015625,B3_PP_yak_2
+3,pika,S. chamaejasme,forbs,0.13,July,0.13192708333333333,B3_PP_yak_2
+3,pika,S. chamaejasme,sedges,0.47,August,0.47015625,B3_PP_yak_1
+3,pika,S. chamaejasme,grasses,0.37,August,0.3706770833333333,B3_PP_yak_1
+3,pika,S. chamaejasme,forbs,0.15,August,0.15182291666666667,B3_PP_yak_1
+3,pika,S. chamaejasme,sedges,0.55,August,0.5497395833333334,B3_PP_yak_2
+3,pika,S. chamaejasme,grasses,0.2,August,0.2015625,B3_PP_yak_2
+3,pika,S. chamaejasme,forbs,0.16,August,0.16177083333333334,B3_PP_yak_2
+4,pika,S. chamaejasme,sedges,0.41,June,0.41046875,B4_PP_yak_1
+4,pika,S. chamaejasme,grasses,0.31,June,0.3109895833333333,B4_PP_yak_1
+4,pika,S. chamaejasme,forbs,0.34,June,0.3408333333333333,B4_PP_yak_1
+4,pika,S. chamaejasme,sedges,0.41,June,0.41046875,B4_PP_yak_2
+4,pika,S. chamaejasme,grasses,0.24,June,0.24135416666666665,B4_PP_yak_2
+4,pika,S. chamaejasme,forbs,0.11,June,0.11203125000000001,B4_PP_yak_2
+4,pika,S. chamaejasme,sedges,0.42,July,0.42041666666666666,B4_PP_yak_1
+4,pika,S. chamaejasme,grasses,0.22,July,0.22145833333333334,B4_PP_yak_1
+4,pika,S. chamaejasme,forbs,0.12,July,0.12197916666666665,B4_PP_yak_1
+4,pika,S. chamaejasme,sedges,0.39,July,0.3905729166666667,B4_PP_yak_2
+4,pika,S. chamaejasme,grasses,0.27,July,0.27119791666666665,B4_PP_yak_2
+4,pika,S. chamaejasme,forbs,0.21,July,0.21151041666666667,B4_PP_yak_2
+4,pika,S. chamaejasme,sedges,0.84,August,0.8382291666666667,B4_PP_yak_1
+4,pika,S. chamaejasme,grasses,0.56,August,0.5596875,B4_PP_yak_1
+4,pika,S. chamaejasme,forbs,0.29,August,0.29109375,B4_PP_yak_1
+4,pika,S. chamaejasme,sedges,0.53,August,0.5298437500000001,B4_PP_yak_2
+4,pika,S. chamaejasme,grasses,0.35,August,0.35078125,B4_PP_yak_2
+4,pika,S. chamaejasme,forbs,0.21,August,0.21151041666666667,B4_PP_yak_2

@@ -29,6 +29,8 @@ library(ggpubr)
 library(patchwork)
 library(here)
 library(mgcv)
+library(gratia)
+library(qs2)
 library(knitr)
 library(kableExtra)
 
@@ -49,28 +51,25 @@ green <- '#2fc09b'
 #| warning: false
 
 
-pika_data <- read_csv(here('data/processed/diet_selection/pika_feeding.csv'))
-pika_feeding_model_summary <- read_csv(here('data/processed/diet_selection/modeled_data/pika_feeding/model_summary.csv'))
-pika_feeding_contrasts <- read_csv(here('data/processed/diet_selection/modeled_data/pika_feeding/posthoc_contrasts.csv'))
-pika_feeding_emms <- read_csv(here('data/processed/diet_selection/modeled_data/pika_feeding/emms.csv'))
-pika_feeding_letters <- read_csv(here('data/processed/diet_selection/modeled_data/pika_feeding/posthoc_letters.csv'))
+pika_data <- read_csv(here('data/clean/diet_selection/pika_feeding.csv'))
+pika_feeding_model_summary <- read_csv(here('data/clean/diet_selection/pika_feeding/model_summary.csv'))
+pika_feeding_contrasts <- read_csv(here('data/clean/diet_selection/pika_feeding/posthoc_contrasts.csv'))
+pika_feeding_emms <- read_csv(here('data/clean/diet_selection/pika_feeding/emms.csv'))
+pika_feeding_letters <- read_csv(here('data/clean/diet_selection/pika_feeding/posthoc_letters.csv'))
 
-yak_data <- read_csv(here('data/processed/diet_selection/yak_grazing.csv'))
-yak_feeding_model_summary <- read_csv(here('data/processed/diet_selection/modeled_data/yak_grazing/model_summary.csv'))
-yak_feeding_contrasts <- read_csv(here('data/processed/diet_selection/modeled_data/yak_grazing/posthoc_contrasts.csv'))
-yak_feeding_emms <- read_csv(here('data/processed/diet_selection/modeled_data/yak_grazing/emms.csv'))
-yak_feeding_letters <- read_csv(here('data/processed/diet_selection/modeled_data/yak_grazing/posthoc_letters.csv'))
+yak_data <- read_csv(here('data/clean/diet_selection/yak_grazing.csv'))
+yak_feeding_model_summary <- read_csv(here('data/clean/diet_selection/yak_grazing/model_summary.csv'))
+yak_feeding_contrasts <- read_csv(here('data/clean/diet_selection/yak_grazing/posthoc_contrasts.csv'))
+yak_feeding_emms <- read_csv(here('data/clean/diet_selection/yak_grazing/emms.csv'))
+yak_feeding_letters <- read_csv(here('data/clean/diet_selection/yak_grazing/posthoc_letters.csv'))
 
-dung_burrow_by_plot <- read_csv(here('data/processed/diet_selection/dung_burrow_by_plot.csv')) |>
+dung_burrow_by_plot <- read_csv(here('data/clean/diet_selection/dung_burrow_by_plot.csv')) |>
     mutate(plot = factor(plot))
 
-burrow_model <- gam(s_chamaejasme_cover_percent ~
-  s(active_pika_burrow_no_100m2, k = 8, bs = 'ts'),
-  data = dung_burrow_by_plot,
-  family = gaussian(),
-  select = TRUE
-)
+# Load pre-fitted GAM model from saved .qs file
+burrow_model <- qs2::qs_read(here('data/models/burrow_cover_gam.qs'))
 
+# Extract GAM smooth estimates for plotting
 gam_ests <- gratia::smooth_estimates(burrow_model)
 gam_ests$adj_est <- gam_ests$.estimate + coef(burrow_model)[1]
 

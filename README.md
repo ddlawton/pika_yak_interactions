@@ -35,20 +35,34 @@ This study investigates the facilitative interactions between plateau pikas (*Oc
 
 ```
 pika_yak_interactions/
-├── R/                                    # All analysis scripts
-│   ├── 01_data_management.R              # Data cleaning and preparation
-│   ├── 02_diet_selection.R               # Pika and yak diet selection analyses
-│   ├── 03_experiment_plant_cover.R       # Plant cover response to treatments
-│   ├── 04_experiment_foraging_efficiency.R # Yak foraging behavior analyses
-│   ├── 05_experiment_forage_quality.R    # Forage nutrient content analyses
-│   ├── 06_active_burrow_yak_gain_analysis.R # Density-dependence analyses
-│   ├── manuscript_figure_creation/       # Scripts for final figures
-│   └── statistical_reports/              # Quarto reports for website
+├── _targets.R                            # Targets pipeline orchestration
+├── R/
+│   ├── functions/                        # Modular analysis functions
+│   │   ├── data_preprocessing.R          # Data cleaning utilities
+│   │   ├── model_fitting.R               # Statistical model functions
+│   │   ├── model_postprocessing.R        # Posthoc tests and predictions
+│   │   └── visualization.R               # Plotting helpers
+│   ├── targets/                          # Pipeline target definitions
+│   │   ├── data_targets.R                # Data loading and preprocessing
+│   │   ├── model_targets.R               # Model fitting targets
+│   │   └── output_targets.R              # Output generation targets
+│   └── statistical_reports/              # Quarto documents
+│       └── manuscript_figures_and_text.qmd # Methods, results, figures, tables
 ├── data/
-│   ├── raw/                              # Original field data
-│   └── processed/                        # Cleaned data and model outputs
-├── output/                               # Figures and diagnostic plots
-├── renv/                                 # Package management
+│   ├── raw/                              # Original field data (Excel files)
+│   ├── clean/                            # Processed data (CSV)
+│   │   ├── diet_selection/               # 2021 survey data
+│   │   ├── plant_cover/                  # Plant community data
+│   │   ├── foraging_efficiency/          # Yak behavior data
+│   │   ├── forage_quality/               # Nutrient analysis data
+│   │   └── additional_data/              # Burrow counts, weight gain
+│   └── models/                           # Fitted model objects (.qs)
+├── output/                               # Generated figures and diagnostics
+│   ├── figures/                          # Publication-quality figures
+│   └── diagnostics/                      # Model diagnostic plots
+├── _targets/                             # Targets cache (auto-generated)
+├── _site/                                # Rendered Quarto website
+├── renv/                                 # Package environment management
 ├── _quarto.yml                           # Website configuration
 └── README.md                             # This file
 ```
@@ -74,22 +88,51 @@ This will install all required packages at the versions used for the analyses.
 
 ### Running Analyses
 
-The analysis workflow consists of sequential R scripts:
+The analysis workflow is managed by the [`targets`](https://books.ropensci.org/targets/) package, which ensures reproducibility and only re-runs necessary computations when dependencies change.
 
-1. `01_data_management.R` - Cleans raw data and prepares it for analysis
-2. `02_diet_selection.R` - Analyzes pika and yak feeding preferences (2021 field survey)
-3. `03_experiment_plant_cover.R` - Models plant cover responses to treatments
-4. `04_experiment_foraging_efficiency.R` - Analyzes yak foraging behavior
-5. `05_experiment_forage_quality.R` - Models forage nutrient content
-6. `06_active_burrow_yak_gain_analysis.R` - Tests density-dependent relationships
+**To run the complete pipeline:**
 
-Each script:
-- Reads data from `data/processed/`
-- Fits statistical models
-- Saves model outputs and figures
-- Exports results for visualization
+```r
+# Load the targets package
+library(targets)
 
-Figures for the manuscript are created using scripts in `manuscript_figure_creation/`.
+# Run the entire analysis pipeline
+tar_make()
+```
+
+The pipeline:
+1. **Data preprocessing** (`R/targets/data_targets.R`)
+   - Loads and cleans raw Excel files
+   - Creates analysis-ready CSV files in `data/clean/`
+
+2. **Model fitting** (`R/targets/model_targets.R`)
+   - Fits all statistical models (GLMMs, GAMs)
+   - Saves model objects to `data/models/`
+
+3. **Postprocessing** (`R/targets/output_targets.R`)
+   - Computes estimated marginal means
+   - Performs posthoc comparisons
+   - Generates model predictions
+   - Creates diagnostic plots
+
+4. **Website generation**
+   - Quarto renders `R/statistical_reports/manuscript_figures_and_text.qmd`
+   - Produces interactive HTML reports with all figures and tables
+
+**Useful targets commands:**
+```r
+# View the pipeline structure
+tar_visnetwork()
+
+# Check which targets are outdated
+tar_outdated()
+
+# Load a specific target into your R session
+tar_load(model_weight_gain)
+
+# Read a specific target (without loading dependencies)
+tar_read(postprocessed_weight_gain)
+```
 
 ### Statistical Reports
 
@@ -99,14 +142,29 @@ https://ddlawton.github.io/pika_yak_interactions
 
 The reports include:
 - Complete statistical methods
-- Model summaries and diagnostics
-- All figures and tables
-- Posthoc comparisons
+- Model summaries with coefficients and significance tests
+- All publication-quality figures
+- Comprehensive supplementary tables
+- Posthoc comparisons with adjusted p-values
 
-To rebuild the website locally:
+**To rebuild the website locally:**
+
+1. First run the targets pipeline to generate data and models:
+```r
+targets::tar_make()
+```
+
+2. Then render the Quarto document:
 ```r
 quarto::quarto_render()
 ```
+
+Or from the terminal:
+```bash
+quarto preview .
+```
+
+The website is automatically rebuilt and deployed via GitHub Actions on every push to `main`.
 
 ## Statistical Methods
 
@@ -133,7 +191,12 @@ Complete package versions are in `renv.lock`.
 
 ## Data Availability
 
-Processed data files are included in `data/processed/`. Raw field data are available upon request.
+- **Raw data**: Original field data files are in `data/raw/` (Excel format)
+- **Processed data**: Analysis-ready CSV files are in `data/clean/`, organized by analysis type
+- **Model outputs**: Fitted model objects (`.qs` format) are in `data/models/`
+- **Results**: Model summaries, predictions, and posthoc tests are saved alongside processed data
+
+All data processing is fully scripted and reproducible via the targets pipeline.
 
 ## Citation
 

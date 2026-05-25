@@ -1,0 +1,321 @@
+block,pika_treatment,posion_plant_treatment,year,plant,forage_quality,month,forage_quality_beta
+1,no pika,No S. chamaejasme,2022,cp,8.4,June,0.08833333333333333
+1,no pika,No S. chamaejasme,2022,adf,30.9,June,0.3109895833333333
+1,no pika,No S. chamaejasme,2022,ndf,62.5,June,0.6236979166666666
+1,no pika,No S. chamaejasme,2022,cp,8.7,June,0.09130208333333333
+1,no pika,No S. chamaejasme,2022,adf,32.2,July,0.32385416666666667
+1,no pika,No S. chamaejasme,2022,ndf,62.6,July,0.6246875
+1,no pika,No S. chamaejasme,2022,ee_percent,3.1,NA,0.045656249999999995
+1,no pika,No S. chamaejasme,2022,cp,9.2,July,0.09625
+1,no pika,No S. chamaejasme,2022,adf,32.4,August,0.32583333333333336
+1,no pika,No S. chamaejasme,2022,ndf,63.6,August,0.6345833333333334
+2,no pika,No S. chamaejasme,2022,cp,8.1,June,0.08536458333333334
+2,no pika,No S. chamaejasme,2022,adf,30.8,June,0.31
+2,no pika,No S. chamaejasme,2022,ndf,63.9,June,0.6375520833333334
+2,no pika,No S. chamaejasme,2022,cp,8,June,0.08437500000000002
+2,no pika,No S. chamaejasme,2022,adf,31.8,July,0.3198958333333333
+2,no pika,No S. chamaejasme,2022,ndf,65.4,July,0.6523958333333334
+2,no pika,No S. chamaejasme,2022,ee_percent,3.2,NA,0.046625
+2,no pika,No S. chamaejasme,2022,cp,8.1,July,0.08536458333333334
+2,no pika,No S. chamaejasme,2022,adf,33.5,August,0.33671875
+2,no pika,No S. chamaejasme,2022,ndf,66.5,August,0.66328125
+3,no pika,No S. chamaejasme,2022,cp,7.9,June,0.08338541666666666
+3,no pika,No S. chamaejasme,2022,adf,30.3,June,0.30505208333333333
+3,no pika,No S. chamaejasme,2022,ndf,61.6,June,0.6147916666666666
+3,no pika,No S. chamaejasme,2022,cp,8.9,June,0.09328125
+3,no pika,No S. chamaejasme,2022,adf,30.1,July,0.30307291666666664
+3,no pika,No S. chamaejasme,2022,ndf,62.1,July,0.6197395833333333
+3,no pika,No S. chamaejasme,2022,ee_percent,3,NA,0.0446875
+3,no pika,No S. chamaejasme,2022,cp,9.3,July,0.09723958333333334
+3,no pika,No S. chamaejasme,2022,adf,31.2,August,0.31395833333333334
+3,no pika,No S. chamaejasme,2022,ndf,63.1,August,0.6296354166666667
+4,no pika,No S. chamaejasme,2022,cp,8.5,June,0.08932291666666668
+4,no pika,No S. chamaejasme,2022,adf,30.2,June,0.30406249999999996
+4,no pika,No S. chamaejasme,2022,ndf,60.1,June,0.5999479166666667
+4,no pika,No S. chamaejasme,2022,cp,8.3,June,0.08734375000000001
+4,no pika,No S. chamaejasme,2022,adf,29.5,July,0.29713541666666665
+4,no pika,No S. chamaejasme,2022,ndf,60.4,July,0.6029166666666667
+4,no pika,No S. chamaejasme,2022,ee_percent,3.2,NA,0.046625
+4,no pika,No S. chamaejasme,2022,cp,7.7,July,0.08140625
+4,no pika,No S. chamaejasme,2022,adf,30.1,August,0.30307291666666664
+4,no pika,No S. chamaejasme,2022,ndf,59.9,August,0.59796875
+1,pika,No S. chamaejasme,2022,cp,8,June,0.08437500000000002
+1,pika,No S. chamaejasme,2022,adf,29.6,June,0.29812500000000003
+1,pika,No S. chamaejasme,2022,ndf,62.4,June,0.6227083333333333
+1,pika,No S. chamaejasme,2022,cp,8.5,June,0.08932291666666668
+1,pika,No S. chamaejasme,2022,adf,29.8,July,0.30010416666666667
+1,pika,No S. chamaejasme,2022,ndf,63.2,July,0.630625
+1,pika,No S. chamaejasme,2022,ee_percent,2.8,NA,0.042749999999999996
+1,pika,No S. chamaejasme,2022,cp,8.9,July,0.09328125
+1,pika,No S. chamaejasme,2022,adf,31.6,August,0.3179166666666667
+1,pika,No S. chamaejasme,2022,ndf,63.4,August,0.6326041666666667
+2,pika,No S. chamaejasme,2022,cp,8.3,June,0.08734375000000001
+2,pika,No S. chamaejasme,2022,adf,30,June,0.3020833333333333
+2,pika,No S. chamaejasme,2022,ndf,60,June,0.5989583333333334
+2,pika,No S. chamaejasme,2022,cp,8.4,June,0.08833333333333333
+2,pika,No S. chamaejasme,2022,adf,32.3,July,0.32484374999999993
+2,pika,No S. chamaejasme,2022,ndf,59.8,July,0.5969791666666666
+2,pika,No S. chamaejasme,2022,ee_percent,2.9,NA,0.04371875
+2,pika,No S. chamaejasme,2022,cp,9.4,July,0.09822916666666666
+2,pika,No S. chamaejasme,2022,adf,33.9,August,0.3406770833333333
+2,pika,No S. chamaejasme,2022,ndf,59.2,August,0.5910416666666668
+3,pika,No S. chamaejasme,2022,cp,8.4,June,0.08833333333333333
+3,pika,No S. chamaejasme,2022,adf,30.1,June,0.30307291666666664
+3,pika,No S. chamaejasme,2022,ndf,65.8,June,0.6563541666666666
+3,pika,No S. chamaejasme,2022,cp,9.3,June,0.09723958333333334
+3,pika,No S. chamaejasme,2022,adf,30.1,July,0.30307291666666664
+3,pika,No S. chamaejasme,2022,ndf,64.5,July,0.6434895833333333
+3,pika,No S. chamaejasme,2022,ee_percent,3.1,NA,0.045656249999999995
+3,pika,No S. chamaejasme,2022,cp,9.6,July,0.10020833333333334
+3,pika,No S. chamaejasme,2022,adf,30.6,August,0.30802083333333335
+3,pika,No S. chamaejasme,2022,ndf,64.7,August,0.64546875
+4,pika,No S. chamaejasme,2022,cp,7.8,June,0.08239583333333333
+4,pika,No S. chamaejasme,2022,adf,29.7,June,0.29911458333333335
+4,pika,No S. chamaejasme,2022,ndf,64.5,June,0.6434895833333333
+4,pika,No S. chamaejasme,2022,cp,8.7,June,0.09130208333333333
+4,pika,No S. chamaejasme,2022,adf,29.9,July,0.30109375
+4,pika,No S. chamaejasme,2022,ndf,65,July,0.6484375
+4,pika,No S. chamaejasme,2022,ee_percent,3.3,NA,0.047593750000000004
+4,pika,No S. chamaejasme,2022,cp,9.5,July,0.09921875000000001
+4,pika,No S. chamaejasme,2022,adf,31.4,August,0.31593750000000004
+4,pika,No S. chamaejasme,2022,ndf,65.8,August,0.6563541666666666
+1,no pika,S. chamaejasme,2022,cp,6.9,June,0.07348958333333334
+1,no pika,S. chamaejasme,2022,adf,29.6,June,0.29812500000000003
+1,no pika,S. chamaejasme,2022,ndf,60.4,June,0.6029166666666667
+1,no pika,S. chamaejasme,2022,cp,7.6,June,0.08041666666666666
+1,no pika,S. chamaejasme,2022,adf,30.8,July,0.31
+1,no pika,S. chamaejasme,2022,ndf,59.8,July,0.5969791666666666
+1,no pika,S. chamaejasme,2022,ee_percent,3.4,NA,0.0485625
+1,no pika,S. chamaejasme,2022,cp,7.1,July,0.07546874999999999
+1,no pika,S. chamaejasme,2022,adf,30.6,August,0.30802083333333335
+1,no pika,S. chamaejasme,2022,ndf,61.6,August,0.6147916666666666
+2,no pika,S. chamaejasme,2022,cp,8.1,June,0.08536458333333334
+2,no pika,S. chamaejasme,2022,adf,28.4,June,0.28624999999999995
+2,no pika,S. chamaejasme,2022,ndf,65.5,June,0.6533854166666667
+2,no pika,S. chamaejasme,2022,cp,8.4,June,0.08833333333333333
+2,no pika,S. chamaejasme,2022,adf,28.2,July,0.2842708333333333
+2,no pika,S. chamaejasme,2022,ndf,64.4,July,0.6425
+2,no pika,S. chamaejasme,2022,ee_percent,2.8,NA,0.042749999999999996
+2,no pika,S. chamaejasme,2022,cp,6.8,July,0.07250000000000001
+2,no pika,S. chamaejasme,2022,adf,28.8,August,0.29020833333333335
+2,no pika,S. chamaejasme,2022,ndf,65.2,August,0.6504166666666668
+3,no pika,S. chamaejasme,2022,cp,6.7,June,0.07151041666666667
+3,no pika,S. chamaejasme,2022,adf,28.7,June,0.28921874999999997
+3,no pika,S. chamaejasme,2022,ndf,61.8,June,0.6167708333333334
+3,no pika,S. chamaejasme,2022,cp,7.1,June,0.07546874999999999
+3,no pika,S. chamaejasme,2022,adf,27.7,July,0.27932291666666664
+3,no pika,S. chamaejasme,2022,ndf,62.5,July,0.6236979166666666
+3,no pika,S. chamaejasme,2022,ee_percent,3.1,NA,0.045656249999999995
+3,no pika,S. chamaejasme,2022,cp,7,July,0.07447916666666667
+3,no pika,S. chamaejasme,2022,adf,27.5,August,0.27734375000000006
+3,no pika,S. chamaejasme,2022,ndf,64.1,August,0.6395312499999999
+4,no pika,S. chamaejasme,2022,cp,8,June,0.08437500000000002
+4,no pika,S. chamaejasme,2022,adf,28.8,June,0.29020833333333335
+4,no pika,S. chamaejasme,2022,ndf,60.2,June,0.6009375
+4,no pika,S. chamaejasme,2022,cp,7.3,June,0.07744791666666666
+4,no pika,S. chamaejasme,2022,adf,28.4,July,0.28624999999999995
+4,no pika,S. chamaejasme,2022,ndf,58.9,July,0.5880729166666666
+4,no pika,S. chamaejasme,2022,ee_percent,2.6,NA,0.0408125
+4,no pika,S. chamaejasme,2022,cp,7.4,July,0.07843750000000001
+4,no pika,S. chamaejasme,2022,adf,28.2,August,0.2842708333333333
+4,no pika,S. chamaejasme,2022,ndf,59.9,August,0.59796875
+1,pika,S. chamaejasme,2022,cp,7.8,June,0.08239583333333333
+1,pika,S. chamaejasme,2022,adf,30.1,June,0.30307291666666664
+1,pika,S. chamaejasme,2022,ndf,62.7,June,0.6256770833333333
+1,pika,S. chamaejasme,2022,cp,8.5,June,0.08932291666666668
+1,pika,S. chamaejasme,2022,adf,30.6,July,0.30802083333333335
+1,pika,S. chamaejasme,2022,ndf,62.1,July,0.6197395833333333
+1,pika,S. chamaejasme,2022,ee_percent,2.9,NA,0.04371875
+1,pika,S. chamaejasme,2022,cp,9,July,0.09427083333333332
+1,pika,S. chamaejasme,2022,adf,30.4,August,0.30604166666666666
+1,pika,S. chamaejasme,2022,ndf,63.5,August,0.6335937500000001
+2,pika,S. chamaejasme,2022,cp,8.1,June,0.08536458333333334
+2,pika,S. chamaejasme,2022,adf,29.5,June,0.29713541666666665
+2,pika,S. chamaejasme,2022,ndf,62.8,June,0.6266666666666667
+2,pika,S. chamaejasme,2022,cp,8.2,June,0.08635416666666666
+2,pika,S. chamaejasme,2022,adf,30.5,July,0.30703125
+2,pika,S. chamaejasme,2022,ndf,62,July,0.61875
+2,pika,S. chamaejasme,2022,ee_percent,3.2,NA,0.046625
+2,pika,S. chamaejasme,2022,cp,8.9,July,0.09328125
+2,pika,S. chamaejasme,2022,adf,31.3,August,0.31494791666666666
+2,pika,S. chamaejasme,2022,ndf,63,August,0.6286458333333333
+3,pika,S. chamaejasme,2022,cp,7.9,June,0.08338541666666666
+3,pika,S. chamaejasme,2022,adf,32.3,June,0.32484374999999993
+3,pika,S. chamaejasme,2022,ndf,59.3,June,0.5920312499999999
+3,pika,S. chamaejasme,2022,cp,8.9,June,0.09328125
+3,pika,S. chamaejasme,2022,adf,32.4,July,0.32583333333333336
+3,pika,S. chamaejasme,2022,ndf,60.3,July,0.6019270833333333
+3,pika,S. chamaejasme,2022,ee_percent,3.1,NA,0.045656249999999995
+3,pika,S. chamaejasme,2022,cp,9.3,July,0.09723958333333334
+3,pika,S. chamaejasme,2022,adf,32.6,August,0.3278125
+3,pika,S. chamaejasme,2022,ndf,61.7,August,0.6157812500000001
+4,pika,S. chamaejasme,2022,cp,8.3,June,0.08734375000000001
+4,pika,S. chamaejasme,2022,adf,30,June,0.3020833333333333
+4,pika,S. chamaejasme,2022,ndf,62.6,June,0.6246875
+4,pika,S. chamaejasme,2022,cp,8.4,June,0.08833333333333333
+4,pika,S. chamaejasme,2022,adf,30.2,July,0.30406249999999996
+4,pika,S. chamaejasme,2022,ndf,62.6,July,0.6246875
+4,pika,S. chamaejasme,2022,ee_percent,3.3,NA,0.047593750000000004
+4,pika,S. chamaejasme,2022,cp,9.1,July,0.09526041666666667
+4,pika,S. chamaejasme,2022,adf,30.7,August,0.3090104166666667
+4,pika,S. chamaejasme,2022,ndf,63.8,August,0.6365625
+1,no pika,No S. chamaejasme,2023,cp,8.4,June,0.08833333333333333
+1,no pika,No S. chamaejasme,2023,adf,29.8,June,0.30010416666666667
+1,no pika,No S. chamaejasme,2023,ndf,63.2,June,0.630625
+1,no pika,No S. chamaejasme,2023,cp,8.5,June,0.08932291666666668
+1,no pika,No S. chamaejasme,2023,adf,30.1,July,0.30307291666666664
+1,no pika,No S. chamaejasme,2023,ndf,62.5,July,0.6236979166666666
+1,no pika,No S. chamaejasme,2023,ee_percent,2.7,NA,0.041781250000000006
+1,no pika,No S. chamaejasme,2023,cp,9.2,July,0.09625
+1,no pika,No S. chamaejasme,2023,adf,30.9,August,0.3109895833333333
+1,no pika,No S. chamaejasme,2023,ndf,63.3,August,0.6316145833333333
+2,no pika,No S. chamaejasme,2023,cp,8.3,June,0.08734375000000001
+2,no pika,No S. chamaejasme,2023,adf,33.3,June,0.3347395833333333
+2,no pika,No S. chamaejasme,2023,ndf,63.8,June,0.6365625
+2,no pika,No S. chamaejasme,2023,cp,8.4,June,0.08833333333333333
+2,no pika,No S. chamaejasme,2023,adf,32.3,July,0.32484374999999993
+2,no pika,No S. chamaejasme,2023,ndf,64.8,July,0.6464583333333334
+2,no pika,No S. chamaejasme,2023,ee_percent,3.2,NA,0.046625
+2,no pika,No S. chamaejasme,2023,cp,8.1,July,0.08536458333333334
+2,no pika,No S. chamaejasme,2023,adf,33.4,August,0.33572916666666663
+2,no pika,No S. chamaejasme,2023,ndf,65.5,August,0.6533854166666667
+3,no pika,No S. chamaejasme,2023,cp,8.6,June,0.0903125
+3,no pika,No S. chamaejasme,2023,adf,29.1,June,0.29317708333333337
+3,no pika,No S. chamaejasme,2023,ndf,62.5,June,0.6236979166666666
+3,no pika,No S. chamaejasme,2023,cp,8.6,June,0.0903125
+3,no pika,No S. chamaejasme,2023,adf,29.8,July,0.30010416666666667
+3,no pika,No S. chamaejasme,2023,ndf,62.1,July,0.6197395833333333
+3,no pika,No S. chamaejasme,2023,ee_percent,2.9,NA,0.04371875
+3,no pika,No S. chamaejasme,2023,cp,8.9,July,0.09328125
+3,no pika,No S. chamaejasme,2023,adf,31.5,August,0.31692708333333336
+3,no pika,No S. chamaejasme,2023,ndf,62.9,August,0.62765625
+4,no pika,No S. chamaejasme,2023,cp,8.2,June,0.08635416666666666
+4,no pika,No S. chamaejasme,2023,adf,21.6,June,0.21895833333333337
+4,no pika,No S. chamaejasme,2023,ndf,59.7,June,0.5959895833333333
+4,no pika,No S. chamaejasme,2023,cp,8.1,June,0.08536458333333334
+4,no pika,No S. chamaejasme,2023,adf,30,July,0.3020833333333333
+4,no pika,No S. chamaejasme,2023,ndf,58.9,July,0.5880729166666666
+4,no pika,No S. chamaejasme,2023,ee_percent,3.1,NA,0.045656249999999995
+4,no pika,No S. chamaejasme,2023,cp,7.8,July,0.08239583333333333
+4,no pika,No S. chamaejasme,2023,adf,30.8,August,0.31
+4,no pika,No S. chamaejasme,2023,ndf,58.4,August,0.583125
+1,pika,No S. chamaejasme,2023,cp,8.1,June,0.08536458333333334
+1,pika,No S. chamaejasme,2023,adf,30.2,June,0.30406249999999996
+1,pika,No S. chamaejasme,2023,ndf,63.4,June,0.6326041666666667
+1,pika,No S. chamaejasme,2023,cp,8.5,June,0.08932291666666668
+1,pika,No S. chamaejasme,2023,adf,30.2,July,0.30406249999999996
+1,pika,No S. chamaejasme,2023,ndf,62.4,July,0.6227083333333333
+1,pika,No S. chamaejasme,2023,ee_percent,2.7,NA,0.041781250000000006
+1,pika,No S. chamaejasme,2023,cp,8.6,July,0.0903125
+1,pika,No S. chamaejasme,2023,adf,31.4,August,0.31593750000000004
+1,pika,No S. chamaejasme,2023,ndf,62.1,August,0.6197395833333333
+2,pika,No S. chamaejasme,2023,cp,7.9,June,0.08338541666666666
+2,pika,No S. chamaejasme,2023,adf,33.1,June,0.33276041666666667
+2,pika,No S. chamaejasme,2023,ndf,60.3,June,0.6019270833333333
+2,pika,No S. chamaejasme,2023,cp,8.7,June,0.09130208333333333
+2,pika,No S. chamaejasme,2023,adf,32.4,July,0.32583333333333336
+2,pika,No S. chamaejasme,2023,ndf,60.3,July,0.6019270833333333
+2,pika,No S. chamaejasme,2023,ee_percent,2.8,NA,0.042749999999999996
+2,pika,No S. chamaejasme,2023,cp,9.3,July,0.09723958333333334
+2,pika,No S. chamaejasme,2023,adf,33.1,August,0.33276041666666667
+2,pika,No S. chamaejasme,2023,ndf,61.7,August,0.6157812500000001
+3,pika,No S. chamaejasme,2023,cp,8.7,June,0.09130208333333333
+3,pika,No S. chamaejasme,2023,adf,29.9,June,0.30109375
+3,pika,No S. chamaejasme,2023,ndf,64.1,June,0.6395312499999999
+3,pika,No S. chamaejasme,2023,cp,9.2,June,0.09625
+3,pika,No S. chamaejasme,2023,adf,29.9,July,0.30109375
+3,pika,No S. chamaejasme,2023,ndf,65.5,July,0.6533854166666667
+3,pika,No S. chamaejasme,2023,ee_percent,2.6,NA,0.0408125
+3,pika,No S. chamaejasme,2023,cp,9.4,July,0.09822916666666666
+3,pika,No S. chamaejasme,2023,adf,31.5,August,0.31692708333333336
+3,pika,No S. chamaejasme,2023,ndf,65.6,August,0.6543749999999999
+4,pika,No S. chamaejasme,2023,cp,8,June,0.08437500000000002
+4,pika,No S. chamaejasme,2023,adf,28.7,June,0.28921874999999997
+4,pika,No S. chamaejasme,2023,ndf,62.6,June,0.6246875
+4,pika,No S. chamaejasme,2023,cp,8.6,June,0.0903125
+4,pika,No S. chamaejasme,2023,adf,30.3,July,0.30505208333333333
+4,pika,No S. chamaejasme,2023,ndf,63.6,July,0.6345833333333334
+4,pika,No S. chamaejasme,2023,ee_percent,3.2,NA,0.046625
+4,pika,No S. chamaejasme,2023,cp,8.3,July,0.08734375000000001
+4,pika,No S. chamaejasme,2023,adf,29.7,August,0.29911458333333335
+4,pika,No S. chamaejasme,2023,ndf,63.8,August,0.6365625
+1,no pika,S. chamaejasme,2023,cp,6.2,June,0.0665625
+1,no pika,S. chamaejasme,2023,adf,29.2,June,0.29416666666666663
+1,no pika,S. chamaejasme,2023,ndf,58.5,June,0.5841145833333333
+1,no pika,S. chamaejasme,2023,cp,6.5,June,0.06953125
+1,no pika,S. chamaejasme,2023,adf,33.3,July,0.3347395833333333
+1,no pika,S. chamaejasme,2023,ndf,57.5,July,0.5742187499999999
+1,no pika,S. chamaejasme,2023,ee_percent,2.9,NA,0.04371875
+1,no pika,S. chamaejasme,2023,cp,7.2,July,0.07645833333333334
+1,no pika,S. chamaejasme,2023,adf,32.5,August,0.3268229166666667
+1,no pika,S. chamaejasme,2023,ndf,56.9,August,0.56828125
+2,no pika,S. chamaejasme,2023,cp,7.4,June,0.07843750000000001
+2,no pika,S. chamaejasme,2023,adf,28.5,June,0.2872395833333333
+2,no pika,S. chamaejasme,2023,ndf,65.2,June,0.6504166666666668
+2,no pika,S. chamaejasme,2023,cp,8.4,June,0.08833333333333333
+2,no pika,S. chamaejasme,2023,adf,29.6,July,0.29812500000000003
+2,no pika,S. chamaejasme,2023,ndf,62.7,July,0.6256770833333333
+2,no pika,S. chamaejasme,2023,ee_percent,3.4,NA,0.0485625
+2,no pika,S. chamaejasme,2023,cp,8.3,July,0.08734375000000001
+2,no pika,S. chamaejasme,2023,adf,30.2,August,0.30406249999999996
+2,no pika,S. chamaejasme,2023,ndf,63.2,August,0.630625
+3,no pika,S. chamaejasme,2023,cp,6.9,June,0.07348958333333334
+3,no pika,S. chamaejasme,2023,adf,28.6,June,0.2882291666666667
+3,no pika,S. chamaejasme,2023,ndf,62.1,June,0.6197395833333333
+3,no pika,S. chamaejasme,2023,cp,7.1,June,0.07546874999999999
+3,no pika,S. chamaejasme,2023,adf,28.8,July,0.29020833333333335
+3,no pika,S. chamaejasme,2023,ndf,60.3,July,0.6019270833333333
+3,no pika,S. chamaejasme,2023,ee_percent,3.2,NA,0.046625
+3,no pika,S. chamaejasme,2023,cp,7.8,July,0.08239583333333333
+3,no pika,S. chamaejasme,2023,adf,27.8,August,0.2803125
+3,no pika,S. chamaejasme,2023,ndf,61,August,0.6088541666666666
+4,no pika,S. chamaejasme,2023,cp,6.8,June,0.07250000000000001
+4,no pika,S. chamaejasme,2023,adf,29.3,June,0.29515624999999995
+4,no pika,S. chamaejasme,2023,ndf,59.8,June,0.5969791666666666
+4,no pika,S. chamaejasme,2023,cp,7.2,June,0.07645833333333334
+4,no pika,S. chamaejasme,2023,adf,30.1,July,0.30307291666666664
+4,no pika,S. chamaejasme,2023,ndf,58.5,July,0.5841145833333333
+4,no pika,S. chamaejasme,2023,ee_percent,2.7,NA,0.041781250000000006
+4,no pika,S. chamaejasme,2023,cp,7.5,July,0.07942708333333333
+4,no pika,S. chamaejasme,2023,adf,30.5,August,0.30703125
+4,no pika,S. chamaejasme,2023,ndf,60.5,August,0.60390625
+1,pika,S. chamaejasme,2023,cp,8.5,June,0.08932291666666668
+1,pika,S. chamaejasme,2023,adf,29.1,June,0.29317708333333337
+1,pika,S. chamaejasme,2023,ndf,62.7,June,0.6256770833333333
+1,pika,S. chamaejasme,2023,cp,8.2,June,0.08635416666666666
+1,pika,S. chamaejasme,2023,adf,31.2,July,0.31395833333333334
+1,pika,S. chamaejasme,2023,ndf,62.1,July,0.6197395833333333
+1,pika,S. chamaejasme,2023,ee_percent,2.9,NA,0.04371875
+1,pika,S. chamaejasme,2023,cp,8.9,July,0.09328125
+1,pika,S. chamaejasme,2023,adf,30.7,August,0.3090104166666667
+1,pika,S. chamaejasme,2023,ndf,63.8,August,0.6365625
+2,pika,S. chamaejasme,2023,cp,7.9,June,0.08338541666666666
+2,pika,S. chamaejasme,2023,adf,30.4,June,0.30604166666666666
+2,pika,S. chamaejasme,2023,ndf,61.6,June,0.6147916666666666
+2,pika,S. chamaejasme,2023,cp,7.9,June,0.08338541666666666
+2,pika,S. chamaejasme,2023,adf,32.7,July,0.32880208333333333
+2,pika,S. chamaejasme,2023,ndf,62.9,July,0.62765625
+2,pika,S. chamaejasme,2023,ee_percent,3.3,NA,0.047593750000000004
+2,pika,S. chamaejasme,2023,cp,8.1,July,0.08536458333333334
+2,pika,S. chamaejasme,2023,adf,33.4,August,0.33572916666666663
+2,pika,S. chamaejasme,2023,ndf,64.2,August,0.6405208333333333
+3,pika,S. chamaejasme,2023,cp,8.3,June,0.08734375000000001
+3,pika,S. chamaejasme,2023,adf,31.9,June,0.32088541666666665
+3,pika,S. chamaejasme,2023,ndf,58.9,June,0.5880729166666666
+3,pika,S. chamaejasme,2023,cp,8.8,June,0.09229166666666667
+3,pika,S. chamaejasme,2023,adf,33.5,July,0.33671875
+3,pika,S. chamaejasme,2023,ndf,60.4,July,0.6029166666666667
+3,pika,S. chamaejasme,2023,ee_percent,3.5,NA,0.049531250000000006
+3,pika,S. chamaejasme,2023,cp,9.4,July,0.09822916666666666
+3,pika,S. chamaejasme,2023,adf,32.6,August,0.3278125
+3,pika,S. chamaejasme,2023,ndf,59.6,August,0.595
+4,pika,S. chamaejasme,2023,cp,8,June,0.08437500000000002
+4,pika,S. chamaejasme,2023,adf,30.1,June,0.30307291666666664
+4,pika,S. chamaejasme,2023,ndf,64.3,June,0.6415104166666666
+4,pika,S. chamaejasme,2023,cp,8.5,June,0.08932291666666668
+4,pika,S. chamaejasme,2023,adf,30.4,July,0.30604166666666666
+4,pika,S. chamaejasme,2023,ndf,65.6,July,0.6543749999999999
+4,pika,S. chamaejasme,2023,ee_percent,3.1,NA,0.045656249999999995
+4,pika,S. chamaejasme,2023,cp,9.3,July,0.09723958333333334
+4,pika,S. chamaejasme,2023,adf,31.6,August,0.3179166666666667
+4,pika,S. chamaejasme,2023,ndf,65.1,August,0.6494270833333332

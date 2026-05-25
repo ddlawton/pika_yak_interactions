@@ -1,0 +1,7 @@
+contrast,odds.ratio,SE,df,null,z.ratio,p.value
+no pika No S. chamaejasme / pika No S. chamaejasme,1.0294928612173,NA,Inf,1,NA,NA
+no pika No S. chamaejasme / no pika S. chamaejasme,1.0097945447910082,NA,Inf,1,NA,NA
+no pika No S. chamaejasme / pika S. chamaejasme,0.975519800617257,NA,Inf,1,NA,NA
+pika No S. chamaejasme / no pika S. chamaejasme,0.980865999980806,NA,Inf,1,NA,NA
+pika No S. chamaejasme / pika S. chamaejasme,0.947573157004485,NA,Inf,1,NA,NA
+no pika S. chamaejasme / pika S. chamaejasme,0.9660577051534331,NA,Inf,1,NA,NA

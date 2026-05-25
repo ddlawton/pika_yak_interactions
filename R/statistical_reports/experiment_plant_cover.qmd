@@ -47,27 +47,27 @@ green <- '#2fc09b'
 #| results: "hide"
 #| message: false
 #| warning: false
-cover_data <- read_csv(here('data/processed/experiment_plant_cover/plant_cover_by_treatment.csv'))
+cover_data <- read_csv(here('data/clean/plant_cover/plant_cover_by_treatment.csv'))
 
-forbs_emms <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/forbs_cover/emms.csv'))
-forbs_letters <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/forbs_cover/posthoc_letters.csv'))
-forbs_model_summary  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/forbs_cover/model_summary.csv'))
-forbs_model_contrasts  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/forbs_cover/posthoc_contrasts.csv'))
+forbs_emms <- read_csv(here('data/clean/plant_cover/forbs/emms.csv'))
+forbs_letters <- read_csv(here('data/clean/plant_cover/forbs/posthoc_letters.csv'))
+forbs_model_summary  <- read_csv(here('data/clean/plant_cover/forbs/model_summary.csv'))
+forbs_model_contrasts  <- read_csv(here('data/clean/plant_cover/forbs/posthoc_contrasts.csv'))
 
-grasses_emms <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/emms.csv'))
-grasses_letters <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/posthoc_letters.csv'))
-grasses_model_summary  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/model_summary.csv'))
-grasses_model_contrasts  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/grasses_cover/posthoc_contrasts.csv'))
+grasses_emms <- read_csv(here('data/clean/plant_cover/grasses/emms.csv'))
+grasses_letters <- read_csv(here('data/clean/plant_cover/grasses/posthoc_letters.csv'))
+grasses_model_summary  <- read_csv(here('data/clean/plant_cover/grasses/model_summary.csv'))
+grasses_model_contrasts  <- read_csv(here('data/clean/plant_cover/grasses/posthoc_contrasts.csv'))
 
-poison_emms <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/emms.csv'))
-poison_letters <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/posthoc_letters.csv'))
-poison_model_summary  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/model_summary.csv'))
-poison__model_contrasts  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover/posthoc_contrasts.csv'))
+poison_emms <- read_csv(here('data/clean/plant_cover/s_chamaejasme/emms.csv'))
+poison_letters <- read_csv(here('data/clean/plant_cover/s_chamaejasme/posthoc_letters.csv'))
+poison_model_summary  <- read_csv(here('data/clean/plant_cover/s_chamaejasme/model_summary.csv'))
+poison__model_contrasts  <- read_csv(here('data/clean/plant_cover/s_chamaejasme/posthoc_contrasts.csv'))
 
-sedges_emms <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/sedges_cover/emms.csv'))
-sedges_letters <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/sedges_cover/posthoc_letters.csv'))
-sedges_model_summary  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/sedges_cover/model_summary.csv'))
-sedges_model_contrasts  <- read_csv(here('data/processed/experiment_plant_cover/modeled_data/sedges_cover/posthoc_contrasts.csv'))
+sedges_emms <- read_csv(here('data/clean/plant_cover/sedges/emms.csv'))
+sedges_letters <- read_csv(here('data/clean/plant_cover/sedges/posthoc_letters.csv'))
+sedges_model_summary  <- read_csv(here('data/clean/plant_cover/sedges/model_summary.csv'))
+sedges_model_contrasts  <- read_csv(here('data/clean/plant_cover/sedges/posthoc_contrasts.csv'))
 
 ```
 

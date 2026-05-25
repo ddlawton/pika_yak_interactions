@@ -1,0 +1,8 @@
+effect,component,group,term,estimate,std.error,statistic,p.value
+fixed,cond,NA,(Intercept),-1.081860153781578,0.09332452526837896,-11.592452794915458,4.500568216361917e-31
+fixed,cond,NA,pika_treatmentpika,-0.08576156249229978,0.09709094148213629,-0.8833116785470558,0.3770678956273147
+fixed,cond,NA,posion_plant_treatmentS. chamaejasme,-0.8576555130333117,0.11065326800813574,-7.750837625240791,9.128835703994048e-15
+fixed,cond,NA,pika_treatmentpika:posion_plant_treatmentS. chamaejasme,0.8766168967103012,0.1475683483139402,5.940412742476231,2.8430535501768912e-9
+ran_pars,cond,block,sd__(Intercept),0.12737349750298352,NA,NA,NA
+ran_pars,cond,year,sd__(Intercept),3.056211924543351e-5,NA,NA,NA
+ran_pars,cond,month,sd__(Intercept),1.1143058987755255e-4,NA,NA,NA

@@ -41,6 +41,10 @@ jobs:
           Rscript -e 'install.packages("renv", repos="https://cran.r-project.org")'
           Rscript -e 'renv::restore(prompt = FALSE)'
 
+      - name: Run targets pipeline
+        run: |
+          Rscript -e 'targets::tar_make()'
+
       - uses: quarto-dev/quarto-actions/setup@v2
 
       - run: quarto render

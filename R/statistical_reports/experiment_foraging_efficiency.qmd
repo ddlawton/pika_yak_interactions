@@ -50,16 +50,26 @@ green <- '#2fc09b'
 #| warning: false
 
 # Load the bite_steps dataset once
-bite_steps <- read_csv(here("data/processed/experiment_foraging_efficiency/yak_bite_steps_ratio.csv"))
+bite_steps <- read_csv(here("data/clean/foraging_efficiency/yak_bite_steps_ratio.csv"))
 
 # Define a function to load model data for a plant group
 load_bite_step_data <- function(plant) {
-  base_path <- here(glue::glue("data/processed/experiment_foraging_efficiency/modeled_data/bite_steps/{plant}_bite_steps"))
+  base_path <- here(glue::glue("data/clean/foraging_efficiency/bite_steps_ratio/{plant}"))
+
+  # Helper: safely load CSV, return NULL if missing (e.g., GAM models lack emmeans)
+  safe_read <- function(filename) {
+    filepath <- file.path(base_path, filename)
+    if (file.exists(filepath)) {
+      read_csv(filepath, show_col_types = FALSE)
+    } else {
+      NULL
+    }
+  }
   list(
-    emms = read_csv(file.path(base_path, "emms.csv")),
-    letters = read_csv(file.path(base_path, "posthoc_letters.csv")),
-    model_summary = read_csv(file.path(base_path, "model_summary.csv")),
-    model_contrasts = read_csv(file.path(base_path, "posthoc_contrasts.csv"))
+    emms = safe_read("emms.csv"),
+    letters = safe_read("posthoc_letters.csv"),
+    model_summary = safe_read("model_summary.csv"),
+    model_contrasts = safe_read("posthoc_contrasts.csv")
   )
 }
 
@@ -167,17 +177,27 @@ For forbs, neither pika presence nor *S. chamaejasme* alone significantly affect
 #| warning: false
 
 # Load the bite_steps dataset once
-plant_bites <- read_csv(here("data/processed/experiment_foraging_efficiency/yak_plant_bites.csv")) |>
+plant_bites <- read_csv(here("data/clean/foraging_efficiency/yak_plant_bites.csv")) |>
   mutate(plant = gsub("_[^_]*$", '',plant))
 
 # Define a function to load model data for a plant group
 load_plant_bites_data <- function(plant) {
-  base_path <- here(glue::glue("data/processed/experiment_foraging_efficiency/modeled_data/plant_bites/{plant}_plant_bites"))
+  base_path <- here(glue::glue("data/clean/foraging_efficiency/plant_bites/{plant}"))
+
+  # Helper: safely load CSV, return NULL if missing (e.g., GAM models lack emmeans)
+  safe_read <- function(filename) {
+    filepath <- file.path(base_path, filename)
+    if (file.exists(filepath)) {
+      read_csv(filepath, show_col_types = FALSE)
+    } else {
+      NULL
+    }
+  }
   list(
-    emms = read_csv(file.path(base_path, "emms.csv")),
-    letters = read_csv(file.path(base_path, "posthoc_letters.csv")),
-    model_summary = read_csv(file.path(base_path, "model_summary.csv")),
-    model_contrasts = read_csv(file.path(base_path, "posthoc_contrasts.csv"))
+    emms = safe_read("emms.csv"),
+    letters = safe_read("posthoc_letters.csv"),
+    model_summary = safe_read("model_summary.csv"),
+    model_contrasts = safe_read("posthoc_contrasts.csv")
   )
 }
 
@@ -287,7 +307,7 @@ Grazing on sedges was significantly reduced by *S. chamaejasme* treatment (estim
 #| message: false
 #| warning: false
 
-weight_gain <- read_csv(here("data/processed/experiment_foraging_efficiency/yak_weight_gain.csv")) |>
+weight_gain <- read_csv(here("data/clean/foraging_efficiency/yak_weight_gain.csv")) |>
   mutate(yak = gsub("_[^_]*$", '',yak))
 
 # Define a function to load model data for a plant group
@@ -301,7 +321,7 @@ load_data <- function(base_path) {
 }
 
 
-weight_gain_models <- load_data(here('data/processed/experiment_foraging_efficiency/modeled_data/weight_gain'))
+weight_gain_models <- load_data(here('data/clean/foraging_efficiency/weight_gain'))
 ```
 
 ```{r}

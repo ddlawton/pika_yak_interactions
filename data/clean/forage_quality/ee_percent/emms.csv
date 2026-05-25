@@ -1,0 +1,5 @@
+pika_treatment,posion_plant_treatment,response,SE,df,asymp.LCL,asymp.UCL
+no pika,No S. chamaejasme,0.045194487380226515,NA,Inf,NA,NA
+pika,No S. chamaejasme,0.0439566699084637,NA,Inf,NA,NA
+no pika,S. chamaejasme,0.0447757497021019,NA,Inf,NA,NA
+pika,S. chamaejasme,0.04627613792981806,NA,Inf,NA,NA

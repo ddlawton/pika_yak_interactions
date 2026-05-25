@@ -1,0 +1,121 @@
+plot,plant_group,month,animal,feeding_clipping_freq,feeding_clipping_freq_beta
+1,S. chamaejasme,June,pika,60,0.5991666666666666
+1,S. chamaejasme,July,pika,50,0.5
+1,S. chamaejasme,August,pika,30,0.30166666666666664
+2,S. chamaejasme,June,pika,90,0.8966666666666667
+2,S. chamaejasme,July,pika,70,0.6983333333333334
+2,S. chamaejasme,August,pika,20,0.2025
+3,S. chamaejasme,June,pika,80,0.7975
+3,S. chamaejasme,July,pika,30,0.30166666666666664
+3,S. chamaejasme,August,pika,40,0.4008333333333333
+4,S. chamaejasme,June,pika,60,0.5991666666666666
+4,S. chamaejasme,July,pika,80,0.7975
+4,S. chamaejasme,August,pika,30,0.30166666666666664
+5,S. chamaejasme,June,pika,70,0.6983333333333334
+5,S. chamaejasme,July,pika,60,0.5991666666666666
+5,S. chamaejasme,August,pika,30,0.30166666666666664
+6,S. chamaejasme,June,pika,100,0.9958333333333333
+6,S. chamaejasme,July,pika,80,0.7975
+6,S. chamaejasme,August,pika,20,0.2025
+7,S. chamaejasme,June,pika,70,0.6983333333333334
+7,S. chamaejasme,July,pika,70,0.6983333333333334
+7,S. chamaejasme,August,pika,50,0.5
+8,S. chamaejasme,June,pika,80,0.7975
+8,S. chamaejasme,July,pika,70,0.6983333333333334
+8,S. chamaejasme,August,pika,30,0.30166666666666664
+9,S. chamaejasme,June,pika,80,0.7975
+9,S. chamaejasme,July,pika,90,0.8966666666666667
+9,S. chamaejasme,August,pika,40,0.4008333333333333
+10,S. chamaejasme,June,pika,90,0.8966666666666667
+10,S. chamaejasme,July,pika,70,0.6983333333333334
+10,S. chamaejasme,August,pika,60,0.5991666666666666
+1,Sedges,June,pika,20,0.2025
+1,Sedges,July,pika,10,0.10333333333333333
+1,Sedges,August,pika,50,0.5
+2,Sedges,June,pika,10,0.10333333333333333
+2,Sedges,July,pika,10,0.10333333333333333
+2,Sedges,August,pika,0,0.004166666666666667
+3,Sedges,June,pika,0,0.004166666666666667
+3,Sedges,July,pika,30,0.30166666666666664
+3,Sedges,August,pika,10,0.10333333333333333
+4,Sedges,June,pika,10,0.10333333333333333
+4,Sedges,July,pika,20,0.2025
+4,Sedges,August,pika,40,0.4008333333333333
+5,Sedges,June,pika,30,0.30166666666666664
+5,Sedges,July,pika,0,0.004166666666666667
+5,Sedges,August,pika,30,0.30166666666666664
+6,Sedges,June,pika,50,0.5
+6,Sedges,July,pika,30,0.30166666666666664
+6,Sedges,August,pika,0,0.004166666666666667
+7,Sedges,June,pika,10,0.10333333333333333
+7,Sedges,July,pika,10,0.10333333333333333
+7,Sedges,August,pika,20,0.2025
+8,Sedges,June,pika,10,0.10333333333333333
+8,Sedges,July,pika,0,0.004166666666666667
+8,Sedges,August,pika,10,0.10333333333333333
+9,Sedges,June,pika,20,0.2025
+9,Sedges,July,pika,40,0.4008333333333333
+9,Sedges,August,pika,10,0.10333333333333333
+10,Sedges,June,pika,30,0.30166666666666664
+10,Sedges,July,pika,0,0.004166666666666667
+10,Sedges,August,pika,20,0.2025
+1,Grasses,June,pika,0,0.004166666666666667
+1,Grasses,July,pika,0,0.004166666666666667
+1,Grasses,August,pika,30,0.30166666666666664
+2,Grasses,June,pika,0,0.004166666666666667
+2,Grasses,July,pika,10,0.10333333333333333
+2,Grasses,August,pika,0,0.004166666666666667
+3,Grasses,June,pika,10,0.10333333333333333
+3,Grasses,July,pika,20,0.2025
+3,Grasses,August,pika,40,0.4008333333333333
+4,Grasses,June,pika,20,0.2025
+4,Grasses,July,pika,30,0.30166666666666664
+4,Grasses,August,pika,0,0.004166666666666667
+5,Grasses,June,pika,0,0.004166666666666667
+5,Grasses,July,pika,0,0.004166666666666667
+5,Grasses,August,pika,40,0.4008333333333333
+6,Grasses,June,pika,10,0.10333333333333333
+6,Grasses,July,pika,30,0.30166666666666664
+6,Grasses,August,pika,20,0.2025
+7,Grasses,June,pika,30,0.30166666666666664
+7,Grasses,July,pika,20,0.2025
+7,Grasses,August,pika,0,0.004166666666666667
+8,Grasses,June,pika,10,0.10333333333333333
+8,Grasses,July,pika,10,0.10333333333333333
+8,Grasses,August,pika,0,0.004166666666666667
+9,Grasses,June,pika,0,0.004166666666666667
+9,Grasses,July,pika,10,0.10333333333333333
+9,Grasses,August,pika,20,0.2025
+10,Grasses,June,pika,20,0.2025
+10,Grasses,July,pika,20,0.2025
+10,Grasses,August,pika,40,0.4008333333333333
+1,Forbs,June,pika,30,0.30166666666666664
+1,Forbs,July,pika,50,0.5
+1,Forbs,August,pika,30,0.30166666666666664
+2,Forbs,June,pika,40,0.4008333333333333
+2,Forbs,July,pika,30,0.30166666666666664
+2,Forbs,August,pika,70,0.6983333333333334
+3,Forbs,June,pika,20,0.2025
+3,Forbs,July,pika,40,0.4008333333333333
+3,Forbs,August,pika,60,0.5991666666666666
+4,Forbs,June,pika,40,0.4008333333333333
+4,Forbs,July,pika,20,0.2025
+4,Forbs,August,pika,50,0.5
+5,Forbs,June,pika,20,0.2025
+5,Forbs,July,pika,40,0.4008333333333333
+5,Forbs,August,pika,20,0.2025
+6,Forbs,June,pika,50,0.5
+6,Forbs,July,pika,60,0.5991666666666666
+6,Forbs,August,pika,20,0.2025
+7,Forbs,June,pika,20,0.2025
+7,Forbs,July,pika,30,0.30166666666666664
+7,Forbs,August,pika,70,0.6983333333333334
+8,Forbs,June,pika,40,0.4008333333333333
+8,Forbs,July,pika,10,0.10333333333333333
+8,Forbs,August,pika,20,0.2025
+9,Forbs,June,pika,30,0.30166666666666664
+9,Forbs,July,pika,30,0.30166666666666664
+9,Forbs,August,pika,30,0.30166666666666664
+10,Forbs,June,pika,60,0.5991666666666666
+10,Forbs,July,pika,40,0.4008333333333333
+10,Forbs,August,pika,20,0.2025

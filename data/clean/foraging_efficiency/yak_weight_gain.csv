@@ -1,0 +1,193 @@
+block,pika_treatment,posion_plant_treatment,year,yak,weight_gain,month
+1,no pika,No S. chamaejasme,2022,B1_AA_yak_1,0.26666666666666666,June
+1,no pika,No S. chamaejasme,2022,B1_AA_yak_2,0.23333333333333334,June
+1,no pika,No S. chamaejasme,2022,B1_AA_yak_1,0.4,July
+1,no pika,No S. chamaejasme,2022,B1_AA_yak_2,0.36666666666666664,July
+1,no pika,No S. chamaejasme,2022,B1_AA_yak_1,0.36666666666666664,August
+1,no pika,No S. chamaejasme,2022,B1_AA_yak_2,0.43333333333333335,August
+2,no pika,No S. chamaejasme,2022,B2_AA_yak_1,0.3,June
+2,no pika,No S. chamaejasme,2022,B2_AA_yak_2,0.36666666666666664,June
+2,no pika,No S. chamaejasme,2022,B2_AA_yak_1,0.36666666666666664,July
+2,no pika,No S. chamaejasme,2022,B2_AA_yak_2,0.26666666666666666,July
+2,no pika,No S. chamaejasme,2022,B2_AA_yak_1,0.4,August
+2,no pika,No S. chamaejasme,2022,B2_AA_yak_2,0.26666666666666666,August
+3,no pika,No S. chamaejasme,2022,B3_AA_yak_1,0.26666666666666666,June
+3,no pika,No S. chamaejasme,2022,B3_AA_yak_2,0.23333333333333334,June
+3,no pika,No S. chamaejasme,2022,B3_AA_yak_1,0.4666666666666667,July
+3,no pika,No S. chamaejasme,2022,B3_AA_yak_2,0.4,July
+3,no pika,No S. chamaejasme,2022,B3_AA_yak_1,0.3333333333333333,August
+3,no pika,No S. chamaejasme,2022,B3_AA_yak_2,0.36666666666666664,August
+4,no pika,No S. chamaejasme,2022,B4_AA_yak_1,0.3333333333333333,June
+4,no pika,No S. chamaejasme,2022,B4_AA_yak_2,0.2,June
+4,no pika,No S. chamaejasme,2022,B4_AA_yak_1,0.5,July
+4,no pika,No S. chamaejasme,2022,B4_AA_yak_2,0.3333333333333333,July
+4,no pika,No S. chamaejasme,2022,B4_AA_yak_1,0.36666666666666664,August
+4,no pika,No S. chamaejasme,2022,B4_AA_yak_2,0.2,August
+1,pika,No S. chamaejasme,2022,B1_PA_yak_1,0.26666666666666666,June
+1,pika,No S. chamaejasme,2022,B1_PA_yak_2,0.16666666666666666,June
+1,pika,No S. chamaejasme,2022,B1_PA_yak_1,0.2,July
+1,pika,No S. chamaejasme,2022,B1_PA_yak_2,0.3,July
+1,pika,No S. chamaejasme,2022,B1_PA_yak_1,0.4666666666666667,August
+1,pika,No S. chamaejasme,2022,B1_PA_yak_2,0.26666666666666666,August
+2,pika,No S. chamaejasme,2022,B2_PA_yak_1,0.16666666666666666,June
+2,pika,No S. chamaejasme,2022,B2_PA_yak_2,0.23333333333333334,June
+2,pika,No S. chamaejasme,2022,B2_PA_yak_1,0.3,July
+2,pika,No S. chamaejasme,2022,B2_PA_yak_2,0.43333333333333335,July
+2,pika,No S. chamaejasme,2022,B2_PA_yak_1,0.5,August
+2,pika,No S. chamaejasme,2022,B2_PA_yak_2,0.4666666666666667,August
+3,pika,No S. chamaejasme,2022,B3_PA_yak_1,0.36666666666666664,June
+3,pika,No S. chamaejasme,2022,B3_PA_yak_2,0.26666666666666666,June
+3,pika,No S. chamaejasme,2022,B3_PA_yak_1,0.43333333333333335,July
+3,pika,No S. chamaejasme,2022,B3_PA_yak_2,0.4666666666666667,July
+3,pika,No S. chamaejasme,2022,B3_PA_yak_1,0.4666666666666667,August
+3,pika,No S. chamaejasme,2022,B3_PA_yak_2,0.36666666666666664,August
+4,pika,No S. chamaejasme,2022,B4_PA_yak_1,0.4,June
+4,pika,No S. chamaejasme,2022,B4_PA_yak_2,0.3,June
+4,pika,No S. chamaejasme,2022,B4_PA_yak_1,0.4666666666666667,July
+4,pika,No S. chamaejasme,2022,B4_PA_yak_2,0.43333333333333335,July
+4,pika,No S. chamaejasme,2022,B4_PA_yak_1,0.5333333333333333,August
+4,pika,No S. chamaejasme,2022,B4_PA_yak_2,0.4666666666666667,August
+1,no pika,S. chamaejasme,2022,B1_AP_yak_1,0.13333333333333333,June
+1,no pika,S. chamaejasme,2022,B1_AP_yak_2,0.16666666666666666,June
+1,no pika,S. chamaejasme,2022,B1_AP_yak_1,0.2,July
+1,no pika,S. chamaejasme,2022,B1_AP_yak_2,0.3,July
+1,no pika,S. chamaejasme,2022,B1_AP_yak_1,0.23333333333333334,August
+1,no pika,S. chamaejasme,2022,B1_AP_yak_2,0.16666666666666666,August
+2,no pika,S. chamaejasme,2022,B2_AP_yak_1,0.2,June
+2,no pika,S. chamaejasme,2022,B2_AP_yak_2,0.16666666666666666,June
+2,no pika,S. chamaejasme,2022,B2_AP_yak_1,0.16666666666666666,July
+2,no pika,S. chamaejasme,2022,B2_AP_yak_2,0.26666666666666666,July
+2,no pika,S. chamaejasme,2022,B2_AP_yak_1,0.2,August
+2,no pika,S. chamaejasme,2022,B2_AP_yak_2,0.3,August
+3,no pika,S. chamaejasme,2022,B3_AP_yak_1,0.16666666666666666,June
+3,no pika,S. chamaejasme,2022,B3_AP_yak_2,0.1,June
+3,no pika,S. chamaejasme,2022,B3_AP_yak_1,0.23333333333333334,July
+3,no pika,S. chamaejasme,2022,B3_AP_yak_2,0.13333333333333333,July
+3,no pika,S. chamaejasme,2022,B3_AP_yak_1,0.16666666666666666,August
+3,no pika,S. chamaejasme,2022,B3_AP_yak_2,0.23333333333333334,August
+4,no pika,S. chamaejasme,2022,B4_AP_yak_1,0.13333333333333333,June
+4,no pika,S. chamaejasme,2022,B4_AP_yak_2,0.2,June
+4,no pika,S. chamaejasme,2022,B4_AP_yak_1,0.26666666666666666,July
+4,no pika,S. chamaejasme,2022,B4_AP_yak_2,0.23333333333333334,July
+4,no pika,S. chamaejasme,2022,B4_AP_yak_1,0.3333333333333333,August
+4,no pika,S. chamaejasme,2022,B4_AP_yak_2,0.2,August
+1,pika,S. chamaejasme,2022,B1_PP_yak_1,0.26666666666666666,June
+1,pika,S. chamaejasme,2022,B1_PP_yak_2,0.3,June
+1,pika,S. chamaejasme,2022,B1_PP_yak_1,0.3333333333333333,July
+1,pika,S. chamaejasme,2022,B1_PP_yak_2,0.36666666666666664,July
+1,pika,S. chamaejasme,2022,B1_PP_yak_1,0.4,August
+1,pika,S. chamaejasme,2022,B1_PP_yak_2,0.5,August
+2,pika,S. chamaejasme,2022,B2_PP_yak_1,0.3333333333333333,June
+2,pika,S. chamaejasme,2022,B2_PP_yak_2,0.26666666666666666,June
+2,pika,S. chamaejasme,2022,B2_PP_yak_1,0.36666666666666664,July
+2,pika,S. chamaejasme,2022,B2_PP_yak_2,0.4666666666666667,July
+2,pika,S. chamaejasme,2022,B2_PP_yak_1,0.3,August
+2,pika,S. chamaejasme,2022,B2_PP_yak_2,0.4666666666666667,August
+3,pika,S. chamaejasme,2022,B3_PP_yak_1,0.36666666666666664,June
+3,pika,S. chamaejasme,2022,B3_PP_yak_2,0.3333333333333333,June
+3,pika,S. chamaejasme,2022,B3_PP_yak_1,0.4,July
+3,pika,S. chamaejasme,2022,B3_PP_yak_2,0.3333333333333333,July
+3,pika,S. chamaejasme,2022,B3_PP_yak_1,0.4,August
+3,pika,S. chamaejasme,2022,B3_PP_yak_2,0.4666666666666667,August
+4,pika,S. chamaejasme,2022,B4_PP_yak_1,0.3,June
+4,pika,S. chamaejasme,2022,B4_PP_yak_2,0.3333333333333333,June
+4,pika,S. chamaejasme,2022,B4_PP_yak_1,0.3333333333333333,July
+4,pika,S. chamaejasme,2022,B4_PP_yak_2,0.36666666666666664,July
+4,pika,S. chamaejasme,2022,B4_PP_yak_1,0.36666666666666664,August
+4,pika,S. chamaejasme,2022,B4_PP_yak_2,0.43333333333333335,August
+1,no pika,No S. chamaejasme,2023,B1_AA_yak_1,0.23333333333333334,June
+1,no pika,No S. chamaejasme,2023,B1_AA_yak_2,0.2,June
+1,no pika,No S. chamaejasme,2023,B1_AA_yak_1,0.4,July
+1,no pika,No S. chamaejasme,2023,B1_AA_yak_2,0.3333333333333333,July
+1,no pika,No S. chamaejasme,2023,B1_AA_yak_1,0.26666666666666666,August
+1,no pika,No S. chamaejasme,2023,B1_AA_yak_2,0.43333333333333335,August
+2,no pika,No S. chamaejasme,2023,B2_AA_yak_1,0.16666666666666666,June
+2,no pika,No S. chamaejasme,2023,B2_AA_yak_2,0.23333333333333334,June
+2,no pika,No S. chamaejasme,2023,B2_AA_yak_1,0.23333333333333334,July
+2,no pika,No S. chamaejasme,2023,B2_AA_yak_2,0.3,July
+2,no pika,No S. chamaejasme,2023,B2_AA_yak_1,0.3,August
+2,no pika,No S. chamaejasme,2023,B2_AA_yak_2,0.3333333333333333,August
+3,no pika,No S. chamaejasme,2023,B3_AA_yak_1,0.3333333333333333,June
+3,no pika,No S. chamaejasme,2023,B3_AA_yak_2,0.3,June
+3,no pika,No S. chamaejasme,2023,B3_AA_yak_1,0.36666666666666664,July
+3,no pika,No S. chamaejasme,2023,B3_AA_yak_2,0.43333333333333335,July
+3,no pika,No S. chamaejasme,2023,B3_AA_yak_1,0.3,August
+3,no pika,No S. chamaejasme,2023,B3_AA_yak_2,0.4,August
+4,no pika,No S. chamaejasme,2023,B4_AA_yak_1,0.16666666666666666,June
+4,no pika,No S. chamaejasme,2023,B4_AA_yak_2,0.26666666666666666,June
+4,no pika,No S. chamaejasme,2023,B4_AA_yak_1,0.2,July
+4,no pika,No S. chamaejasme,2023,B4_AA_yak_2,0.36666666666666664,July
+4,no pika,No S. chamaejasme,2023,B4_AA_yak_1,0.4666666666666667,August
+4,no pika,No S. chamaejasme,2023,B4_AA_yak_2,0.36666666666666664,August
+1,pika,No S. chamaejasme,2023,B1_PA_yak_1,0.2,June
+1,pika,No S. chamaejasme,2023,B1_PA_yak_2,0.23333333333333334,June
+1,pika,No S. chamaejasme,2023,B1_PA_yak_1,0.36666666666666664,July
+1,pika,No S. chamaejasme,2023,B1_PA_yak_2,0.4,July
+1,pika,No S. chamaejasme,2023,B1_PA_yak_1,0.3333333333333333,August
+1,pika,No S. chamaejasme,2023,B1_PA_yak_2,0.26666666666666666,August
+2,pika,No S. chamaejasme,2023,B2_PA_yak_1,0.3,June
+2,pika,No S. chamaejasme,2023,B2_PA_yak_2,0.36666666666666664,June
+2,pika,No S. chamaejasme,2023,B2_PA_yak_1,0.3333333333333333,July
+2,pika,No S. chamaejasme,2023,B2_PA_yak_2,0.26666666666666666,July
+2,pika,No S. chamaejasme,2023,B2_PA_yak_1,0.43333333333333335,August
+2,pika,No S. chamaejasme,2023,B2_PA_yak_2,0.4,August
+3,pika,No S. chamaejasme,2023,B3_PA_yak_1,0.2,June
+3,pika,No S. chamaejasme,2023,B3_PA_yak_2,0.23333333333333334,June
+3,pika,No S. chamaejasme,2023,B3_PA_yak_1,0.36666666666666664,July
+3,pika,No S. chamaejasme,2023,B3_PA_yak_2,0.3,July
+3,pika,No S. chamaejasme,2023,B3_PA_yak_1,0.26666666666666666,August
+3,pika,No S. chamaejasme,2023,B3_PA_yak_2,0.23333333333333334,August
+4,pika,No S. chamaejasme,2023,B4_PA_yak_1,0.2,June
+4,pika,No S. chamaejasme,2023,B4_PA_yak_2,0.26666666666666666,June
+4,pika,No S. chamaejasme,2023,B4_PA_yak_1,0.4,July
+4,pika,No S. chamaejasme,2023,B4_PA_yak_2,0.3,July
+4,pika,No S. chamaejasme,2023,B4_PA_yak_1,0.23333333333333334,August
+4,pika,No S. chamaejasme,2023,B4_PA_yak_2,0.3,August
+1,no pika,S. chamaejasme,2023,B1_AP_yak_1,0.13333333333333333,June
+1,no pika,S. chamaejasme,2023,B1_AP_yak_2,0.2,June
+1,no pika,S. chamaejasme,2023,B1_AP_yak_1,0.3333333333333333,July
+1,no pika,S. chamaejasme,2023,B1_AP_yak_2,0.23333333333333334,July
+1,no pika,S. chamaejasme,2023,B1_AP_yak_1,0.26666666666666666,August
+1,no pika,S. chamaejasme,2023,B1_AP_yak_2,0.3,August
+2,no pika,S. chamaejasme,2023,B2_AP_yak_1,0.1,June
+2,no pika,S. chamaejasme,2023,B2_AP_yak_2,0.1,June
+2,no pika,S. chamaejasme,2023,B2_AP_yak_1,0.23333333333333334,July
+2,no pika,S. chamaejasme,2023,B2_AP_yak_2,0.2,July
+2,no pika,S. chamaejasme,2023,B2_AP_yak_1,0.23333333333333334,August
+2,no pika,S. chamaejasme,2023,B2_AP_yak_2,0.13333333333333333,August
+3,no pika,S. chamaejasme,2023,B3_AP_yak_1,0.2,June
+3,no pika,S. chamaejasme,2023,B3_AP_yak_2,0.16666666666666666,June
+3,no pika,S. chamaejasme,2023,B3_AP_yak_1,0.2,July
+3,no pika,S. chamaejasme,2023,B3_AP_yak_2,0.26666666666666666,July
+3,no pika,S. chamaejasme,2023,B3_AP_yak_1,0.36666666666666664,August
+3,no pika,S. chamaejasme,2023,B3_AP_yak_2,0.2,August
+4,no pika,S. chamaejasme,2023,B4_AP_yak_1,0.13333333333333333,June
+4,no pika,S. chamaejasme,2023,B4_AP_yak_2,0.06666666666666667,June
+4,no pika,S. chamaejasme,2023,B4_AP_yak_1,0.26666666666666666,July
+4,no pika,S. chamaejasme,2023,B4_AP_yak_2,0.16666666666666666,July
+4,no pika,S. chamaejasme,2023,B4_AP_yak_1,0.43333333333333335,August
+4,no pika,S. chamaejasme,2023,B4_AP_yak_2,0.4,August
+1,pika,S. chamaejasme,2023,B1_PP_yak_1,0.4,June
+1,pika,S. chamaejasme,2023,B1_PP_yak_2,0.43333333333333335,June
+1,pika,S. chamaejasme,2023,B1_PP_yak_1,0.23333333333333334,July
+1,pika,S. chamaejasme,2023,B1_PP_yak_2,0.43333333333333335,July
+1,pika,S. chamaejasme,2023,B1_PP_yak_1,0.4,August
+1,pika,S. chamaejasme,2023,B1_PP_yak_2,0.36666666666666664,August
+2,pika,S. chamaejasme,2023,B2_PP_yak_1,0.16666666666666666,June
+2,pika,S. chamaejasme,2023,B2_PP_yak_2,0.23333333333333334,June
+2,pika,S. chamaejasme,2023,B2_PP_yak_1,0.3,July
+2,pika,S. chamaejasme,2023,B2_PP_yak_2,0.26666666666666666,July
+2,pika,S. chamaejasme,2023,B2_PP_yak_1,0.3333333333333333,August
+2,pika,S. chamaejasme,2023,B2_PP_yak_2,0.3333333333333333,August
+3,pika,S. chamaejasme,2023,B3_PP_yak_1,0.3,June
+3,pika,S. chamaejasme,2023,B3_PP_yak_2,0.3333333333333333,June
+3,pika,S. chamaejasme,2023,B3_PP_yak_1,0.43333333333333335,July
+3,pika,S. chamaejasme,2023,B3_PP_yak_2,0.4,July
+3,pika,S. chamaejasme,2023,B3_PP_yak_1,0.5,August
+3,pika,S. chamaejasme,2023,B3_PP_yak_2,0.3333333333333333,August
+4,pika,S. chamaejasme,2023,B4_PP_yak_1,0.26666666666666666,June
+4,pika,S. chamaejasme,2023,B4_PP_yak_2,0.3,June
+4,pika,S. chamaejasme,2023,B4_PP_yak_1,0.3333333333333333,July
+4,pika,S. chamaejasme,2023,B4_PP_yak_2,0.36666666666666664,July
+4,pika,S. chamaejasme,2023,B4_PP_yak_1,0.4,August
+4,pika,S. chamaejasme,2023,B4_PP_yak_2,0.4,August

@@ -53,9 +53,10 @@ library(ggpubr)
 library(patchwork)
 library(here)
 library(mgcv)
+library(gratia)
+library(qs2)
 library(knitr)
 library(kableExtra)
-library(gratia)   
 library(cowplot)
 library(glue)
 library(gt)
@@ -91,13 +92,32 @@ load_csv <- function(...) {
 }
 
 # Generalized function for loading model outputs (emms, letters, summary, contrasts)
+# Handles optional files (e.g., GAM models don't produce emmeans)
 load_model_data <- function(base_dir, name = NULL) {
   base_path <- if (is.null(name)) here(base_dir) else here(glue("{base_dir}/{name}"))
+  
+  # Helper to safely load CSV if it exists, NULL otherwise
+  safe_read <- function(filename) {
+    filepath <- file.path(base_path, filename)
+    if (file.exists(filepath)) {
+      read_csv(filepath, show_col_types = FALSE)
+    } else {
+      NULL
+    }
+  }
+  
   list(
-    emms            = read_csv(file.path(base_path, "emms.csv")),
-    letters         = read_csv(file.path(base_path, "posthoc_letters.csv")),
-    model_summary   = read_csv(file.path(base_path, "model_summary.csv")),
-    model_contrasts = read_csv(file.path(base_path, "posthoc_contrasts.csv"))
+    emms            = safe_read("emms.csv"),
+    letters         = safe_read("posthoc_letters.csv"),
+    model_summary   = safe_read("model_summary.csv"),
+    model_contrasts = safe_read("posthoc_contrasts.csv"),
+    # Prefer marginal predictions file if available (produced by pipeline),
+    # fall back to legacy 'predictions.csv'.
+    predictions     = (function() {
+      pm <- safe_read("predictions_marginal.csv")
+      if (!is.null(pm)) return(pm)
+      safe_read("predictions.csv")
+    })()
   )
 }
 
@@ -106,15 +126,15 @@ load_model_data <- function(base_dir, name = NULL) {
 # ============================================================
 
 # Pika
-pika_data            <- load_csv("data/processed/diet_selection/pika_feeding.csv")
-pika_feeding_models  <- load_model_data("data/processed/diet_selection/modeled_data/pika_feeding")
+pika_data            <- load_csv("data/clean/diet_selection/pika_feeding.csv")
+pika_feeding_models  <- load_model_data("data/clean/diet_selection/pika_feeding")
 
 # Yak
-yak_data             <- load_csv("data/processed/diet_selection/yak_grazing.csv")
-yak_feeding_models   <- load_model_data("data/processed/diet_selection/modeled_data/yak_grazing")
+yak_data             <- load_csv("data/clean/diet_selection/yak_grazing.csv")
+yak_feeding_models   <- load_model_data("data/clean/diet_selection/yak_grazing")
 
 # Shared dung/burrow
-dung_burrow_by_plot  <- load_csv("data/processed/diet_selection/dung_burrow_by_plot.csv") |>
+dung_burrow_by_plot  <- load_csv("data/clean/diet_selection/dung_burrow_by_plot.csv") |>
   mutate(plot = factor(plot))
 
 # ============================================================
@@ -122,69 +142,69 @@ dung_burrow_by_plot  <- load_csv("data/processed/diet_selection/dung_burrow_by_p
 # ============================================================
 
 # Weight gain
-weight_gain <- load_csv("data/processed/experiment_foraging_efficiency/yak_weight_gain.csv") |>
+weight_gain <- load_csv("data/clean/foraging_efficiency/yak_weight_gain.csv") |>
   mutate(yak = gsub("_[^_]*$", "", yak))
-weight_gain_models <- load_model_data("data/processed/experiment_foraging_efficiency/modeled_data/weight_gain")
+weight_gain_models <- load_model_data("data/clean/foraging_efficiency/weight_gain")
 
 # Forage quality (all metrics in one pass)
 quality_metrics <- c("cp", "adf", "ndf")
-forage_quality  <- load_csv("data/processed/experiment_foraging_quality/plant_foraging_quality.csv")
+forage_quality  <- load_csv("data/clean/forage_quality/plant_forage_quality.csv")
 forage_quality_models <- map(quality_metrics,
-                             ~ load_model_data("data/processed/experiment_foraging_quality/modeled_data", .x)) |>
+                             ~ load_model_data("data/clean/forage_quality", .x)) |>
   set_names(quality_metrics)
 
 # Plant cover
-cover_data     <- load_csv("data/processed/experiment_plant_cover/plant_cover_by_treatment.csv")
-grasses_models <- load_model_data("data/processed/experiment_plant_cover/modeled_data/grasses_cover")
-poison_models  <- load_model_data("data/processed/experiment_plant_cover/modeled_data/s_chamaejasme_cover")
-forbs_models   <- load_model_data("data/processed/experiment_plant_cover/modeled_data/forbs_cover")
-sedges_models  <- load_model_data("data/processed/experiment_plant_cover/modeled_data/sedges_cover")
+cover_data     <- load_csv("data/clean/plant_cover/plant_cover_by_treatment.csv")
+grasses_models <- load_model_data("data/clean/plant_cover/grasses")
+poison_models  <- load_model_data("data/clean/plant_cover/s_chamaejasme")
+forbs_models   <- load_model_data("data/clean/plant_cover/forbs")
+sedges_models  <- load_model_data("data/clean/plant_cover/sedges")
 
 # Flip grouping for sedges posthoc letters
 sedges_models$letters <- sedges_models$letters |>
   mutate(.group = ifelse(.group == "a", "b", "a"))
 
 # Active burrow count by treatment
-act_burrow_count_dat <- read_csv(here('data/processed/additional_data/modeled_data/active_burrow_dat.csv'),show_col_types=FALSE)
-burrow_count_models  <- load_model_data("data/processed/additional_data/modeled_data/active_burrow_count")
-weight_gain_burrow_regression_models  <- load_model_data("data/processed/additional_data/modeled_data/weight_gain")
-
-
-#weight by burrow count
-weight_burrow_raw <- read_csv(here('data/processed/additional_data/modeled_data/weight_gain_raw.csv'),show_col_types=FALSE)
-weight_burrow_modeled <- read_csv(here('data/processed/additional_data/modeled_data/weight_gain_modeled_dat.csv'),show_col_types=FALSE)
+act_burrow_count_dat <- read_csv(here('data/clean/additional_data/active_burrow_dat.csv'),show_col_types=FALSE)
+burrow_count_models  <- load_model_data("data/clean/additional_data/active_burrow_count")
+weight_gain_burrow_regression_models  <- load_model_data("data/clean/additional_data/weight_gain")
 
 # ============================================================
-#                 FIGURE 4 DATA
+#                 FIGURE 4 DATA (LOADED EARLY FOR INLINE CALCS)
 # ============================================================
 
 # Plant bites
-plant_bites <- load_csv("data/processed/experiment_foraging_efficiency/yak_plant_bites.csv") |>
+plant_bites <- load_csv("data/clean/foraging_efficiency/yak_plant_bites.csv") |>
   mutate(plant = gsub("_[^_]*$", "", plant))
 plant_groups <- c("forbs", "grasses", "sedges")
 plant_bites_models <- map(plant_groups,
-                          ~ load_model_data("data/processed/experiment_foraging_efficiency/modeled_data/plant_bites",
-                                            paste0(.x, "_plant_bites"))) |>
+                          ~ load_model_data("data/clean/foraging_efficiency/plant_bites",
+                                            .x)) |>
   set_names(plant_groups)
 
 # Bite/steps
-bite_steps <- load_csv("data/processed/experiment_foraging_efficiency/yak_bite_steps_ratio.csv")
+bite_steps <- load_csv("data/clean/foraging_efficiency/yak_bite_steps_ratio.csv")
 bite_step_groups <- c("forbs", "grasses", "sedges")
 bite_step_models <- map(bite_step_groups,
-                        ~ load_model_data("data/processed/experiment_foraging_efficiency/modeled_data/bite_steps",
-                                          paste0(.x, "_bite_steps"))) |>
+                        ~ load_model_data("data/clean/foraging_efficiency/bite_steps_ratio",
+                                          .x)) |>
   set_names(bite_step_groups)
+
+# Weight by burrow count
+# Data is pre-filtered by pipeline to pika + S. chamaejasme treatment
+weight_burrow_raw <- read_csv(here('data/clean/additional_data/weight_gain_raw.csv'), show_col_types = FALSE)
+weight_burrow_modeled <- read_csv(here('data/clean/additional_data/weight_gain_modeled_dat.csv'), show_col_types = FALSE)
 
 # ============================================================
 #            SUPPLEMENTARY FIGURES/TABLES DATA
 # ============================================================
 
-# Plant cover
-forbs_models   <- load_model_data("data/processed/experiment_plant_cover/modeled_data/forbs_cover")
-sedges_models  <- load_model_data("data/processed/experiment_plant_cover/modeled_data/sedges_cover")
+# Plant cover (reload for supplementary analyses)
+forbs_models   <- load_model_data("data/clean/plant_cover/forbs")
+sedges_models  <- load_model_data("data/clean/plant_cover/sedges")
 
 # Forage quality
-ndf_models     <- load_model_data("data/processed/experiment_foraging_quality/modeled_data/ndf")
+ndf_models     <- load_model_data("data/clean/forage_quality/ndf")
 
 # Yak grazing
 yak_feeding_model_summary <- yak_feeding_models$model_summary
@@ -212,6 +232,9 @@ n_experiment_plots <- weight_gain |>
 n_treatments <- 4  # 2x2 factorial design (pika yes/no × poison yes/no)
 n_plots_per_treatment <- n_experiment_plots / n_treatments
 n_years_experiment <- 2
+
+# Weight-burrow regression uses filtered data (pika + S. chamaejasme only)
+n_weight_burrow_observations <- weight_burrow_raw |> nrow()
 
 ```
 
@@ -246,7 +269,7 @@ All data were analyzed using linear models, generalized linear mixed models, or 
 
 # Results and Discussion
 
-First, we carried out a set of field observational experiments to investigate diet selection by pika and yak, as well as the associations among pika abundance, S. chamaejasme abundance, and yak activity under natural field conditions. Consistent with previous studies^5,11,24–25^, we found that pika and yak have distinct diet preferences: yaks preferred grasses and sedges, while pika preferred the poisonous S. chamaejasme (@fig-diet-selection A,B, @supptbl-pika-yak-feeding-model-summary, @supptbl-pika-yak-feeding-model-contrast). We also found that S. chamaejasme abundance was negatively associated with active pika burrow abundance (@fig-diet-selection C) and with yak foraging activity, as indicated by dung density (@fig-diet-selection D).
+First, we carried out a set of field observational experiments to investigate diet selection by pika and yak, as well as the associations among pika abundance, S. chamaejasme abundance, and yak activity under natural field conditions. Consistent with previous studies^5,11,24–25^, we found that pika and yak have distinct diet preferences: yaks preferred grasses and sedges, while pika preferred the poisonous S. chamaejasme (@fig-diet-selection A,B, @supptbl-pika-yak-feeding-model-summary, @supptbl-pika-yak-feeding-model-contrast). We also found that S. chamaejasme abundance was negatively associated with active pika burrow abundance (@fig-diet-selection C, @supptbl-pika-burrow-chamaejasme-gam) and with yak foraging activity, as indicated by dung density (@fig-diet-selection D, @supptbl-dung-chamaejasme-lm).
 
 Building on these results, we conducted an in-situ manipulative field experiment using fenced enclosures to test the interactive effects of pika and S. chamaejasme on yak weight gain, foraging quantity and quality, and grazing behavior. For weight gain, yaks gained less in poison-plant plots than in non-poison plots, and there was a significant interaction between pika and S. chamaejasme treatments (@supptbl-yak-performance-model-summary). When pika were present, yaks showed higher weight gain (@supptbl-yak-performance-model-contrast). This effect was driven by pika feeding on S. chamaejasme (@fig-diet-selection B, @supptbl-yak-performance-model-summary, @supptbl-yak-performance-model-contrast), which increased grass cover (@fig-diet-selection C, @supptbl-yak-performance-model-summary, @supptbl-yak-performance-model-contrast) compared to plots with S. chamaejasme but no pika.
 
@@ -258,7 +281,7 @@ Building on these results, we conducted an in-situ manipulative field experiment
 #| warning: false
 
 # Function to calculate % increase from "no pika" to "pika"
-calc_pct_increase <- function(emms_df, value_col = "response") {
+calc_pct_increase <- function(emms_df, value_col = "emmean") {
   emms_df |>
     filter(posion_plant_treatment == "S. chamaejasme") |>
     summarise(
@@ -271,8 +294,8 @@ calc_pct_increase <- function(emms_df, value_col = "response") {
     pull()
 }
 
-cp_increase <- calc_pct_increase(forage_quality_models$cp$emms)
-adf_increase <- calc_pct_increase(forage_quality_models$adf$emms)
+cp_increase <- calc_pct_increase(forage_quality_models$cp$emms, value_col = "response")
+adf_increase <- calc_pct_increase(forage_quality_models$adf$emms, value_col = "response")
 
 
 ```
@@ -287,9 +310,9 @@ Food quantity and quality are key drivers of individual performance and populati
 #| results: "hide"
 
 
-sedge_bite_increase <- calc_pct_increase(plant_bites_models$sedges$emm,value_col = 'response')
-grass_bite_steps <- calc_pct_increase(plant_bites_models$grasses$emm,value_col = 'emmean')
-sedge_bite_steps <- calc_pct_increase(plant_bites_models$sedges$emm,value_col = 'response')
+sedge_bite_increase <- calc_pct_increase(plant_bites_models$sedges$emms, value_col = 'emmean')
+grass_bite_steps <- calc_pct_increase(bite_step_models$grasses$emms, value_col = 'response')
+sedge_bite_steps <- calc_pct_increase(bite_step_models$sedges$emms, value_col = 'response')
   
 ```
 
@@ -327,25 +350,21 @@ make_feeding_plot <- function(raw_data, emms, letters, yvar, ylabel,
 }
 
 # -------------------------------------------------------------------
-# 2. Models
+# 2. Load Pre-fitted Models from Saved Files
 # -------------------------------------------------------------------
 
-# GAM for S. chamaejasme cover vs pika burrow density
-burrow_model <- gam(
-  s_chamaejasme_cover_percent ~ 
-    s(active_pika_burrow_no_100m2, k = 8, bs = "ts") +
-    s(plot, bs = "re"),
-  data = dung_burrow_by_plot,
-  family = gaussian(),
-  select = TRUE
-)
+# Load GAM models from saved .qs files (created by targets pipeline)
+burrow_model <- qs2::qs_read(here('data/models/burrow_cover_gam.qs'))
+dung_model <- qs2::qs_read(here('data/models/dung_cover.qs'))
 
-# Extract GAM smooth estimates
+# Load model summaries and predictions from targets outputs
+burrow_model_data <- load_model_data("data/clean/diet_selection/burrow_cover_gam")
+dung_model_data <- load_model_data("data/clean/diet_selection/dung_cover")
+
+# Extract GAM smooth estimates for burrow model visualization
+burrow_intercept <- coef(burrow_model)[1]
 gam_ests <- smooth_estimates(burrow_model) |>
-  mutate(adj_est = .estimate + coef(burrow_model)[1])
-
-# Simple GAM/LM for dung vs cover
-dung_model <- gam(yak_dung_no_100m2 ~ s_chamaejasme_cover_percent, data = dung_burrow_by_plot)
+  mutate(adj_est = .estimate + burrow_intercept)
 
 # -------------------------------------------------------------------
 # 3. Plots
@@ -403,10 +422,15 @@ pika_burrow <- ggplot(dung_burrow_by_plot, aes(x = active_pika_burrow_no_100m2, 
   labs(x = expression("Active pika burrow density (no/100 m"^2*")"),
        y = expression(italic("S. chamaejasme")~"cover (%)"))
 
-# Dung density vs cover
+# Dung density vs cover (using model predictions)
 dung_plot <- ggplot(dung_burrow_by_plot, aes(x = s_chamaejasme_cover_percent, y = yak_dung_no_100m2)) +
   geom_point(color = "darkgrey") +
-  geom_smooth(method = "lm", se = TRUE, color = "blue") +
+  geom_ribbon(data = dung_model_data$predictions,
+              aes(x = s_chamaejasme_cover_percent, ymin = lower, ymax = upper),
+              alpha = 0.2, inherit.aes = FALSE) +
+  geom_line(data = dung_model_data$predictions,
+            aes(x = s_chamaejasme_cover_percent, y = fit),
+            color = "blue", linewidth = 1.25) +
   theme_pubr(base_size = base_size) +
   labs(x = expression(italic("S. chamaejasme")~"cover (%)"),
        y = "Yak dung density (no/100 m^2)") +
@@ -595,9 +619,9 @@ panel_g <- ggplot(act_burrow_count_dat, aes(x = pika_treatment, y = active_burro
   theme(legend.position = "bottom")
 
 panel_h <- weight_burrow_modeled |>
-  ggplot(aes(x = active_burrows, y = adj_est)) +
+  ggplot(aes(x = active_burrows, y = weight_gain_mean)) +
   geom_point(data = weight_burrow_raw, aes(y = weight_gain_mean), color = plant_colors[2]) +
-  geom_line(aes(y = adj_est), size = 1) +
+  geom_line(aes(y = weight_gain_mean), size = 1) +
   theme_pubr() +
   xlab('No. active burrows/ha') +
   ylab('Weight gain kg/yak/day') +
@@ -954,6 +978,29 @@ burrow_model_summary |>
 Model summary for S. chamaejasme cover regressed on active pika burrow density. Estimates are from a generalized additive mixed model (Gaussian family) with plot as a random effect (n = `r n_burrow_dung_plots` plots).
 :::
 
+::: {#supptbl-dung-chamaejasme-lm}
+```{r}
+#| echo: false
+#| results: 'asis'
+#| message: false
+#| warning: false
+
+dung_model_summary <- broom::tidy(dung_model) |>
+  mutate(term = case_when(
+    term == "(Intercept)" ~ "Intercept",
+    term == "s_chamaejasme_cover_percent" ~ "S. chamaejasme cover (%)",
+    TRUE ~ term
+  ))
+
+dung_model_summary |>
+  gt() |>
+  fmt_number(columns = where(is.numeric), decimals = 2)
+
+```
+
+Model summary for yak dung density regressed on S. chamaejasme cover. Estimates are from a linear regression model (n = `r n_burrow_dung_plots` plots).
+:::
+
 ::: {#supptbl-weight-gain-burrow-regression}
 ```{r}
 #| echo: false
@@ -968,7 +1015,7 @@ weight_gain_burrow_regression_models$model_summary  |>
 
 ```
 
-Model summary for yak weight gain regressed on active burrow count. Estimates are from a generalized additive mixed model (Gaussian family) with block, year, and month as random effects (n = `r n_experiment_plots` plots).
+Model summary for yak weight gain regressed on active burrow count in plots with both pika presence and S. chamaejasme presence. Estimates are from a generalized additive mixed model (Gaussian family) with block, year, and month as random effects (n = `r n_weight_burrow_observations` observations from the pika + S. chamaejasme treatment).
 :::
 
 ::: {#supptbl-yak-performance-model-summary}
@@ -1092,35 +1139,497 @@ Model contrasts for plant bites and the bites to step ratio for sedges, grasses,
 #| message: false
 #| warning: false
 
-# Create comprehensive model summary table
-model_overview <- tibble::tribble(
-  ~Analysis, ~`Response Variable`, ~`Model Type`, ~`Distribution/Family`, ~`Random Effects`, ~`Sample Size`,
+# ============================================================
+#          HELPER FUNCTIONS TO EXTRACT MODEL INFO
+# ============================================================
+
+# Extract response variable from model formula
+get_response_var <- function(model) {
+  if (is.null(model)) return(NA_character_)
   
-  # Field surveys (2021)
-  "Diet selection", "Pika feeding frequency", "GLMM", "Beta", "plot, month", glue("n = {n_pika_plots} plots"),
-  "Diet selection", "Yak grazing frequency", "GLMM", "Beta", "transect, month", glue("n = {n_yak_transects} transects"),
-  "Diet selection", "S. chamaejasme cover vs burrow density", "GAM", "Gaussian", "plot", glue("n = {n_burrow_dung_plots} plots"),
-  "Diet selection", "Dung density vs S. chamaejasme cover", "LM", "Gaussian", "none", glue("n = {n_burrow_dung_plots} plots"),
+  # Handle adaptive models (fit_plant_bites_model returns a list)
+  if (is.list(model) && "model" %in% names(model)) {
+    model <- model$model
+  }
   
-  # Field experiments (2022-2023)
-  "Yak performance", "Weight gain", "GLMM", "Gaussian", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
-  "Yak performance", "Weight gain vs burrow density", "GAM", "Gaussian", "block, year, month", glue("n = {n_experiment_plots} plots"),
-  "Plant cover", "Grass cover", "GLMM", "Beta", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
-  "Plant cover", "Sedge cover", "GLMM", "Beta", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
-  "Plant cover", "Forb cover", "GLMM", "Beta", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
-  "Plant cover", "S. chamaejasme cover", "GLMM", "Beta", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
-  "Plant cover", "Active burrow density", "GLMM", "Tweedie", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
-  "Forage quality", "Crude protein (%)", "GLMM", "Gaussian", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
-  "Forage quality", "Acid detergent fiber (%)", "GLMM", "Gaussian", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
-  "Forage quality", "Neutral detergent fiber (%)", "GLMM", "Gaussian", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
-  "Foraging efficiency", "Sedge bite rate", "GLMM", "Gaussian", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
-  "Foraging efficiency", "Grass bite rate", "GLMM", "Gaussian", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
-  "Foraging efficiency", "Forb bite rate", "GLMM", "Gaussian", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
-  "Foraging efficiency", "Sedge bites/step", "GLMM", "Beta", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
-  "Foraging efficiency", "Grass bites/step", "GLMM", "Beta", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years"),
-  "Foraging efficiency", "Forb bites/step", "GLMM", "Beta", "block, year, month", glue("n = {n_experiment_plots} plots, {n_years_experiment} years")
+  if (is.null(model)) return(NA_character_)
+  
+  formula_obj <- tryCatch(formula(model), error = function(e) NULL)
+  if (is.null(formula_obj)) return(NA_character_)
+  
+  # Get left-hand side of formula
+  response <- tryCatch({
+    as.character(formula_obj[[2]])
+  }, error = function(e) {
+    # For some model types, try alternative extraction
+    if (inherits(model, "gam")) {
+      # Get response from model terms
+      terms_obj <- terms(model)
+      response_idx <- attr(terms_obj, "response")
+      if (response_idx > 0) {
+        all_vars <- all.vars(terms_obj)
+        return(all_vars[response_idx])
+      }
+    }
+    return(NA_character_)
+  })
+  
+  return(response)
+}
+
+# Extract fixed effects (interaction terms)
+get_fixed_effects <- function(model) {
+  if (is.null(model)) return(NA_character_)
+  
+  # Handle adaptive models
+  if (is.list(model) && "model" %in% names(model)) {
+    model <- model$model
+  }
+  
+  if (is.null(model)) return(NA_character_)
+  
+  # For GAM models
+  if (inherits(model, "gam")) {
+    formula_obj <- formula(model)
+    # Extract terms, excluding smooths and response
+    terms_char <- as.character(formula_obj)[3]
+    # Look for interaction patterns
+    if (grepl(":", terms_char) || grepl("\\*", terms_char)) {
+      # Extract interaction terms
+      fixed_terms <- gsub("s\\([^)]+\\)", "", terms_char)
+      fixed_terms <- gsub("\\+\\s*\\+", "+", fixed_terms)
+      fixed_terms <- trimws(fixed_terms)
+      return(fixed_terms)
+    } else {
+      return("")
+    }
+  }
+  
+  # For glmmTMB models
+  if (inherits(model, "glmmTMB")) {
+    # Get model summary
+    summ <- summary(model)
+    coef_table <- summ$coefficients$cond
+    
+    # Look for interaction terms (contain ":")
+    if (!is.null(coef_table)) {
+      row_names <- rownames(coef_table)
+      interaction_terms <- row_names[grepl(":", row_names)]
+      
+      if (length(interaction_terms) > 0) {
+        # Clean up the interaction term names - extract just the base variable names
+        interactions <- sapply(interaction_terms, function(term) {
+          parts <- strsplit(term, ":")[[1]]
+          # Clean each part - extract just the variable name, not the factor level
+          parts <- gsub("pika_treatment.*", "pika", parts)
+          parts <- gsub("posion_plant_treatment.*", "poison", parts)
+          paste(parts, collapse = " × ")
+        })
+        return(paste(unique(interactions), collapse = "; "))
+      }
+    }
+  }
+  
+  # For lm models
+  if (inherits(model, "lm")) {
+    # Check if there are interaction terms
+    terms_obj <- terms(model)
+    term_labels <- attr(terms_obj, "term.labels")
+    interaction_terms <- term_labels[grepl(":", term_labels)]
+    
+    if (length(interaction_terms) > 0) {
+      return(paste(interaction_terms, collapse = "; "))
+    }
+  }
+  
+  return("")
+}
+
+# Extract random effects
+get_random_effects <- function(model) {
+  if (is.null(model)) return(NA_character_)
+  
+  # Handle adaptive models
+  if (is.list(model) && "model" %in% names(model)) {
+    model <- model$model
+  }
+  
+  if (is.null(model)) return(NA_character_)
+  
+  # For GAM models
+  if (inherits(model, "gam")) {
+    formula_obj <- formula(model)
+    terms_char <- as.character(formula_obj)[3]
+    # Extract random effect smooths (bs = 're')
+    re_matches <- gregexpr("s\\(([^)]+),\\s*bs\\s*=\\s*['\"]re['\"]\\)", terms_char, perl = TRUE)
+    if (re_matches[[1]][1] != -1) {
+      re_text <- regmatches(terms_char, re_matches)[[1]]
+      # Extract variable names
+      re_vars <- gsub("s\\(([^,]+),.+", "\\1", re_text)
+      return(paste(re_vars, collapse = ", "))
+    }
+    # Check if there are any random effects in the model
+    smooth_terms <- summary(model)$s.table
+    if (!is.null(smooth_terms) && nrow(smooth_terms) > 0) {
+      row_names <- rownames(smooth_terms)
+      # Look for "re" basis functions
+      re_terms <- row_names[grepl("s\\(.+\\)", row_names) & grepl(",re\\)", row_names)]
+      if (length(re_terms) > 0) {
+        # Extract variable names from smooth terms like "s(plot)"
+        re_vars <- gsub("s\\(([^,)]+).*\\)", "\\1", re_terms)
+        return(paste(re_vars, collapse = ", "))
+      }
+    }
+    return("")
+  }
+  
+  # For glmmTMB models
+  if (inherits(model, "glmmTMB")) {
+    re_struct <- model$modelInfo$reTrms
+    if (!is.null(re_struct) && length(re_struct$cond$cnms) > 0) {
+      re_names <- names(re_struct$cond$cnms)
+      return(paste(re_names, collapse = ", "))
+    }
+  }
+  
+  # For lm models (no random effects)
+  if (inherits(model, "lm") && !inherits(model, "glmmTMB")) {
+    return("")
+  }
+  
+  return("")
+}
+
+# Extract family and Tweedie power
+get_family_info <- function(model) {
+  if (is.null(model)) return(list(family = NA_character_, tweedie_power = NA_real_))
+  
+  # Handle adaptive models - the actual fitted model is in $model
+  # But only if this is truly an adaptive model wrapper (not a GAM/LM with a $model frame)
+  actual_model <- model
+  if (is.list(model) && "model" %in% names(model) && 
+      !inherits(model, c("lm", "glm", "gam", "glmmTMB"))) {
+    actual_model <- model$model
+  }
+  
+  if (is.null(actual_model)) return(list(family = NA_character_, tweedie_power = NA_real_))
+  
+  # Get family
+  fam <- tryCatch({
+    if (inherits(actual_model, "glmmTMB")) {
+      # Extract family from glmmTMB model object directly
+      fam_obj <- actual_model$modelInfo$family
+      if (!is.null(fam_obj)) {
+        list(
+          family = fam_obj$family,
+          link = fam_obj$link
+        )
+      } else {
+        NULL
+      }
+    } else {
+      family(actual_model)
+    }
+  }, error = function(e) NULL)
+  
+  if (is.null(fam)) {
+    # For lm objects
+    if (inherits(actual_model, "lm")) {
+      return(list(family = "Gaussian", tweedie_power = NA_real_))
+    }
+    return(list(family = NA_character_, tweedie_power = NA_real_))
+  }
+  
+  family_name <- fam$family
+  
+  # Format family name
+  if (grepl("tweedie", family_name, ignore.case = TRUE)) {
+    # Extract Tweedie power parameter
+    tweedie_power <- NA_real_
+    
+    if (inherits(actual_model, "glmmTMB")) {
+      # Try multiple ways to extract the power parameter
+      tweedie_power <- tryCatch({
+        # Method 1: from family object
+        if (!is.null(fam$par)) {
+          return(fam$par)
+        }
+        # Method 2: from model info
+        if (!is.null(actual_model$modelInfo$family$par)) {
+          return(actual_model$modelInfo$family$par)
+        }
+        # Method 3: from family link parameters
+        if (!is.null(actual_model$fit$par)) {
+          # The Tweedie power is stored in the dispersion parameters
+          disp_par <- actual_model$fit$par
+          if (length(disp_par) >= 2) {
+            return(disp_par[2])  # Tweedie power is typically the 2nd parameter
+          }
+        }
+        NA_real_
+      }, error = function(e) NA_real_)
+    }
+    
+    return(list(family = "Tweedie", tweedie_power = tweedie_power))
+  } else if (grepl("beta", family_name, ignore.case = TRUE)) {
+    return(list(family = "Beta", tweedie_power = NA_real_))
+  } else if (grepl("gaussian", family_name, ignore.case = TRUE)) {
+    return(list(family = "Gaussian", tweedie_power = NA_real_))
+  } else if (grepl("binomial", family_name, ignore.case = TRUE)) {
+    return(list(family = "Binomial", tweedie_power = NA_real_))
+  } else {
+    return(list(family = family_name, tweedie_power = NA_real_))
+  }
+}
+
+# Get model type
+get_model_type <- function(model) {
+  if (is.null(model)) return(NA_character_)
+  
+  # Handle adaptive models
+  if (is.list(model) && "model" %in% names(model)) {
+    model <- model$model
+  }
+  
+  if (is.null(model)) return(NA_character_)
+  
+  # Check class hierarchy
+  model_classes <- class(model)
+  
+  if (inherits(model, "gam")) {
+    return("GAM")
+  } else if (inherits(model, "glmmTMB")) {
+    return("GLMM")
+  } else if (inherits(model, "lm") && !inherits(model, "glm")) {
+    return("LM")
+  } else if (inherits(model, "glm")) {
+    return("GLM")
+  } else {
+    # Return first class as fallback
+    return(paste(model_classes, collapse = "/"))
+  }
+}
+
+# ============================================================
+#          LOAD ALL MODEL OBJECTS FROM .QS FILES
+# ============================================================
+
+model_files <- list(
+  # Diet selection models
+  pika_feeding = here("data/models/pika_feeding.qs"),
+  yak_grazing = here("data/models/yak_grazing.qs"),
+  burrow_cover_gam = here("data/models/burrow_cover_gam.qs"),
+  dung_cover = here("data/models/dung_cover.qs"),
+  
+  # Weight gain
+  weight_gain = here("data/models/weight_gain.qs"),
+  weight_gain_burrow_gam = here("data/models/weight_gain_burrow_gam.qs"),
+  
+  # Plant cover
+  plant_cover_grasses = here("data/models/plant_cover_grasses.qs"),
+  plant_cover_sedges = here("data/models/plant_cover_sedges.qs"),
+  plant_cover_forbs = here("data/models/plant_cover_forbs.qs"),
+  plant_cover_s_chamaejasme = here("data/models/plant_cover_s_chamaejasme.qs"),
+  active_burrows = here("data/models/active_burrows.qs"),
+  
+  # Forage quality
+  forage_quality_cp = here("data/models/forage_quality_cp.qs"),
+  forage_quality_adf = here("data/models/forage_quality_adf.qs"),
+  forage_quality_ndf = here("data/models/forage_quality_ndf.qs"),
+  
+  # Plant bites
+  plant_bites_sedges = here("data/models/plant_bites_sedges.qs"),
+  plant_bites_grasses = here("data/models/plant_bites_grasses.qs"),
+  plant_bites_forbs = here("data/models/plant_bites_forbs.qs"),
+  
+  # Bite steps ratio
+  bite_steps_sedges = here("data/models/bite_steps_ratio_sedges.qs"),
+  bite_steps_grasses = here("data/models/bite_steps_ratio_grasses.qs"),
+  bite_steps_forbs = here("data/models/bite_steps_ratio_forbs.qs")
 )
 
+# Load models with error handling
+models <- map(model_files, ~ {
+  if (file.exists(.x)) {
+    tryCatch({
+      obj <- qs2::qs_read(.x)
+      # Verify it's actually a model object or a list containing one
+      if (is.null(obj)) return(NULL)
+      
+      # FIRST: Restore class for GAM/LM models that lost their class attributes
+      # This must happen BEFORE checking for adaptive models, because GAM/LM objects
+      # have a $model component (the model frame) that can be confused with adaptive model structure
+      if (is.list(obj) && "formula" %in% names(obj) && "coefficients" %in% names(obj)) {
+        # Check for GAM-specific components
+        if ("smooth" %in% names(obj) && "sp" %in% names(obj)) {
+          class(obj) <- c("gam", "glm", "lm")
+        } 
+        # Check for LM-specific components (both qr and terms are reliably present)
+        else if ("qr" %in% names(obj) && "terms" %in% names(obj)) {
+          class(obj) <- "lm"
+        }
+        # Check for GLM-specific components
+        else if ("family" %in% names(obj) && "qr" %in% names(obj)) {
+          class(obj) <- c("glm", "lm")
+        }
+      }
+      
+      # Check if it's a data.frame masquerading as a model
+      if (is.data.frame(obj) && !inherits(obj, c("lm", "glm", "gam", "glmmTMB"))) {
+        warning(paste("Model file", basename(.x), "contains a data.frame, not a model object"))
+        return(NULL)
+      }
+      return(obj)
+    }, error = function(e) {
+      warning(paste("Error loading model from", basename(.x), ":", e$message))
+      return(NULL)
+    })
+  } else {
+    warning(paste("Model file not found:", basename(.x)))
+    NULL
+  }
+})
+
+# ============================================================
+#          EXTRACT MODEL INFORMATION
+# ============================================================
+
+# Debug: Check which models loaded successfully
+models_loaded <- map_lgl(models, ~ !is.null(.x))
+if (any(!models_loaded)) {
+  warning(paste("Failed to load models:", 
+                paste(names(models)[!models_loaded], collapse = ", ")))
+}
+
+model_info <- tibble(
+  model_name = names(models),
+  model_object = models
+) |>
+  mutate(
+    response_var = map_chr(model_object, get_response_var),
+    interaction_terms = map_chr(model_object, get_fixed_effects),
+    random_effects = map_chr(model_object, get_random_effects),
+    family_info = map(model_object, get_family_info),
+    family = map_chr(family_info, "family"),
+    tweedie_power = map_dbl(family_info, "tweedie_power"),
+    model_type = map_chr(model_object, get_model_type)
+  ) |>
+  select(-family_info, -model_object)
+
+# ============================================================
+#          CREATE MODEL OVERVIEW TABLE
+# ============================================================
+
+# Define analysis categories and sample sizes
+model_overview <- model_info |>
+  mutate(
+    # Clean up variable names for display
+    response_display = case_when(
+      response_var == "feeding_clipping_freq" ~ "Pika feeding frequency",
+      response_var == "grazing_freq" ~ "Yak grazing frequency",
+      response_var == "s_chamaejasme_cover_percent" ~ "S. chamaejasme cover",
+      response_var == "yak_dung_no_100m2" ~ "Yak dung density",
+      response_var == "weight_gain" ~ "Yak weight gain",
+      response_var == "weight_gain_mean" ~ "Yak weight gain (vs burrow density)",
+      model_name == "burrow_cover_gam" ~ "S. chamaejasme cover (vs burrow density)",
+      model_name == "dung_cover" ~ "Yak dung density (vs S. chamaejasme)",
+      model_name == "weight_gain_burrow_gam" ~ "Yak weight gain (vs burrow density)",
+      response_var == "cover_beta" ~ str_to_title(gsub("plant_cover_", "", model_name)),
+      response_var == "active_burrows" ~ "Active burrow density",
+      response_var == "forage_quality_beta" ~ case_when(
+        grepl("_cp", model_name) ~ "Crude protein (%)",
+        grepl("_adf", model_name) ~ "Acid detergent fiber (%)",
+        grepl("_ndf", model_name) ~ "Neutral detergent fiber (%)",
+        TRUE ~ "Forage quality"
+      ),
+      response_var == "forage_efficiency" ~ case_when(
+        grepl("sedges", model_name) ~ "Sedge bite rate",
+        grepl("grasses", model_name) ~ "Grass bite rate",
+        grepl("forbs", model_name) ~ "Forb bite rate",
+        TRUE ~ "Plant bite rate"
+      ),
+      response_var == "bites_steps_ratio_beta" ~ case_when(
+        grepl("sedges", model_name) ~ "Sedge bites/step",
+        grepl("grasses", model_name) ~ "Grass bites/step",
+        grepl("forbs", model_name) ~ "Forb bites/step",
+        TRUE ~ "Bites/step ratio"
+      ),
+      TRUE ~ response_var
+    ),
+    
+    # Analysis category
+    analysis_category = case_when(
+      model_name %in% c("pika_feeding", "yak_grazing", "burrow_cover_gam", "dung_cover") ~ "Diet selection",
+      model_name %in% c("weight_gain", "weight_gain_burrow_gam") ~ "Yak performance",
+      grepl("plant_cover", model_name) | model_name == "active_burrows" ~ "Plant cover",
+      grepl("forage_quality", model_name) ~ "Forage quality",
+      grepl("plant_bites|bite_steps", model_name) ~ "Foraging efficiency",
+      TRUE ~ "Other"
+    ),
+    
+    # Override model type for known GAM and LM models if detection failed
+    model_type = case_when(
+      model_name %in% c("burrow_cover_gam", "weight_gain_burrow_gam") & (is.na(model_type) | model_type == "data.frame") ~ "GAM",
+      model_name == "dung_cover" & (is.na(model_type) | model_type == "data.frame") ~ "LM",
+      TRUE ~ model_type
+    ),
+    
+    # Override family for known models if detection failed
+    family = case_when(
+      model_name %in% c("burrow_cover_gam", "weight_gain_burrow_gam", "dung_cover") & (is.na(family) | family == "NA") ~ "Gaussian",
+      TRUE ~ family
+    ),
+    
+    # Override random effects for known GAM models if detection failed
+    random_effects = case_when(
+      model_name == "burrow_cover_gam" & (is.na(random_effects) | random_effects == "") ~ "plot",
+      model_name == "weight_gain_burrow_gam" & (is.na(random_effects) | random_effects == "") ~ "block, year, month",
+      model_name == "dung_cover" & (is.na(random_effects) | random_effects == "") ~ "",
+      TRUE ~ random_effects
+    ),
+    
+    # Sample size
+    sample_size = case_when(
+      model_name == "pika_feeding" ~ glue("n = {n_pika_plots} plots"),
+      model_name == "yak_grazing" ~ glue("n = {n_yak_transects} transects"),
+      model_name %in% c("burrow_cover_gam", "dung_cover") ~ glue("n = {n_burrow_dung_plots} plots"),
+      model_name == "weight_gain_burrow_gam" ~ glue("n = {n_experiment_plots} plots"),
+      TRUE ~ glue("n = {n_experiment_plots} plots, {n_years_experiment} years")
+    ),
+    
+    # Format family display with Tweedie power if applicable
+    family_display = if_else(
+      !is.na(tweedie_power),
+      glue("{family} (p = {round(tweedie_power, 2)})"),
+      family
+    ),
+    
+    # Clean up interaction terms display
+    interaction_display = if_else(
+      interaction_terms == "" | is.na(interaction_terms),
+      "",
+      # Replace the simplified terms from get_fixed_effects
+      gsub("poison", "S. chamaejasme", interaction_terms)
+    ),
+    
+    # Clean up random effects display
+    random_effects_display = if_else(
+      random_effects == "" | is.na(random_effects),
+      "",
+      random_effects
+    )
+  ) |>
+  select(
+    Analysis = analysis_category,
+    `Response Variable` = response_display,
+    `Model Type` = model_type,
+    `Distribution/Family` = family_display,
+    `Interaction Terms` = interaction_display,
+    `Random Effects` = random_effects_display,
+    `Sample Size` = sample_size
+  )
+
+# Display table
 model_overview |>
   gt(groupname_col = "Analysis") |>
   tab_header(
@@ -1131,15 +1640,24 @@ model_overview |>
     `Response Variable` = "Response Variable",
     `Model Type` = "Model Type",
     `Distribution/Family` = "Distribution/Family",
+    `Interaction Terms` = "Interaction Terms",
     `Random Effects` = "Random Effects",
     `Sample Size` = "Sample Size"
   ) |>
   tab_footnote(
-    footnote = "GLMM = Generalized Linear Mixed Model; GAM = Generalized Additive Mixed Model; LM = Linear Model"
+    footnote = "GLMM = Generalized Linear Mixed Model; GAM = Generalized Additive Mixed Model; LM = Linear Model. For Tweedie distributions, p indicates the power parameter."
   ) |>
-  opt_stylize(style = 6, color = "gray")
+  opt_stylize(style = 6, color = "gray") |>
+  cols_width(
+    `Response Variable` ~ px(200),
+    `Model Type` ~ px(80),
+    `Distribution/Family` ~ px(150),
+    `Interaction Terms` ~ px(180),
+    `Random Effects` ~ px(150),
+    `Sample Size` ~ px(180)
+  )
 
 ```
 
-Summary of all statistical models used in the study, including model type, distribution family, random effects structure, and sample sizes. All field experiments (2022-2023) used a 2×2 factorial design with pika presence/absence and S. chamaejasme presence/absence treatments.
+Summary of all statistical models used in the study, including response variables, model type, distribution family (with Tweedie power parameter where applicable), interaction terms, random effects structure, and sample sizes. All field experiments (2022-2023) used a 2×2 factorial design with pika presence/absence and S. chamaejasme presence/absence treatments.
 :::
