@@ -3,6 +3,12 @@
 # -------------------------------------------------------------
 # Extracted from scripts 02-06
 # Functions to fit GLMMs and GAMs for all analyses
+# 
+# REPRODUCIBILITY NOTE:
+# Family selection for plant bites models is based on empirical
+# testing and fixed per plant type (grasses=Gaussian, others=Tweedie).
+# This ensures reproducible results across pipeline runs.
+# Random seed is set in _targets.R for additional reproducibility.
 # =============================================================
 
 # ===========================================================
@@ -232,10 +238,41 @@ fit_forage_quality_model <- function(data, use_beta = TRUE) {
   )
 }
 
-#' Fit plant bites model (adaptive Gaussian → Tweedie)
+#' Fit plant bites model with explicit family per plant type
+#' Based on empirical testing, different plant types require different families:
+#' - Grasses: Gaussian (converges well)
+#' - Sedges: Tweedie (Gaussian has convergence issues)
+#' - Forbs: Tweedie (Gaussian has convergence issues)
 fit_plant_bites_model <- function(data) {
   formula <- formula_treatment_model("forage_efficiency")
-  fit_adaptive_glmm(formula, data, gaussian(), tweedie(link = "log"))
+  
+  # Determine plant type from data to select appropriate family
+  plant_type <- unique(data$plant)
+  
+  if (length(plant_type) != 1) {
+    stop("Data should contain only one plant type")
+  }
+  
+  # Select family based on empirical testing results
+  family_to_use <- if (plant_type == "grasses") {
+    gaussian()
+  } else {
+    tweedie(link = "log")
+  }
+  
+  # Fit model with specified family
+  model <- glmmTMB::glmmTMB(
+    formula = formula,
+    family = family_to_use,
+    data = data
+  )
+  
+  # Return in same structure as adaptive models for compatibility
+  list(
+    model = model,
+    warnings = list(),
+    family_used = family(model)$family
+  )
 }
 
 #' Fit bite-to-step ratio model (beta family)

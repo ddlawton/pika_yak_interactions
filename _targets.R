@@ -11,6 +11,9 @@ library(targets)
 library(tarchetypes)
 library(qs2)
 
+# Set random seed for reproducibility
+set.seed(42)
+
 # Source all function definitions
 source("R/functions/data_preprocessing.R")
 source("R/functions/model_fitting.R")
