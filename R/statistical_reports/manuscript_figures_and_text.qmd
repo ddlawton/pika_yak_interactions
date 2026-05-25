@@ -1360,21 +1360,25 @@ get_family_info <- function(model) {
       tweedie_power <- tryCatch({
         # Method 1: from family object
         if (!is.null(fam$par)) {
-          return(fam$par)
+          fam$par
         }
         # Method 2: from model info
-        if (!is.null(actual_model$modelInfo$family$par)) {
-          return(actual_model$modelInfo$family$par)
+        else if (!is.null(actual_model$modelInfo$family$par)) {
+          actual_model$modelInfo$family$par
         }
         # Method 3: from family link parameters
-        if (!is.null(actual_model$fit$par)) {
+        else if (!is.null(actual_model$fit$par)) {
           # The Tweedie power is stored in the dispersion parameters
           disp_par <- actual_model$fit$par
           if (length(disp_par) >= 2) {
-            return(disp_par[2])  # Tweedie power is typically the 2nd parameter
+            disp_par[2]  # Tweedie power is typically the 2nd parameter
+          } else {
+            NA_real_
           }
         }
-        NA_real_
+        else {
+          NA_real_
+        }
       }, error = function(e) NA_real_)
     }
     
@@ -1521,9 +1525,38 @@ model_info <- tibble(
     response_var = map_chr(model_object, get_response_var),
     interaction_terms = map_chr(model_object, get_fixed_effects),
     random_effects = map_chr(model_object, get_random_effects),
-    family_info = map(model_object, get_family_info),
-    family = map_chr(family_info, ~ .x$family %||% NA_character_),
-    tweedie_power = map_dbl(family_info, ~ .x$tweedie_power %||% NA_real_),
+    family_info = map(model_object, get_family_info)
+  )
+
+# Debug: Check family_info structure for problematic models
+for (i in seq_along(model_info$family_info)) {
+  fi <- model_info$family_info[[i]]
+  if (!is.list(fi) || !all(c("family", "tweedie_power") %in% names(fi))) {
+    warning(paste("Model", model_info$model_name[i], "has invalid family_info:",
+                  "is.list =", is.list(fi),
+                  "| type =", typeof(fi),
+                  "| class =", paste(class(fi), collapse = ", "),
+                  "| names =", paste(names(fi), collapse = ", ")))
+  }
+}
+
+# Continue with extraction
+model_info <- model_info |>
+  mutate(
+    family = map_chr(family_info, function(x) {
+      if (is.list(x) && "family" %in% names(x)) {
+        return(x$family)
+      } else {
+        return(NA_character_)
+      }
+    }),
+    tweedie_power = map_dbl(family_info, function(x) {
+      if (is.list(x) && "tweedie_power" %in% names(x)) {
+        return(x$tweedie_power)
+      } else {
+        return(NA_real_)
+      }
+    }),
     model_type = map_chr(model_object, get_model_type)
   ) |>
   select(-family_info, -model_object)
