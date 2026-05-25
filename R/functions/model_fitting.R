@@ -234,8 +234,7 @@ fit_forage_quality_model <- function(data, use_beta = TRUE) {
 
 #' Fit plant bites model (adaptive Gaussian → Tweedie)
 fit_plant_bites_model <- function(data) {
-  # This dataset doesn't have year, only block and month
-  formula <- as.formula("forage_efficiency ~ pika_treatment * posion_plant_treatment + (1 | block) + (1 | month)")
+  formula <- formula_treatment_model("forage_efficiency")
   fit_adaptive_glmm(formula, data, gaussian(), tweedie(link = "log"))
 }
 

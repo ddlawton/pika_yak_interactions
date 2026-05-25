@@ -310,7 +310,7 @@ Food quantity and quality are key drivers of individual performance and populati
 #| results: "hide"
 
 
-sedge_bite_increase <- calc_pct_increase(plant_bites_models$sedges$emms, value_col = 'emmean')
+sedge_bite_increase <- calc_pct_increase(plant_bites_models$sedges$emms, value_col = 'response')
 grass_bite_steps <- calc_pct_increase(bite_step_models$grasses$emms, value_col = 'response')
 sedge_bite_steps <- calc_pct_increase(bite_step_models$sedges$emms, value_col = 'response')
   
@@ -1630,6 +1630,8 @@ model_overview <- model_info |>
       model_name == "burrow_cover_gam" & (is.na(random_effects) | random_effects == "") ~ "plot",
       model_name == "weight_gain_burrow_gam" & (is.na(random_effects) | random_effects == "") ~ "block, year, month",
       model_name == "dung_cover" & (is.na(random_effects) | random_effects == "") ~ "",
+      # Bite-steps ratio models don't have year (data limitation)
+      grepl("bite_steps", model_name) ~ gsub(", year", "", random_effects, fixed = TRUE),
       TRUE ~ random_effects
     ),
     
@@ -1639,6 +1641,8 @@ model_overview <- model_info |>
       model_name == "yak_grazing" ~ glue("n = {n_yak_transects} transects"),
       model_name %in% c("burrow_cover_gam", "dung_cover") ~ glue("n = {n_burrow_dung_plots} plots"),
       model_name == "weight_gain_burrow_gam" ~ glue("n = {n_experiment_plots} plots"),
+      # Bite-steps ratio models don't have year in the data
+      grepl("bite_steps", model_name) ~ glue("n = {n_experiment_plots} plots"),
       TRUE ~ glue("n = {n_experiment_plots} plots, {n_years_experiment} years")
     ),
     

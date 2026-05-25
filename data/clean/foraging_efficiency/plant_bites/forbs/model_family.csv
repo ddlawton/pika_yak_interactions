@@ -1,2 +1,2 @@
 family,link
-gaussian,identity
+tweedie,log
