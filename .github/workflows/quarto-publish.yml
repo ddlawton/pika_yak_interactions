@@ -29,7 +29,8 @@ jobs:
             libcairo2-dev \
             imagemagick \
             libmagick++-dev \
-            ghostscript
+            ghostscript \
+            libglpk-dev
 
       - name: Set up R
         uses: r-lib/actions/setup-r@v2

@@ -182,6 +182,16 @@
       ],
       "Hash": "4ac8e423216b8b70cb9653d1b3f71eb9"
     },
+    "RcppParallel": {
+      "Package": "RcppParallel",
+      "Version": "5.1.11-2",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R"
+      ],
+      "Hash": "03f41dbd55bb100847e38cab8ac0dde2"
+    },
     "Rdpack": {
       "Package": "Rdpack",
       "Version": "2.6.4",
@@ -2169,6 +2179,19 @@
       ],
       "Hash": "820fafca8afe2ae429767faa9e1f7704"
     },
+    "qs2": {
+      "Package": "qs2",
+      "Version": "0.2.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "Rcpp",
+        "RcppParallel",
+        "stringfish"
+      ],
+      "Hash": "d8534e75fa5e9f5a58bf716a6821ccb6"
+    },
     "quantreg": {
       "Package": "quantreg",
       "Version": "6.1",
@@ -2562,6 +2585,18 @@
       ],
       "Hash": "5f5a7629f956619d519205ec475fe647"
     },
+    "stringfish": {
+      "Package": "stringfish",
+      "Version": "0.19.0",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "Rcpp",
+        "RcppParallel"
+      ],
+      "Hash": "be1d56cba5a7ee446dadd87ec8b1395b"
+    },
     "stringi": {
       "Package": "stringi",
       "Version": "1.8.7",
@@ -2648,6 +2683,27 @@
         "utils"
       ],
       "Hash": "fe31683d2c6fd9a5724bcdf8ed44ded9"
+    },
+    "tarchetypes": {
+      "Package": "tarchetypes",
+      "Version": "0.14.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Requirements": [
+        "R",
+        "dplyr",
+        "fs",
+        "parallel",
+        "rlang",
+        "secretbase",
+        "targets",
+        "tibble",
+        "tidyselect",
+        "utils",
+        "vctrs",
+        "withr"
+      ],
+      "Hash": "f1c58e0dabb39e34df1faaefc99f73dc"
     },
     "targets": {
       "Package": "targets",
