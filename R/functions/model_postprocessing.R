@@ -301,7 +301,29 @@ create_diagnostic_plot <- function(model, model_name, output_path, n_sim = 1000)
     
     par(mfrow = c(1, 2), oma = c(0, 0, 2, 0))
     
-    resid <- DHARMa::simulateResiduals(model, n = n_sim)
+    # Allow overriding number of DHARMa simulations with env var `DHARMA_NSIMS`.
+    # If `DHARMA_NSIMS` is set to "0" diagnostics are skipped (useful for CI).
+    env_n <- Sys.getenv("DHARMA_NSIMS", unset = "")
+    if (nzchar(env_n)) {
+      env_val <- suppressWarnings(as.integer(env_n))
+      if (!is.na(env_val)) {
+        chosen_n <- env_val
+      } else {
+        chosen_n <- n_sim
+      }
+    } else if (nzchar(Sys.getenv("GITHUB_ACTIONS"))) {
+      chosen_n <- 200L
+    } else {
+      chosen_n <- n_sim
+    }
+
+    if (chosen_n == 0L) {
+      message(glue::glue("[{model_name}] Skipping DHARMa diagnostics (DHARMA_NSIMS=0)"))
+      return(FALSE)
+    }
+
+    message(glue::glue("[{model_name}] Running DHARMa simulateResiduals with n = {chosen_n}"))
+    resid <- DHARMa::simulateResiduals(model, n = chosen_n)
     DHARMa::plotQQunif(resid)
     DHARMa::plotResiduals(resid)
     

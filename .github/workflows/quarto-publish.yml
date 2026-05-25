@@ -47,9 +47,11 @@ jobs:
           Rscript -e 'if (!requireNamespace("multcompView", quietly = TRUE)) install.packages("multcompView", repos="https://cran.r-project.org")'
 
       - name: Run targets pipeline
+        env:
+          DHARMA_NSIMS: "0"
         run: |
           Rscript -e 'targets::tar_make()'
-
+          
       - uses: quarto-dev/quarto-actions/setup@v2
 
       - run: quarto render
