@@ -1341,9 +1341,12 @@ get_family_info <- function(model) {
   }
   
   family_name <- fam$family
-  
+  if (is.null(family_name) || length(family_name) == 0) {
+    family_name <- NA_character_
+  }
+
   # Format family name
-  if (grepl("tweedie", family_name, ignore.case = TRUE)) {
+  if (!is.na(family_name) && grepl("tweedie", family_name, ignore.case = TRUE)) {
     # Extract Tweedie power parameter
     tweedie_power <- NA_real_
     
@@ -1370,15 +1373,15 @@ get_family_info <- function(model) {
       }, error = function(e) NA_real_)
     }
     
-    return(list(family = "Tweedie", tweedie_power = tweedie_power))
+    return(list(family = as.character("Tweedie"), tweedie_power = as.numeric(tweedie_power)))
   } else if (grepl("beta", family_name, ignore.case = TRUE)) {
-    return(list(family = "Beta", tweedie_power = NA_real_))
+    return(list(family = as.character("Beta"), tweedie_power = NA_real_))
   } else if (grepl("gaussian", family_name, ignore.case = TRUE)) {
-    return(list(family = "Gaussian", tweedie_power = NA_real_))
+    return(list(family = as.character("Gaussian"), tweedie_power = NA_real_))
   } else if (grepl("binomial", family_name, ignore.case = TRUE)) {
-    return(list(family = "Binomial", tweedie_power = NA_real_))
+    return(list(family = as.character("Binomial"), tweedie_power = NA_real_))
   } else {
-    return(list(family = family_name, tweedie_power = NA_real_))
+    return(list(family = as.character(ifelse(is.na(family_name), NA_character_, family_name[1])), tweedie_power = NA_real_))
   }
 }
 
