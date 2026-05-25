@@ -42,6 +42,10 @@ jobs:
           Rscript -e 'install.packages("renv", repos="https://cran.r-project.org")'
           Rscript -e 'renv::restore(prompt = FALSE)'
 
+      - name: Ensure multcompView is installed (workaround)
+        run: |
+          Rscript -e 'if (!requireNamespace("multcompView", quietly = TRUE)) install.packages("multcompView", repos="https://cran.r-project.org")'
+
       - name: Run targets pipeline
         run: |
           Rscript -e 'targets::tar_make()'
