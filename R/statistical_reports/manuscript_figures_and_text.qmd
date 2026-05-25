@@ -1302,17 +1302,22 @@ get_random_effects <- function(model) {
 
 # Extract family and Tweedie power
 get_family_info <- function(model) {
-  if (is.null(model)) return(list(family = NA_character_, tweedie_power = NA_real_))
+  # Default return value
+  default_result <- list(family = NA_character_, tweedie_power = NA_real_)
   
-  # Handle adaptive models - the actual fitted model is in $model
-  # But only if this is truly an adaptive model wrapper (not a GAM/LM with a $model frame)
-  actual_model <- model
-  if (is.list(model) && "model" %in% names(model) && 
-      !inherits(model, c("lm", "glm", "gam", "glmmTMB"))) {
-    actual_model <- model$model
-  }
-  
-  if (is.null(actual_model)) return(list(family = NA_character_, tweedie_power = NA_real_))
+  # Wrap entire function in tryCatch to ensure we always return proper structure
+  tryCatch({
+    if (is.null(model)) return(default_result)
+    
+    # Handle adaptive models - the actual fitted model is in $model
+    # But only if this is truly an adaptive model wrapper (not a GAM/LM with a $model frame)
+    actual_model <- model
+    if (is.list(model) && "model" %in% names(model) && 
+        !inherits(model, c("lm", "glm", "gam", "glmmTMB"))) {
+      actual_model <- model$model
+    }
+    
+    if (is.null(actual_model)) return(default_result)
   
   # Get family
   fam <- tryCatch({
@@ -1383,6 +1388,10 @@ get_family_info <- function(model) {
   } else {
     return(list(family = as.character(ifelse(is.na(family_name), NA_character_, family_name[1])), tweedie_power = NA_real_))
   }
+  }, error = function(e) {
+    warning(paste("Error in get_family_info:", e$message))
+    return(default_result)
+  })
 }
 
 # Get model type
@@ -1513,8 +1522,8 @@ model_info <- tibble(
     interaction_terms = map_chr(model_object, get_fixed_effects),
     random_effects = map_chr(model_object, get_random_effects),
     family_info = map(model_object, get_family_info),
-    family = map_chr(family_info, "family"),
-    tweedie_power = map_dbl(family_info, "tweedie_power"),
+    family = map_chr(family_info, ~ .x$family %||% NA_character_),
+    tweedie_power = map_dbl(family_info, ~ .x$tweedie_power %||% NA_real_),
     model_type = map_chr(model_object, get_model_type)
   ) |>
   select(-family_info, -model_object)
